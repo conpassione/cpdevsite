@@ -1,0 +1,3 @@
+// Default User TsConfig
+
+@import './TsConfig/User/*.tsconfig'

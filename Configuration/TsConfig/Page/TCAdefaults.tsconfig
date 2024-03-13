@@ -1,0 +1,10 @@
+# TCAdefaults Configuration
+
+TCAdefaults.pages {
+  layout = 1
+}
+
+
+TCAdefaults.tt_content {
+  header_layout = 3
+}

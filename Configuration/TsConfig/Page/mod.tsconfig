@@ -1,0 +1,27 @@
+mod.wizards.newContentElement.wizardItems.common {
+  elements {
+    shortcut < mod.wizards.newContentElement.wizardItems.special.elements.shortcut
+  }
+  show:=addToList(shortcut)
+}
+
+mod.wizards.newContentElement.wizardItems.special {
+  show >
+}
+
+mod.wizards.newContentElement.wizardItems.sliders {
+  header = Slider
+  elements {
+    cpdevsite_testce {
+      iconIdentifier = content-text
+      title = "Test CE"
+      description = "Das ist ein neues CE"
+      tt_content_defValues {
+        CType = cpdevsite_testce
+      }
+    }
+  }
+  show:=addToList(cpdevsite_testce)
+}
+
+

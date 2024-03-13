@@ -1,0 +1,3 @@
+# Default Page TsConfig
+
+@import 'EXT:cpdevsite/Configuration/TsConfig/Page/*.tsconfig'

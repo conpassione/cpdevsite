@@ -1,0 +1,7 @@
+composer.lock
+.DS_Store
+.build/
+.ddev/
+.idea/
+packages/
+var/

@@ -1,0 +1,53 @@
+# TCEFORM Configuration
+
+
+# NewContentElementWizard konfigurieren
+TCEFORM.tt_content.CType {
+  removeItems:=addToList(textpic, bullets, table, html, div)
+}
+
+# Definition der Überschriften
+TCEFORM.tt_content.header_layout {
+  removeItems = 0,1,5
+  altLabels {
+    2 = Haupttitel
+    3 = Titel
+    4 = Untertitel
+  }
+}
+
+# Definition der Rahmen und Hintergründe
+TCEFORM.tt_content.frame_class {
+  removeItems:=addToList(ruler-before,ruler-after,indent,indent-left,indent-right,none)
+  altLabels {
+    #framed = Weiss mit Rahmen
+  }
+  addItems {
+  }
+}
+
+# Definition der Seitenattribute
+TCEFORM.pages {
+  #TAB-Allgemein
+  #TAB-SEO
+  #TAB-Social Media
+  #TAB-Metadaten
+
+  #TAB-Erscheinungsbild
+  layout {
+        removeItems = 2,3
+        altLabels.1 = Standard
+  }
+  layout.disabled = 1
+  # backend_layout {
+  # }
+  # backend_layout_next_level {
+  # }
+
+  #TAB-Verhalten
+  #TAB-Ressourcen
+  #TAB-Sprache
+  #TAB-Zugriff
+  #TAB-Kategorien
+  #TAB-Hinweis
+}
