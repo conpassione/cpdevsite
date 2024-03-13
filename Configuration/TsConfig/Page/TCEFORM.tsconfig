@@ -2,8 +2,20 @@
 
 
 # NewContentElementWizard konfigurieren
+[!backend.user.isAdmin]
 TCEFORM.tt_content.CType {
-  removeItems:=addToList(textpic, bullets, table, html, div)
+  removeItems:=addToList(textpic, bullets, table, login, html, div)
+}
+[GLOBAL]
+
+# Eigenschaften der CE-Elemente
+TCEFORM.tt_content {
+  linkToTop.disabled = 1
+  #space_before_class.disabled = 1
+  #space_after_class.disabled = 1
+  imageheight.disabled = 1
+  imageborder.disabled = 1
+  rowDescription.disabled = 1
 }
 
 # Definition der Überschriften
@@ -25,6 +37,37 @@ TCEFORM.tt_content.frame_class {
   addItems {
   }
 }
+
+# Bildausrichtungen
+#  0 oben-mittig     -> above center
+#  1 oben-rechts     -> above right
+#  2 oben-links      -> above left
+#  8 unten-mittig    -> below center
+#  9 unten-rechts    -> below right
+# 10 unten-links     -> below left
+# 17 rechts floating -> intext right
+# 18 links floating  -> intext left
+# 25 oben-rechts     -> intext right noWrap
+# 26 oben-links      -> intext left noWrap
+# 31 mitte-rechts    -> intext right middle noWrap
+# 32 mitte-links     -> intext left middle noWrap
+# 33 unten-rechts    -> intext right below noWrap
+# 34 unten-links     -> intext left below noWrap
+TCEFORM.tt_content.imageorient {
+  removeItems = 17,18
+  addItems {
+    31 = Neben dem Text mitterechts
+    31.icon = EXT:cpdevsite/Resources/Public/Icons/content-beside-text-img-right-middle.png
+    32 = Neben dem Text mittelinks
+    32.icon = EXT:cp_base/Resources/Public/Icons/content-beside-text-img-left-middle.png
+    33 = Neben dem Text untenrechts
+    33.icon = EXT:cp_base/Resources/Public/Icons/content-beside-text-img-right-bottom.png
+    34 = Neben dem Text untenlinks
+    34.icon = EXT:cp_base/Resources/Public/Icons/content-beside-text-img-left-bottom.png
+  }
+  types.image.removeItems = 8,9,10,17,18,25,26,31,32,33,34
+}
+
 
 # Definition der Seitenattribute
 TCEFORM.pages {
