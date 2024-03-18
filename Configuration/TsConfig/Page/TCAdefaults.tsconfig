@@ -1,10 +1,15 @@
 # TCAdefaults Configuration
 
-TCAdefaults.pages {
-  layout = 1
-}
-
-
 TCAdefaults.tt_content {
   header_layout = 3
+  imagecols = 1
+}
+
+TCAdefaults.pages {
+  layout = 1
+  #backend_layout = pagets__Standard
+  #backend_layout_next_level = pagets__Standard
+  author = conPassione gmbh
+  author_email = info@conpassione.ch
+  sitemap_changefreq = weekly
 }

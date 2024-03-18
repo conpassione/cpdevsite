@@ -6,7 +6,7 @@
 TCEFORM.tt_content.CType {
   removeItems:=addToList(textpic, bullets, table, login, html, div)
 }
-[GLOBAL]
+[END]
 
 # Eigenschaften der CE-Elemente
 TCEFORM.tt_content {
@@ -72,8 +72,15 @@ TCEFORM.tt_content.imageorient {
 # Definition der Seitenattribute
 TCEFORM.pages {
   #TAB-Allgemein
+  nav_title.disabled = 1
+  subtitle.disabled = 1
+
   #TAB-SEO
+  no_index.disabled = 1
+  no_follow.disabled = 1
+
   #TAB-Social Media
+
   #TAB-Metadaten
 
   #TAB-Erscheinungsbild
@@ -88,9 +95,29 @@ TCEFORM.pages {
   # }
 
   #TAB-Verhalten
+  php_tree_stop.disabled = 1
+  module.disabled = 1
+
   #TAB-Ressourcen
   #TAB-Sprache
   #TAB-Zugriff
   #TAB-Kategorien
   #TAB-Hinweis
 }
+
+[!backend.user.isAdmin]
+# Definition der Seitenattribute für Redaktoren
+TCEFORM.pages {
+  #TAB-Allgemein
+  #TAB-SEO
+  #TAB-Social Media
+  #TAB-Metadaten
+  #TAB-Erscheinungsbild
+  #TAB-Verhalten
+  #TAB-Ressourcen
+  #TAB-Sprache
+  #TAB-Zugriff
+  #TAB-Kategorien
+  #TAB-Hinweis
+}
+[END]

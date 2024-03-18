@@ -9,19 +9,19 @@ ExtensionManagementUtility::addTcaSelectItemGroup (
     'tt_content',
     'CType',
     'sliders',
-    'Testgruppe',
-    'after:common'
+    'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.grouLabel',
+    'after:default'
 );
 
 ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [
-        'label' => 'TestCE',
+        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.slider1.label',
         'value' => 'cpdevsite_testce',
-        'icon' => 'content-text',
+        'icon' => 'tx-conpassione-alfabeta',
         'group' => 'sliders',
-        'description' => 'Test Content Element'
+        'description' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.slider1.description'
     ],
     'text',
     'after'

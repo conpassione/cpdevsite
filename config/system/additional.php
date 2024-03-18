@@ -28,6 +28,17 @@ if (getenv('IS_DDEV_PROJECT') == 'true') {
                     ]
                 ]
             ],
+            'EXTENSIONS' => [
+                'backend' => [
+                    'backendFavicon' => '',
+                    'backendLogo' => 'fileadmin/alfabeta.svg',
+                    'loginBackgroundImage' => '',
+                    'loginFootnote' => '',
+                    'loginHighlightColor' => '',
+                    'loginLogo' => '',
+                    'loginLogoAlt' => '',
+                ],
+            ],
             'FE' => [
                 'compressionLevel' => '5'
             ],

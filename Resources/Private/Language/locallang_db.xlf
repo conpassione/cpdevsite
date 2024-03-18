@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext"
+    original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" date="2024-03-18T18:20:51Z"
+    product-name="cpdevsite">
+        <header/>
+        <body>
+            <trans-unit id="contentwizard.sliders.groupLabel" resname="contentwizard.sliders.groupLabel">
+                <source>Sliders</source>
+            </trans-unit>
+            <trans-unit id="contentwizard.sliders.slider1.label" resname="contentwizard.sliders.slider1.label">
+                <source>Sliders with caption</source>
+            </trans-unit>
+            <trans-unit id="contentwizard.sliders.slider1.label" resname="contentwizard.sliders.slider1.description">
+                <source>The pictures can have Title added.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

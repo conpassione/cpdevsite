@@ -28,7 +28,7 @@ return [
     'EXTENSIONS' => [
         'backend' => [
             'backendFavicon' => '',
-            'backendLogo' => 'fileadmin/alfabeta.svg',
+            'backendLogo' => '',
             'loginBackgroundImage' => '',
             'loginFootnote' => '',
             'loginHighlightColor' => '',

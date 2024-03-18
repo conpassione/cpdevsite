@@ -1,3 +1,6 @@
+# mod Konfiguration
+
+# Konfiguration des Content-Elements Wizards
 mod.wizards.newContentElement.wizardItems.common {
   elements {
     shortcut < mod.wizards.newContentElement.wizardItems.special.elements.shortcut
@@ -10,12 +13,12 @@ mod.wizards.newContentElement.wizardItems.special {
 }
 
 mod.wizards.newContentElement.wizardItems.sliders {
-  header = Slider
+  header = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.groupLabel
   elements {
     cpdevsite_testce {
-      iconIdentifier = content-text
-      title = "Test CE"
-      description = "Das ist ein neues CE"
+      iconIdentifier = tx-conpassione-alfabeta
+      title = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.slider1.label
+      description = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.slider1.description
       tt_content_defValues {
         CType = cpdevsite_testce
       }
@@ -24,4 +27,13 @@ mod.wizards.newContentElement.wizardItems.sliders {
   show:=addToList(cpdevsite_testce)
 }
 
+# Anzeige im Listenmodul konfigurieren
+[!backend.user.isAdmin]
+  mod.web_list {
+    # Tables ausblenden in Listenansicht
+    hideTables = pages
+  }
+[global]
 
+# Linkvalidator konfigurieren
+mod.linkvalidator.linkhandler.reportHiddenRecords = 1
