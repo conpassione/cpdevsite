@@ -22,9 +22,9 @@ TCEFORM.tt_content {
 TCEFORM.tt_content.header_layout {
   removeItems = 0,1,5
   altLabels {
-    2 = Haupttitel
-    3 = Titel
-    4 = Untertitel
+    2 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.Label2
+    3 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.Label3
+    4 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.Label4
   }
 }
 
@@ -56,14 +56,18 @@ TCEFORM.tt_content.frame_class {
 TCEFORM.tt_content.imageorient {
   removeItems = 17,18
   addItems {
-    31 = Neben dem Text mitterechts
-    31.icon = EXT:cpdevsite/Resources/Public/Icons/content-beside-text-img-right-middle.png
-    32 = Neben dem Text mittelinks
-    32.icon = EXT:cp_base/Resources/Public/Icons/content-beside-text-img-left-middle.png
-    33 = Neben dem Text untenrechts
-    33.icon = EXT:cp_base/Resources/Public/Icons/content-beside-text-img-right-bottom.png
-    34 = Neben dem Text untenlinks
-    34.icon = EXT:cp_base/Resources/Public/Icons/content-beside-text-img-left-bottom.png
+    # Neben dem Text mitterechts
+    31 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.rightmiddle
+    31.icon = EXT:cpdevsite/Resources/Public/Icons/content-beside-text-img-right-middle.svg
+    #  Neben dem Text mittelinks
+    32 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.leftmiddle
+    32.icon = EXT:cpdevsite/Resources/Public/Icons/content-beside-text-img-left-middle.svg
+    # Neben dem Text untenrechts
+    33 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.rightbottom
+    33.icon = EXT:cpdevsite/Resources/Public/Icons/content-beside-text-img-right-bottom.svg
+    # Nebem dem Text untenlinks
+    34 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.leftbottom
+    34.icon = EXT:cpdevsite/Resources/Public/Icons/content-beside-text-img-left-bottom.svg
   }
   types.image.removeItems = 8,9,10,17,18,25,26,31,32,33,34
 }

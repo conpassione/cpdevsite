@@ -14,6 +14,27 @@
             <trans-unit id="contentwizard.sliders.slider1.label" resname="contentwizard.sliders.slider1.description">
                 <source>The pictures can have Title added.</source>
             </trans-unit>
+            <trans-unit id="tceform.header_layout.Label2" resname="tceform.header_layout.Label2">
+            	<source>Header</source>
+            </trans-unit>
+            <trans-unit id="tceform.header_layout.Label3" resname="tceform.header_layout.Label3">
+            	<source>Title</source>
+            </trans-unit>
+            <trans-unit id="tceform.header_layout.Label4" resname="tceform.header_layout.Label4">
+            	<source>Subtitle</source>
+            </trans-unit>
+            <trans-unit id="tceform.imageorient.rightmiddle" resname="tceform.imageorient.rightmiddle">
+            	<source>Right middle</source>
+            </trans-unit>
+            <trans-unit id="tceform.imageorient.leftmiddle" resname="tceform.imageorient.leftmiddle">
+            	<source>Left middle</source>
+            </trans-unit>
+            <trans-unit id="tceform.imageorient.rightbottom" resname="tceform.imageorient.rightbottom">
+            	<source>Right bottom</source>
+            </trans-unit>
+            <trans-unit id="tceform.imageorient.leftbottom" resname="tceform.imageorient.leftbottom">
+            	<source>Left bottom</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
