@@ -4,9 +4,6 @@ if (getenv('IS_DDEV_PROJECT') == 'true') {
     $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive(
         $GLOBALS['TYPO3_CONF_VARS'],
         [
-            'BE' => [
-                'compressionLevel' => '5'
-            ],
             'DB' => [
                 'Connections' => [
                     'Default' => [
@@ -19,28 +16,16 @@ if (getenv('IS_DDEV_PROJECT') == 'true') {
                     ],
                 ],
             ],
-            'EXTCONF' => [
-                'lang' => [
-                    'availableLanguages' => [
-                        'de',
-                        'fr',
-                        'it'
-                    ]
-                ]
-            ],
             'EXTENSIONS' => [
                 'backend' => [
                     'backendFavicon' => '',
-                    'backendLogo' => 'fileadmin/alfabeta.svg',
-                    'loginBackgroundImage' => '',
-                    'loginFootnote' => '',
+                    'backendLogo' => 'fileadmin/cpdevsite/alfabeta.svg',
+                    'loginBackgroundImage' => 'fileadmin/cpdevsite/bernesealps.png',
+                    'loginFootnote' => '(c) by conPassione gmbh',
                     'loginHighlightColor' => '',
-                    'loginLogo' => '',
-                    'loginLogoAlt' => '',
+                    'loginLogo' => 'fileadmin/cpdevsite/logo_cp_core_G35_black_mit.png',
+                    'loginLogoAlt' => 'conPassione gmbh',
                 ],
-            ],
-            'FE' => [
-                'compressionLevel' => '5'
             ],
             // This GFX configuration allows processing by installed ImageMagick 6
             'GFX' => [
@@ -55,16 +40,61 @@ if (getenv('IS_DDEV_PROJECT') == 'true') {
                 'transport_smtp_server' => 'localhost:1025',
             ],
             'SYS' => [
-                'UTF8filesystem' => true,
-                'defaultScheme' => 'https',
                 'trustedHostsPattern' => '.*.*',
                 'features' => [
                     'security.backend.htmlSanitizeRte' => true,
                     'security.usePasswordPolicyForFrontendUsers' => true,
                 ],
-                'phpTimeZone' => 'Europe/Zurich',
-                'systemLocale' => 'de_CH.UTF-8',
             ],
         ]
     );
+} else {
+    $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive(
+        $GLOBALS['TYPO3_CONF_VARS'],
+        [
+            'EXTENSIONS' => [
+                'backend' => [
+                    'backendFavicon' => '',
+                    'backendLogo' => 'fileadmin/cpdevsite/alfabeta.svg',
+                    'loginBackgroundImage' => 'fileadmin/cpdevsite/bernesealps.png',
+                    'loginFootnote' => '(c) by conPassione gmbh',
+                    'loginHighlightColor' => '',
+                    'loginLogo' => 'fileadmin/cpdevsite/logo_cp_core_G35_black_mit.png',
+                    'loginLogoAlt' => 'conPassione gmbh',
+                ],
+            ]
+        ]
+    );
 }
+
+$GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive(
+    $GLOBALS['TYPO3_CONF_VARS'],
+    [
+        'BE' => [
+            'compressionLevel' => '5'
+        ],
+        'EXTCONF' => [
+            'lang' => [
+                'availableLanguages' => [
+                    'de',
+                    'fr',
+                    'it'
+                ]
+            ]
+        ],
+        'FE' => [
+            'compressionLevel' => '5'
+        ],
+        'SYS' => [
+            'UTF8filesystem' => true,
+            'defaultScheme' => 'https',
+            'trustedHostsPattern' => '.*.*',
+            'features' => [
+                'security.backend.htmlSanitizeRte' => true,
+                'security.usePasswordPolicyForFrontendUsers' => true,
+            ],
+            'phpTimeZone' => 'Europe/Zurich',
+            'systemLocale' => 'de_CH.UTF-8',
+        ],
+    ]
+);

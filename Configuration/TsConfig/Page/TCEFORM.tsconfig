@@ -76,12 +76,12 @@ TCEFORM.tt_content.imageorient {
 # Definition der Seitenattribute
 TCEFORM.pages {
   #TAB-Allgemein
-  nav_title.disabled = 1
-  subtitle.disabled = 1
+  # nav_title.disabled = 1
+  # subtitle.disabled = 1
 
   #TAB-SEO
-  no_index.disabled = 1
-  no_follow.disabled = 1
+  # no_index.disabled = 1
+  # no_follow.disabled = 1
 
   #TAB-Social Media
 
@@ -92,15 +92,15 @@ TCEFORM.pages {
         removeItems = 2,3
         altLabels.1 = Standard
   }
-  layout.disabled = 1
+  # layout.disabled = 1
   # backend_layout {
   # }
   # backend_layout_next_level {
   # }
 
   #TAB-Verhalten
-  php_tree_stop.disabled = 1
-  module.disabled = 1
+  # php_tree_stop.disabled = 1
+  # module.disabled = 1
 
   #TAB-Ressourcen
   #TAB-Sprache

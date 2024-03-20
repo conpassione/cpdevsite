@@ -75,9 +75,4 @@ routeEnhancers:
       sitemap.xml: 1533906435
       browserconfig.xml: 2943879438
       site.webmanifest: 3478304621
-routes:
-  -
-    route: robots.txt
-    type: staticText
-    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n"
 websiteTitle: ''
