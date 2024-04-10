@@ -1,0 +1,28 @@
+// Default User TSConfig
+
+// Configuration Pagetree
+options.pageTree.showPageIdWithTitle = 1
+options.pageTree.showDomainNameWithTitle = 1
+// options.pageTree.showNavTitle = 1
+// options.pageTree.backgroundColor.(pageID) = color
+// options.pageTree.doktypesToShowInNewPageDragArea = 1,6,4,7,3,254,199
+
+// Toolbar
+options.clearCache.pages = 1
+
+// Dashboard
+// options.dashboard.dashboardPresetsForNewUsers := addToList(customDashboard)
+
+// file_list
+options.file_list.enableDisplayThumbnails = aktivated
+options.file_list.filesPerPage = 100
+options.file_list.thumbnail.height = 128
+options.file_list.thumbnail.width = 128
+
+// folderTree
+options.folderTree.uploadFieldsInLinkBrowser = 5
+
+// Configuration User Settings
+setup.default.startModule = web_layout
+setup.default.lang = de
+setup.default.showHiddenFilesAndFolders = 1
