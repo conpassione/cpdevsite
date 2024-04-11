@@ -20,6 +20,8 @@
 	"prefer-stable" : true,
 	"version": "1.0.0",
 	"require": {
+		"b13/container": "^2.3",
+		"contentblocks/content-blocks": "^0.7.2",
 		"helhum/dotenv-connector": "*",
 		"typo3/cms-adminpanel": "^12.4",
 		"typo3/cms-backend": "^12.4",
@@ -33,7 +35,6 @@
 		"typo3/cms-filelist": "^12.4",
 		"typo3/cms-filemetadata": "^12.4",
 		"typo3/cms-fluid": "^12.4",
-		"typo3/cms-fluid-styled-content": "^12.4",
 		"typo3/cms-form": "^12.4",
 		"typo3/cms-frontend": "^12.4",
 		"typo3/cms-impexp": "^12.4",
