@@ -9,4 +9,4 @@ defined('TYPO3') or die();
 ExtensionManagementUtility::addStaticFile(
     'cpdevsite',
     'Configuration/TypoScript',
-    'Conpassione cpdevsite');
+    'Conpassione CPDEV-Sitepackage');

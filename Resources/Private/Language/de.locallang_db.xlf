@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext"
+    original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" date="2024-03-18T18:20:51Z"
+    product-name="cpdevsite">
+        <header/>
+        <body>
+            <trans-unit id="contentwizard.sliders.groupLabel" resname="contentwizard.sliders.groupLabel">
+                <source>Sliders</source>
+                <target>Bildwechsler</target>
+            </trans-unit>
+            <trans-unit id="contentwizard.sliders.slider1.label" resname="contentwizard.sliders.slider1.label">
+                <source>Sliders with caption</source>
+                <target>Bildwechsler mit Titeln</target>
+            </trans-unit>
+            <trans-unit id="contentwizard.sliders.slider1.description" resname="contentwizard.sliders.slider1.description.description">
+                <source>The pictures can have Title added.</source>
+                <target>Die Bilder können mit einem anklickbaren Titeln versehen werden.</target>
+            </trans-unit>
+            <trans-unit id="tceform.header_layout.Label2" resname="tceform.header_layout.Label2">
+            	<source>Header</source>
+            	<target>Haupttitel</target>
+            </trans-unit>
+            <trans-unit id="tceform.header_layout.Label3" resname="tceform.header_layout.Label3">
+            	<source>Title</source>
+            	<target>Titel</target>
+            </trans-unit>
+            <trans-unit id="tceform.header_layout.Label4" resname="tceform.header_layout.Label4">
+            	<source>Subtitle</source>
+            	<target>Untertitel</target>
+            </trans-unit>
+            <trans-unit id="tceform.imageorient.rightmiddle" resname="tceform.imageorient.rightmiddle">
+            	<source>Right middle</source>
+            	<target>Neben dem Text mitterechts</target>
+            </trans-unit>
+            <trans-unit id="tceform.imageorient.leftmiddle" resname="tceform.imageorient.leftmiddle">
+            	<source>Left middle</source>
+            	<target>Neben dem Text mittelinks</target>
+            </trans-unit>
+            <trans-unit id="tceform.imageorient.rightbottom" resname="tceform.imageorient.rightbottom">
+            	<source>Right bottom</source>
+            	<target>Neben dem Text untenrechts</target>
+            </trans-unit>
+            <trans-unit id="tceform.imageorient.leftbottom" resname="tceform.imageorient.leftbottom">
+            	<source>Left bottom</source>
+            	<target>Neben dem Text untenlinks</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

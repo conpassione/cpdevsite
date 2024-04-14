@@ -15,6 +15,7 @@ options.clearCache.pages = 1
 
 // file_list
 options.file_list.enableDisplayThumbnails = aktivated
+options.file_list.enableDisplay
 options.file_list.filesPerPage = 100
 options.file_list.thumbnail.height = 128
 options.file_list.thumbnail.width = 128

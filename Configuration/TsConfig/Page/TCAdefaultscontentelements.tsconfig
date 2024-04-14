@@ -1,0 +1,7 @@
+# TCAdefaults Configuration for Content Elements
+
+TCAdefaults.tt_content {
+  header_layout = 3
+  imagecols = 1
+  imageorient = 0
+}

@@ -1,0 +1,49 @@
+page = PAGE
+page.typeNum = 0
+page.10 = FLUIDTEMPLATE
+page.10 {
+  templateName = TEXT
+  templateName {
+    cObject = TEXT
+    cObject {
+      data = pagelayout
+      required = 1
+      case = ucfirst
+      split {
+        token = pagets__
+        cObjNum = 1
+        1.current = 1
+      }
+    }
+    ifEmpty = Default
+  }
+
+  templateRootPaths {
+    10 = EXT:cpdevsite/Resources/Private/Templates/Page/
+  }
+
+  partialRootPaths {
+    10 = EXT:cpdevsite/Resources/Private/Partials/Page/
+  }
+
+  layoutRootPaths {
+    10 = EXT:cpdevsite/Resources/Private/Layouts/Page/
+  }
+
+  dataProcessing {
+    10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+    10 {
+      table = tt_content
+      orderBy = sorting
+      where = colPos = 0
+      as = content
+    }
+    20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+    20 {
+      table = tt_content
+      orderBy = sorting
+      where = colPos = 1
+      as = sidecontent
+    }
+  }
+}

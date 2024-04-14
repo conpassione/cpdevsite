@@ -3,8 +3,9 @@
 .DS_Store
 .idea/
 composer.lock
-Build/
-var/
-vendor/
-bin/
-packages/
+/Build/
+/vendor/
+/bin/
+/packages/
+/var/
+

@@ -1,0 +1,65 @@
+# Definition der Seitenattribute
+TCEFORM.pages {
+  #TAB-Allgemein
+  # nav_title.disabled = 1
+  # subtitle.disabled = 1
+
+  #TAB-SEO
+  # no_index.disabled = 1
+  # no_follow.disabled = 1
+
+  #TAB-Social Media
+
+  #TAB-Metadaten
+
+  #TAB-Erscheinungsbild
+  layout {
+    removeItems = 2,3
+    altLabels.1 = Standard
+  }
+  # layout.disabled = 1
+  # backend_layout {
+  # }
+  # backend_layout_next_level {
+  # }
+
+  #TAB-Verhalten
+  # php_tree_stop.disabled = 1
+  # module.disabled = 1
+
+  #TAB-Ressourcen
+  #TAB-Sprache
+  #TAB-Zugriff
+  #TAB-Kategorien
+  #TAB-Hinweis
+}
+
+[!backend.user.isAdmin]
+  # Definition der Seitenattribute für Redaktoren
+  TCEFORM.pages {
+    #TAB-Allgemein
+    #TAB-SEO
+    #TAB-Social Media
+    #TAB-Metadaten
+    #TAB-Erscheinungsbild
+    #TAB-Verhalten
+    #TAB-Ressourcen
+    #TAB-Sprache
+    #TAB-Zugriff
+    #TAB-Kategorien
+    #TAB-Hinweis
+  }
+[END]
+
+
+# TCAdefaults Configuration for pages
+
+
+TCAdefaults.pages {
+  layout = 1
+  #backend_layout = pagets__Standard
+  #backend_layout_next_level = pagets__Standard
+  author = conPassione gmbh
+  author_email = info@conpassione.ch
+  sitemap_changefreq = weekly
+}
