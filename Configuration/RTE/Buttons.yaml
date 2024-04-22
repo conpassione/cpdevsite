@@ -1,0 +1,71 @@
+buttons:
+  link:
+    properties:
+      class:
+        allowedClasses:
+          - internal-link
+          - download-link
+          - external-link
+          - mail-link
+          - mail-icon-link
+          - fon-link
+    page:
+      properties:
+        class:
+          default: 'internal-link'
+    file:
+      properties:
+        class:
+          default: 'download-link'
+    url:
+      properties:
+        class:
+          default: 'external-link'
+    email:
+      properties:
+        class:
+          default: 'mail-icon-link'
+    telephone:
+      properties:
+        class:
+          default: 'fon-link'
+
+classes:
+  internal-link:
+    name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.classes.internal-link'
+  download-link:
+    name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.classes.download-link'
+  external-link:
+    name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.classes.external-link'
+  mail-link:
+    name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.classes.mail-link'
+  mail-icon-link:
+    name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.classes.mail-icon-link'
+  fon-link:
+    name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.classes.fon-link'
+
+classesAnchor:
+  pagelink:
+    class: 'internal-link'
+    type: 'page'
+    target: '_top'
+  flielink:
+    class: 'download-link'
+    type: 'file'
+    target: '_blank'
+  externallink:
+    class: 'external-link'
+    type: 'url'
+    target: '_blank'
+  maillink:
+    class: 'mail-link'
+    type: 'email'
+    target: '_blank'
+  mailiconlink:
+    class: 'mail-icon-link'
+    type: 'email'
+    target: '_blank'
+  fonlink:
+    class: 'fon-link'
+    type: 'telephone'
+    target: '_blank'

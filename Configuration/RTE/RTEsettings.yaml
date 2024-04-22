@@ -4,6 +4,9 @@ imports:
   - { resource: './Editor/Processing.yaml' }
   - { resource: './Editor/Base.yaml' }
   - { resource: './Editor/Plugins.yaml' }
+  - { resource: './Buttons.yaml' }
+#  - { resource: './CodeBlock.yaml' }
+
 
 # Add configuration for the editor
 # For complete documentation see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
@@ -12,27 +15,29 @@ editor:
     style:
       definitions:
         # block level styles
-        - { name: 'Orange title H3', element: 'h3', classes: ['h3class abc'], styles: { color: '#ff3300', background: 'blue' } }
-        - { name: 'Quote / Citation', element: 'blockquote', classes: [],  }
-        - { name: 'Code block', element: 'p', classes: ['codeblockclass'],  }
+        - { name: 'Orange title H3', element: 'h3', classes: ['h3class test'], styles: { color: '#ff3300', background-color: 'blue' } }
+        - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelquote', element: 'blockquote', classes: [],  }
+        - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelcodeblock', element: 'p', classes: ['codeblockclass'],  }
         # Inline styles
-        - { name: 'Yellow marker', element: 'span', classes: ['cp-yellow'], styles: { background-color: 'yellow' } }
+        - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.inlinestyle.labelsuccess', element: 'span', classes: ['cp-success'], styles: { background-color: 'green' } }
+        - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.inlinestyle.labelwarning', element: 'span', classes: ['cp-warning'], styles: { background-color: 'yellow' } }
+        - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.inlinestyle.labelerror', element: 'span', classes: ['cp-error'], styles: { background-color: 'red' } }
 
     heading:
       options:
-        - { model: 'paragraph', title: 'Absatz' }
-        - { model: 'heading3', view: 'h3', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.Label3' }
-        - {
-          model: 'headingfancy',
-          view: {
-            name: 'h3',
-            classes: 'fancy'
-          },
-          title: 'H-fancy',
-          converterPriority: 'high'
-        }
-        - { model: 'heading4', view: 'h4', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.Label4' }
-        #- { model: 'formatted', view: 'pre', title: 'Pre-Formatted Text' }
+        - { model: 'paragraph', view: 'p', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.heading.labelparagraph' }
+        - { model: 'heading3', view: 'h3', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh3' }
+        - { model: 'heading4', view: 'h4', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh4' }
+         #- { model: 'formatted', view: 'pre', title: 'Pre-Formatted Text' }
+#        - {
+#          model: 'headingfancy',
+#          view: {
+#            name: 'h3',
+#            classes: 'fancy'
+#          },
+#          title: 'H-fancy',
+#          converterPriority: 'high'
+#        }
 
     toolbar:
       items:
@@ -67,23 +72,7 @@ editor:
         - showBlocks
         - '|'
         - pasteFromOffice
-        - codeBlock
-        # - { label: 'Table', icon: 'threeVerticalDots', items: [ 'insertTable', 'tableColumn', 'tableRow', 'mergeTableCells' ] }
-        # - insertTable
-        # - tableColumn
-        # - tableRow
-        # - mergeTableCells
-        # - horizontalLine
-        # line break
-#        - strikethrough
-#        - subscript
-#        - superscript
-#        - table
-        # - '-'
-        # - fontFamily
-        # - fontBackgroundColor
-        # - fontColor
-        # - fontSize
+        - { label: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.toolbar.items.table', withText: true, items: [ 'insertTable', 'tableColumn', 'tableRow', 'mergeTableCells' ] }
 
     alignment:
       options:
@@ -102,47 +91,5 @@ editor:
         - tableCellProperties
         - toggleTableCaption
 
-    codeBlock:
-      languages: [
-        { language: 'plaintext', label: 'Text', class: '' },
-        { language: 'bash', label: 'Bash' },
-        { language: 'html', label: 'HTML' },
-        { language: 'css', label: 'CSS' },
-        { language: 'php', label: 'PHP' },
-        { language: 'typoscript', lable: 'TypoScript'}
-      ]
-
-#    pasteFromOffice:
-#      isEnabled: 'true'
-
-#    fontColor:
-#      colors:
-#        - { label: 'Orange', color: '#ff8700' }
-#        - { label: 'Blue', color: '#0080c9' }
-#        - { label: 'Green', color: '#209d44' }
-
-#    fontBackgroundColor:
-#      colors:
-#        - { label: 'Stage orange light', color: '#fab85c' }
-
-#    fontFamily:
-#      options:
-#        - 'default'
-#        - 'Arial, sans-serif'
-
-#    fontSize:
-#      options:
-#        - 'default'
-#        - 18
-#        - 22
-
     plugins:
       - PasteFromOffice
-
-    importModules:
-      #- { 'module': '@ckeditor/ckeditor5-font', 'exports': ['Font'] }
-      - { module: '@ckeditor/ckeditor5-show-blocks', exports: ['ShowBlocks'] }
-      - { module: '@ckeditor/ckeditor5-word-count', exports: ['WordCount'] }
-      - { module: '@ckeditor/ckeditor5-code-block', exports: ['CodeBlock'] }
-      - { module: '@ckeditor/ckeditor5-find-and-replace', exports: ['FindAndReplace'] }
-      - { module: '@ckeditor/ckeditor5-paste-from-office', exports: ['PasteFromOffice'] }

@@ -1,9 +1,5 @@
 # Setup Frontend Output
 
-page = PAGE
 @import './Library/*.typoscript'
-
-page.10 = TEXT
-page.10.value = Hello World
 
 

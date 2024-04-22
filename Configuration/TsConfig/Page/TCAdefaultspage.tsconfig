@@ -51,9 +51,7 @@ TCEFORM.pages {
   }
 [END]
 
-
 # TCAdefaults Configuration for pages
-
 
 TCAdefaults.pages {
   layout = 1

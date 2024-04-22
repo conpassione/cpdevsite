@@ -17,15 +17,15 @@
                 <source>The pictures can have Title added.</source>
                 <target>Die Bilder können mit einem anklickbaren Titeln versehen werden.</target>
             </trans-unit>
-            <trans-unit id="tceform.header_layout.Label2" resname="tceform.header_layout.Label2">
+            <trans-unit id="tceform.header_layout.labelh2" resname="tceform.header_layout.labelh2">
             	<source>Header</source>
             	<target>Haupttitel</target>
             </trans-unit>
-            <trans-unit id="tceform.header_layout.Label3" resname="tceform.header_layout.Label3">
+            <trans-unit id="tceform.header_layout.labelh3" resname="tceform.header_layout.labelh3">
             	<source>Title</source>
             	<target>Titel</target>
             </trans-unit>
-            <trans-unit id="tceform.header_layout.Label4" resname="tceform.header_layout.Label4">
+            <trans-unit id="tceform.header_layout.labelh4" resname="tceform.header_layout.labelh4">
             	<source>Subtitle</source>
             	<target>Untertitel</target>
             </trans-unit>
@@ -45,6 +45,59 @@
             	<source>Left bottom</source>
             	<target>Neben dem Text untenlinks</target>
             </trans-unit>
+            <trans-unit id="rte.heading.labelparagraph" resname="rte.heading.labelparagraph">
+            	<source>Paragraph</source>
+            	<target>Absatz</target>
+            </trans-unit>
+			<trans-unit id="rte.toolbar.items.table" resname="rte.toolbar.items.table">
+				<source>Tables</source>
+				<target>Tabellen</target>
+			</trans-unit>
+			<trans-unit id="rte.blockstyle.labelquote" resname="rte.blockstyle.labelquote">
+				<source>Quote / Citation</source>
+				<target>Erwähnung / Zitat</target>
+			</trans-unit>
+			<trans-unit id="rte.blockstyle.labelcodeblock" resname="rte.blockstyle.labelcodeblock">
+				<source>Code Block</source>
+				<target>Code Block</target>
+			</trans-unit>
+			<trans-unit id="rte.inlinestyle.labelsuccess" resname="rte.inlinestyle.labelsuccess">
+				<source>Success</source>
+				<target>Erfolg</target>
+			</trans-unit>
+			<trans-unit id="rte.inlinestyle.labelwarning" resname="rte.inlinestyle.labelwarning">
+				<source>Warning</source>
+				<target>Warnung</target>
+			</trans-unit>
+			<trans-unit id="rte.inlinestyles.labelerror" resname="rte.inlinestyles.labelerror">
+				<source>Error</source>
+				<target>Fehler</target>
+			</trans-unit>
+			<trans-unit id="rte.classes.internal-link" resname="rte.classes.internal-link">
+				<source>Internal Link</source>
+				<target>Interner Link</target>
+			</trans-unit>
+			<trans-unit id="rte.classes.download-link" resname="rte.classes.download-link">
+				<source>Download</source>
+				<target>Download</target>
+			</trans-unit>
+			<trans-unit id="rte.classes.external-link" resname="rte.classes.external-link">
+				<source>External Link</source>
+				<target>Externer Link</target>
+			</trans-unit>
+			<trans-unit id="rte.classes.mail-link" resname="rte.classes.mail-link">
+				<source>eMail Link</source>
+				<target>E-Mail Link</target>
+			</trans-unit>
+			<trans-unit id="rte.classes.mail-icon-link" resname="rte.classes.mail-icon-link">
+				<source>eMail with icon Link</source>
+				<target>E-Mail mit Icon Link</target>
+			</trans-unit>
+			<trans-unit id="rte.classes.fon-link" resname="rte.classes.fon-link">
+				<source>Telephone Link</source>
+				<target>Telefon Link</target>
+			</trans-unit>
+
         </body>
     </file>
 </xliff>

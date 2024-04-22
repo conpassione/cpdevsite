@@ -1,0 +1,13 @@
+editor:
+  config:
+    toolbar:
+      items:
+        - codeBlock
+    languages: [
+      { language: 'plaintext', label: 'Text', class: '' },
+      { language: 'bash', label: 'Bash' },
+      { language: 'html', label: 'HTML' },
+      { language: 'css', label: 'CSS' },
+      { language: 'php', label: 'PHP' },
+      { language: 'typoscript', label: 'TypoScript' }
+    ]
