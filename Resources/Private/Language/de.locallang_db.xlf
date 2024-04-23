@@ -74,30 +74,29 @@
 				<target>Fehler</target>
 			</trans-unit>
 			<trans-unit id="rte.classes.internal-link" resname="rte.classes.internal-link">
-				<source>Internal Link</source>
-				<target>Interner Link</target>
+				<source>Internal</source>
+				<target>Interner</target>
 			</trans-unit>
 			<trans-unit id="rte.classes.download-link" resname="rte.classes.download-link">
 				<source>Download</source>
 				<target>Download</target>
 			</trans-unit>
 			<trans-unit id="rte.classes.external-link" resname="rte.classes.external-link">
-				<source>External Link</source>
-				<target>Externer Link</target>
+				<source>External</source>
+				<target>Externer</target>
 			</trans-unit>
 			<trans-unit id="rte.classes.mail-link" resname="rte.classes.mail-link">
-				<source>eMail Link</source>
-				<target>E-Mail Link</target>
+				<source>eMail</source>
+				<target>E-Mail</target>
 			</trans-unit>
 			<trans-unit id="rte.classes.mail-icon-link" resname="rte.classes.mail-icon-link">
-				<source>eMail with icon Link</source>
-				<target>E-Mail mit Icon Link</target>
+				<source>eMail with icon</source>
+				<target>E-Mail mit Icon</target>
 			</trans-unit>
 			<trans-unit id="rte.classes.fon-link" resname="rte.classes.fon-link">
-				<source>Telephone Link</source>
-				<target>Telefon Link</target>
+				<source>Telephone</source>
+				<target>Telefon</target>
 			</trans-unit>
-
         </body>
     </file>
 </xliff>

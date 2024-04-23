@@ -1,7 +1,14 @@
 buttons:
   link:
+    options:
+      removeItems: 'folder'
+    queryParametersSelector:
+      enabled: true
+    relAttribute:
+      enabled: true
     properties:
       class:
+        required: true
         allowedClasses:
           - internal-link
           - download-link

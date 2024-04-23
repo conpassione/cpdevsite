@@ -2,10 +2,3 @@
 
 RTE.default.preset = cpdevsite
 # RTE.config.tt_content.bodytext.preset = minimal
-
-RTE.buttons.link {
-  options.removeItems = folder
-  queryParametersSelector.enabled = 1
-  relAttribute.enabled = 1
-  properties.class.required = 1
-}

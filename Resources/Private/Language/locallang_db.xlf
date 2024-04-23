@@ -57,22 +57,22 @@
 				<source>Error</source>
 			</trans-unit>
 			<trans-unit id="rte.classes.internal-link" resname="rte.classes.internal-link">
-				<source>Internal Link</source>
+				<source>Internal</source>
 			</trans-unit>
 			<trans-unit id="rte.classes.download-link" resname="rte.classes.download-link">
 				<source>Download</source>
 			</trans-unit>
 			<trans-unit id="rte.classes.external-link" resname="rte.classes.external-link">
-				<source>External Link</source>
+				<source>External</source>
 			</trans-unit>
 			<trans-unit id="rte.classes.mail-link" resname="rte.classes.mail-link">
-				<source>eMail Link</source>
+				<source>eMail</source>
 			</trans-unit>
 			<trans-unit id="rte.classes.mail-icon-link" resname="rte.classes.mail-icon-link">
-				<source>eMail with icon Link</source>
+				<source>eMail with icon</source>
 			</trans-unit>
 			<trans-unit id="rte.classes.fon-link" resname="rte.classes.fon-link">
-				<source>Telephone Link</source>
+				<source>Telephone</source>
 			</trans-unit>
 
         </body>

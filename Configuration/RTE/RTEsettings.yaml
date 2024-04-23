@@ -12,6 +12,14 @@ imports:
 # For complete documentation see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
 editor:
   config:
+    defaultContentLanguage: "de"
+    defaultLanguage: "de"
+    contentsLanguage: "de"
+    language: "de"
+    scayt_autoStartup: true # Spellcheck always on
+    scayt_sLang: "de_CH" # spellcheck language
+    wsc_lang: "de_CH"
+
     style:
       definitions:
         # block level styles
