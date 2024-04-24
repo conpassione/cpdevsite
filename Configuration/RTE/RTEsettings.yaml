@@ -16,16 +16,14 @@ editor:
     defaultLanguage: "de"
     contentsLanguage: "de"
     language: "de"
-    scayt_autoStartup: true # Spellcheck always on
-    scayt_sLang: "de_CH" # spellcheck language
+    # scayt_autoStartup: true # Spellcheck always on
+    # scayt_sLang: "de_CH" # spellcheck language
     wsc_lang: "de_CH"
 
     style:
       definitions:
         # block level styles
-        - { name: 'Orange title H3', element: 'h3', classes: ['h3class test'], styles: { color: '#ff3300', background-color: 'blue' } }
-        - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelquote', element: 'blockquote', classes: [],  }
-        - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelcodeblock', element: 'p', classes: ['codeblockclass'],  }
+        - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelquote', element: 'blockquote', classes: ['cp-blockquote'],  }
         # Inline styles
         - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.inlinestyle.labelsuccess', element: 'span', classes: ['cp-success'], styles: { background-color: 'green' } }
         - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.inlinestyle.labelwarning', element: 'span', classes: ['cp-warning'], styles: { background-color: 'yellow' } }
@@ -34,18 +32,19 @@ editor:
     heading:
       options:
         - { model: 'paragraph', view: 'p', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.heading.labelparagraph' }
+        - { model: 'formatted', view: 'pre', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.heading.labelpre' }
+        - { model: 'quote', view: 'blockquote', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelquote' }
         - { model: 'heading3', view: 'h3', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh3' }
         - { model: 'heading4', view: 'h4', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh4' }
-         #- { model: 'formatted', view: 'pre', title: 'Pre-Formatted Text' }
-#        - {
-#          model: 'headingfancy',
-#          view: {
-#            name: 'h3',
-#            classes: 'fancy'
-#          },
-#          title: 'H-fancy',
-#          converterPriority: 'high'
-#        }
+        - {
+          model: 'gugusdada',
+          view: {
+            name: 'pre',
+            classes: 'fancy'
+          },
+          title: 'PRE-fancy',
+          converterPriority: 'high'
+        }
 
     toolbar:
       items:
@@ -66,9 +65,6 @@ editor:
         - '|'
         - bulletedList
         - numberedList
-        - blockQuote
-        - indent
-        - outdent
         - alignment
         - '|'
         - specialCharacters

@@ -1,38 +1,60 @@
-# New ContentElement Wizaard konfigurieren
+# Definition der Seitenattribute
+TCEFORM.pages {
+  #TAB-Allgemein
+  # nav_title.disabled = 1
+  # subtitle.disabled = 1
 
-# Konfiguration des Content-Elements Wizards
-#mod.wizards.newContentElement.wizardItems.common {
-#  elements {
-#    shortcut < mod.wizards.newContentElement.wizardItems.special.elements.shortcut
-#  }
-#  show:=addToList(shortcut)
-#}
+  #TAB-SEO
+  # no_index.disabled = 1
+  # no_follow.disabled = 1
 
-#mod.wizards.newContentElement.wizardItems.common {
-# # show:=removeFromList(bullets,textpic,table,upload)
-#}
-#mod.wizards.newContentElement.wizardItems.special {
-#  #show:=removeFromList(html,div)
-#}
+  #TAB-Social Media
 
-#mod.wizards.newContentElement.wizardItems.sliders {
-#  header = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.groupLabel
-#  elements {
-#    cpdevsite_testce {
-#      iconIdentifier = tx-conpassione-alfabeta
-#      title = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.slider1.label
-#      description = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.slider1.description
-#      tt_content_defValues {
-#        CType = cpdevsite_testce
-#      }
-#    }
-#  }
-#  show:=addToList(cpdevsite_testce)
-#}
+  #TAB-Metadaten
+
+  #TAB-Erscheinungsbild
+  layout {
+    removeItems = 2,3
+    altLabels.1 = Standard
+  }
+  # layout.disabled = 1
+  # backend_layout {
+  # }
+  # backend_layout_next_level {
+  # }
+
+  #TAB-Verhalten
+  # php_tree_stop.disabled = 1
+  # module.disabled = 1
+
+  #TAB-Ressourcen
+  #TAB-Sprache
+  #TAB-Zugriff
+  #TAB-Kategorien
+  #TAB-Hinweis
+}
+
+[!backend.user.isAdmin]
+  # Definition der Seitenattribute für Redaktoren
+  TCEFORM.pages {
+    #TAB-Allgemein
+    #TAB-SEO
+    #TAB-Social Media
+    #TAB-Metadaten
+    #TAB-Erscheinungsbild
+    #TAB-Verhalten
+    #TAB-Ressourcen
+    #TAB-Sprache
+    #TAB-Zugriff
+    #TAB-Kategorien
+    #TAB-Hinweis
+  }
+[END]
+
 
 #[backend.user.isAdmin]
-  TCEFORM.tt_content.CType.removeItems:=addToList(bullets, textpic, table, upload)
-  TCEFORM.tt_content.CType.removeItems:=addToList(html, div)
+TCEFORM.tt_content.CType.removeItems:=addToList(bullets, textpic, table, upload)
+TCEFORM.tt_content.CType.removeItems:=addToList(html, div)
 #[end]
 
 # Eigenschaften der CE-Elemente

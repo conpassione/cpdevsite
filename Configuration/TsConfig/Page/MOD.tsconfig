@@ -1,0 +1,34 @@
+# Linkvalidator konfigurieren
+mod.linkvalidator.linkhandler.reportHiddenRecords = 1
+
+# New ContentElement Wizard konfigurieren
+
+# Konfiguration des Content-Elements Wizards
+#mod.wizards.newContentElement.wizardItems.common {
+#  elements {
+#    shortcut < mod.wizards.newContentElement.wizardItems.special.elements.shortcut
+#  }
+#  show:=addToList(shortcut)
+#}
+
+#mod.wizards.newContentElement.wizardItems.common {
+# # show:=removeFromList(bullets,textpic,table,upload)
+#}
+#mod.wizards.newContentElement.wizardItems.special {
+#  #show:=removeFromList(html,div)
+#}
+
+#mod.wizards.newContentElement.wizardItems.sliders {
+#  header = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.groupLabel
+#  elements {
+#    cpdevsite_testce {
+#      iconIdentifier = tx-conpassione-alfabeta
+#      title = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.slider1.label
+#      description = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.slider1.description
+#      tt_content_defValues {
+#        CType = cpdevsite_testce
+#      }
+#    }
+#  }
+#  show:=addToList(cpdevsite_testce)
+#}

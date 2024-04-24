@@ -74,7 +74,9 @@
 			<trans-unit id="rte.classes.fon-link" resname="rte.classes.fon-link">
 				<source>Telephone</source>
 			</trans-unit>
-
+            <trans-unit id="rte.heading.labelpre" resname="rte.heading.labelpre">
+            	<source>Paragraph</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -97,6 +97,10 @@
 				<source>Telephone</source>
 				<target>Telefon</target>
 			</trans-unit>
+            <trans-unit id="rte.heading.labelpre" resname="rte.heading.labelpre">
+            	<source>Preformatted text</source>
+				<target>Vorformatierter Text</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
