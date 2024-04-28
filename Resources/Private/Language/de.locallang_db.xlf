@@ -115,6 +115,16 @@
             	<source>Preformatted text</source>
 				<target>Vorformatierter Text</target>
             </trans-unit>
+
+            <trans-unit id="template.simple.site.title" resname="template.simple.site.title">
+            	<source>SimpleSite</source>
+            	<target>Einfache Site</target>
+            </trans-unit>
+            <trans-unit id="template.simple.site.col.1" resname="template.simple.site.col.1">
+            	<source>Content</source>
+            	<target>Inhalt</target>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

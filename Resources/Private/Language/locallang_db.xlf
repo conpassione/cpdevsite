@@ -86,6 +86,13 @@
             <trans-unit id="rte.heading.labelpre" resname="rte.heading.labelpre">
             	<source>Paragraph</source>
             </trans-unit>
+
+            <trans-unit id="template.simple.site.title" resname="template.simple.site.title">
+            	<source>SimpleSite</source>
+            </trans-unit>
+            <trans-unit id="template.simple.site.col.1" resname="template.simple.site.col.1">
+            	<source>Content</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -1,0 +1,35 @@
+#---------------------------------------------------------------
+# PageTS config.backend_layout for ext cp_grid
+#
+# Generated 01.06.2020 by www.conpassione.ch
+#---------------------------------------------------------------
+
+mod {
+  web_layout {
+		BackendLayouts {
+			simple-site {
+				title =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:template.simple.site.title
+				config {
+					backend_layout {
+            colCount = 1
+            rowCount = 1
+            rows {
+              1 {
+                columns {
+                  1 {
+                    name =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:template.simple.site.col.1
+                    colPos = 0
+                    #allowed {
+                    #	CType = gridelements_pi1
+                    #}
+                  }
+                }
+              }
+            }
+					}
+				}
+				icon = tx-conpassione-template-simple-site
+			}
+	  }
+  }
+}

@@ -20,9 +20,8 @@ TCEFORM.pages {
     altLabels.0 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.0
     altLabels.1 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.1
   }
-  backend_layout {
-    label =
-  }
+  #backend_layout {
+  #}
   # backend_layout_next_level {
   # }
 

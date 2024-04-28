@@ -43,6 +43,12 @@ return [
         // The source SVG for the SvgIconProvider
         'source' => 'EXT:cpdevsite/Resources/Public/Icons/content-beside-text-img-right-bottom.svg',
     ],
+    'tx-conpassione-template-simple-site' => [
+        // Icon provider class
+        'provider' => SvgIconProvider::class,
+        // The source SVG for the SvgIconProvider
+        'source' => 'EXT:cpdevsite/Resources/Public/Icons/template-simple-site.svg',
+    ],
 
 
 /*    'tx-myext-bitmapicon' => [
