@@ -17,6 +17,21 @@ page.10 {
     }
     ifEmpty = Default
   }
+#  layoutName = TEXT
+#  layoutName {
+#    cObject = TEXT
+#    cObject {
+#      data = layout
+#      required = 1
+#      case = ucfirst
+#      split {
+#        token = pagets__
+#        cObjNum = 1
+#        1.current = 1
+#      }
+#    }
+#    ifEmpty = Default
+#  }
 
   templateRootPaths {
     10 = EXT:cpdevsite/Resources/Private/Templates/Page/

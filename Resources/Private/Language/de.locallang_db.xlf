@@ -45,6 +45,20 @@
             	<source>Left bottom</source>
             	<target>Neben dem Text untenlinks</target>
             </trans-unit>
+            <trans-unit id="tceform.page.layout.label" resname="tceform.page.layout.label">
+            	<source>Page-Layout</source>
+				<target>Seitenlayout</target>
+            </trans-unit>
+             <trans-unit id="tceform.page.layout.0" resname="tceform.page.layout.0">
+             	<source>Default0</source>
+             	<target>Default0</target>
+             </trans-unit>
+             <trans-unit id="tceform.page.layout.1" resname="tceform.page.layout.1">
+             	<source>Default1</source>
+             	<target>Default1</target>
+             </trans-unit>
+
+
             <trans-unit id="rte.heading.labelparagraph" resname="rte.heading.labelparagraph">
             	<source>Paragraph</source>
             	<target>Absatz</target>

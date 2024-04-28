@@ -1,11 +1,11 @@
 # TCAdefaults Configuration for pages
 
 TCAdefaults.pages {
-  layout = 1
+  layout = 0
   #backend_layout = pagets__Standard
   #backend_layout_next_level = pagets__Standard
-  author = conPassione gmbh
-  author_email = info@conpassione.ch
+  author = {$pages.author}
+  author_email = {$pages.author_email}
   sitemap_changefreq = weekly
 }
 

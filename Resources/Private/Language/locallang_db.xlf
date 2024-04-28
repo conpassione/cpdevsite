@@ -35,6 +35,15 @@
             <trans-unit id="tceform.imageorient.leftbottom" resname="tceform.imageorient.leftbottom">
             	<source>Left bottom</source>
             </trans-unit>
+            <trans-unit id="tceform.page.layout.label" resname="tceform.page.layout.label">
+            	<source>Page-Layout</source>
+            </trans-unit>
+            <trans-unit id="tceform.page.layout.0" resname="tceform.page.layout.0">
+            	<source>Default0</source>
+            </trans-unit>
+            <trans-unit id="tceform.page.layout.1" resname="tceform.page.layout.1">
+            	<source>Default1</source>
+            </trans-unit>
             <trans-unit id="rte.heading.labelparagraph" resname="rte.heading.labelparagraph">
             	<source>Paragraph</source>
             </trans-unit>

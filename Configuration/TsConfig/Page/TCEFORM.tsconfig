@@ -14,12 +14,15 @@ TCEFORM.pages {
 
   #TAB-Erscheinungsbild
   layout {
+  # disabled = 1
+    label = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.label
     removeItems = 2,3
-    altLabels.1 = Standard
+    altLabels.0 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.0
+    altLabels.1 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.1
   }
-  # layout.disabled = 1
-  # backend_layout {
-  # }
+  backend_layout {
+    label =
+  }
   # backend_layout_next_level {
   # }
 
@@ -80,11 +83,11 @@ TCEFORM.tt_content.header_layout {
 # Definition der Rahmen und Hintergründe
 TCEFORM.tt_content.frame_class {
   removeItems:=addToList(ruler-before,ruler-after,indent,indent-left,indent-right,none)
-  altLabels {
+  #altLabels {
     #framed = Weiss mit Rahmen
-  }
-  addItems {
-  }
+  #}
+  #addItems {
+  #}
 }
 
 # Bildausrichtungen
