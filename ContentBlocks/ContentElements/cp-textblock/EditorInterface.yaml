@@ -1,0 +1,14 @@
+name: conpassione/cp-textblock
+typeName: conpassione_cptextblock
+group: common
+prefixFields: true
+prefixType: full
+fields:
+  - identifier: header
+    useExistingField: true
+    label: 'Titel'
+  - identifier: bodytext
+    useExistingField: true
+    type: Textarea
+    enableRichtext: true
+    label: 'Text'

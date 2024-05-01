@@ -23,6 +23,7 @@
 		"b13/container": "^2.3",
 		"contentblocks/content-blocks": "^0.7.2",
 		"helhum/dotenv-connector": "*",
+		"ichhabrecht/content-defender": "^3.4",
 		"typo3/cms-adminpanel": "^12.4",
 		"typo3/cms-backend": "^12.4",
 		"typo3/cms-belog": "^12.4",
