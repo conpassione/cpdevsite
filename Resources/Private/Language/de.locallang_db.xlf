@@ -50,12 +50,12 @@
 				<target>Seitenlayout</target>
             </trans-unit>
              <trans-unit id="tceform.page.layout.0" resname="tceform.page.layout.0">
-             	<source>Default0</source>
-             	<target>Default0</target>
+             	<source>Default</source>
+             	<target>Default</target>
              </trans-unit>
              <trans-unit id="tceform.page.layout.1" resname="tceform.page.layout.1">
-             	<source>Default1</source>
-             	<target>Default1</target>
+             	<source>conPassione</source>
+             	<target>conPassione</target>
              </trans-unit>
 
 

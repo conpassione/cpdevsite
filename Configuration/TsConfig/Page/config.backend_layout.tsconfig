@@ -7,10 +7,12 @@
 mod {
   web_layout {
 		BackendLayouts {
-			simple-site {
+			SimpleSite {
 				title =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:template.simple.site.title
-				config {
-					backend_layout {
+        icon = EXT:cpdevsite/Resources/Public/Icons/template-simple-page.svg
+        #icon = tx-conpassione-template-simple-site
+        config {
+          backend_layout {
             colCount = 1
             rowCount = 1
             rows {
@@ -20,15 +22,14 @@ mod {
                     name =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:template.simple.site.col.1
                     colPos = 0
                     #allowed {
-                    #	CType = gridelements_pi1
+                    #	CType = text, textpic
                     #}
                   }
                 }
               }
             }
-					}
-				}
-				icon = tx-conpassione-template-simple-site
+          }
+        }
 			}
 	  }
   }

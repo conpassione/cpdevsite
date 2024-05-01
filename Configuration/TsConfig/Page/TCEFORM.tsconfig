@@ -1,33 +1,30 @@
 # Definition der Seitenattribute
 TCEFORM.pages {
   #TAB-Allgemein
-  # nav_title.disabled = 1
+  nav_title.disabled = 1
   # subtitle.disabled = 1
 
   #TAB-SEO
   # no_index.disabled = 1
   # no_follow.disabled = 1
+  sitemap_changefreq = monthly
 
   #TAB-Social Media
-
   #TAB-Metadaten
 
   #TAB-Erscheinungsbild
   layout {
-  # disabled = 1
     label = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.label
     removeItems = 2,3
     altLabels.0 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.0
     altLabels.1 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.1
   }
-  #backend_layout {
-  #}
-  # backend_layout_next_level {
-  # }
-
+  #backend_layout {}
+  backend_layout_next_level {
+    disabled = 1
+  }
   #TAB-Verhalten
-  # php_tree_stop.disabled = 1
-  # module.disabled = 1
+  php_tree_stop.disabled = 1
 
   #TAB-Ressourcen
   #TAB-Sprache
@@ -45,9 +42,12 @@ TCEFORM.pages {
     #TAB-Metadaten
     #TAB-Erscheinungsbild
     #TAB-Verhalten
+    module.disabled = 1
+    is_siteroot.disabled = 1
     #TAB-Ressourcen
     #TAB-Sprache
     #TAB-Zugriff
+    editlock.disabled = 1
     #TAB-Kategorien
     #TAB-Hinweis
   }

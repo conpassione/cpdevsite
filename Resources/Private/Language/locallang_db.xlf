@@ -39,10 +39,10 @@
             	<source>Page-Layout</source>
             </trans-unit>
             <trans-unit id="tceform.page.layout.0" resname="tceform.page.layout.0">
-            	<source>Default0</source>
+            	<source>Default</source>
             </trans-unit>
             <trans-unit id="tceform.page.layout.1" resname="tceform.page.layout.1">
-            	<source>Default1</source>
+            	<source>conPassione</source>
             </trans-unit>
             <trans-unit id="rte.heading.labelparagraph" resname="rte.heading.labelparagraph">
             	<source>Paragraph</source>

@@ -1,12 +1,23 @@
 # TCAdefaults Configuration for pages
 
 TCAdefaults.pages {
-  layout = 0
-  #backend_layout = pagets__Standard
-  #backend_layout_next_level = pagets__Standard
+  #TAB-Allgemein
+  #TAB-SEO
+  sitemap_changefreq = monthly
+  #TAB-Metadaten
   author = {$pages.author}
   author_email = {$pages.author_email}
-  sitemap_changefreq = weekly
+  #TAB-Erscheinungsbild
+  layout = 0
+  backend_layout = pagets__simple-site
+  backend_layout_next_level = pagets__simple-site
+  #TAB-Verhaltaen
+  #TAB-Ressourcen
+  #TAB-Sprache
+  #TAB-Zugriff
+
+  #TAB-Kategorien
+  #TAB-Hinweise
 }
 
 # TCAdefaults Configuration for Content Elements
