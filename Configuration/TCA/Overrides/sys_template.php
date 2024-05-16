@@ -7,6 +7,6 @@ defined('TYPO3') or die();
 
 // Typoscript konfigurieren
 ExtensionManagementUtility::addStaticFile(
-    'cpdevsite',
+    getenv('TYPO3_EXT_IDENTIFIER'),
     'Configuration/TypoScript',
-    'Conpassione CPDEV-Sitepackage');
+    'Conpassione Sitepackage DEV');

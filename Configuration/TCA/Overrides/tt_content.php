@@ -9,7 +9,7 @@ ExtensionManagementUtility::addTcaSelectItemGroup (
     'tt_content',
     'CType',
     'sliders',
-    'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.grouLabel',
+    'LLL:EXT:' . getenv('TYPO3_EXT_IDENTIFIER') . '/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.grouLabel',
     'after:default'
 );
 
@@ -17,11 +17,11 @@ ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [
-        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.slider1.label',
+        'label' => 'LLL:EXT:' . getenv('TYPO3_EXT_IDENTIFIER') . '/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.slider1.label',
         'value' => 'cpdevsite_testce',
         'icon' => 'tx-conpassione-alfabeta',
         'group' => 'sliders',
-        'description' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.slider1.description'
+        'description' => 'LLL:EXT:' . getenv('TYPO3_EXT_IDENTIFIER') . '/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.slider1.description'
     ],
     'text',
     'after'
