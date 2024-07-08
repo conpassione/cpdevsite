@@ -8,7 +8,11 @@
     <ul>
         <f:for each="{content}" as="contentelement">
             <li>{contentelement.data.header}<br>
-                <f:format.raw>{contentelement.data.bodytext}</f:format.raw>
+                <f:cObject
+                    typoscriptObjectPath="tt_content.{contentelement.data.CType}"
+                    data="{contentelement.data}"
+                    table="tt_content"
+                />
             </li>
         </f:for>
     </ul>

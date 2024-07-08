@@ -73,9 +73,9 @@ TCEFORM.tt_content {
 TCEFORM.tt_content.header_layout {
   removeItems = 0,1,5
   altLabels {
-    2 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.Labelh2
-    3 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.Labelh3
-    4 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.Labelh4
+    2 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh2
+    3 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh3
+    4 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh4
   }
 }
 

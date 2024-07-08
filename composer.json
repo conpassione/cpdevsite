@@ -1,7 +1,7 @@
 {
 	"name": "conpassione/cpdevsite",
 	"type": "typo3-cms-extension",
-	"description": "cpdevsite-Sitepackage from conPassione",
+	"description": "Sitepackage from conPassione",
 	"keywords": [
 		"TYPO3",
 		"TYPO3 Extension",
@@ -36,6 +36,7 @@
 		"typo3/cms-filelist": "^12.4",
 		"typo3/cms-filemetadata": "^12.4",
 		"typo3/cms-fluid": "^12.4",
+		"typo3/cms-fluid-styled-content": "^12.4",
 		"typo3/cms-form": "^12.4",
 		"typo3/cms-frontend": "^12.4",
 		"typo3/cms-impexp": "^12.4",
