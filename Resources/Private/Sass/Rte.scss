@@ -1,0 +1,25 @@
+/*doc
+---
+title: RTE
+name: rte
+category: Utilities
+---
+
+Central Style Sheet
+this is the only one included into the HTML-Code
+
+*/
+
+
+// use utilities
+@import
+	'fonts',
+	'constants.base',
+	'./utilities/mixins',
+	'./utilities/remedy',
+	'./utilities/clearfix',
+	'./utilities/hidding',
+	'constants.additional',
+	'./utilities/fsc',
+	'./utilities/ck_editor';
+
