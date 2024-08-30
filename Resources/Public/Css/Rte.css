@@ -1,18 +1,14 @@
-@charset "utf-8";
-
-/* doc
+/*doc
 ---
-title: Layout
-name: layout
+title: RTE
+name: rte
 category: Utilities
 ---
 
 Central Style Sheet
 this is the only one included into the HTML-Code
+
 */
-
-
-// import utilities
 @use 'fonts';
 @use 'constants.base';
 @use 'utilities/remedy';
@@ -21,3 +17,6 @@ this is the only one included into the HTML-Code
 @use './utilities/hidding';
 @use './utilities/fsc';
 @use 'constants.additional';
+@use './utilities/ck_editor';
+
+/*# sourceMappingURL=Rte.css.map */

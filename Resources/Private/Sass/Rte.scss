@@ -12,14 +12,13 @@ this is the only one included into the HTML-Code
 
 
 // use utilities
-@import
-	'fonts',
-	'constants.base',
-	'./utilities/mixins',
-	'./utilities/remedy',
-	'./utilities/clearfix',
-	'./utilities/hidding',
-	'constants.additional',
-	'./utilities/fsc',
-	'./utilities/ck_editor';
 
+@use 'fonts';
+@use 'constants.base';
+@use 'utilities/remedy';
+@use './utilities/mixins';
+@use './utilities/clearfix';
+@use './utilities/hidding';
+@use './utilities/fsc';
+@use 'constants.additional';
+@use './utilities/ck_editor';
