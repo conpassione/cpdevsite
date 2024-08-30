@@ -21,6 +21,7 @@
 	"version": "1.0.0",
 	"require": {
 		"b13/container": "^2.3",
+		"b13/http2": "^2.0",
 		"contentblocks/content-blocks": "^0.7.2",
 		"helhum/dotenv-connector": "*",
 		"ichhabrecht/content-defender": "^3.4",
