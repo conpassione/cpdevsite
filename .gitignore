@@ -4,6 +4,7 @@
 .idea/
 composer.lock
 /Build/
+/node_modules/
 /vendor/
 /bin/
 /packages/

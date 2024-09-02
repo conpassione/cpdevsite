@@ -1,24 +1,9 @@
-/*doc
----
-title: RTE
-name: rte
-category: Utilities
----
+// This are additional CSS-Styles for the Backend
 
-Central Style Sheet
-this is the only one included into the HTML-Code
+// import utilities
 
-*/
-
-
-// use utilities
-
-@use 'fonts';
-@use 'constants.base';
-@use 'utilities/remedy';
-@use './utilities/mixins';
-@use './utilities/clearfix';
-@use './utilities/hidding';
-@use './utilities/fsc';
-@use 'constants.additional';
-@use './utilities/ck_editor';
+@use 'fonts' as *;
+@use 'constants.base' as *;
+@use './utilities' as *;
+//@use 'constants.additional' as *;
+@use 'utilities/ck_editor';

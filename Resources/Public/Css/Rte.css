@@ -1,22 +1,19 @@
-/*doc
----
-title: RTE
-name: rte
-category: Utilities
----
+/* Error: Undefined variable.
+ *    ,
+ * 72 |   padding: $cp-gutterWidth;
+ *    |            ^^^^^^^^^^^^^^^
+ *    '
+ *   utilities/_fsc.scss 72:12  @forward
+ *   utilities/_index.scss 5:1  @use
+ *   Rte.scss 7:1               root stylesheet */
 
-Central Style Sheet
-this is the only one included into the HTML-Code
-
-*/
-@use 'fonts';
-@use 'constants.base';
-@use 'utilities/remedy';
-@use './utilities/mixins';
-@use './utilities/clearfix';
-@use './utilities/hidding';
-@use './utilities/fsc';
-@use 'constants.additional';
-@use './utilities/ck_editor';
-
-/*# sourceMappingURL=Rte.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 72 \2502    padding: $cp-gutterWidth;\a    \2502             ^^^^^^^^^^^^^^^\a    \2575 \a   utilities/_fsc.scss 72:12  @forward\a   utilities/_index.scss 5:1  @use\a   Rte.scss 7:1               root stylesheet";
+}

@@ -65,12 +65,12 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Conpassione\\cpdevsite\\": "Classes"
+			"Conpassione\\Cpdevsite\\": "Classes"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Conpassione\\cpdevsite\\Tests\\": "Tests"
+			"Conpassione\\Cpdevsite\\Tests\\": "Tests"
 		}
 	},
 	"config": {

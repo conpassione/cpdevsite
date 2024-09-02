@@ -8,21 +8,21 @@
 
 @font-face {
   font-family: 'LigatureSymbols';
-  src: url('../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.eot');
-  src: url('../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.eot?#iefix') format('embedded-opentype'),
-       url('../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.woff') format('woff'),
-       url('../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.ttf') format('truetype'),
-       url('../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.svg#LigatureSymbols') format('svg');
-  src: url('../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.ttf') format('truetype');
+  src:         url('../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.eot');
+  src:         url('../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.eot?#iefix') format('embedded-opentype'),
+               url('../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.woff') format('woff'),
+               url('../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.ttf') format('truetype'),
+               url('../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.svg#LigatureSymbols') format('svg');
+  src:         url('../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.ttf') format('truetype');
   font-weight: normal;
-  font-style: normal;
+  font-style:  normal;
 }
 
-$cp-fontFamily: 'Ubuntu', sans-serif;
-$cp-fontFamily--serif: 'Ubuntu', serif;
-$cp-fontFamily--h: 'Ubuntu', sans-serif;
-$cp-fontFamily--nav: $cp-fontFamily;
-$cp-fontFamily--mono: 'Ubuntu', sans-serif;
+$cp-fontFamily:         'Ubuntu', sans-serif;
+$cp-fontFamily--serif:  'Ubuntu', serif;
+$cp-fontFamily--h:      'Ubuntu', sans-serif;
+$cp-fontFamily--nav:    $cp-fontFamily;
+$cp-fontFamily--mono:   'Ubuntu', sans-serif;
 $cp-fontFamily--symbol: 'LigatureSymbols';
 
 * {
@@ -30,20 +30,11 @@ $cp-fontFamily--symbol: 'LigatureSymbols';
 }
 
 %cp-symbol {
-  font-family: $cp-fontFamily--symbol;
-  -webkit-text-rendering: optimizeLegibility;
-  -moz-text-rendering: optimizeLegibility;
-  -ms-text-rendering: optimizeLegibility;
-  -o-text-rendering: optimizeLegibility;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+  font-family:                   $cp-fontFamily--symbol;
+  text-rendering:                optimizeLegibility;
+  -webkit-font-smoothing:        antialiased;
+  font-smoothing:                antialiased;
   -webkit-font-feature-settings: 'liga' 1, 'dlig' 1;
-  -moz-font-feature-settings: 'liga' 1, 'dlig' 1;
-  -ms-font-feature-settings: 'liga' 1, 'dlig' 1;
-  -o-font-feature-settings: 'liga' 1, 'dlig' 1;
-  font-feature-settings: 'liga' 1, 'dlig' 1;
+  -moz-font-feature-settings:    'liga' 1, 'dlig' 1;
+  font-feature-settings:         'liga' 1, 'dlig' 1;
 }

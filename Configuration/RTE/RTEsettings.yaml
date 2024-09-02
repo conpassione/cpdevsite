@@ -20,6 +20,9 @@ editor:
     # scayt_sLang: "de_CH" # spellcheck language
     wsc_lang: "de_CH"
 
+    # the CSS file to be used inside the editor
+    contentsCss: "EXT:cpdevsite/Resources/Public/Css/Rte.css"
+
     style:
       definitions:
         # block level styles

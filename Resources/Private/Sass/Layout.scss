@@ -1,23 +1,7 @@
-@charset "utf-8";
-
-/* doc
----
-title: Layout
-name: layout
-category: Utilities
----
-
-Central Style Sheet
-this is the only one included into the HTML-Code
-*/
-
+// this is the only one includet in HTML-Code of Frontend
 
 // import utilities
-@use 'fonts';
-@use 'constants.base';
-@use 'utilities/remedy';
-@use './utilities/mixins';
-@use './utilities/clearfix';
-@use './utilities/hidding';
-@use './utilities/fsc';
-@use 'constants.additional';
+@use 'fonts' as *;
+@use 'constants.base' as *;
+@use './utilities' as *;
+//@use 'constants.additional' as *;
