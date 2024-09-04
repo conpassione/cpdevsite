@@ -33,7 +33,6 @@ $cp-fontFamily--symbol: 'LigatureSymbols';
   font-family:                   $cp-fontFamily--symbol;
   text-rendering:                optimizeLegibility;
   -webkit-font-smoothing:        antialiased;
-  font-smoothing:                antialiased;
   -webkit-font-feature-settings: 'liga' 1, 'dlig' 1;
   -moz-font-feature-settings:    'liga' 1, 'dlig' 1;
   font-feature-settings:         'liga' 1, 'dlig' 1;

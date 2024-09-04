@@ -5,7 +5,7 @@ imports:
   - { resource: './Editor/Base.yaml' }
   - { resource: './Editor/Plugins.yaml' }
   - { resource: './Buttons.yaml' }
-#  - { resource: './CodeBlock.yaml' }
+  - { resource: './CodeBlock.yaml' }
 
 
 # Add configuration for the editor

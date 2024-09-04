@@ -1,4 +1,4 @@
-base: 'https://cpdevsite.ddev.site'
+base: 'https://www.cpdev.ch'
 baseVariants:
   -
     base: 'https://cpdevsite.ddev.site'

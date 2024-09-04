@@ -1,6 +1,6 @@
 // doc
 // cp_base:ck-editor
-
+@use '../constants.base' as *;
 @layer ckeditor {
 
   html {
@@ -58,7 +58,7 @@
 
   // special classes to adjust RTE-Editor
   .htmlarea-content-body {
-    background: #ffffff;
+    background: $cp-color--white;
   }
 
   ul.cke_panel_list {

@@ -1,6 +1,8 @@
+@use '../constants.base' as *;
+@use '../fonts' as *;
 /* additional, not originally from Magnific Popup CSS */
 .white-popup-block {
-  background: #ffffff;
+  background: $cp-color--white;
   padding:    20px 30px;
   text-align: left;
   max-width:  650px;
@@ -18,7 +20,7 @@
   z-index:    1042;
   overflow:   hidden;
   position:   fixed;
-  background: #0b0b0b;
+  background: $cp-color--extralight;
   opacity:    0.8;
 }
 
@@ -104,7 +106,7 @@
 }
 
 .mfp-preloader {
-  color:      #cccccc;
+  color:      $cp-color--gray;
   position:   absolute;
   top:        50%;
   width:      auto;
@@ -116,11 +118,11 @@
 }
 
 .mfp-preloader a {
-  color: #cccccc;
+  color: $cp-color--gray;
 }
 
 .mfp-preloader a:hover {
-  color: #ffffff;
+  color: $cp-color--white;
 }
 
 .mfp-s-ready .mfp-preloader {
@@ -166,7 +168,7 @@ button::-moz-focus-inner {
   text-align:      center;
   opacity:         0.65;
   padding:         0 0 18px 10px;
-  color:           #ffffff;
+  color:           $cp-color--white;
   font-style:      normal;
   font-size:       28px;
   font-family:     $cp-fontFamily
@@ -182,12 +184,12 @@ button::-moz-focus-inner {
 }
 
 .mfp-close-btn-in .mfp-close {
-  color: #333333;
+  color: $cp-color--dark;
 }
 
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close {
-  color:         #ffffff;
+  color:         $cp-color--white;
   right:         -6px;
   text-align:    right;
   padding-right: 6px;
@@ -198,7 +200,7 @@ button::-moz-focus-inner {
   position:    absolute;
   top:         0;
   right:       0;
-  color:       #cccccc;
+  color:       $cp-color--gray;
   font-size:   12px;
   line-height: 18px;
   white-space: nowrap;
@@ -254,13 +256,13 @@ button::-moz-focus-inner {
 }
 
 .mfp-arrow-left:after {
-  border-right: 17px solid #ffffff;
+  border-right: 17px solid $cp-color--white;
   margin-left:  31px;
 }
 
 .mfp-arrow-left:before {
   margin-left:  25px;
-  border-right: 27px solid #3f3f3f;
+  border-right: 27px solid $cp-color--dark;
 }
 
 .mfp-arrow-right {
@@ -268,12 +270,12 @@ button::-moz-focus-inner {
 }
 
 .mfp-arrow-right:after {
-  border-left: 17px solid #ffffff;
+  border-left: 17px solid $cp-color--white;
   margin-left: 39px;
 }
 
 .mfp-arrow-right:before {
-  border-left: 27px solid #3f3f3f;
+  border-left: 27px solid $cp-color--dark;
 }
 
 .mfp-iframe-holder {
@@ -305,8 +307,8 @@ button::-moz-focus-inner {
   left:       0;
   width:      100%;
   height:     100%;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-  background: #000000;
+  box-shadow: 0 0 8px rgba($cp-color--black, 0.6);
+  background: $cp-color--black;
 }
 
 /* Main image in popup */
@@ -337,12 +339,12 @@ img.mfp-img {
   width:      auto;
   height:     auto;
   z-index:    -1;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-  background: #444444;
+  box-shadow: 0 0 8px rgba($cp-color--black, 0.6);
+  background: $cp-color--dark;
 }
 
 .mfp-figure small {
-  color:       #bdbdbd;
+  color:       $cp-color--lightgray;
   display:     block;
   font-size:   12px;
   line-height: 14px;
@@ -364,7 +366,7 @@ img.mfp-img {
 .mfp-title {
   text-align:    left;
   line-height:   18px;
-  color:         #f3f3f3;
+  color:         $cp-color--extralight;
   word-wrap:     break-word;
   padding-right: 36px;
 }
@@ -397,7 +399,7 @@ img.mfp-img {
     margin-left: 5px;
   }
   .mfp-img-mobile .mfp-bottom-bar {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba($cp-color--black, 0.6);
     bottom:     0;
     margin:     0;
     top:        auto;
@@ -418,7 +420,7 @@ img.mfp-img {
     width:       35px;
     height:      35px;
     line-height: 35px;
-    background:  rgba(0, 0, 0, 0.6);
+    background:  rgba($cp-color--black, 0.6);
     position:    fixed;
     text-align:  center;
     padding:     0;
