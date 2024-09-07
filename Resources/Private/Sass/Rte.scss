@@ -1,9 +1,7 @@
-// This are additional CSS-Styles for the Backend
-
-// import utilities
+/* import utilities */
 
 @use 'fonts' as *;
 @use 'constants.base' as *;
 @use './utilities' as *;
 @use 'constants.additional' as *;
-@use 'utilities/ck_editor';
+@use 'ck_editor';

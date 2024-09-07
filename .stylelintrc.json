@@ -1,6 +1,12 @@
 {
-	"extends": "stylelint-config-standard",
+	"extends": [
+		"stylelint-config-recommended-scss",
+		"stylelint-config-two-dash-bem"
+	],
 	"rules": {
-		"color-hex-length": "long"
+		"color-hex-length": "long",
+		"selector-attribute-quotes": "never",
+		"function-url-no-scheme-relative": true,
+		"import-notation": "url"
 	}
 }

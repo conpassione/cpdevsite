@@ -1,5 +1,6 @@
 @use '../constants.base' as *;
 @use '../fonts' as *;
+
 /* additional, not originally from Magnific Popup CSS */
 .white-popup-block {
   background: $cp-color--white;
@@ -10,8 +11,8 @@
   position:   relative;
 }
 
-/* Magnific Popup CSS version 1.1.0 */
-/* Magnific Popup CSS */
+/* Magnific Popup CSS version 1.1.0
+ * Magnific Popup CSS */
 .mfp-bg {
   top:        0;
   left:       0;

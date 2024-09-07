@@ -1,11 +1,12 @@
 @use 'constants.base' as *;
-// cp_base:constants.additional
 
-// Font sizes
+/* cp_base:constants.additional */
+
+/* Font sizes */
 $cp-fontsize--small:               .75rem;
 $cp-fontsize--big:                 1.25rem;
 
-// layout + template (page)
+/* layout + template (page) */
 $cp-html--color:                   $cp-color;
 $cp-htmlbg--color:                 $cp-color--white;
 
@@ -18,20 +19,20 @@ $cp-footer--color:                 $cp-color--white;
 $cp-footerbg--color:               $cp-color--custom4;
 
 
-// heading
+/* heading */
 $cp-h--color:                      $cp-color--custom1;
 $cp-hbg--color:                    transparent;
 
-// link
+/* link */
 $cp-link--color:                   $cp-color;
 $cp-link--colorhover:              $cp-color--custom2;
 
-// border
+/* border  */
 $cp-border--color:                 $cp-color--lightgray;
 $cp-border--radius:                1rem;
 $cp-border--style:                 solid;
 
-// Button primary
+/* Button primary */
 $cp-btncolor:                      $cp-color--lightgray;
 $cp-btncolor--hover:               $cp-color--white;
 $cp-btncolorbg:                    $cp-color--custom2;
@@ -42,7 +43,7 @@ $cp-btncorder--color:              transparent;
 $cp-btncorder--radius:             5px;
 $cp-btncorder--colorhover:         transparent;
 
-// Button secondary
+/* Button secondary */
 $cp-btncolor2:                     $cp-color--lightgray;
 $cp-btncolor2--hover:              $cp-color--white;
 $cp-btncolor2bg:                   $cp-color--gray;
@@ -50,7 +51,7 @@ $cp-btncolor2bg--hover:            $cp-color--dark;
 $cp-btnborder2--color:             transparent;
 $cp-btnborder2--colorhover:        transparent;
 
-// Button disabled
+/* Button disabled */
 $cp-btncolord:                     $cp-color--dark;
 $cp-btncolord--hover:              $cp-color--dark;
 $cp-btncolordbg:                   $cp-color--gray;
@@ -58,13 +59,13 @@ $cp-btncolordbg--hover:            $cp-color--gray;
 $cp-btncorderc--color:             transparent;
 $cp-btncorderd--colorhover:        transparent;
 
-// Accordion-Button
+/* Accordion-Button */
 $cp-btncoloracc:                   $cp-color--white;
 $cp-btncoloracc--hover:            $cp-color--white;
 $cp-btncoloraccbg:                 $cp-color--custom4;
 $cp-btncoloraccbg--hover:          $cp-color--lightgray;
 
-// form colors
+/* form colors */
 $cp-form--color:                   $cp-color--custom1;
 $cp-formbg--color:                 $cp-color--extralight;
 $cp-formborder--color:             $cp-color--lightgray;
@@ -72,8 +73,8 @@ $cp-forminpunt--color:             $cp-color--custom1;
 $cp-forminputbg--color:            $cp-color--white;
 $cp-forminputborder--color:        $cp-color--custom1;
 
-/* navigation colors */
-/* Navigation Button */
+/* navigation colors
+ * Navigation Button */
 $cp-btnColorNav:                   $cp-color--custom1;
 $cp-btnColorNav--hover:            $cp-color--custom1;
 $cp-btnColorNavBg:                 $cp-color--white;

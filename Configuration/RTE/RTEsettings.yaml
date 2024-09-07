@@ -1,65 +1,30 @@
 # CKE-Editor CpBase-Configuration
 # Load default processing options
 imports:
-  - { resource: './Editor/Processing.yaml' }
-  - { resource: './Editor/Base.yaml' }
-  - { resource: './Editor/Plugins.yaml' }
-  - { resource: './Buttons.yaml' }
-  - { resource: './CodeBlock.yaml' }
-
+  - { resource: 'EXT:rte-ckeditor/Configuration/RTE/Processing.yaml' }
+  - { resource: 'EXT:rte-ckeditor/Configuration/RTE/Editor/Base.yaml' }
+  - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml' }
+  #- { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/LinkBrowser.yaml' }
+  - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Base.yaml' }
+  - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Plugins.yaml' }
+  - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/LinkBrowser.yaml' }
+  - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/CodeBlock.yaml' }
+  - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Styles.yaml' }
+  - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Languages.yaml' }
 
 # Add configuration for the editor
 # For complete documentation see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
 editor:
   config:
-    defaultContentLanguage: "de"
-    defaultLanguage: "de"
-    contentsLanguage: "de"
-    language: "de"
-    # scayt_autoStartup: true # Spellcheck always on
-    # scayt_sLang: "de_CH" # spellcheck language
-    wsc_lang: "de_CH"
-
-    # the CSS file to be used inside the editor
-    contentsCss: "EXT:cpdevsite/Resources/Public/Css/Rte.css"
-
-    style:
-      definitions:
-        # block level styles
-        - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelquote', element: 'blockquote', classes: ['cp-blockquote'],  }
-        # Inline styles
-        - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.inlinestyle.labelsuccess', element: 'span', classes: ['cp-success'], styles: { background-color: 'green' } }
-        - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.inlinestyle.labelwarning', element: 'span', classes: ['cp-warning'], styles: { background-color: 'yellow' } }
-        - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.inlinestyle.labelerror', element: 'span', classes: ['cp-error'], styles: { background-color: 'red' } }
-
-    heading:
-      options:
-        - { model: 'paragraph', view: 'p', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.heading.labelparagraph' }
-        - { model: 'formatted', view: 'pre', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.heading.labelpre' }
-        - { model: 'quote', view: 'blockquote', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelquote' }
-        - { model: 'heading3', view: 'h3', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh3' }
-        - { model: 'heading4', view: 'h4', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh4' }
-        - {
-          model: 'gugusdada',
-          view: {
-            name: 'pre',
-            classes: 'fancy'
-          },
-          title: 'PRE-fancy',
-          converterPriority: 'high'
-        }
-
     toolbar:
       items:
-        - clipboard
+        - style
+        - heading
+        - '|'
         - removeFormat
         - undo
         - redo
-        - '|'
         - findAndReplace
-        - selectAll
-        - '|'
-        - link
         - '|'
         - bold
         - italic
@@ -68,22 +33,25 @@ editor:
         - '|'
         - bulletedList
         - numberedList
+        - '|'
         - alignment
         - '|'
         - specialCharacters
-        - '-'
-        - style
-        - heading
+        - codeBlock
         - '|'
-        - sourceEditing
+        - link
+        - '|'
+        - { label: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.toolbar.items.table', withText: true, items: [ 'insertTable', 'tableColumn', 'tableRow', 'mergeTableCells' ] }
+        - '|'
         - showBlocks
         - '|'
-        - pasteFromOffice
-        - { label: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.toolbar.items.table', withText: true, items: [ 'insertTable', 'tableColumn', 'tableRow', 'mergeTableCells' ] }
+        - sourceEditing
+        #- pasteFromOffice
+        #- textPartLanguage
 
     alignment:
       options:
-        - { name: 'left', className: 'text-start' }
+        - { name: 'links', className: 'text-start' }
         - { name: 'center', className: 'text-center' }
         - { name: 'right', className: 'text-end' }
         - { name: 'justify', className: 'text-justify' }
@@ -97,6 +65,3 @@ editor:
         - tableProperties
         - tableCellProperties
         - toggleTableCaption
-
-    plugins:
-      - PasteFromOffice

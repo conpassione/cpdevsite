@@ -1,12 +1,6 @@
 /*doc
  * cp_base:fsc_styles
-*/
-
-/**
  * Fluid Styled Content CSS Definitions
- */
-
-/**
  * Anpassung conPassione für Benutzung von Constants
  * und für rem anstatt em
  */
@@ -72,10 +66,11 @@
   padding: $cp-gutterWidth;
 }
 
-.ce-intext.ce-right .ce-gallery,
-.ce-intext.ce-left .ce-gallery,
+
 .ce-above .ce-gallery,
-.ce-below .ce-gallery {
+.ce-below .ce-gallery,
+.ce-intext.ce-right .ce-gallery,
+.ce-intext.ce-left .ce-gallery {
   margin-bottom: 0;
   max-width:     100%;
 }
@@ -257,4 +252,3 @@
 .frame-indent-right {
   margin-right: 33%;
 }
-

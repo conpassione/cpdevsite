@@ -1,8 +1,11 @@
-// doc
-// cp_base:ck-editor
-@use '../constants.base' as *;
-@layer ckeditor {
+/* doc
+ * cp_base:ck-editor
+ */
 
+@use 'constants.base' as *;
+@use 'fonts' as *;
+
+@layer ckeditor {
   html {
     background: $cp-color--white;
   }
@@ -10,7 +13,7 @@
   .cke_editable {
     padding: 10px;
 
-    > *:last-child {
+    > :last-child {
       border-bottom: 3px dotted $cp-color--gray;
     }
 
@@ -20,7 +23,7 @@
         padding-left: 1.5rem;
         position:     relative;
 
-        &:before {
+        &::before {
           background-color: $cp-color--custom1;
           content:          '';
           display:          block;
@@ -41,7 +44,7 @@
         padding-left: 1.5rem;
         position:     relative;
 
-        &:before {
+        &::before {
           bottom:            0;
           color:             inherit;
           content:           counter(cp-counter) '.';
@@ -56,7 +59,7 @@
     }
   }
 
-  // special classes to adjust RTE-Editor
+  /* special classes to adjust RTE-Editor */
   .htmlarea-content-body {
     background: $cp-color--white;
   }
@@ -72,5 +75,22 @@
         padding:     3px 5px;
       }
     }
+  }
+
+  .ck.ck-content {
+    font-family: $cp-fontFamily;
+    font-size: 16px;
+    line-height: 20px;
+    color: red !important;
+  }
+
+  .ck.ck-content > :last-child {
+    border-bottom: 3px dotted red;
+  }
+
+  body {
+    font-family: $cp-fontFamily;
+    font-size: 16px;
+    line-height: 20px;
   }
 }

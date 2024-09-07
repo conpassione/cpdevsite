@@ -17,6 +17,7 @@
                 <source>The pictures can have Title added.</source>
                 <target>Die Bilder können mit einem anklickbaren Titeln versehen werden.</target>
             </trans-unit>
+
             <trans-unit id="tceform.header_layout.labelh2" resname="tceform.header_layout.labelh2">
             	<source>Header</source>
             	<target>Haupttitel</target>
@@ -45,6 +46,7 @@
             	<source>Left bottom</source>
             	<target>Neben dem Text untenlinks</target>
             </trans-unit>
+
             <trans-unit id="tceform.page.layout.label" resname="tceform.page.layout.label">
             	<source>Page-Layout</source>
 				<target>Seitenlayout</target>
@@ -58,7 +60,6 @@
              	<target>conPassione</target>
              </trans-unit>
 
-
             <trans-unit id="rte.heading.labelparagraph" resname="rte.heading.labelparagraph">
             	<source>Paragraph</source>
             	<target>Absatz</target>
@@ -69,47 +70,56 @@
 			</trans-unit>
 			<trans-unit id="rte.blockstyle.labelquote" resname="rte.blockstyle.labelquote">
 				<source>Quote / Citation</source>
-				<target>Erwähnung / Zitat</target>
+				<target>Zitat</target>
 			</trans-unit>
 			<trans-unit id="rte.blockstyle.labelcodeblock" resname="rte.blockstyle.labelcodeblock">
 				<source>Code Block</source>
 				<target>Code Block</target>
 			</trans-unit>
-			<trans-unit id="rte.inlinestyle.labelsuccess" resname="rte.inlinestyle.labelsuccess">
-				<source>Success</source>
-				<target>Erfolg</target>
+			<trans-unit id="rte.inlinestyle.labelaccent" resname="rte.inlinestyle.labelaccent">
+				<source>Accent</source>
+				<target>Hervorhebung</target>
 			</trans-unit>
-			<trans-unit id="rte.inlinestyle.labelwarning" resname="rte.inlinestyle.labelwarning">
-				<source>Warning</source>
-				<target>Warnung</target>
-			</trans-unit>
-			<trans-unit id="rte.inlinestyles.labelerror" resname="rte.inlinestyles.labelerror">
-				<source>Error</source>
-				<target>Fehler</target>
-			</trans-unit>
+
 			<trans-unit id="rte.classes.internal-link" resname="rte.classes.internal-link">
 				<source>Internal</source>
 				<target>Interner</target>
+			</trans-unit>
+			<trans-unit id="rte.classes.internal-link-icon" resname="rte.classes.internal-link-icon">
+				<source>Internal with Icon</source>
+				<target>Interner mit Icon</target>
 			</trans-unit>
 			<trans-unit id="rte.classes.download-link" resname="rte.classes.download-link">
 				<source>Download</source>
 				<target>Download</target>
 			</trans-unit>
+			<trans-unit id="rte.classes.download-link-icon" resname="rte.classes.download-link-icon">
+				<source>Download with Icon</source>
+				<target>Download mit Icon</target>
+			</trans-unit>
 			<trans-unit id="rte.classes.external-link" resname="rte.classes.external-link">
 				<source>External</source>
 				<target>Externer</target>
+			</trans-unit>
+			<trans-unit id="rte.classes.external-link-icon" resname="rte.classes.external-link-icon">
+				<source>External with Icon</source>
+				<target>Externer mit Icon</target>
 			</trans-unit>
 			<trans-unit id="rte.classes.mail-link" resname="rte.classes.mail-link">
 				<source>eMail</source>
 				<target>E-Mail</target>
 			</trans-unit>
-			<trans-unit id="rte.classes.mail-icon-link" resname="rte.classes.mail-icon-link">
+			<trans-unit id="rte.classes.mail-link-icon" resname="rte.classes.mail-link-icon">
 				<source>eMail with icon</source>
 				<target>E-Mail mit Icon</target>
 			</trans-unit>
-			<trans-unit id="rte.classes.fon-link" resname="rte.classes.fon-link">
+			<trans-unit id="rte.classes.phone-link" resname="rte.classes.phone-link">
 				<source>Telephone</source>
 				<target>Telefon</target>
+			</trans-unit>
+			<trans-unit id="rte.classes.phone-link-icon" resname="rte.classes.phone-link-icon">
+				<source>Telephone with Icon</source>
+				<target>Telefon mit Icon</target>
 			</trans-unit>
             <trans-unit id="rte.heading.labelpre" resname="rte.heading.labelpre">
             	<source>Preformatted text</source>

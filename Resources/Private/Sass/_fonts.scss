@@ -1,13 +1,14 @@
-/*doc
+/* doc
  * cp_base:fonts
 */
 
 /* fonts */
-//@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400,wght@700&family=Public+Sans:wght@100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400,wght@700&family=Public+Sans:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
 @font-face {
-  font-family: 'LigatureSymbols';
+  font-family: LigatureSymbols;
   src:         url('../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.eot');
   src:         url('../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.eot?#iefix') format('embedded-opentype'),
                url('../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.woff') format('woff'),
@@ -18,22 +19,16 @@
   font-style:  normal;
 }
 
-$cp-fontFamily:         'Ubuntu', sans-serif;
-$cp-fontFamily--serif:  'Ubuntu', serif;
-$cp-fontFamily--h:      'Ubuntu', sans-serif;
-$cp-fontFamily--nav:    $cp-fontFamily;
-$cp-fontFamily--mono:   'Ubuntu', sans-serif;
+$cp-fontFamily: 'Ubuntu', sans-serif;
+$cp-fontFamily--serif: 'Ubuntu', serif;
+$cp-fontFamily--h: 'Ubuntu', sans-serif;
+$cp-fontFamily--nav: 'Ubuntu', sans-serif;
+$cp-fontFamily--mono: 'Ubuntu', sans-serif;
 $cp-fontFamily--symbol: 'LigatureSymbols';
-
-* {
-  text-rendering: optimizeLegibility;
-}
 
 %cp-symbol {
   font-family:                   $cp-fontFamily--symbol;
-  text-rendering:                optimizeLegibility;
+  text-rendering:                optimizelegibility;
   -webkit-font-smoothing:        antialiased;
-  -webkit-font-feature-settings: 'liga' 1, 'dlig' 1;
-  -moz-font-feature-settings:    'liga' 1, 'dlig' 1;
   font-feature-settings:         'liga' 1, 'dlig' 1;
 }

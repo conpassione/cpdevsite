@@ -1,21 +1,12 @@
 buttons:
   link:
-    options:
-      removeItems: 'folder'
-    queryParametersSelector:
-      enabled: true
-    relAttribute:
-      enabled: true
+
     properties:
       class:
         required: true
         allowedClasses:
-          - internal-link
-          - download-link
-          - external-link
-          - mail-link
-          - mail-icon-link
-          - fon-link
+
+internal-link, download-link, external-link, mail-link, - mail-icon-link, fon-link
     page:
       properties:
         class:

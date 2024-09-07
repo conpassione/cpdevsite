@@ -7,10 +7,8 @@ version: 0.1.0-beta.2
         as a starter for any project.
 
 category: file
-*/
 
-
-/* @docs
+@docs
 label: Box Sizing
 
     note: |
@@ -34,11 +32,11 @@ label: Line Sizing
     - https://drafts.csswg.org/css-inline-3/#line-sizing-property
 
 category: global
-*/
+*
 html {
   line-sizing: normal;
 }
-
+*/
 
 /* @docs
 label: Body Margins
@@ -269,8 +267,8 @@ label: Checkbox & Radio Inputs
 
 category: legacy browsers
 */
-[type='checkbox'],
-[type='radio'] {
+[type= checkbox],
+[type=radio] {
   box-sizing: border-box;
   padding:    0;
 }

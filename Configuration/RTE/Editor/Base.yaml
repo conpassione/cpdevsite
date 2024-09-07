@@ -5,11 +5,10 @@ editor:
     # the CSS file to be used inside the editor
     contentsCss:
       - 'EXT:rte_ckeditor/Resources/Public/Css/contents.css'
-      #- 'EXT:cpdevsite/Resources/Public/Css/rte.css'
-    height: 300
+    height: 400
     width: 'auto'
     ui:
       poweredBy:
         position: 'inside'
-        side: 'right'
-        label: ''
+        side: 'left'
+        label: 'conPassione gmbh'
