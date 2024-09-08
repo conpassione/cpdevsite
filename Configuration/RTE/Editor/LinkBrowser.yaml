@@ -35,7 +35,7 @@ classesAnchor:
   - { class: "folder-link-icon", type: "folder", target: "_blank" }
   - { class: "external-link", type: "url", target: "_blank" }
   - { class: "external-link-icon", type: "url", target: "_blank" }
-  - { class: "phone-link", type: '"telephone', target: "_blank" }
+  - { class: "phone-link", type: "telephone", target: "_blank" }
   - { class: "phone-link-icon", type: "telephone", target: "_blank" }
   - { class: "mail-link", type: "email",target: "_blank" }
   - { class: "mail-link-icon", type: "email", target: "_blank" }

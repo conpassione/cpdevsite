@@ -10,7 +10,7 @@ editor:
     style:
       definitions:
         # block level styles
-        - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelquote', element: 'blockquote', classes: ['cp-blockquote']  }
+        #- { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelquote', element: 'blockquote', classes: ['cp-blockquote']  }
         # Inline styles
         - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.inlinestyle.labelaccent', element: 'span', classes: ['cp-accent'] }
 
@@ -21,4 +21,4 @@ editor:
         - { model: 'quote', view: 'blockquote', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelquote' }
         - { model: 'heading3', view: 'h3', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh3' }
         - { model: 'heading4', view: 'h4', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh4' }
-        - { model: 'pre', view: 'pre', title: 'Fancy-pre', classes: ['fancy'] }
+        #- { model: 'pre', view: 'pre', title: 'Fancy-pre', classes: ['fancy'] }

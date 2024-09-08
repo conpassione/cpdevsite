@@ -28,7 +28,7 @@ editor:
         - '|'
         - bold
         - italic
-        - underline
+        #- underline
         - softhyphen
         - '|'
         - bulletedList
