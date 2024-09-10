@@ -4,7 +4,6 @@ imports:
   - { resource: 'EXT:rte-ckeditor/Configuration/RTE/Processing.yaml' }
   - { resource: 'EXT:rte-ckeditor/Configuration/RTE/Editor/Base.yaml' }
   - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml' }
-  #- { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/LinkBrowser.yaml' }
   - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Base.yaml' }
   - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Plugins.yaml' }
   - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/LinkBrowser.yaml' }
@@ -16,6 +15,8 @@ imports:
 # For complete documentation see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
 editor:
   config:
+    # the CSS file to be used inside the editor
+    # contentsCss: 'EXT:cpdevsite/Resources/Public/Css/Rte.css'
     toolbar:
       items:
         - style

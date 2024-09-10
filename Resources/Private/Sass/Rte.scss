@@ -1,7 +1,33 @@
 /* import utilities */
 
-@use 'fonts' as *;
+/* @use 'fonts' as *;
 @use 'constants.base' as *;
 @use './utilities' as *;
 @use 'constants.additional' as *;
-@use 'ck_editor';
+@use 'ck_editor'; */
+
+blockquote {
+  font-size: 3rem;
+  border-style: solid;
+  border-color: #0000ff;
+  border-width: 10px;
+}
+
+.ck-content blockquote {
+  font-size: 3rem;
+  border-style: solid;
+  border-color: #ff3300;
+  border-width: 10px;
+}
+
+.cp-accent {
+  color: #824493;
+}
+
+.cptest1 {
+  background-color: #006dbe;
+}
+
+.cptest2 {
+  background-color: #c3f6a6;
+}

@@ -11,13 +11,15 @@ editor:
       definitions:
         # block level styles
         #- { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelquote', element: 'blockquote', classes: ['cp-blockquote']  }
+        - { name: 'Test1', element: 'p', classes: ['cptest1']  }
+        - { name: 'Test2', element: 'p', classes: ['cptest2']  }
         # Inline styles
         - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.inlinestyle.labelaccent', element: 'span', classes: ['cp-accent'] }
 
     heading:
       options:
-        - { model: 'paragraph', view: 'p', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.heading.labelparagraph' }
-        #- { model: 'formatted', view: 'pre', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.heading.labelpre' }
+        - { model: 'paragraph', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.heading.labelparagraph' }
+          #- { model: 'formatted', view: 'pre', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.heading.labelpre' }
         - { model: 'quote', view: 'blockquote', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelquote' }
         - { model: 'heading3', view: 'h3', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh3' }
         - { model: 'heading4', view: 'h4', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh4' }
