@@ -10,6 +10,7 @@ imports:
   - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/CodeBlock.yaml' }
   - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Styles.yaml' }
   - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Languages.yaml' }
+  - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Processing.yaml' }
 
 # Add configuration for the editor
 # For complete documentation see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
@@ -34,6 +35,7 @@ editor:
         - '|'
         - bulletedList
         - numberedList
+        - blockQuote
         - '|'
         - alignment
         - '|'

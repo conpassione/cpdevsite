@@ -11,6 +11,7 @@ editor:
         { language: 'php', label: 'PHP' },
         { language: 'typoscript', label: 'TypoScript' }
       ]
-  style:
-    definitions:
-      - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelcodeblock', element: 'code', classes: ['codeblock'],  }
+    style:
+      definitions:
+        #- { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelcodeblock', element: 'code', classes: ['codeblock'],  }
+        - { name: 'KBD', element: 'kbd', classes: ['cp-kbd'] }
