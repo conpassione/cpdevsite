@@ -29,11 +29,12 @@ return [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:cpdevsite/Resources/Public/Icons/content-beside-text-img-right-bottom.svg',
     ],
-/*  Im BackendLayout wird das Icon direkt vom File geladen, damit das Icon grösser dargestellt werden kann
-    'tx-conpassione-template-simple-site' => [
+
+//  Im BackendLayout wird das Icon direkt vom File geladen, damit das Icon grösser dargestellt werden kann
+    'tx-conpassione-backendlayout-simplepage' => [
         'provider' => SvgIconProvider::class,
-        'source' => 'EXT:cpdevsite/Resources/Public/Icons/template-simple-page.svg',
-    ],*/
+        'source' => 'EXT:cpdevsite/Resources/Public/Icons/backendlayout-simplepage.svg',
+    ],
 
 
 /*    'tx-myext-bitmapicon' => [

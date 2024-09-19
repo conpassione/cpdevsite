@@ -7,7 +7,6 @@ imports:
   - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Base.yaml' }
   - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Plugins.yaml' }
   - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/LinkBrowser.yaml' }
-  - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/CodeBlock.yaml' }
   - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Styles.yaml' }
   - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Languages.yaml' }
   - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Processing.yaml' }
@@ -35,7 +34,7 @@ editor:
         - '|'
         - bulletedList
         - numberedList
-        - blockQuote
+        #- blockQuote
         - '|'
         - alignment
         - '|'
@@ -54,7 +53,7 @@ editor:
 
     alignment:
       options:
-        - { name: 'links', className: 'text-start' }
+        - { name: 'left', className: 'text-start' }
         - { name: 'center', className: 'text-center' }
         - { name: 'right', className: 'text-end' }
         - { name: 'justify', className: 'text-justify' }

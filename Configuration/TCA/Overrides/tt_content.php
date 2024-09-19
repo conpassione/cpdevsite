@@ -5,7 +5,7 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 defined('TYPO3') or die();
 
-ExtensionManagementUtility::addTcaSelectItemGroup (
+/*ExtensionManagementUtility::addTcaSelectItemGroup (
     'tt_content',
     'CType',
     'sliders',
@@ -25,4 +25,4 @@ ExtensionManagementUtility::addTcaSelectItem(
     ],
     'text',
     'after'
-);
+);*/

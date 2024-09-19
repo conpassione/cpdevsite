@@ -7,10 +7,9 @@
 mod {
   web_layout {
 		BackendLayouts {
-			SimpleSite {
-				title =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:template.simple.site.title
-        icon = EXT:cpdevsite/Resources/Public/Icons/template-simple-page.svg
-        #icon = tx-conpassione-template-simple-site
+			SimplePage {
+				title =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.simplepage.title
+        icon = tx-conpassione-backendlayout-simplepage
         config {
           backend_layout {
             colCount = 1
@@ -19,7 +18,7 @@ mod {
               1 {
                 columns {
                   1 {
-                    name =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:template.simple.site.col.1
+                    name =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.col1
                     colPos = 0
                     #allowed {
                     #	CType = text, textpic

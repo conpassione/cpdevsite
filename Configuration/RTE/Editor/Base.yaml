@@ -9,5 +9,5 @@ editor:
     ui:
       poweredBy:
         position: 'inside'
-        side: 'left'
+        side: 'right'
         label: 'conPassione gmbh'

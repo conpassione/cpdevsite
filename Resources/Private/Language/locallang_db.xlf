@@ -1,107 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" datatype="plaintext"
-    original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" date="2024-03-18T18:20:51Z"
-    product-name="cpdevsite">
-        <header/>
+    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2024-09-19T13:35:12+02:00">
+        <header></header>
         <body>
-            <trans-unit id="contentwizard.sliders.groupLabel" resname="contentwizard.sliders.groupLabel">
-                <source>Sliders</source>
+            <trans-unit id="backendlayout.col1" resname="backendlayout.col1">
+                <source>Content</source>
             </trans-unit>
-            <trans-unit id="contentwizard.sliders.slider1.label" resname="contentwizard.sliders.slider1.label">
-                <source>Sliders with caption</source>
+            <trans-unit id="backendlayout.simplepage.title" resname="backendlayout.simplepage.title">
+                <source>SimpleSite</source>
             </trans-unit>
-            <trans-unit id="contentwizard.sliders.slider1.label" resname="contentwizard.sliders.slider1.description">
-                <source>The pictures can have Title added.</source>
+            <trans-unit id="rte.codeblock.kbd" resname="rte.codeblock.kbd">
+                <source>Keystroke</source>
             </trans-unit>
-
+            <trans-unit id="rte.linkbrowser.fb-link--icon" resname="rte.linkbrowser.fb-link--icon">
+                <source>Marked link to FaceBook</source>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.file-link" resname="rte.linkbrowser.file-link">
+                <source>Link to File</source>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.file-link--icon" resname="rte.linkbrowser.file-link--icon">
+                <source>Marked link to File</source>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.folder-link" resname="rte.linkbrowser.folder-link">
+                <source>Link to Folder</source>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.folder-link--icon" resname="rte.linkbrowser.folder-link--icon">
+                <source>Marked link to Folder</source>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.insta-link--icon" resname="rte.linkbrowser.insta-link--icon">
+                <source>Marked link to Instagram</source>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.mail-link" resname="rte.linkbrowser.mail-link">
+                <source>Link to eMail</source>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.mail-link--icon" resname="rte.linkbrowser.mail-link--icon">
+                <source>Marked link to eMail</source>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.page-link" resname="rte.linkbrowser.page-link">
+                <source>Link to Page</source>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.page-link--icon" resname="rte.linkbrowser.page-link--icon">
+                <source>Marked link to Page</source>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.phone-link" resname="rte.linkbrowser.phone-link">
+                <source>Link to Phonenumber</source>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.phone-link--icon" resname="rte.linkbrowser.phone-link--icon">
+                <source>Marked link to Phonenumber</source>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.url-link" resname="rte.linkbrowser.url-link">
+                <source>Link to URL</source>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.url-link--icon" resname="rte.linkbrowser.url-link--icon">
+                <source>Marked link to URL</source>
+            </trans-unit>
+            <trans-unit id="rte.style.blockquote" resname="rte.style.blockquote">
+                <source>Blockquote</source>
+            </trans-unit>
+            <trans-unit id="rte.style.paragraph" resname="rte.style.paragraph">
+                <source>Paragraph</source>
+            </trans-unit>
+            <trans-unit id="rte.toolbar.items.table" resname="rte.toolbar.items.table">
+                <source>Table</source>
+            </trans-unit>
+            <trans-unit id="tceform.header_layout.labelh1" resname="tceform.header_layout.labelh1">
+                <source>Header H1</source>
+            </trans-unit>
             <trans-unit id="tceform.header_layout.labelh2" resname="tceform.header_layout.labelh2">
-            	<source>Header</source>
+                <source>Header H2</source>
             </trans-unit>
             <trans-unit id="tceform.header_layout.labelh3" resname="tceform.header_layout.labelh3">
-            	<source>Title</source>
+                <source>Title H3</source>
             </trans-unit>
             <trans-unit id="tceform.header_layout.labelh4" resname="tceform.header_layout.labelh4">
-            	<source>Subtitle</source>
-            </trans-unit>
-            <trans-unit id="tceform.imageorient.rightmiddle" resname="tceform.imageorient.rightmiddle">
-            	<source>Right middle</source>
-            </trans-unit>
-            <trans-unit id="tceform.imageorient.leftmiddle" resname="tceform.imageorient.leftmiddle">
-            	<source>Left middle</source>
-            </trans-unit>
-            <trans-unit id="tceform.imageorient.rightbottom" resname="tceform.imageorient.rightbottom">
-            	<source>Right bottom</source>
+                <source>Subtitle H4</source>
             </trans-unit>
             <trans-unit id="tceform.imageorient.leftbottom" resname="tceform.imageorient.leftbottom">
-            	<source>Left bottom</source>
+                <source>bottom left</source>
             </trans-unit>
-
-            <trans-unit id="tceform.page.layout.label" resname="tceform.page.layout.label">
-            	<source>Page-Layout</source>
+            <trans-unit id="tceform.imageorient.leftmiddle" resname="tceform.imageorient.leftmiddle">
+                <source>left middle</source>
+            </trans-unit>
+            <trans-unit id="tceform.imageorient.rightbottom" resname="tceform.imageorient.rightbottom">
+                <source>bottom right</source>
+            </trans-unit>
+            <trans-unit id="tceform.imageorient.rightmiddle" resname="tceform.imageorient.rightmiddle">
+                <source>right middle</source>
             </trans-unit>
             <trans-unit id="tceform.page.layout.0" resname="tceform.page.layout.0">
-            	<source>Default</source>
+                <source>Default</source>
             </trans-unit>
-            <trans-unit id="tceform.page.layout.1" resname="tceform.page.layout.1">
-            	<source>conPassione</source>
-            </trans-unit>
-
-            <trans-unit id="rte.heading.labelparagraph" resname="rte.heading.labelparagraph">
-            	<source>Paragraph</source>
-            </trans-unit>
-			<trans-unit id="rte.toolbar.items.table" resname="rte.toolbar.items.table">
-				<source>Table functions</source>
-			</trans-unit>
-			<trans-unit id="rte.blockstyle.labelquote" resname="rte.blockstyle.labelquote">
-				<source>Quote / Citation</source>
-			</trans-unit>
-			<trans-unit id="rte.blockstyle.labelcodeblock" resname="rte.blockstyle.labelcodeblock">
-				<source>Code Block</source>
-			</trans-unit>
-			<trans-unit id="rte.inlinestyle.labelaccent" resname="rte.inlinestyle.labelaccent">
-				<source>Accent</source>
-			</trans-unit>
-
-			<trans-unit id="rte.classes.internal-link" resname="rte.classes.internal-link">
-				<source>Internal</source>
-			</trans-unit>
-			<trans-unit id="rte.classes.internal-link-icon" resname="rte.classes.internal-link-icon">
-				<source>Internal with Icon</source>
-			</trans-unit>
-			<trans-unit id="rte.classes.download-link" resname="rte.classes.download-link">
-				<source>Download</source>
-			</trans-unit>
-			<trans-unit id="rte.classes.download-link-icon" resname="rte.classes.download-link-icon">
-				<source>Download with Icon</source>
-			</trans-unit>
-			<trans-unit id="rte.classes.external-link" resname="rte.classes.external-link">
-				<source>External</source>
-			</trans-unit>
-			<trans-unit id="rte.classes.external-link-icon" resname="rte.classes.external-link-icon">
-				<source>External with Icon</source>
-			</trans-unit>
-			<trans-unit id="rte.classes.mail-link" resname="rte.classes.mail-link">
-				<source>eMail</source>
-			</trans-unit>
-			<trans-unit id="rte.classes.mail-link-icon" resname="rte.classes.mail-link-icon">
-				<source>eMail with Icon</source>
-			</trans-unit>
-			<trans-unit id="rte.classes.phone-link" resname="rte.classes.phone-link">
-				<source>Telephone</source>
-			</trans-unit>
-			<trans-unit id="rte.classes.phone-link-icon" resname="rte.classes.phone-link-icon">
-				<source>Telephone with Icon</source>
-			</trans-unit>
-            <trans-unit id="rte.heading.labelpre" resname="rte.heading.labelpre">
-            	<source>Paragraph</source>
-            </trans-unit>
-
-            <trans-unit id="template.simple.site.title" resname="template.simple.site.title">
-            	<source>SimpleSite</source>
-            </trans-unit>
-            <trans-unit id="template.simple.site.col.1" resname="template.simple.site.col.1">
-            	<source>Content</source>
+            <trans-unit id="tceform.page.layout.label" resname="tceform.page.layout.label">
+                <source>Pagelayout</source>
             </trans-unit>
         </body>
     </file>

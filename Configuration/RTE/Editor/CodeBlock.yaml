@@ -14,4 +14,4 @@ editor:
     style:
       definitions:
         #- { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.blockstyle.labelcodeblock', element: 'code', classes: ['codeblock'],  }
-        - { name: 'KBD', element: 'kbd', classes: ['cp-kbd'] }
+        - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.codeblock.kbd', element: 'kbd', classes: ['cp-kbd'] }

@@ -1,0 +1,5 @@
+# CKE-Editor CpBase-Configuration
+# Load default processing options
+imports:
+  - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/CodeBlock.yaml' }
+  - { resource: 'EXT:cpdevsite/Configuration/RTE/RTEsettings.yaml' }
