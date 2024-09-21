@@ -1,4 +1,10 @@
 @use '../atoms/color' as *;
+@use '../atoms/fonts' as *;
+
+:root {
+  --code-bg: var(--clr-lightgray);
+  --code-bc: var(--clr-dark);
+}
 
 p {
   max-width: 62ch;
@@ -6,23 +12,16 @@ p {
   orphans: inherit;
 }
 
-code {
+pre:has(code),
+pre[data-language] {
   padding: 1rem;
-  background-color: var(--code-bg, --clr-lightgray);
-  border: 1px solid var(--code-bc, --clr-dark);
+  background-color: var(--code-bg);
+  border: 1px solid var(--code-bc);
+  font-family: #{$cp-fontFamily--mono};
 }
 
-.plaintext {
+pre:has(.cbcss),
+pre[data-language="CSS"] {
+  --code-bg: steelblue;
   --code-bc: red;
-}
-
-.bash,
-.php,
-.typoscript {
-  --code-bc: blue;
-}
-
-.html,
-.css {
-  --code-bc: yellow;
 }

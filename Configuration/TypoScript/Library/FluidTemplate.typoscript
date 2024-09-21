@@ -1,6 +1,6 @@
 page = PAGE
 page.typeNum = 0
-
+page.includeCSS.cp_conpassione = EXT:cpdevsite/Resources/Public/Css/Layout.css
 page.10 = FLUIDTEMPLATE
 page.10 {
   templateName = TEXT
