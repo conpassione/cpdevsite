@@ -5,7 +5,7 @@
  * und für rem anstatt em
  */
 
-@use '../constants.base' as *;
+@use '../atoms' as *;
 
 .ce-table td,
 .ce-table th {
@@ -163,7 +163,8 @@
 }
 
 //* Anpassung padding und Umsetzung in rem*/
-.ce-table th, .ce-table td {
+.ce-table th,
+.ce-table td {
   padding:        .25rem .5rem;
   vertical-align: top;
 }
@@ -172,7 +173,8 @@
   border-bottom: 2px solid $cp-color--dark;
 }
 
-.ce-table th, .ce-table td {
+.ce-table th,
+.ce-table td {
   border-top: 1px solid $cp-color--dark;
 }
 
@@ -180,7 +182,8 @@
   background-color: rgba(0, 0, 0, .05);
 }
 
-.ce-table-bordered th, .ce-table-bordered td {
+.ce-table-bordered th,
+.ce-table-bordered td {
   border: 1px solid $cp-color;
 }
 

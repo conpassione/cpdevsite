@@ -1,10 +1,9 @@
 /* import utilities */
 
-/* @use 'fonts' as *;
-@use 'constants.base' as *;
-@use './utilities' as *;
-@use 'constants.additional' as *;
-@use 'ck_editor'; */
+@use 'atoms' as *;
+@use 'utilities' as *;
+//@use 'constants.additional' as *;
+@use 'ck_editor';
 
 blockquote {
   font-size: 3rem;
@@ -22,12 +21,4 @@ blockquote {
 
 .cp-accent {
   color: #824493;
-}
-
-.cptest1 {
-  background-color: #006dbe;
-}
-
-.cptest2 {
-  background-color: #c3f6a6;
 }

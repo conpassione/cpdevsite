@@ -2,8 +2,8 @@
  * cp_base:ck-editor
  */
 
-@use 'constants.base' as *;
-@use 'fonts' as *;
+@use 'atoms/color' as *;
+@use 'atoms/fonts' as *;
 
 @layer ckeditor {
   html {
@@ -24,7 +24,7 @@
         position:     relative;
 
         &::before {
-          background-color: $cp-color--custom1;
+          background-color: var(--clr-brand1);
           content:          '';
           display:          block;
           height:           .5rem;

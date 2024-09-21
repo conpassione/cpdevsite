@@ -4,12 +4,12 @@ editor:
       - { module: '@ckeditor/ckeditor5-code-block', exports: [ 'CodeBlock' ] }
     codeBlock:
       languages: [
-        { language: 'plaintext', label: 'Text', class: '' },
-        { language: 'bash', label: 'Bash' },
-        { language: 'html', label: 'HTML' },
-        { language: 'css', label: 'CSS' },
-        { language: 'php', label: 'PHP' },
-        { language: 'typoscript', label: 'TypoScript' }
+        { language: 'plaintext', label: 'Text', class: 'cbplaintext' },
+        { language: 'bash', label: 'Bash', class: 'cbbash' },
+        { language: 'html', label: 'HTML', class: 'cbhtml' },
+        { language: 'css', label: 'CSS', class: 'cbcss' },
+        { language: 'php', label: 'PHP', class: 'cbphp' },
+        { language: 'typoscript', label: 'TypoScript', class: 'cbtyposcript' }
       ]
     style:
       definitions:

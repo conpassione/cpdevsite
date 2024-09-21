@@ -1,0 +1,28 @@
+@use '../atoms/color' as *;
+
+p {
+  max-width: 62ch;
+  text-wrap: pretty;
+  orphans: inherit;
+}
+
+code {
+  padding: 1rem;
+  background-color: var(--code-bg, --clr-lightgray);
+  border: 1px solid var(--code-bc, --clr-dark);
+}
+
+.plaintext {
+  --code-bc: red;
+}
+
+.bash,
+.php,
+.typoscript {
+  --code-bc: blue;
+}
+
+.html,
+.css {
+  --code-bc: yellow;
+}

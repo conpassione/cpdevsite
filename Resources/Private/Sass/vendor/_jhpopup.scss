@@ -1,9 +1,9 @@
-@use '../constants.base' as *;
-@use '../fonts' as *;
+@use '../atoms/color' as *;
+@use '../atoms/fonts' as *;
 
 /* additional, not originally from Magnific Popup CSS */
 .white-popup-block {
-  background: $cp-color--white;
+  background: var(--clr--white);
   padding:    20px 30px;
   text-align: left;
   max-width:  650px;
@@ -21,7 +21,7 @@
   z-index:    1042;
   overflow:   hidden;
   position:   fixed;
-  background: $cp-color--extralight;
+  background: var(--clr-extralight);
   opacity:    0.8;
 }
 

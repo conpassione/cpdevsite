@@ -1,46 +1,128 @@
 @charset "UTF-8";
-/* doc
- * cp_base:fonts
-*/
 /* fonts */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400,wght@700&family=Public+Sans:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
 @font-face {
-  font-family: LigatureSymbols;
-  src: url("../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.eot");
-  src: url("../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.eot?#iefix") format("embedded-opentype"), url("../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.woff") format("woff"), url("../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.ttf") format("truetype"), url("../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.svg#LigatureSymbols") format("svg");
-  src: url("../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.ttf") format("truetype");
+  font-family: "Ubuntu";
+  font-weight: 300;
+  src: url("../../../Public/Fonts/Ubuntu/ubuntu-l-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 300;
+  font-style: italic;
+  src: url("../../../Public/Fonts/Ubuntu/ubuntu-li-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  src: url("../../../Public/Fonts/Ubuntu/ubuntu-r-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../../../Public/Fonts/Ubuntu/ubuntu-ri-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 500;
+  src: url("../../../Public/Fonts/Ubuntu/ubuntu-m-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 500;
+  font-style: italic;
+  src: url("../../../Public/Fonts/Ubuntu/ubuntu-mi-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  src: url("../../../Public/Fonts/Ubuntu/ubuntu-b-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-style: italic;
+  src: url("../../../Public/Fonts/Ubuntu/ubuntu-bi-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "UbuntuCondensed";
+  font-weight: 400;
+  src: url("../../../Public/Fonts/Ubuntu/ubuntu-c-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "UbuntuMono";
+  font-weight: 400;
+  src: url("../../../Public/Fonts/Ubuntu/ubuntumono-r-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "LigatureSymbols";
+  src: url("../../../Public/Fonts/LigatureSymbols/ligaturesymbols-2.11-webfont.woff2") format("woff2"), url("../../../Public/Fonts/LigatureSymbols/LigatureSymbols-2.11.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 /* cp_base:constants */
 /* Baseline Colors */
-/* media brakepoints */
-/* Baseline
- * $cp-fontSize: min( 20px, (14px + max( 0, calc( ( 100vw - 480px ) * 6 / (1400 - 480)) ))); */
-/* siehe https://www.gridlover.net/try */
 :root {
-  --black: #c0c0c0;
-  --color: #343f3a;
-  --custom1: #809483;
-  --custom2: #824493;
-  --custom3: #ba7dff;
-  --custom4: #416a7f;
-  --dark: #333333;
-  --error: #f3a8bb;
-  --extralight: #ececec;
-  --gray: #666666;
-  --highlight: #416a7f;
-  --info: #a3bae7;
-  --lightgray: #cccccc;
-  --success: #c3f6a6;
-  --white: #ffffff;
+  --clr-black: oklch(0 0 0);
+  --clr-extradark: oklch(0.3 0 0);
+  --clr-dark: oklch(0.4 0 0);
+  --clr-gray: oklch(0.6 0 0);
+  --clr-lightgray: oklch(0.75 0 0);
+  --clr-extralight: oklch(0.9 0 0);
+  --clr-white: oklch(1 0 0);
+  --clr-success: oklch(0.78 0.12 152);
+  --clr-info: oklch(0.78 0.12 222);
+  --clr-error: oklch(0.78 0.12 0);
+  --clr-color: oklch(0.3 0 0);
+  --clr-brand1: oklch(0.646 0.034 149.54);
+  --clr-brand2: oklch(0.496 0.137 318.633);
+  --clr-brand3: oklch(0.706 0.189 303.591);
+  --clr-brand4: oklch(0.503 0.057 231.771);
+  --highlight: oklch(0.503 0.057 231.771);
 }
 
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
-/**
+/* mediaqueries */
+/* media brakepoints */
+/* metrics */
+/* Baseline
+$cp-fontsize: 16px;
+
+$cp-scaleFactor:       1.15; /* siehe https://www.gridlover.net/try */
+p {
+  max-width: 62ch;
+  text-wrap: pretty;
+  orphans: inherit;
+}
+
+code {
+  padding: 1rem;
+  background-color: var(--code-bg, --clr-lightgray);
+  border: 1px solid var(--code-bc, --clr-dark);
+}
+
+.plaintext {
+  --code-bc: red;
+}
+
+.bash,
+.php,
+.typoscript {
+  --code-bc: blue;
+}
+
+.html,
+.css {
+  --code-bc: yellow;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
+ * Document
+   ==========================================================================
+ *
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
@@ -50,8 +132,8 @@ html {
 }
 
 /* Sections
-   ========================================================================== */
-/**
+   ==========================================================================
+ *
  * Remove the margin in all browsers.
  */
 body {
@@ -75,8 +157,8 @@ h1 {
 }
 
 /* Grouping content
-   ========================================================================== */
-/**
+   ==========================================================================
+ *
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
@@ -96,8 +178,8 @@ pre {
 }
 
 /* Text-level semantics
-   ========================================================================== */
-/**
+   ==========================================================================
+ *
  * Remove the gray background on active links in IE 10.
  */
 a {
@@ -160,8 +242,8 @@ sup {
 }
 
 /* Embedded content
-   ========================================================================== */
-/**
+   ==========================================================================
+ *
  * Remove the border on images inside links in IE 10.
  */
 img {
@@ -169,8 +251,8 @@ img {
 }
 
 /* Forms
-   ========================================================================== */
-/**
+   ==========================================================================
+ *
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
  */
@@ -315,8 +397,8 @@ textarea {
 }
 
 /* Interactive
-   ========================================================================== */
-/*
+   ==========================================================================
+ *
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
 details {
@@ -331,8 +413,8 @@ summary {
 }
 
 /* Misc
-   ========================================================================== */
-/**
+   ==========================================================================
+ *
  * Add the correct display in IE 10+.
  */
 template {
@@ -532,25 +614,28 @@ template {
   width: 100%;
 }
 
-.ce-table th, .ce-table td {
+.ce-table th,
+.ce-table td {
   padding: 0.25rem 0.5rem;
   vertical-align: top;
 }
 
 .ce-table thead th {
-  border-bottom: 2px solid #333333;
+  border-bottom: 2px solid oklch(0.4 0 0);
 }
 
-.ce-table th, .ce-table td {
-  border-top: 1px solid #333333;
+.ce-table th,
+.ce-table td {
+  border-top: 1px solid oklch(0.4 0 0);
 }
 
 .ce-table-striped tbody tr:nth-of-type(odd) {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.ce-table-bordered th, .ce-table-bordered td {
-  border: 1px solid #343f3a;
+.ce-table-bordered th,
+.ce-table-bordered td {
+  border: 1px solid oklch(0.3 0 0);
 }
 
 .frame-space-before-extra-small {
@@ -619,19 +704,5 @@ template {
 .frame-indent-right {
   margin-right: 33%;
 }
-
-/* cp_base:constants.additional */
-/* Font sizes */
-/* layout + template (page) */
-/* heading */
-/* link */
-/* border  */
-/* Button primary */
-/* Button secondary */
-/* Button disabled */
-/* Accordion-Button */
-/* form colors */
-/* navigation colors
- * Navigation Button */
 
 /*# sourceMappingURL=Layout.css.map */
