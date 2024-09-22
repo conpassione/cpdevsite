@@ -1,0 +1,4 @@
+name: conpassione/cpdevsite
+label: conPassione DEVxxx Site
+dependencies:
+  - typo3/fluid-styled-content

@@ -80,4 +80,4 @@ routes:
     route: robots.txt
     type: staticText
     content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3conf/\r\nSitemap: https://cpdevsite.ddev.site/sitemap.xml\r\n"
-websiteTitle: ''
+websiteTitle: 'conPassione Developeing'

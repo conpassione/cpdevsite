@@ -1,0 +1,7 @@
+
+page.10 = PAGEVIEW
+page.10 {
+  paths {
+    10 = EXT:cpdevsite/Resources/Private/Templates/
+  }
+}

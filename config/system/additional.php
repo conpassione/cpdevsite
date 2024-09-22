@@ -38,7 +38,7 @@ $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive(
 
         // This GFX configuration allows processing by installed ImageMagick 6
         'GFX' => [
-            'processor' => 'ImageMagick',
+            'processor' => 'GraphicsMagick',
             'processor_path' => '/usr/bin/',
             'processor_path_lzw' => '/usr/bin/',
         ],

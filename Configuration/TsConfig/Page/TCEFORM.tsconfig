@@ -14,15 +14,20 @@ TCEFORM.pages {
 
   #TAB-Erscheinungsbild
   layout {
-    disabled = 1
+    disabled = 0
     label = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.label
-    removeItems = 2,3
+    disableNoMatchingValueElement = 1
+    removeItems = 1,2,3
     altLabels.0 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.0
-    altLabels.1 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.simplepage.title
   }
-  #backend_layout {}
+  backend_layout {
+    disabled = 0
+    removeItems = -1
+    disableNoMatchingValueElement = 1
+  }
   backend_layout_next_level {
     disabled = 1
+    disableNoMatchingValueElement = 1
   }
   #TAB-Verhalten
   php_tree_stop.disabled = 1
@@ -43,12 +48,12 @@ TCEFORM.pages {
     #TAB-Metadaten
     #TAB-Erscheinungsbild
     #TAB-Verhalten
-    module.disabled = 1
-    is_siteroot.disabled = 1
+    module.disabled = 0
+    is_siteroot.disabled = 0
     #TAB-Ressourcen
     #TAB-Sprache
     #TAB-Zugriff
-    editlock.disabled = 1
+    editlock.disabled = 0
     #TAB-Kategorien
     #TAB-Hinweis
   }
@@ -56,8 +61,8 @@ TCEFORM.pages {
 
 
 #[backend.user.isAdmin]
-TCEFORM.tt_content.CType.removeItems:=addToList(bullets, textpic, table, upload)
-TCEFORM.tt_content.CType.removeItems:=addToList(html, div)
+#TCEFORM.tt_content.CType.removeItems:=addToList(bullets, textpic, table, upload)
+#TCEFORM.tt_content.CType.removeItems:=addToList(html, div)
 #[end]
 
 # Eigenschaften der CE-Elemente

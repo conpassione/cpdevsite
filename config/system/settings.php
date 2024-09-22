@@ -28,16 +28,20 @@ return [
     'EXTENSIONS' => [
         'backend' => [
             'backendFavicon' => '',
-            'backendLogo' => 'EXT:cpdevsite/Resources/Public/Images/alfabeta.svg',
+            'backendLogo' => 'cpdevsite',
             'loginBackgroundImage' => 'EXT:cpdevsite/Resources/Public/Images/bernesealps.png',
-            'loginFootnote' => '(c) by conPassione gmbh',
-            'loginHighlightColor' => '',
-            'loginLogo' => 'EXT:cpdevsite/Resources/Public/Images/logo_cp_core_G35_black_mit.png',
+            'loginFootnote' => 'created by conPassione gmbh',
+            'loginHighlightColor' => '#009ee0',
+            'loginLogo' => 'cpdevsite',
             'loginLogoAlt' => 'conPassione gmbh',
         ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
+        ],
+        'redirects' => [
+            'showCheckIntegrityInfoInReports' => '1',
+            'showCheckIntegrityInfoInReportsSeconds' => '86400',
         ],
         'scheduler' => [
             'maxLifetime' => '1440',
@@ -52,8 +56,6 @@ return [
     ],
     'GFX' => [
         'processor' => 'GraphicsMagick',
-        'processor_allowTemporaryMasksAsPng' => false,
-        'processor_colorspace' => 'RGB',
         'processor_effects' => false,
         'processor_enabled' => true,
         'processor_path' => '/usr/bin/',
@@ -82,6 +84,7 @@ return [
         'transport_smtp_username' => '',
     ],
     'SYS' => [
+        'UTF8filesystem' => true,
         'caching' => [
             'cacheConfigurations' => [
                 'hash' => [
@@ -107,14 +110,20 @@ return [
                 ],
             ],
         ],
+        'defaultScheme' => 'https',
         'devIPmask' => '*',
         'displayErrors' => 1,
         'encryptionKey' => '3ed1a7e8559425f4fadf07bfaab2479fa5f9f6ba4d5e37ba773455cb4e3476f9beed40bd366d729acda4d27789ca0d58',
         'exceptionalErrors' => 12290,
+        'features' => [
+            'security.backend.htmlSanitizeRte' => true,
+        ],
+        'phpTimeZone' => 'Europe/Zurich',
         'sitename' => 'CPdev-cpdevsite',
+        'systemLocale' => 'de_CH.utf8',
         'systemMaintainers' => [
             1,
         ],
-        'trustedHostsPattern' => '.*.*',
+        'trustedHostsPattern' => 'cpdevsite.ddev.site',
     ],
 ];

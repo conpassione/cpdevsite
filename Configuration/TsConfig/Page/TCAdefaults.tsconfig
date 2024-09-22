@@ -9,8 +9,8 @@ TCAdefaults.pages {
   author_email = {$pages.author_email}
   #TAB-Erscheinungsbild
   layout = 0
-  backend_layout = pagets__SimplePage
-  backend_layout_next_level = pagets__SimplePage
+  #backend_layout = pagets__SimplePage
+  #backend_layout_next_level = pagets__SimplePage
   #TAB-Verhaltaen
   #TAB-Ressourcen
   #TAB-Sprache

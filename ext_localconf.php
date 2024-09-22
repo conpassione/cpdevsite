@@ -1,13 +1,11 @@
 <?php
 declare(strict_types=1);
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+// use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 // use TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider;
-use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
+// use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
 
 defined('TYPO3') or die();
-
-ExtensionManagementUtility::addUserTSConfig('@import "EXT:' . getenv('TYPO3_EXT_IDENTIFIER') . '/Configuration/TsConfig/User/user.tsconfig"');
 
 // CK-Editor Konfiguration laden
 if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets'][getenv('TYPO3_EXT_IDENTIFIER')])) {
