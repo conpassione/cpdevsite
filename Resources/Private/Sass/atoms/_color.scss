@@ -13,11 +13,11 @@ $cp-color--info:       oklch(0.78 0.12 222);
 $cp-color--error:      oklch(0.78 0.12 0);
 
 $cp-color:             $cp-color--extradark;
-$cp-color--brand1:     oklch(0.646 0.034 149.54);
-$cp-color--brand2:     oklch(0.496 0.137 318.633);
+$cp-color--brand1:     oklch(0.496 0.137 318.633);
+$cp-color--brand2:     oklch(0.646 0.034 149.54);
 $cp-color--brand3:     oklch(0.706 0.189 303.591);
 $cp-color--brand4:     oklch(0.503 0.057 231.771);
-$cp-color--highlight:  $cp-color--brand4;
+$cp-color--highlight:  $cp-color--brand1;
 
 // as css constants
 :root {
@@ -36,5 +36,10 @@ $cp-color--highlight:  $cp-color--brand4;
   --clr-brand2:     #{$cp-color--brand2};
   --clr-brand3:     #{$cp-color--brand3};
   --clr-brand4:     #{$cp-color--brand4};
-  --highlight:      #{$cp-color--highlight};
+  --clr-highlight:  #{$cp-color--highlight};
+
+  --code-bg:        #{$cp-color--lightgray};
+  --code-bc:        #{$cp-color--dark};
+
 }
+

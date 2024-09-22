@@ -1,24 +1,6 @@
 /* import utilities */
 
-@use 'atoms' as *;
 @use 'utilities' as *;
+@use 'atoms' as *;
 //@use 'constants.additional' as *;
 @use 'ck_editor';
-
-blockquote {
-  font-size: 3rem;
-  border-style: solid;
-  border-color: #0000ff;
-  border-width: 10px;
-}
-
-.ck-content blockquote {
-  font-size: 3rem;
-  border-style: solid;
-  border-color: #ff3300;
-  border-width: 10px;
-}
-
-.cp-accent {
-  color: #824493;
-}

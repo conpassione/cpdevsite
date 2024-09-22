@@ -4,10 +4,10 @@
 
 @use 'atoms/color' as *;
 @use 'atoms/fonts' as *;
-
+/*
 @layer ckeditor {
   html {
-    background: $cp-color--white;
+    background: red;
   }
 
   .cke_editable {
@@ -59,7 +59,7 @@
     }
   }
 
-  /* special classes to adjust RTE-Editor */
+  !* special classes to adjust RTE-Editor *!
   .htmlarea-content-body {
     background: $cp-color--white;
   }
@@ -86,11 +86,12 @@
 
   .ck.ck-content > :last-child {
     border-bottom: 3px dotted red;
-  }
+  } */
 
   body {
     font-family: $cp-fontFamily;
     font-size: 16px;
     line-height: 20px;
   }
-}
+/*}
+*/

@@ -1,15 +1,16 @@
 @use '../atoms/color' as *;
 @use '../atoms/fonts' as *;
 
-:root {
-  --code-bg: var(--clr-lightgray);
-  --code-bc: var(--clr-dark);
-}
-
 p {
   max-width: 62ch;
   text-wrap: pretty;
   orphans: inherit;
+  margin-block-end: 1rem;
+}
+
+pre {
+  font-family: #{$cp-fontFamily--mono};
+  font-size: 1rem;
 }
 
 pre:has(code),
@@ -18,10 +19,22 @@ pre[data-language] {
   background-color: var(--code-bg);
   border: 1px solid var(--code-bc);
   font-family: #{$cp-fontFamily--mono};
+  line-height: 1.2rem;
 }
 
-pre:has(.cbcss),
+/* pre:has(.cbcss),
 pre[data-language="CSS"] {
-  --code-bg: steelblue;
-  --code-bc: red;
+  --code-bg: var(--clr-lightgray);
+  --code-bc: var(--clr-dark);
+} */
+
+kbd {
+  font-family: #{$cp-fontFamily--mono};
+  background: inherit;
+  color: inherit;
+}
+
+.cp-accent {
+  color: var(--clr-highlight);
+  font-weight: 500;
 }
