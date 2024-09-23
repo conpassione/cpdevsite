@@ -1,3 +1,8 @@
+/* headings */
+
+@use '../atoms/fonts';
+
 h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
+  text-wrap:   balance;
+  font-family: var(--ff-headings), sans-serif;
 }

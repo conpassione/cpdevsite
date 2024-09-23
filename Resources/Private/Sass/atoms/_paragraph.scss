@@ -5,21 +5,19 @@ p {
   max-width: 62ch;
   text-wrap: pretty;
   orphans: inherit;
-  margin-block-end: 1rem;
 }
 
 pre {
-  font-family: #{$cp-fontFamily--mono};
+  font-family: var(--ff-mono), monospace;
   font-size: 1rem;
 }
 
 pre:has(code),
 pre[data-language] {
-  padding: 1rem;
+  padding: 1em;
   background-color: var(--code-bg);
   border: 1px solid var(--code-bc);
-  font-family: #{$cp-fontFamily--mono};
-  line-height: 1.2rem;
+  line-height: 1.2em;
 }
 
 /* pre:has(.cbcss),
@@ -29,7 +27,7 @@ pre[data-language="CSS"] {
 } */
 
 kbd {
-  font-family: #{$cp-fontFamily--mono};
+  font-family:  var(--ff-mono), monospace;;
   background: inherit;
   color: inherit;
 }

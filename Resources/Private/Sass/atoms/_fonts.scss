@@ -72,23 +72,19 @@
 }
 
 $cp-fontFamily: 'Ubuntu', sans-serif;
-$cp-fontFamily--condensed: 'UbuntuCondensed';
+$cp-fontFamily--condensed: 'UbuntuCondensed', sans-serif;
 $cp-fontFamily--serif: 'Ubuntu', serif;
-$cp-fontFamily--h: 'Ubuntu', sans-serif;
+$cp-fontFamily--h: 'UbuntuCondensed', sans-serif;
 $cp-fontFamily--nav: 'Ubuntu', sans-serif;
 $cp-fontFamily--mono: 'UbuntuMono', sans-serif;
 $cp-fontFamily--symbol: 'Symbols';
 
-%cp-symbol {
-  font-family:            #{$cp-fontFamily--symbol};
-  text-rendering:         optimizelegibility;
-  -webkit-font-smoothing: antialiased;
-  font-feature-settings:  'dlig' 1;
-}
-
 :root {
   --ff: #{$cp-fontFamily};
   --ff-condensed: #{$cp-fontFamily--condensed};
+  --ff-serif: #{$cp-fontFamily--serif};
+  --ff-h: #{$cp-fontFamily--h};
+  --ff-nav: #{$cp-fontFamily--nav};
   --ff-mono: #{$cp-fontFamily--mono};
   --ff-symbol: #{$cp-fontFamily--symbol};
 }

@@ -1,97 +1,16 @@
-/* doc
- * cp_base:ck-editor
- */
+/* ck-editor */
 
 @use 'atoms/color' as *;
 @use 'atoms/fonts' as *;
-/*
-@layer ckeditor {
-  html {
-    background: red;
-  }
 
-  .cke_editable {
-    padding: 10px;
 
-    > :last-child {
-      border-bottom: 3px dotted $cp-color--gray;
-    }
+body {
+  font-family: var(--ff), sans-serif;
+  font-size:   16px;
+  line-height: 20px;
+  // background-color: var(--clr-lightgray);
+}
 
-    ul {
-      li {
-        margin-left:  0;
-        padding-left: 1.5rem;
-        position:     relative;
-
-        &::before {
-          background-color: var(--clr-brand1);
-          content:          '';
-          display:          block;
-          height:           .5rem;
-          left:             .03rem;
-          position:         absolute;
-          top:              .45rem;
-          width:            .5rem;
-        }
-      }
-    }
-
-    ol {
-      counter-reset: cp-counter;
-
-      li {
-        margin-left:  0;
-        padding-left: 1.5rem;
-        position:     relative;
-
-        &::before {
-          bottom:            0;
-          color:             inherit;
-          content:           counter(cp-counter) '.';
-          counter-increment: cp-counter;
-          font-size:         inherit;
-          left:              0;
-          position:          absolute;
-          top:               0;
-          width:             1.5rem;
-        }
-      }
-    }
-  }
-
-  !* special classes to adjust RTE-Editor *!
-  .htmlarea-content-body {
-    background: $cp-color--white;
-  }
-
-  ul.cke_panel_list {
-    li.cke_panel_listItem {
-      a,
-      b,
-      i,
-      strong,
-      span {
-        line-height: 1rem;
-        padding:     3px 5px;
-      }
-    }
-  }
-
-  .ck.ck-content {
-    font-family: $cp-fontFamily;
-    font-size: 16px;
-    line-height: 20px;
-    color: red !important;
-  }
-
-  .ck.ck-content > :last-child {
-    border-bottom: 3px dotted red;
-  } */
-
-  body {
-    font-family: $cp-fontFamily;
-    font-size: 16px;
-    line-height: 20px;
-  }
-/*}
-*/
+body >*:nth-last-child(-n + 1) {
+  border-bottom: 3px dashed var(--clr-extralight);
+}

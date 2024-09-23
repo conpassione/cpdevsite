@@ -26,7 +26,7 @@
 %link-icona {
   @extend %link;
   &:after {
-    font-family: #{$cp-fontFamily--symbol};
+    font-family: var(--ff-symbol), serif;
     content: '';
     padding-inline-start: 0.1em;
   }
