@@ -1,0 +1,108 @@
+/* link */
+
+@use '../atoms/fonts' as *;
+
+%link {
+  color: inherit;
+  background-color: inherit;
+  text-decoration: none;
+  &:active,
+  &:hover {
+    background-color: oklch( from currentColor 0.9 c h);
+    text-decoration: none;
+    outline: 0;
+  }
+}
+
+%link-iconb {
+  @extend %link;
+  &:before {
+    font-family: #{$cp-fontFamily--symbol};
+    content: '';
+    padding-inline-end: 0.1em;
+  }
+}
+
+%link-icona {
+  @extend %link;
+  &:after {
+    font-family: #{$cp-fontFamily--symbol};
+    content: '';
+    padding-inline-start: 0.1em;
+  }
+}
+
+a {
+  @extend %link;
+}
+
+//.page-link {};
+.page-link--icon {
+  @extend %link-iconb;
+  &:before {
+    content: 'arrowright';
+
+  }
+}
+
+//.file-link {};
+.file-link--icon {
+  @extend %link-iconb;
+  &:before {
+    content: 'download';
+
+  }
+}
+
+//.folder-link {}
+.folder-link--icon {
+  @extend %link-iconb;
+  &:before {
+    content: 'folder';
+
+  }
+}
+
+//.url-link {}
+.url-link--icon {
+  @extend %link-iconb;
+  &:before {
+    content: 'external';
+
+  }
+}
+
+//.phone-link {}
+.phone-link--icon {
+  @extend %link-iconb;
+  &:before {
+    content: 'phone';
+
+  }
+}
+
+//.mail-link {}
+.mail-link--icon {
+  @extend %link-iconb;
+  &:before {
+    content: 'mail';
+
+  }
+}
+
+.fb-link--icon {
+  @extend %link-iconb;
+  &:before {
+    content: 'facebook';
+
+  }
+}
+
+.insta-link--icon {
+  @extend %link-iconb;
+  &:before {
+    content: 'instagram';
+
+  }
+}
+

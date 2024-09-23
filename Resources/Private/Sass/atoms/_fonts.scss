@@ -65,9 +65,8 @@
 }
 
 @font-face {
-  font-family: 'LigatureSymbols';
-  src:         url('../Fonts/LigatureSymbols/ligaturesymbols-2.11-webfont.woff2') format('woff2'),
-               url('../Fonts/LigatureSymbols/LigatureSymbols-2.11.woff') format('woff');
+  font-family: 'Symbols';
+  src:         url('../Fonts/LigatureSymbols/LigatureSymbols-2.11.woff') format('woff');
   font-weight: normal;
   font-style:  normal;
 }
@@ -78,11 +77,18 @@ $cp-fontFamily--serif: 'Ubuntu', serif;
 $cp-fontFamily--h: 'Ubuntu', sans-serif;
 $cp-fontFamily--nav: 'Ubuntu', sans-serif;
 $cp-fontFamily--mono: 'UbuntuMono', sans-serif;
-$cp-fontFamily--symbol: 'LigatureSymbols';
+$cp-fontFamily--symbol: 'Symbols';
 
 %cp-symbol {
-  font-family:            $cp-fontFamily--symbol;
+  font-family:            #{$cp-fontFamily--symbol};
   text-rendering:         optimizelegibility;
   -webkit-font-smoothing: antialiased;
   font-feature-settings:  'dlig' 1;
+}
+
+:root {
+  --ff: #{$cp-fontFamily};
+  --ff-condensed: #{$cp-fontFamily--condensed};
+  --ff-mono: #{$cp-fontFamily--mono};
+  --ff-symbol: #{$cp-fontFamily--symbol};
 }

@@ -9,12 +9,12 @@ ul {
 ul {
   padding-inline-start: 1rem;
 }
+ul > ::marker {
+  color: var(--clr-brand1)
+}
 
 li {
   margin: 0;
   line-height: 1.2rem;
 }
 
-li::marker {
-  color: var(--clr-brand1)
-}

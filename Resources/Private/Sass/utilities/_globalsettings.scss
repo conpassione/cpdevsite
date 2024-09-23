@@ -1,8 +1,15 @@
 /* reset by conPassione gmbh */
 @use '../atoms/fonts' as *;
+@use '../atoms/metrics' as *;
 
 *, ::before, ::after {
   box-sizing: border-box;
+}
+
+* { margin: 0;}
+
+.flow > * + * {
+  margin-top: var(--flow-spacer, 1em);
 }
 
 html,

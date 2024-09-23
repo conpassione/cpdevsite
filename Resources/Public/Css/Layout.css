@@ -56,13 +56,36 @@
   src: url("../Fonts/Ubuntu/ubuntumono-r-webfont.woff2") format("woff2");
 }
 @font-face {
-  font-family: "LigatureSymbols";
-  src: url("../Fonts/LigatureSymbols/ligaturesymbols-2.11-webfont.woff2") format("woff2"), url("../Fonts/LigatureSymbols/LigatureSymbols-2.11.woff") format("woff");
+  font-family: "Symbols";
+  src: url("../Fonts/LigatureSymbols/LigatureSymbols-2.11.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+:root {
+  --ff: Ubuntu, sans-serif;
+  --ff-condensed: UbuntuCondensed;
+  --ff-mono: UbuntuMono, sans-serif;
+  --ff-symbol: Symbols;
+}
+
+/* metrics */
+/* Baseline */
+:root {
+  --gutter: 1.5rem;
+  --line-height: 1.6rem;
+  --flow-spacer: 1em;
+}
+
 *, ::before, ::after {
   box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-spacer, 1em);
 }
 
 html,
@@ -277,11 +300,6 @@ template {
 
 /* mediaqueries */
 /* media brakepoints */
-/* metrics */
-/* Baseline
-$cp-fontsize: 16px;
-
-$cp-scaleFactor:       1.15; /* siehe https://www.gridlover.net/try */
 p {
   max-width: 62ch;
   text-wrap: pretty;
@@ -333,13 +351,63 @@ ul {
   padding-inline-start: 1rem;
 }
 
+ul > ::marker {
+  color: var(--clr-brand1);
+}
+
 li {
   margin: 0;
   line-height: 1.2rem;
 }
 
-li::marker {
-  color: var(--clr-brand1);
+/* link */
+a, .insta-link--icon, .fb-link--icon, .mail-link--icon, .phone-link--icon, .url-link--icon, .folder-link--icon, .file-link--icon, .page-link--icon {
+  color: inherit;
+  background-color: inherit;
+  text-decoration: none;
+}
+a:active, .insta-link--icon:active, .fb-link--icon:active, .mail-link--icon:active, .phone-link--icon:active, .url-link--icon:active, .folder-link--icon:active, .file-link--icon:active, .page-link--icon:active, a:hover, .insta-link--icon:hover, .fb-link--icon:hover, .mail-link--icon:hover, .phone-link--icon:hover, .url-link--icon:hover, .folder-link--icon:hover, .file-link--icon:hover, .page-link--icon:hover {
+  background-color: oklch(from currentColor 0.9 c h);
+  text-decoration: none;
+  outline: 0;
+}
+
+.insta-link--icon:before, .fb-link--icon:before, .mail-link--icon:before, .phone-link--icon:before, .url-link--icon:before, .folder-link--icon:before, .file-link--icon:before, .page-link--icon:before {
+  font-family: Symbols;
+  content: "";
+  padding-inline-end: 0.1em;
+}
+
+.page-link--icon:before {
+  content: "arrowright";
+}
+
+.file-link--icon:before {
+  content: "download";
+}
+
+.folder-link--icon:before {
+  content: "folder";
+}
+
+.url-link--icon:before {
+  content: "external";
+}
+
+.phone-link--icon:before {
+  content: "phone";
+}
+
+.mail-link--icon:before {
+  content: "mail";
+}
+
+.fb-link--icon:before {
+  content: "facebook";
+}
+
+.insta-link--icon:before {
+  content: "instagram";
 }
 
 .ce-table td,
