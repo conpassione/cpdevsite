@@ -1,4 +1,6 @@
 base: 'https://www.cpdev.ch'
+dependencies:
+  - conpassione/cpdevsite
 baseVariants:
   -
     base: 'https://cpdevsite.ddev.site'

@@ -1,3 +1,0 @@
-# Setup Frontend Output
-
-@import 'EXT:cpdevsite/Configuration/TypoScript/Setup/*.typoscript'

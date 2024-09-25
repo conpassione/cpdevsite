@@ -1,2 +1,0 @@
-@import 'EXT:cpdevsite/Configuration/TsConfig/Page/*.tsconfig'
-@import 'EXT:cpdevsite/Configuration/TsConfig/Page/PageLayout/*.tsconfig'
