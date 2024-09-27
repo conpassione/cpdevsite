@@ -18,11 +18,11 @@ $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive(
         'EXTENSIONS' => [
             'backend' => [
                 'backendFavicon' => getenv('TYPO3_BE_FAVICON'),
-                'backendLogo' =>  getenv('TYPO3_EXT_IDENTIFIER') ,
+                'backendLogo' =>  getenv('TYPO3_BE_LOGO') ,
                 'loginBackgroundImage' => getenv('TYPO3_BE_LOGINBGIMAGE'),
                 'loginFootnote' => getenv('TYPO3_BE_LOGINFOOTNOTE'),
                 'loginHighlightColor' => getenv('TYPO3_BE_HIGHLIGHTCOLOR'),
-                'loginLogo' => getenv('TYPO3_EXT_IDENTIFIER'),
+                'loginLogo' => getenv('TYPO3_BE_LOGINLOGO'),
                 'loginLogoAlt' => getenv('TYPO3_BE_LOGINLOGOALT'),
             ],
         ],
