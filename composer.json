@@ -20,6 +20,7 @@
 	"prefer-stable" : true,
 	"version": "1.0.0",
 	"require": {
+		"contentblocks/content-blocks": "^0.8.2",
 		"helhum/dotenv-connector": "*",
 		"typo3/cms-adminpanel": "^13",
 		"typo3/cms-backend": "^13",
@@ -42,6 +43,7 @@
 		"typo3/cms-linkvalidator": "^13",
 		"typo3/cms-lowlevel": "^13",
 		"typo3/cms-opendocs": "^13",
+		"typo3/cms-reactions": "^13.3",
 		"typo3/cms-recycler": "^13",
 		"typo3/cms-redirects": "^13",
 		"typo3/cms-reports": "^13",
@@ -53,6 +55,7 @@
 		"typo3/cms-t3editor": "^13",
 		"typo3/cms-tstemplate": "^13",
 		"typo3/cms-viewpage": "^13",
+		"typo3/cms-webhooks": "^13.3",
 		"typo3/minimal": "^13"
 	},
 	"require-dev": {

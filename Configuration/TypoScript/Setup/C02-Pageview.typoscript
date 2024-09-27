@@ -4,4 +4,22 @@ page.10 {
   paths {
     10 = EXT:cpdevsite/Resources/Private/Templates/
   }
+  variables {
+    templateName = TEXT
+    templateName {
+      cObject = CASE
+      cObject {
+        key.field = doktype
+
+        default = TEXT
+        default.value = Default
+
+        10 = TEXT
+        10.value = SimplePage
+      }
+    }
+  }
 }
+
+page.10.variables.templateName.cObject.1 = TEXT
+page.10.variables.templateName.cObject.1.value = Test

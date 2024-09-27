@@ -17,8 +17,4 @@ page.10 {
       as = col2content
     }
   }
-  variables {
-    CR = TEXT
-    CR.value = {$TYPO3copyright}
-  }
 }
