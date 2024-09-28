@@ -1,0 +1,21 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="Default" />
+<f:section name="Main">
+<f:debug>{_all}</f:debug>
+<main>
+    <h1>Hello World from Homepage</h1>
+    <p>Das ist die Homepage</p>
+    <p>From settings.yaml: {settings.TYPO3copyright}</p>
+    <hr>
+    <f:for each="{content}" as="contentelement">
+        <f:cObject
+            typoscriptObjectPath="tt_content.{contentelement.data.CType}"
+            data="{contentelement.data}"
+            table="tt_content"
+        />
+    </f:for>
+</main>
+</f:section>
+
+</html>

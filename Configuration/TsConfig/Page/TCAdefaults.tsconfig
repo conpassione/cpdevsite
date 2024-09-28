@@ -24,6 +24,8 @@ TCAdefaults.pages {
 
 TCAdefaults.tt_content {
   header_layout = 2
+  layout = 0
+  frame_class = default
   imagecols = 1
   imageorient = 0
 }

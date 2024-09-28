@@ -1,0 +1,20 @@
+name: conpassione/homepage
+typeName: 36650001
+fields:
+  - identifier: logo
+    type: File
+    extendedPalette: true
+    minitems: 1
+    maxitems: 1
+    allowed: common-image-types
+    cropVariants:
+      logo:
+        title: Logocrop
+        allowedAspectRatios:
+          Logo:
+            title: 1:1
+            value: 1
+        selectedRatio: Logo
+  - identifier: media
+    useExistingField: true
+

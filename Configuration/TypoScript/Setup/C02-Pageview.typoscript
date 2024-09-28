@@ -14,12 +14,12 @@ page.10 {
         default = TEXT
         default.value = Default
 
-        10 = TEXT
-        10.value = SimplePage
+        1 = TEXT
+        1.value = SimplePage
+
+        36650001 = TEXT
+        36650001.value = Homepage
       }
     }
   }
 }
-
-page.10.variables.templateName.cObject.1 = TEXT
-page.10.variables.templateName.cObject.1.value = Test

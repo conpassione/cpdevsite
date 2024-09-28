@@ -1,6 +1,6 @@
 name: conpassione/cp-textblock
 typeName: conpassione_cptextblock
-group: common
+group: default
 prefixFields: true
 prefixType: full
 fields:

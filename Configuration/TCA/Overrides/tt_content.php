@@ -5,6 +5,14 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 defined('TYPO3') or die();
 
+// Defaulteinstellungen für Feld layout löschen
+$GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'] = [];
+unset($GLOBALS['TCA']['tt_content']['columns']['layout']['config']['default']);
+
+// Defaulteinstellungen für Feld frame_class löschen
+$GLOBALS['TCA']['tt_content']['columns']['frame_class']['config']['items'] = [];
+unset($GLOBALS['TCA']['tt_content']['columns']['frame_class']['config']['default']);
+
 /*ExtensionManagementUtility::addTcaSelectItemGroup (
     'tt_content',
     'CType',

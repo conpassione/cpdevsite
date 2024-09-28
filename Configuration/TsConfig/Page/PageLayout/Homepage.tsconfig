@@ -7,12 +7,12 @@
 mod {
   web_layout {
 		BackendLayouts {
-			SimplePage {
-				title =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.simplepage.title
+			HomePage {
+				title =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.homepage.title
         icon = tx-conpassione-backendlayout-simplepage
         config {
           backend_layout {
-            doktype = 1
+            doktype = 36650001
             colCount = 1
             rowCount = 1
             rows {
