@@ -1,5 +1,5 @@
 name: conpassione/cpdevsite
-label: conPassione DEV-Site
+label: conPassione Base
 dependencies:
   - typo3/form
   - typo3/fluid-styled-content

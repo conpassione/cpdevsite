@@ -25,7 +25,6 @@ TCEFORM.pages {
   }
   backend_layout {
     disabled = 0
-    //removeItems = -1
     disableNoMatchingValueElement = 1
   }
   backend_layout_next_level {
@@ -113,8 +112,6 @@ TCEFORM.tt_content {
   # rowDescription.disabled = 1
 }
 
-
-
 # Bildausrichtungen
 #  0 oben-mittig     -> above center
 #  1 oben-rechts     -> above right
@@ -135,16 +132,16 @@ TCEFORM.tt_content.imageorient {
   addItems {
     # Neben dem Text mitterechts
     31 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.rightmiddle
-    31.icon = tx-conpassione-content-beside-text-img-right-middle.svg
+    31.icon = tx-conpassione-content-beside-text-img-right-middle
     #  Neben dem Text mittelinks
     32 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.leftmiddle
     32.icon = tx-conpassione-content-beside-text-img-left-middle
     # Neben dem Text untenrechts
     33 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.rightbottom
-    33.icon = EXT:cpdevsite/Resources/Public/Icons/content-beside-text-img-right-bottom.svg
+    33.icon = tx-conpassione-content-beside-text-img-right-bottom
     # Nebem dem Text untenlinks
     34 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.leftbottom
-    34.icon = EXT:cpdevsite/Resources/Public/Icons/content-beside-text-img-left-bottom.svg
+    34.icon = tx-conpassione-content-beside-text-img-left-bottom
   }
   types.image.removeItems = 8,9,10,17,18,25,26,31,32,33,34
 }

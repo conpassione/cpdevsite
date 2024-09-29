@@ -1,13 +1,13 @@
 
 # yamllint disable-line rule:line-length
 
-TYPO3copyright: created by conPassione gmbh using HTML5, CSS3, www.conpassione.ch
-TYPO3siteidentifier: cpdevsite
+TYPO3copyright: 'created by conPassione gmbh using HTML5, CSS3, www.conpassione.ch'
+TYPO3extkey: 'cpdevsite'
 
 RTEpreset: cpdevsite
 RTEpresetCode: cpdevsiteCode
 
-pages:
-  author: conPassione gmbh
+TCEpage:
+  author: 'conPassione gmbh'
   author_email: info@conpassione.ch
   author_phone: '+41793301011'

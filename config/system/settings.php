@@ -28,11 +28,11 @@ return [
     'EXTENSIONS' => [
         'backend' => [
             'backendFavicon' => '',
-            'backendLogo' => 'cpdevsite',
+            'backendLogo' => '',
             'loginBackgroundImage' => 'EXT:cpdevsite/Resources/Public/Images/bernesealps.png',
             'loginFootnote' => 'created by conPassione gmbh',
             'loginHighlightColor' => '#009ee0',
-            'loginLogo' => 'cpdevsite',
+            'loginLogo' => '',
             'loginLogoAlt' => 'conPassione gmbh',
         ],
         'extensionmanager' => [

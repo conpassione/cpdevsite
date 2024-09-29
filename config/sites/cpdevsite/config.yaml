@@ -1,10 +1,9 @@
 base: 'https://www.cpdev.ch'
 dependencies:
-  - conpassione/%env(TYPO3_EXT_IDENTIFIER)%
+  - conpassione/cpdevsite
 baseVariants:
   -
-#    base: 'https://cpdevsite.ddev.site'
-    base: '%env(TYPO3_SYS_HOSTPATTERN)%'
+    base: 'https://cpdevsite.ddev.site'
     condition: 'applicationContext == "Development"'
 errorHandling:
   -
@@ -83,5 +82,3 @@ routes:
     route: robots.txt
     type: staticText
     content: 'User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3conf/\r\nSitemap: https://cpdevsite.ddev.site/sitemap.xml\r\n'
-websiteTitle: 'conPassione Developeing'
-sitePackage: '%env(TYPO3_EXT_IDENTIFIER)%'

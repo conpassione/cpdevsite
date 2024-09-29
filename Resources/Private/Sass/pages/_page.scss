@@ -16,3 +16,10 @@ html {
     scroll-padding-top: 3rem;
   }
 }
+
+header,
+footer,
+section,
+article {
+  container-type: inline-size;
+}

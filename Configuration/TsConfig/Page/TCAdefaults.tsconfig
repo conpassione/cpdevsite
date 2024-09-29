@@ -5,8 +5,8 @@ TCAdefaults.pages {
   #TAB-SEO
   sitemap_changefreq = monthly
   #TAB-Metadaten
-  author = {$pages.author}
-  author_email = {$pages.author_email}
+  author = {$TCEpage.author}
+  author_email = {$TCEpage.author_email}
   #TAB-Erscheinungsbild
   layout = 0
   #backend_layout = pagets__SimplePage

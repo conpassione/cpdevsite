@@ -1,4 +1,5 @@
 // Default User TSConfig
+setup.fields.colorScheme.disabled = 0
 
 // Configuration Pagetree
 options.pageTree.showPageIdWithTitle = 1
