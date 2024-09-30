@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="de" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-09-28T18:46:22+02:00">
+    <file source-language="en" target-language="de" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-09-30T17:23:50+02:00">
         <header></header>
         <body>
             <trans-unit id="backendlayout.col1" resname="backendlayout.col1">
                 <source>Content</source>
                 <target>Inhalt</target>
+            </trans-unit>
+            <trans-unit id="backendlayout.homepage.title" resname="backendlayout.homepage.title">
+                <source>Homepage</source>
+                <target>Startseite</target>
             </trans-unit>
             <trans-unit id="backendlayout.simplepage.title" resname="backendlayout.simplepage.title">
                 <source>SimpleSite</source>
@@ -55,17 +59,9 @@
                 <source>Marked link to Page</source>
                 <target>Seitenlink mit Icon</target>
             </trans-unit>
-            <trans-unit id="backendlayout.homepage.title" resname="backendlayout.homepage.title">
-                <source>Homepage</source>
-                <target>Startseite</target>
-            </trans-unit>
             <trans-unit id="rte.linkbrowser.phone-link" resname="rte.linkbrowser.phone-link">
                 <source>Link to Phonenumber</source>
                 <target>Telefon-Nummer Link</target>
-            </trans-unit>
-            <trans-unit id="tceform.page.layout.36650001" resname="tceform.page.layout.36650001">
-                <source>Homepage with footer</source>
-                <target>Startseite mit Fusszeile</target>
             </trans-unit>
             <trans-unit id="rte.linkbrowser.phone-link--icon" resname="rte.linkbrowser.phone-link--icon">
                 <source>Marked link to Phonenumber</source>
@@ -134,6 +130,10 @@
             <trans-unit id="tceform.page.layout.0" resname="tceform.page.layout.0">
                 <source>Default</source>
                 <target>Standard</target>
+            </trans-unit>
+            <trans-unit id="tceform.page.layout.36650001" resname="tceform.page.layout.36650001">
+                <source>Homepage with footer</source>
+                <target>Startseite mit Fusszeile</target>
             </trans-unit>
             <trans-unit id="tceform.page.layout.label" resname="tceform.page.layout.label">
                 <source>Pagelayout</source>

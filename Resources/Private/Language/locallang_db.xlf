@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2024-09-28T18:46:22+02:00">
+    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2024-09-30T17:03:47+02:00">
         <header></header>
         <body>
             <trans-unit id="backendlayout.col1" resname="backendlayout.col1">
                 <source>Content</source>
+            </trans-unit>
+            <trans-unit id="backendlayout.homepage.title" resname="backendlayout.homepage.title">
+                <source>Homepage</source>
             </trans-unit>
             <trans-unit id="backendlayout.simplepage.title" resname="backendlayout.simplepage.title">
                 <source>SimpleSite</source>
@@ -42,14 +45,8 @@
             <trans-unit id="rte.linkbrowser.page-link--icon" resname="rte.linkbrowser.page-link--icon">
                 <source>Marked link to Page</source>
             </trans-unit>
-            <trans-unit id="backendlayout.homepage.title" resname="backendlayout.homepage.title">
-                <source>Homepage</source>
-            </trans-unit>
             <trans-unit id="rte.linkbrowser.phone-link" resname="rte.linkbrowser.phone-link">
                 <source>Link to Phonenumber</source>
-            </trans-unit>
-            <trans-unit id="tceform.page.layout.36650001" resname="tceform.page.layout.36650001">
-                <source>Homepage with footer</source>
             </trans-unit>
             <trans-unit id="rte.linkbrowser.phone-link--icon" resname="rte.linkbrowser.phone-link--icon">
                 <source>Marked link to Phonenumber</source>
@@ -101,6 +98,9 @@
             </trans-unit>
             <trans-unit id="tceform.page.layout.0" resname="tceform.page.layout.0">
                 <source>Default</source>
+            </trans-unit>
+            <trans-unit id="tceform.page.layout.36650001" resname="tceform.page.layout.36650001">
+                <source>Homepage with footer</source>
             </trans-unit>
             <trans-unit id="tceform.page.layout.label" resname="tceform.page.layout.label">
                 <source>Pagelayout</source>
