@@ -1,20 +1,23 @@
 name: conpassione/homepage
-typeName: 36650001
+typeName: 36650002
+title: Startpage
+description: Das ist die Startseite für alle Websiten
+showItems: test
 fields:
+  - identifier: subtitle
+    useExistingField: true
   - identifier: logo
+    label: newlogo
     type: File
     extendedPalette: true
     minitems: 1
     maxitems: 1
     allowed: common-image-types
     cropVariants:
-      logo:
-        title: Logocrop
+      logocrp:
+        title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.frame_class.labeldefault'
         allowedAspectRatios:
-          Logo:
+          LogoSQ:
             title: 1:1
             value: 1
-        selectedRatio: Logo
-  - identifier: media
-    useExistingField: true
-
+        selectedRatio: LogoSQ

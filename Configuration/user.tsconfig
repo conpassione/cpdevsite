@@ -6,7 +6,7 @@ options.pageTree.showPageIdWithTitle = 1
 options.pageTree.showDomainNameWithTitle = 1
 // options.pageTree.showNavTitle = 1
 // options.pageTree.backgroundColor.(pageID) = color
-options.pageTree.doktypesToShowInNewPageDragArea = 36650001,1,3,4,254
+options.pageTree.doktypesToShowInNewPageDragArea = 36650002,1,3,4,254
 // options.pageTree.doktypesToShowInNewPageDragArea:=addToList()
 // options.pageTree.doktypesToShowInNewPageDragArea:=removeFromList()
 

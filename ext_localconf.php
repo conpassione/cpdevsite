@@ -8,21 +8,19 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 defined('TYPO3') or die();
 
 // CK-Editor Konfiguration laden
-if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets'][getenv('TYPO3_EXT_IDENTIFIER')])) {
-    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets'][getenv('TYPO3_EXT_IDENTIFIER')] = 'EXT:' . getenv('TYPO3_EXT_IDENTIFIER') . '/Configuration/RTE/RTEsettings.yaml';
+if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['cpdevsite'])) {
+    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['cpdevsite'] = 'EXT:cpdevsite/Configuration/RTE/RTEsettings.yaml';
 }
 
 // CK-Editor Konfiguration laden mit Code-Auszeichnung
-if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets'][getenv('TYPO3_EXT_IDENTIFIER') . 'Code'])) {
-    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets'][getenv('TYPO3_EXT_IDENTIFIER') . 'Code'] = 'EXT:' . getenv('TYPO3_EXT_IDENTIFIER') . '/Configuration/RTE/RTEsettingsCode.yaml';
+if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['cpdevsite' . 'Code'])) {
+    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['cpdevsite' . 'Code'] = 'EXT:cpdevsite/Configuration/RTE/RTEsettingsCode.yaml';
 }
 
 
 // Add custom translations overriding default labels
-// $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:frontend/Resources/Private/Language/locallang_tca.xlf'][] = 'EXT:' . getenv('TYPO3_EXT_IDENTIFIER') .
-// '/Resources/Private/Language/custom.xlf';
-// $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['de']['EXT:frontend/Resources/Private/Language/locallang_tca.xlf'][] ='EXT:' . getenv('TYPO3_EXT_IDENTIFIER') .
-// '/Resources/Private/Language/de.custom.xlf';
+// $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:frontend/Resources/Private/Language/locallang_tca.xlf'][] = 'EXT:cpdevsite/Resources/Private/Language/custom.xlf';
+// $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['de']['EXT:frontend/Resources/Private/Language/locallang_tca.xlf'][] ='EXT:cpdevsite/Resources/Private/Language/de.custom.xlf';
 
 
 

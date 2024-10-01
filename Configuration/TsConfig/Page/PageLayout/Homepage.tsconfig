@@ -12,7 +12,7 @@ mod {
         icon = tx-conpassione-backendlayout-simplepage
         config {
           backend_layout {
-            doktype = 36650001
+            doktype = 36650002
             colCount = 1
             rowCount = 1
             rows {

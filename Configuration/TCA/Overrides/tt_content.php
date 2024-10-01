@@ -13,15 +13,15 @@ unset($GLOBALS['TCA']['tt_content']['columns']['layout']['config']['default']);
 $GLOBALS['TCA']['tt_content']['columns']['frame_class']['config']['items'] = [];
 unset($GLOBALS['TCA']['tt_content']['columns']['frame_class']['config']['default']);
 
-/*ExtensionManagementUtility::addTcaSelectItemGroup (
+ExtensionManagementUtility::addTcaSelectItemGroup (
     'tt_content',
     'CType',
-    'sliders',
-    'LLL:EXT:' . getenv('TYPO3_EXT_IDENTIFIER') . '/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.grouLabel',
-    'after:default'
+    'conpassione',
+    'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.conpassione.grouLabel',
+    'before:default'
 );
 
-ExtensionManagementUtility::addTcaSelectItem(
+/*ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [

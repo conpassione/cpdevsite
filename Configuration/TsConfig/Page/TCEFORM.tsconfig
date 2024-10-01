@@ -16,15 +16,15 @@ TCEFORM.pages {
   #TAB-Erscheinungsbild
   layout {
     disabled = 0
-    label = LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.label
+    label = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.label
     disableNoMatchingValueElement = 1
     # removeItems = 1,2,3
     addItems {
-      0 = LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.0
+      0 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.0
     }
   }
   backend_layout {
-    disabled = 0
+    disabled = 1
     disableNoMatchingValueElement = 1
   }
   backend_layout_next_level {

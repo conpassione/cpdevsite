@@ -1,0 +1,11 @@
+name: conpassione/board
+typeName: conpassione-board
+title: 'Board'
+group: conpassione
+table: tx_conpassione_board
+lableField: title
+
+fields:
+- identifier: title
+  type: 'Text'
+  label: 'Board'

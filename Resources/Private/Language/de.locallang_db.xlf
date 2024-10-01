@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="de" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-09-30T17:23:50+02:00">
+    <file source-language="en" target-language="de" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-10-01T19:12:01+02:00">
         <header></header>
         <body>
             <trans-unit id="backendlayout.col1" resname="backendlayout.col1">
                 <source>Content</source>
                 <target>Inhalt</target>
+            </trans-unit>
+            <trans-unit id="contentwizard.conpassione.grouLabel" resname="contentwizard.conpassione.grouLabel">
+                <source>conPassione</source>
+                <target>conPassione</target>
             </trans-unit>
             <trans-unit id="backendlayout.homepage.title" resname="backendlayout.homepage.title">
                 <source>Homepage</source>
