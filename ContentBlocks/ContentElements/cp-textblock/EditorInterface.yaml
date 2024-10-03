@@ -4,11 +4,23 @@ group: conpassione
 prefixFields: true
 prefixType: full
 fields:
-  - identifier: header
-    useExistingField: true
-    label: 'Titel'
+  - identifier: conpassione/Header
+    type: Basic
   - identifier: bodytext
     useExistingField: true
     type: Textarea
     enableRichtext: true
     label: 'Text'
+  -
+    identifier: cp_tab
+    type: Tab
+    label: Neues Tab
+  - identifier: palett1
+    type: Palette
+    label: Neue Palette
+    fields:
+      - identifier: subheader
+        useExistingField: true
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Categories

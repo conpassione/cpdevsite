@@ -1,4 +1,4 @@
 # RTE Konfiguration
 
-RTE.default.preset = cpdevsite
+RTE.default.preset = cpdefault
 # RTE.config.tt_content.bodytext.preset = minimal

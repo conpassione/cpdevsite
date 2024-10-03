@@ -4,6 +4,8 @@ title: 'Mitglied'
 group: conpassione
 table: tx_conpassione_member
 lableField: title
+sortField: title
+
 
 fields:
 - identifier: title
