@@ -23,6 +23,7 @@
 		"b13/doktypemapper": "^2.0",
 		"contentblocks/content-blocks": "^0.8.2",
 		"helhum/dotenv-connector": "*",
+		"stefanfroemken/mysqlreport": "^4.0",
 		"typo3/cms-adminpanel": "^13",
 		"typo3/cms-backend": "^13",
 		"typo3/cms-belog": "^13",

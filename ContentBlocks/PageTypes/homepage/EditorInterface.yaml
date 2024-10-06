@@ -21,13 +21,3 @@ fields:
             title: 1:1
             value: 1
         selectedRatio: LogoSQ
-  -
-    identifier: resources_tab
-    type: Tab
-    label: 'LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.resources'
-  - identifier: media
-    type: Palette
-    label: Dateien
-    fields:
-      - identifier: media
-        useExistingField: true

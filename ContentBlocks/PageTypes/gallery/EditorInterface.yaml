@@ -1,0 +1,9 @@
+name: conpassione/gallery
+typeName: 36650001
+title: Gallery
+description: Das ist die Startseite für alle Webseiten
+fields:
+  - identifier: subtitle
+    useExistingField: true
+
+

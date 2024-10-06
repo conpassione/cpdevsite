@@ -35,6 +35,8 @@ TCEFORM.pages {
   php_tree_stop.disabled = 1
 
   #TAB-Ressourcen
+  tsconfig_includes.disabled = 1
+  TSconfig.disabled = 1
   #TAB-Sprache
   #TAB-Zugriff
   #TAB-Kategorien

@@ -28,16 +28,22 @@ return [
     'EXTENSIONS' => [
         'backend' => [
             'backendFavicon' => '',
-            'backendLogo' => '',
+            'backendLogo' => 'EXT:cpdevsite/Resources/Public/Icons/alfabeta.svg',
             'loginBackgroundImage' => 'EXT:cpdevsite/Resources/Public/Images/bernesealps.png',
             'loginFootnote' => 'created by conPassione gmbh',
-            'loginHighlightColor' => '#009ee0',
-            'loginLogo' => '',
+            'loginHighlightColor' => '#8FA4C1',
+            'loginLogo' => 'EXT:cpdevsite/Resources/Public/Images/logo_cp_core_G35_black_mit.png',
             'loginLogoAlt' => 'conPassione gmbh',
         ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
+        ],
+        'mysqlreport' => [
+            'activateExplainQuery' => '0',
+            'enableBackendLogging' => '0',
+            'enableFrontendLogging' => '0',
+            'slowQueryThreshold' => '10.0',
         ],
         'redirects' => [
             'showCheckIntegrityInfoInReports' => '1',

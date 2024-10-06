@@ -12,6 +12,8 @@ options.pageTree.doktypesToShowInNewPageDragArea = 36650002,1,3,4,254
 
 // Toolbar
 options.clearCache.pages = 1
+// Clipboard
+options.clipboardNumberPads = 1
 
 // Dashboard
 // options.dashboard.dashboardPresetsForNewUsers := addToList(customDashboard)
