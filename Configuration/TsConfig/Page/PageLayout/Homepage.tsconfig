@@ -12,18 +12,24 @@ mod {
         icon = tx-conpassione-backendlayout-simplepage
         config {
           backend_layout {
-            doktype = 36650002
-            colCount = 1
+            doktype = 36650001
+            colCount = 2
             rowCount = 1
             rows {
               1 {
                 columns {
                   1 {
-                    name =  LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:backendlayout.col1
+                    name =  LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:backendlayout.col0
+                    identifier = content
                     colPos = 0
                     #allowed {
                     #	CType = text, textpic
                     #}
+                  }
+                  2 {
+                    name =  LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:backendlayout.col1
+                    identifier = footer
+                    colPos = 1
                   }
                 }
               }

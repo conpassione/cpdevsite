@@ -12,17 +12,16 @@ fields:
   type: 'Text'
   label: 'Funktion'
 - identifier: feuser
-  type: Select
+  type: 'Select'
   renderType: selectSingle
   foreign_table: fe_users
   label: 'FE-User'
   labelField: name
-  behaviour:
-    - allowLanguageSynchronization: 1
 - identifier: board
+  label: 'Board'
   type: Select
   renderType: selectSingle
-  foreign_table: tx_conpassione_board
-  foreign_table_where: 'ORDER BY title'
-  relationship: oneToMany
+  items:
+    - value: 1
+    - value: 2
 

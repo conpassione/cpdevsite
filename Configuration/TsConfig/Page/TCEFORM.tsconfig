@@ -1,34 +1,37 @@
 # Definition der Seitenattribute
 TCEFORM.pages {
   #TAB-Allgemein
+  title.label = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.title.label
   nav_title.disabled = 1
   # subtitle.disabled = 1
+  subtitle.label = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.subtitle.label
   // Remove unwanted doktypes (1:Standard, 2:Erweitert, 3:Externe URL, 4:Shortcut, 5:Nicht im Menu, 6:BE-Bereich, 7:Mountpoint, 199:Abstand, 254:Sysordner, 255:Recycler, --div--:Trennlinie
   doktype.removeItems = 5,6,7,199,255,--div--
   #TAB-SEO
   # no_index.disabled = 1
   # no_follow.disabled = 1
   sitemap_changefreq = monthly
+  media.label = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.media.label
 
   #TAB-Social Media
   #TAB-Metadaten
-
   #TAB-Erscheinungsbild
   layout {
     disabled = 0
     label = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.label
     disableNoMatchingValueElement = 1
-    # removeItems = 1,2,3
+    # layout field TYPO3 Standard labels removed in TCA/Overrides/pages.php
+    # => use addItems only
     addItems {
       0 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.layout.0
     }
   }
   backend_layout {
-    disabled = 1
+    disabled = 0
     disableNoMatchingValueElement = 1
   }
   backend_layout_next_level {
-    disabled = 1
+    disabled = 0
     disableNoMatchingValueElement = 1
   }
   #TAB-Verhalten

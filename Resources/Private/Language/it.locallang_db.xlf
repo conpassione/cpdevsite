@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="it" original="" datatype="plaintext" date="2024-10-07T22:24:27+02:00">
+        <body>
+            <trans-unit id="backendlayout.col0" resname="backendlayout.col0">
+                <source>Content</source>
+                <target>Contenuto</target>
+            </trans-unit>
+            <trans-unit id="backendlayout.col1" resname="backendlayout.col1">
+                <source>Footer</source>
+                <target>Piè di pagina</target>
+            </trans-unit>
+            <trans-unit id="backendlayout.gallery.title" resname="backendlayout.gallery.title">
+                <source>Gallery</source>
+                <target>Galleria</target>
+            </trans-unit>
+            <trans-unit id="backendlayout.homepage.title" resname="backendlayout.homepage.title">
+                <source>Homepage</source>
+                <target>Pagina iniziale</target>
+            </trans-unit>
+            <trans-unit id="tceform.page.media.label" resname="tceform.page.media.label">
+                <source>Content image</source>
+                <target>Imagine</target>
+            </trans-unit>
+            <trans-unit id="tceform.page.subtitle.label" resname="tceform.page.subtitle.label">
+                <source>Pageheader</source>
+                <target>Tittolo della pagina</target>
+            </trans-unit>
+            <trans-unit id="tceform.page.title.label" resname="tceform.page.title.label">
+                <source>Pagetree title</source>
+                <target>Identificazione nel menu</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

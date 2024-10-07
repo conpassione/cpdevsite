@@ -6,6 +6,9 @@
 			<trans-unit id="title" resname="title">
 				<source>Homepage</source>
 			</trans-unit>
+			<trans-unit id="description" resname="description">
+				<source>Used as startingpoint for the website</source>
+			</trans-unit>
 			<trans-unit id="logo.label" resname="logo.label">
 				<source>Brand Logo</source>
 			</trans-unit>

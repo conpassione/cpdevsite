@@ -9,7 +9,7 @@
             </trans-unit>
 			<trans-unit id="logo.label" resname="logo.label">
 				<source>Brand Logo</source>
-				<target>Firmenlogo</target>
+				<target>Markenlogo</target>
 			</trans-unit>
         </body>
     </file>

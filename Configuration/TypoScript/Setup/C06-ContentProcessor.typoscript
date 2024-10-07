@@ -1,20 +1,19 @@
-page.10 {
+/* page.10 {
   dataProcessing {
-    #10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-    10 = database-query
-    10 {
+    10 = page-content
+    20 = database-query
+    20 {
       table = tt_content
       orderBy = sorting
       where = colPos = 0
-      as = content
+      as = mycontent
     }
-    //20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-    20 = database-query
-    20 {
+    30 = database-query
+    30 {
       table = tt_content
       orderBy = sorting
       where = colPos = 1
       as = col2content
     }
   }
-}
+} */

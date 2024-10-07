@@ -2,7 +2,6 @@ name: conpassione/homepage
 typeName: 36650002
 title: Startpage
 description: Das ist die Startseite für alle Websiten
-showItems: test
 fields:
   - identifier: subtitle
     useExistingField: true
@@ -12,7 +11,7 @@ fields:
     extendedPalette: true
     minitems: 1
     maxitems: 1
-    allowed: common-image-types
+    allowed: svg
     cropVariants:
       logocrp:
         title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.frame_class.labeldefault'
@@ -21,3 +20,5 @@ fields:
             title: 1:1
             value: 1
         selectedRatio: LogoSQ
+  - identifier: media
+    useExistingField: true

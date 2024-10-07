@@ -4,8 +4,8 @@
         <header/>
         <body>
             <trans-unit id="title" resname="title">
-                <source>Homepage</source>
-                <target>Startseite</target>
+                <source>Gallerypage</source>
+                <target>Galeriseite</target>
             </trans-unit>
 			<trans-unit id="logo.label" resname="logo.label">
 				<source>Brand Logo</source>

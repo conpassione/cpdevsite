@@ -39,12 +39,6 @@ return [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
         ],
-        'mysqlreport' => [
-            'activateExplainQuery' => '0',
-            'enableBackendLogging' => '0',
-            'enableFrontendLogging' => '0',
-            'slowQueryThreshold' => '10.0',
-        ],
         'redirects' => [
             'showCheckIntegrityInfoInReports' => '1',
             'showCheckIntegrityInfoInReportsSeconds' => '86400',

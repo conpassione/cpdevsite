@@ -24,7 +24,6 @@ languages:
     iso-639-1: de
     hreflang: de_CH
     direction: ltr
-    typo3Language: default
     flag: ch
     enabled: true
   -
@@ -36,7 +35,6 @@ languages:
     iso-639-1: fr
     hreflang: fr_FR
     direction: ltr
-    typo3Language: default
     flag: fr
     fallbackType: fallback
     fallbacks: '0'
@@ -50,7 +48,6 @@ languages:
     iso-639-1: it
     hreflang: it_IT
     direction: ltr
-    typo3Language: default
     flag: it
     fallbackType: fallback
     fallbacks: '1,0'
@@ -64,7 +61,6 @@ languages:
     iso-639-1: en
     hreflang: en_US
     direction: ltr
-    typo3Language: default
     flag: gb
     fallbackType: fallback
     fallbacks: '0'

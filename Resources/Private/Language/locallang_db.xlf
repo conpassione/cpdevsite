@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2024-10-01T19:12:01+02:00">
+    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2024-10-07T22:24:27+02:00">
         <header></header>
         <body>
-            <trans-unit id="backendlayout.col1" resname="backendlayout.col1">
+            <trans-unit id="backendlayout.col0" resname="backendlayout.col0">
                 <source>Content</source>
             </trans-unit>
-            <trans-unit id="contentwizard.conpassione.grouLabel" resname="contentwizard.conpassione.grouLabel">
-                <source>conPassione</source>
+            <trans-unit id="backendlayout.col1" resname="backendlayout.col1">
+                <source>Footer</source>
+            </trans-unit>
+            <trans-unit id="backendlayout.gallery.title" resname="backendlayout.gallery.title">
+                <source>Gallery</source>
             </trans-unit>
             <trans-unit id="backendlayout.homepage.title" resname="backendlayout.homepage.title">
                 <source>Homepage</source>
             </trans-unit>
             <trans-unit id="backendlayout.simplepage.title" resname="backendlayout.simplepage.title">
                 <source>SimpleSite</source>
+            </trans-unit>
+            <trans-unit id="contentwizard.conpassione.grouLabel" resname="contentwizard.conpassione.grouLabel">
+                <source>conPassione</source>
             </trans-unit>
             <trans-unit id="rte.codeblock.kbd" resname="rte.codeblock.kbd">
                 <source>Keystroke</source>
@@ -107,6 +113,15 @@
             </trans-unit>
             <trans-unit id="tceform.page.layout.label" resname="tceform.page.layout.label">
                 <source>Pagelayout</source>
+            </trans-unit>
+            <trans-unit id="tceform.page.media.label" resname="tceform.page.media.label">
+                <source>Content image</source>
+            </trans-unit>
+            <trans-unit id="tceform.page.subtitle.label" resname="tceform.page.subtitle.label">
+                <source>Pageheader</source>
+            </trans-unit>
+            <trans-unit id="tceform.page.title.label" resname="tceform.page.title.label">
+                <source>Pagetree title</source>
             </trans-unit>
         </body>
     </file>

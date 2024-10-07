@@ -4,7 +4,7 @@
 		<header/>
 		<body>
 			<trans-unit id="title" resname="title">
-				<source>Homepage</source>
+				<source>Galerypage</source>
 			</trans-unit>
 			<trans-unit id="logo.label" resname="logo.label">
 				<source>Brand Logo</source>
