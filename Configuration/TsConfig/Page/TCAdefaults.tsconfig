@@ -11,11 +11,10 @@ TCAdefaults.pages {
   layout = 0
   #backend_layout = pagets__SimplePage
   #backend_layout_next_level = pagets__SimplePage
-  #TAB-Verhaltaen
+  #TAB-Verhalten
   #TAB-Ressourcen
   #TAB-Sprache
   #TAB-Zugriff
-
   #TAB-Kategorien
   #TAB-Hinweise
 }

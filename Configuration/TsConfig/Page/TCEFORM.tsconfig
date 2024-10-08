@@ -27,19 +27,18 @@ TCEFORM.pages {
     }
   }
   backend_layout {
-    disabled = 0
+    disabled = 1
     disableNoMatchingValueElement = 1
   }
   backend_layout_next_level {
-    disabled = 0
+    disabled = 1
     disableNoMatchingValueElement = 1
   }
   #TAB-Verhalten
   php_tree_stop.disabled = 1
+  content_from_pid.disabled = 1
 
   #TAB-Ressourcen
-  tsconfig_includes.disabled = 1
-  TSconfig.disabled = 1
   #TAB-Sprache
   #TAB-Zugriff
   #TAB-Kategorien
@@ -55,19 +54,21 @@ TCEFORM.pages {
     #TAB-Metadaten
     #TAB-Erscheinungsbild
     #TAB-Verhalten
-    module.disabled = 0
-    is_siteroot.disabled = 0
+    module.disabled = 1
+    is_siteroot.disabled = 1
     #TAB-Ressourcen
+    tsconfig_includes.disabled = 1
+    TSconfig.disabled = 1
     #TAB-Sprache
     #TAB-Zugriff
-    editlock.disabled = 0
+    editlock.disabled = 1
     #TAB-Kategorien
     #TAB-Hinweis
   }
 [END]
 
 
-#[backend.user.isAdmin]
+#[!backend.user.isAdmin]
 #TCEFORM.tt_content.CType.removeItems:=addToList(bullets, textpic, table, upload)
 #TCEFORM.tt_content.CType.removeItems:=addToList(html, div)
 #[end]
@@ -110,7 +111,7 @@ TCEFORM.tt_content {
   imageborder.disabled = 1
 
 # Zugriff
-  fe_group.disabled = 1
+  fe_group.disabled = 0
   editlock.disabled = 1
 
 # Hinweise

@@ -5,7 +5,8 @@ group: conpassione
 table: tx_conpassione_member
 lableField: title
 sortField: title
-
+security:
+  ignorePageTypeRestriction: true
 
 fields:
 - identifier: title

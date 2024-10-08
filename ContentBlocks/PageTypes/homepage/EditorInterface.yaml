@@ -20,5 +20,5 @@ fields:
             title: 1:1
             value: 1
         selectedRatio: LogoSQ
-  - identifier: media
-    useExistingField: true
+#  - identifier: media
+#    useExistingField: true
