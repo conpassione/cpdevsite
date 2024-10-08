@@ -1,15 +1,9 @@
-#---------------------------------------------------------------
-# PageTS config.backend_layout for ext cp_grid
-#
-# Generated 01.06.2020 by www.conpassione.ch
-#---------------------------------------------------------------
-
 mod {
   web_layout {
 		BackendLayouts {
-			SimplePage {
-				title =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.simplepage.title
-        icon = tx-conpassione-backendlayout-simplepage
+			DefaultContentPage {
+				title =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.defaultcontentpage.title
+        icon = tx-conpassione-backendlayout
         config {
           backend_layout {
             doktype = 1

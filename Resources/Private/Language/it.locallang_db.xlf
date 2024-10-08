@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="it" original="" datatype="plaintext" date="2024-10-07T22:24:27+02:00">
+    <file source-language="en" target-language="it" original="" datatype="plaintext" date="2024-10-08T22:32:24+02:00">
         <body>
             <trans-unit id="backendlayout.col0" resname="backendlayout.col0">
                 <source>Content</source>
@@ -10,6 +10,10 @@
                 <source>Footer</source>
                 <target>Piè di pagina</target>
             </trans-unit>
+            <trans-unit id="backendlayout.defaultcontentpage.title" resname="backendlayout.defaultcontentpage.title">
+                <source>Standard content page</source>
+                <target>Pgina di contenuto standard</target>
+            </trans-unit>
             <trans-unit id="backendlayout.gallery.title" resname="backendlayout.gallery.title">
                 <source>Gallery</source>
                 <target>Galleria</target>
@@ -18,8 +22,16 @@
                 <source>Homepage</source>
                 <target>Pagina iniziale</target>
             </trans-unit>
+            <trans-unit id="contentwizard.conpassione.groupLabel" resname="contentwizard.conpassione.groupLabel">
+                <source>conPassione</source>
+                <target>conPassione</target>
+            </trans-unit>
+            <trans-unit id="pagewizard.gallery.groupLabel" resname="pagewizard.gallery.groupLabel">
+                <source>Gallery</source>
+                <target>Galleria</target>
+            </trans-unit>
             <trans-unit id="tceform.page.media.label" resname="tceform.page.media.label">
-                <source>Content image</source>
+                <source>Title image</source>
                 <target>Imagine</target>
             </trans-unit>
             <trans-unit id="tceform.page.subtitle.label" resname="tceform.page.subtitle.label">

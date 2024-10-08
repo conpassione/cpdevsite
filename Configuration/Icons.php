@@ -5,6 +5,12 @@ use TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider;
 use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
 
 return [
+     //  Im BackendLayout wird das Icon direkt vom File geladen, damit das Icon grösser dargestellt werden kann
+    'tx-conpassione-backendlayout' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:cpdevsite/Resources/Public/Icons/backendlayout.svg',
+    ],
+
     'tx-conpassione-content-beside-text-img-left' => [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:cpdevsite/Resources/Public/Icons/content-beside-text-img-left.svg',
@@ -29,13 +35,6 @@ return [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:cpdevsite/Resources/Public/Icons/content-beside-text-img-right-bottom.svg',
     ],
-
-//  Im BackendLayout wird das Icon direkt vom File geladen, damit das Icon grösser dargestellt werden kann
-    'tx-conpassione-backendlayout-simplepage' => [
-        'provider' => SvgIconProvider::class,
-        'source' => 'EXT:cpdevsite/Resources/Public/Icons/backendlayout-simplepage.svg',
-    ],
-
 
 /*    'tx-myext-bitmapicon' => [
         'provider' => BitmapIconProvider::class,

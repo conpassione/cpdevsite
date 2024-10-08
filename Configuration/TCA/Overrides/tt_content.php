@@ -17,7 +17,7 @@ call_user_func(static function(): void {
         'tt_content',
         'CType',
         'conpassione',
-        'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.conpassione.grouLabel',
+        'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.conpassione.groupLabel',
         'before:default'
     );
 

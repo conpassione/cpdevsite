@@ -11,8 +11,17 @@ call_user_func(static function(): void {
     $GLOBALS['TCA']['pages']['columns']['layout']['config']['items'] = [];
     unset($GLOBALS['TCA']['pages']['columns']['layout']['config']['default']);
 
+    ExtensionManagementUtility::addTcaSelectItemGroup(
+        'pages',
+        'doktype',
+        'gallery',
+        'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:pagewizard.gallery.groupLabel',
+        'before:default'
+    );
+
     $doktypes = '36650001,36650002';
 
+    // update TCA to unify BE for Standard and Custom Pages
     ExtensionManagementUtility::addToAllTCAtypes(
         'pages',
         'abstract',
@@ -38,5 +47,18 @@ call_user_func(static function(): void {
         'media',
         $doktypes,
         'before:tsconfig_includes'
+    );
+
+    ExtensionManagementUtility::addFieldsToPalette(
+        'pages',
+        'layout',
+        'layout,newUntil'
+    );
+
+    ExtensionManagementUtility::addToAllTCAtypes(
+        'pages',
+        '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.layout;layout',
+        $doktypes,
+        'before:palette:backend_layout'
     );
 });

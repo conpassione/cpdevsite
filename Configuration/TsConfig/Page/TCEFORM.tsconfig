@@ -5,13 +5,12 @@ TCEFORM.pages {
   nav_title.disabled = 1
   # subtitle.disabled = 1
   subtitle.label = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.subtitle.label
-  // Remove unwanted doktypes (1:Standard, 2:Erweitert, 3:Externe URL, 4:Shortcut, 5:Nicht im Menu, 6:BE-Bereich, 7:Mountpoint, 199:Abstand, 254:Sysordner, 255:Recycler, --div--:Trennlinie
-  doktype.removeItems = 5,6,7,199,255,--div--
+  // Remove unwanted doktypes (1:Standard, 3:Externe URL, 4:Shortcut, 6:BE-Bereich, 7:Mountpoint, 199:Abstand, 254:Sysordner, 255:Recycler, --div--:Trennlinie
+  doktype.removeItems = 6,7,199,255,--div--
   #TAB-SEO
   # no_index.disabled = 1
   # no_follow.disabled = 1
   sitemap_changefreq = monthly
-  media.label = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.media.label
 
   #TAB-Social Media
   #TAB-Metadaten
@@ -39,6 +38,7 @@ TCEFORM.pages {
   content_from_pid.disabled = 1
 
   #TAB-Ressourcen
+  media.label = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.media.label
   #TAB-Sprache
   #TAB-Zugriff
   #TAB-Kategorien
