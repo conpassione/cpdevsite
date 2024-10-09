@@ -1,0 +1,10 @@
+name: conpassione/event
+typeName: 36650022
+title: Event
+group: agenda
+description: Das ist die Events Detailseite
+fields:
+  - identifier: subtitle
+    useExistingField: true
+
+

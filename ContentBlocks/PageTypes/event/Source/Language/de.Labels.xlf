@@ -4,8 +4,8 @@
         <header/>
         <body>
             <trans-unit id="title" resname="title">
-                <source>Gallerypage</source>
-                <target>Galerieseite</target>
+                <source>Event</source>
+                <target>Veranstaltung</target>
             </trans-unit>
 			<trans-unit id="logo.label" resname="logo.label">
 				<source>Brand Logo</source>

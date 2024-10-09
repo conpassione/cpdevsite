@@ -1,6 +1,7 @@
 name: conpassione/gallery
-typeName: 36650002
+typeName: 36650012
 title: Gallery
+group: gallery
 description: Das ist die Startseite für alle Webseiten
 fields:
   - identifier: subtitle

@@ -25,7 +25,7 @@ page.10 {
     10 = EXT:cpdevsite/Resources/Private/Templates/
   }
   dataProcessing.10 = page-content
-  dataProcessing.10.as = mycontent
+  dataProcessing.10.as = pagecontent
   variables {
     templateName = TEXT
     templateName {
@@ -37,10 +37,23 @@ page.10 {
         default.value = Default
 
         1 = TEXT
-        1.value = SimplePage
+        1.value = Defaultcontentpage
 
         36650001 = TEXT
         36650001.value = Homepage
+
+        36650011 = TEXT
+        36650011.value = Gallerymenu
+
+        36650012 = TEXT
+        36650012.value = Gallery
+
+        36650021 = TEXT
+        36650021.value = Agenda
+
+        36650022 = TEXT
+        36650022.value = Event
+
       }
     }
   }

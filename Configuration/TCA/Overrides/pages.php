@@ -16,10 +16,18 @@ call_user_func(static function(): void {
         'doktype',
         'gallery',
         'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:pagewizard.gallery.groupLabel',
-        'before:default'
+        'after:default'
     );
 
-    $doktypes = '36650001,36650002';
+    ExtensionManagementUtility::addTcaSelectItemGroup(
+        'pages',
+        'doktype',
+        'agenda',
+        'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:pagewizard.agenda.groupLabel',
+        'after:default'
+    );
+
+    $doktypes = '36650001,36650011,36650012,36650021,36650022';
 
     // update TCA to unify BE for Standard and Custom Pages
     ExtensionManagementUtility::addToAllTCAtypes(

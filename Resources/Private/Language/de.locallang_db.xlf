@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="de" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-10-08T22:32:24+02:00">
-        <header></header>
+    <file source-language="en" target-language="de" original="" datatype="plaintext" date="2024-10-09T14:13:12+02:00">
         <body>
+            <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
+                <source>Agenda</source>
+                <target>Agenda</target>
+            </trans-unit>
+            <trans-unit id="backendlayout.event.title" resname="backendlayout.event.title">
+                <source>Event</source>
+                <target>Evento</target>
+            </trans-unit>
             <trans-unit id="backendlayout.col0" resname="backendlayout.col0">
                 <source>Content</source>
                 <target>Inhalt</target>
@@ -19,6 +26,10 @@
                 <source>Gallery</source>
                 <target>Galerie</target>
             </trans-unit>
+            <trans-unit id="backendlayout.gallerymenu.title" resname="backendlayout.gallerymenu.title">
+                <source>Gallery menu</source>
+                <target>Galerie Verzeichnis</target>
+            </trans-unit>
             <trans-unit id="backendlayout.homepage.title" resname="backendlayout.homepage.title">
                 <source>Homepage</source>
                 <target>Startseite</target>
@@ -26,6 +37,10 @@
             <trans-unit id="contentwizard.conpassione.groupLabel" resname="contentwizard.conpassione.groupLabel">
                 <source>conPassione</source>
                 <target>conPassione</target>
+            </trans-unit>
+            <trans-unit id="pagewizard.agenda.groupLabel" resname="pagewizard.agenda.groupLabel">
+                <source>Agenda</source>
+                <target>Agenda</target>
             </trans-unit>
             <trans-unit id="pagewizard.gallery.groupLabel" resname="pagewizard.gallery.groupLabel">
                 <source>Gallery</source>

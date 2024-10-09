@@ -1,12 +1,12 @@
 mod {
   web_layout {
 		BackendLayouts {
-			Gallery {
-				title =  LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:backendlayout.gallery.title
+			Event {
+				title =  LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:backendlayout.event.title
         icon = tx-conpassione-backendlayout-simplepage
         config {
           backend_layout {
-            doktype = 36650012
+            doktype = 36650022
             colCount = 1
             rowCount = 1
             rows {
