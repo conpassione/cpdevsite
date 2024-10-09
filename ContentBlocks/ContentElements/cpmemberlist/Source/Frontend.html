@@ -1,0 +1,11 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:cb="http://typo3.org/ns/Contentblocks/ContentBlocks/ViewHelpers">
+<cb:asset.css identifier="content-block-css-conpassione-conpassione/cpmemberlist" file="Frontend.css" />
+<cb:asset.script identifier="content-block-js-conpassione-conpassione/cpmemberlist" file="Frontend.js"/>
+
+<div class="cpmemberlist">
+    <h1>{data.header}</h1>
+    <f:for as="member" each="{data.members}">
+        <h2>{member.title} - X<f:translate key="LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:recordtype.member.board.{member.board}" />:{member.board}</h2>
+        <p>{member.feuser.name}</p>
+    </f:for>
+</div>

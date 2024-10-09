@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="fr" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-10-09T14:13:12+02:00">
+    <file source-language="en" target-language="fr" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-10-09T18:02:54+02:00">
         <header></header>
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
                 <source>Agenda</source>
                 <target>Agenda</target>
+            </trans-unit>
+            <trans-unit id="recordtype.member.board.1" resname="recordtype.member.board.1">
+                <source>Comitee</source>
+                <target>Comitée</target>
+            </trans-unit>
+            <trans-unit id="recordtype.member.board.2" resname="recordtype.member.board.2">
+                <source>Breeders comitee</source>
+                <target>Commision d&#39;élevage</target>
             </trans-unit>
             <trans-unit id="backendlayout.event.title" resname="backendlayout.event.title">
                 <source>Event</source>
