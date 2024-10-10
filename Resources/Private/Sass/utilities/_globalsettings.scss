@@ -14,10 +14,18 @@
 
 html,
 body {
+  color: var(--clr-text);
+  background-color: var(--clr-white);
   margin: 0;
+  padding: 0;
   font-family: var(--ff), sans-serif;
   font-size: 16px;
   line-height: 1.6rem;
+  display:block;
+}
+
+body {
+  overflow-y: scroll;
 }
 
 hr {
@@ -51,6 +59,19 @@ img, svg, video, canvas, audio, iframe, embed, object {
   background-repeat: no-repeat;
   background-size: cover;
   shape-margin: 1rem;
+}
+
+/* @docs
+label: Audio Width
+
+    note: |
+        There is no good reason elements default to 300px,
+        and audio files are unlikely to come with a width attribute.
+
+category: embedded elements
+*/
+audio {
+  width: 100%;
 }
 
 audio:not([controls]) {
@@ -95,19 +116,6 @@ img, svg, video, canvas {
   height: auto;
 }
 
-
-/* @docs
-label: Audio Width
-
-    note: |
-        There is no good reason elements default to 300px,
-        and audio files are unlikely to come with a width attribute.
-
-category: embedded elements
-*/
-audio {
-  width: 100%;
-}
 
 /* @docs
 label: Image Borders

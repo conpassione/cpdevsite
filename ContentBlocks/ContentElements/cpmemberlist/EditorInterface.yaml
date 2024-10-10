@@ -1,8 +1,7 @@
 name: conpassione/cpmemberlist
 typeName: cpmemberlist
 group: conpassione
-prefixFields: true
-prefixType: full
+prefixFields: false
 fields:
   - identifier: conpassione/Header
     type: Basic

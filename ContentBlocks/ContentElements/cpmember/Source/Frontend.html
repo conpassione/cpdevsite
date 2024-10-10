@@ -1,0 +1,24 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:cb="http://typo3.org/ns/Contentblocks/ContentBlocks/ViewHelpers">
+<cb:asset.css identifier="content-block-css-conpassione-conpassione/cpdata.feuserlist" file="Frontend.css" />
+<cb:asset.script identifier="content-block-js-conpassione-conpassione/cpdata.feuserlist" file="Frontend.js"/>
+
+<div class="cpdata.feuser">
+    <f:debug inline="1">{data}</f:debug>
+    <p>{data.header}</p>
+    <f:if condition="{data.feuser}">
+        <h2>{data.feuser.name}</h2>
+        <p>{data.feuser.last_name} - {data.feuser.first_name}<br>
+            {data.feuser.address}<br>
+            {data.feuser.zip}&nbsp;{data.feuser.city}<br>
+            {data.feuser.telephone} img: <br>
+        </p>
+        <f:for as="member" each="{data._raw.feuser}">
+            <f:if condition="{member.image}">
+                Bild gefunden
+                <f:for as="image" each="{member.image}">
+                    <f:image image="{image}" width="250c" height="250c"/>
+                </f:for>
+            </f:if>
+        </f:for>
+    </f:if>
+</div>

@@ -1,0 +1,19 @@
+name: conpassione/cpmember
+typeName: cpmember
+title: 'Mitglied'
+group: conpassione
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+  - identifier: feuser
+    type: 'Select'
+    label: 'FE-User'
+    renderType: selectSingle
+    foreign_table: fe_users
+    labelField: name
+    minitems: 0
+    maxitems: 1
+basics:
+- TYPO3/Appearance
+- TYPO3/Categories

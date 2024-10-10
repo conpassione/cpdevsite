@@ -1,15 +1,5 @@
 /* page */
 
-html {
-  background-color: var(--clr-brand3);
-  margin: 0;
-  padding: 0;
-  font-family: #{$cp-fontFamily};
-  font-size: 16px;
-  line-height: 1.6rem;
-}
-
-
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {
     scroll-behavior: smooth;
@@ -18,8 +8,10 @@ html {
 }
 
 header,
+main,
 footer,
 section,
 article {
   container-type: inline-size;
 }
+

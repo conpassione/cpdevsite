@@ -63,12 +63,12 @@
   font-style: normal;
 }
 :root {
-  --ff: Ubuntu, sans-serif;
-  --ff-condensed: UbuntuCondensed, sans-serif;
-  --ff-serif: Ubuntu, serif;
-  --ff-h: UbuntuCondensed, sans-serif;
-  --ff-nav: Ubuntu, sans-serif;
-  --ff-mono: UbuntuMono, sans-serif;
+  --ff: Ubuntu;
+  --ff-condensed: UbuntuCondensed;
+  --ff-serif: Ubuntu;
+  --ff-h: UbuntuCondensed;
+  --ff-nav: Ubuntu;
+  --ff-mono: UbuntuMono;
   --ff-symbol: Symbols;
 }
 
@@ -94,10 +94,18 @@
 
 html,
 body {
+  color: var(--clr-text);
+  background-color: var(--clr-white);
   margin: 0;
+  padding: 0;
   font-family: var(--ff), sans-serif;
   font-size: 16px;
   line-height: 1.6rem;
+  display: block;
+}
+
+body {
+  overflow-y: scroll;
 }
 
 hr {
@@ -131,6 +139,19 @@ img, svg, video, canvas, audio, iframe, embed, object {
   background-repeat: no-repeat;
   background-size: cover;
   shape-margin: 1rem;
+}
+
+/* @docs
+label: Audio Width
+
+    note: |
+        There is no good reason elements default to 300px,
+        and audio files are unlikely to come with a width attribute.
+
+category: embedded elements
+*/
+audio {
+  width: 100%;
 }
 
 audio:not([controls]) {
@@ -171,19 +192,6 @@ category: embedded elements
 */
 img, svg, video, canvas {
   height: auto;
-}
-
-/* @docs
-label: Audio Width
-
-    note: |
-        There is no good reason elements default to 300px,
-        and audio files are unlikely to come with a width attribute.
-
-category: embedded elements
-*/
-audio {
-  width: 100%;
 }
 
 /* @docs
@@ -298,6 +306,8 @@ template {
   --clr-brand3: oklch(70.6% 0.189 303.591deg);
   --clr-brand4: oklch(50.3% 0.057 231.771deg);
   --clr-highlight: oklch(49.6% 0.137 318.633deg);
+  --clr-h: oklch(49.6% 0.137 318.633deg);
+  --clr-text: oklch(40% 0 0deg);
   --code-bg: oklch(75% 0 0deg);
   --code-bc: oklch(40% 0 0deg);
 }
@@ -363,7 +373,32 @@ kbd {
 /* headings */
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
-  font-family: var(--ff-headings), sans-serif;
+  font-family: var(--ff-h), sans-serif;
+  margin-block-end: 1rem;
+  margin-inline: 0;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-size: clamp(3rem, 5vw, 5rem);
+  margin-block-start: 2em;
+  color: var(--clr-h);
+}
+
+h2 {
+  font-size: clamp(2rem, 3vw, 4rem);
+  margin-block-start: 1.5em;
+  color: var(--clr-h);
+}
+
+h3,
+h4 {
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  margin-block-start: 1em;
+}
+
+h3 {
+  color: var(--clr-h);
 }
 
 /* list */

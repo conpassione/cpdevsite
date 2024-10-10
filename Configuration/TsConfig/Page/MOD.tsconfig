@@ -14,9 +14,8 @@ mod.linkvalidator.linkhandler.reportHiddenRecords = 1
 #mod.wizards.newContentElement.wizardItems.common {
 # # show:=removeFromList(bullets,textpic,table,upload)
 #}
-#mod.wizards.newContentElement.wizardItems.special {
-#  #show:=removeFromList(html,div)
-#}
+
+# mod.wizards.newContentElement.wizardItems.special.show:=removeFromList(html,div)
 
 #mod.wizards.newContentElement.wizardItems.sliders {
 #  header = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.groupLabel

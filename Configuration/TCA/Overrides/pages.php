@@ -11,6 +11,14 @@ call_user_func(static function(): void {
     $GLOBALS['TCA']['pages']['columns']['layout']['config']['items'] = [];
     unset($GLOBALS['TCA']['pages']['columns']['layout']['config']['default']);
 
+    // zusätzliche Icons für Folder-Seiten
+    $GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] = [
+        'label' => 'Test',
+        'icon' => 'mimetypes-x-content-login',
+        'value'=>   'members'
+    ];
+    $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-members'] = 'mimetypes-x-content-login';
+
     ExtensionManagementUtility::addTcaSelectItemGroup(
         'pages',
         'doktype',
@@ -27,6 +35,7 @@ call_user_func(static function(): void {
         'after:default'
     );
 
+    // List all pages that are to be supplemented with the standard fields
     $doktypes = '36650001,36650011,36650012,36650021,36650022';
 
     // update TCA to unify BE for Standard and Custom Pages

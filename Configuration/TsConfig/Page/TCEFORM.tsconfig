@@ -76,13 +76,14 @@ TCEFORM.pages {
 # Eigenschaften der CE-Elemente
 TCEFORM.tt_content {
 # Allgemein
+  colPos.disabled = 1
   header_layout {
     removeItems = 0,5
     altLabels {
-      1 = LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh1
-      2 = LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh2
-      3 = LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh3
-      4 = LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh4
+      1 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh1
+      2 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh2
+      3 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh3
+      4 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh4
     }
   }
   # header_position
@@ -93,18 +94,21 @@ TCEFORM.tt_content {
   #layout
   layout {
     addItems {
-      0 = LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:tceform.layout.label0
+      0 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.layout.label0
     }
   }
   # Definition der Rahmen und Hintergründe
   frame_class {
     addItems {
-      default = LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:tceform.frame_class.labeldefault
+      default = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.frame_class.labeldefault
     }
   }
   space_before_class.disabled = 1
   space_after_class.disabled = 1
   linkToTop.disabled = 1
+
+# Kategorien
+  categories.disabled = 1
 
 # Medien/Bilder
   imageheight.disabled = 1
@@ -137,16 +141,16 @@ TCEFORM.tt_content.imageorient {
   removeItems = 17,18
   addItems {
     # Neben dem Text mitterechts
-    31 = LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.rightmiddle
+    31 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.rightmiddle
     31.icon = tx-conpassione-content-beside-text-img-right-middle
     #  Neben dem Text mittelinks
-    32 = LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.leftmiddle
+    32 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.leftmiddle
     32.icon = tx-conpassione-content-beside-text-img-left-middle
     # Neben dem Text untenrechts
-    33 = LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.rightbottom
+    33 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.rightbottom
     33.icon = tx-conpassione-content-beside-text-img-right-bottom
     # Nebem dem Text untenlinks
-    34 = LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.leftbottom
+    34 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.leftbottom
     34.icon = tx-conpassione-content-beside-text-img-left-bottom
   }
   types.image.removeItems = 8,9,10,17,18,25,26,31,32,33,34
