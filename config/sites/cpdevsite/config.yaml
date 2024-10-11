@@ -1,10 +1,10 @@
 base: 'https://www.cpdev.ch'
-dependencies:
-  - conpassione/cpdevsite
 baseVariants:
   -
     base: 'https://cpdevsite.ddev.site'
     condition: 'applicationContext == "Development"'
+dependencies:
+  - conpassione/cpdevsite
 errorHandling:
   -
     errorCode: 404
@@ -26,6 +26,7 @@ languages:
     direction: ltr
     flag: ch
     enabled: true
+    websiteTitle: 'conPassione Entwicklungsinstanz'
   -
     languageId: 1
     title: Français
@@ -39,6 +40,7 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     enabled: true
+    websiteTitle: 'conPassione | site de develeopement'
   -
     languageId: 2
     title: Italiano
@@ -52,6 +54,7 @@ languages:
     fallbackType: fallback
     fallbacks: '1,0'
     enabled: true
+    websiteTitle: 'conPassione | developemento'
   -
     languageId: 3
     title: English
@@ -65,16 +68,16 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     enabled: true
+    websiteTitle: 'conPassion DevSite'
 rootPageId: 1
 routeEnhancers:
   PageTypeSuffix:
     type: PageType
     map:
       sitemap.xml: 1533906435
-#      browserconfig.xml: 2943879438
-#      site.webmanifest: 3478304621
 routes:
   -
     route: robots.txt
     type: staticText
     content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3conf/\r\nSitemap: https://cpdevsite.ddev.site/sitemap.xml\r\n"
+websiteTitle: CpDevSite

@@ -2,3 +2,38 @@ page = PAGE
 page {
   typeNum = 0
 }
+
+config {
+  headerComment (
+      {$TYPO3copyright}
+  )
+  linkVars = L(0-3)
+
+#  spamProtectEmailAddresses = -4
+#  spamProtectEmailAddresses_atSubst = (at)
+
+  index_enable = 1
+  index_externals = 1
+
+  noPageTitle = 0
+  pageTitleFirst = 1
+  pageTitleSeparator = |
+  pageTitleSeparator.noTrimWrap = | | |
+
+  removeDefaultCss = 1
+  removeDefaultJS = 1
+
+  sendCacheHeaders = 1
+  cache_period = 86400
+  cache_clearAtMidnight = 1
+
+  absRefPrefix = auto
+
+#  additionalHeaders {
+#    10.header = Strict-Transport-Security: max-age=31536000; inludeSubDomains
+#    20.header = X-Content-Type-Options: nosniff
+#    30.header = X-Powered-By: Unicorns
+#    40.header = Referrer-Policy: same-origin
+#    60.header = Content-Security-Policy: frame-ancestors 'self'
+#  }
+}

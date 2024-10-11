@@ -9,23 +9,28 @@
 
     <f:if condition="{data.feuser}">
         <f:then>
-            <p>{data.header}</p><h2>{data.feuser.name}</h2>
-            <p>{data.feuser.last_name} - {data.feuser.first_name}<br>
-                {data.feuser.address}<br>
-                {data.feuser.zip}&nbsp;{data.feuser.city}<br>
-                {data.feuser.telephone} img: <br>
-            </p>
-            <f:for as="member" each="{data._raw.feuser}">
-                <f:if condition="{member.image}">
-                    Bild gefunden
-                    <f:for as="image" each="{member.image}">
-                        <f:image image="{image}" width="250c" height="250c"/>
+            <h2>{data.header}</h2>
+
+            <div class="cpmember--body">
+                <div class="cpmember--img">
+                    <f:for as="member" each="{data._raw.feuser}">
+                        <f:if condition="{member.image}">
+                            <f:for as="image" each="{member.image}">
+                                <f:image image="{image}"/>
+                            </f:for>
+                        </f:if>
                     </f:for>
-                </f:if>
-            </f:for>
+                </div>
+                <p>{data.feuser.last_name} - {data.feuser.first_name}<br>
+                    {data.feuser.address}<br>
+                    {data.feuser.zip}&nbsp;{data.feuser.city}<br>
+                    {data.feuser.telephone}
+                </p>
+            </div>
         </f:then>
         <f:else>
-            <p>{data.header} (vakant)</p>
+            <h2>{data.header}</h2>
+            <p>(vakant)</p>
         </f:else>
 
     </f:if>

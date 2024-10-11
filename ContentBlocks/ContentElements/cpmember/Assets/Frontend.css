@@ -2,6 +2,14 @@
 
 .cpmember {
   container-type: inline-size;
+  h2 {
+    text-align: center;
+  }
 }
 
+.cpmember--body {
+  display: grid;
+  grid: auto / repeat(2, 1fr);
+  grid-gap: 2em;
+}
 
