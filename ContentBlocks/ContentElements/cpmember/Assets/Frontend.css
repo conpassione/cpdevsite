@@ -1,6 +1,7 @@
 /* Created by Content Blocks */
 
 .cpmember {
-  border: 1px solid firebrick;
-
+  container-type: inline-size;
 }
+
+
