@@ -1,11 +1,16 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 
-<f:layout name="Default" />
+<f:layout name={layoutName} />
+
+<f:section name="Header">
+
+</f:section>
+
 <f:section name="Main">
-    <f:asset.css identifier="globalcss" href="EXT:cpdevsite/Resources/Public/Css/Layout.css" />
     <main>
-        <h1>Hello World from SimpleSite</h1>
+        <f:debug inline="true">{_all}</f:debug>
+        <h1>Hello World from DefaultContentPage</h1>
         <p>From settings.yaml: {settings.TYPO3copyright}</p>
         <hr>
         <f:for each="{pagecontent.content.records}" as="contentelement">
@@ -16,6 +21,10 @@
             />
         </f:for>
     </main>
+</f:section>
+
+<f:section name="Footer">
+
 </f:section>
 
 </html>

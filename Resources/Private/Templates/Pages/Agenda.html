@@ -1,7 +1,13 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 <f:asset.css identifier="globalcss" href="EXT:cpdevsite/Resources/Public/Css/Layout.css" />
 
-<f:layout name="Default" />
+<f:layout name={layoutName} />
+
+<f:section name="Header">
+
+</f:section>
+
+
 <f:section name="Main">
     <f:debug>{_all}</f:debug>
     <main>
@@ -16,6 +22,10 @@
             />
         </f:for>
     </main>
+</f:section>
+
+<f:section name="Footer">
+
 </f:section>
 
 </html>

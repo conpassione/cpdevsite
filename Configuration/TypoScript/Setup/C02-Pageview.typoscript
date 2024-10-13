@@ -28,32 +28,43 @@ page.10 {
   dataProcessing.10.as = pagecontent
   variables {
     templateName = TEXT
-    templateName {
+    templateName.value = test
+#    templateName {
+#      cObject = CASE
+#      cObject {
+#        key.field = doktype
+#
+#        default = TEXT
+#        default.value = Default
+#
+#        1 = TEXT
+#        1.value = Defaultcontentpagex
+#
+#        36650001 = TEXT
+#        36650001.value = Homepagex
+#
+#        36650011 = TEXT
+#        36650011.value = Gallerymenu
+#
+#        36650012 = TEXT
+#        36650012.value = Gallery
+#
+#        36650021 = TEXT
+#        36650021.value = Agenda
+#
+#        36650022 = TEXT
+#        36650022.value = Event
+#
+#      }
+#    }
+    layoutName = TEXT
+    layoutName {
       cObject = CASE
       cObject {
-        key.field = doktype
+        key.field = layout
 
         default = TEXT
         default.value = Default
-
-        1 = TEXT
-        1.value = Defaultcontentpage
-
-        36650001 = TEXT
-        36650001.value = Homepage
-
-        36650011 = TEXT
-        36650011.value = Gallerymenu
-
-        36650012 = TEXT
-        36650012.value = Gallery
-
-        36650021 = TEXT
-        36650021.value = Agenda
-
-        36650022 = TEXT
-        36650022.value = Event
-
       }
     }
   }
