@@ -83,6 +83,15 @@
 			"helhum/dotenv-connector": true
 		}
 	},
+	"repositories": [
+		{
+			"type": "path",
+			"url": "packages/*",
+			"options": {
+				"symlink": true
+			}
+		}
+	],
 	"extra": {
 		"typo3/cms": {
 			"extension-key": "cpdevsite",

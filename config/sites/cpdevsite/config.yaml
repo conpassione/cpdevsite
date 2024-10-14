@@ -54,7 +54,7 @@ languages:
     fallbackType: fallback
     fallbacks: '1,0'
     enabled: true
-    websiteTitle: 'conPassione | developemento'
+    websiteTitle: 'conPassione | sito di sviluppo'
   -
     languageId: 3
     title: English
