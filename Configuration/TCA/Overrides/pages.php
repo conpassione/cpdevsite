@@ -13,7 +13,7 @@ call_user_func(static function(): void {
 
     // zusätzliche Icons für Folder-Seiten
     $GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] = [
-        'label' => 'Test',
+        'label' => 'Members',
         'icon' => 'mimetypes-x-content-login',
         'value'=>   'members'
     ];

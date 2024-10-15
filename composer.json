@@ -21,7 +21,7 @@
 	"version": "1.0.0",
 	"require": {
 		"b13/doktypemapper": "^2.0",
-		"contentblocks/content-blocks": "^0.8.2",
+		"friendsoftypo3/content-blocks": "^0.8.2",
 		"helhum/dotenv-connector": "*",
 		"typo3/cms-adminpanel": "^13",
 		"typo3/cms-backend": "^13",
