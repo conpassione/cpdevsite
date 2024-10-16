@@ -17,7 +17,7 @@ call_user_func(static function(): void {
         'icon' => 'tx-conpassione-memberlist',
         'value'=>   'memberlist'
     ];
-    $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-members'] = 'tx-conpassione-memberlist';
+    $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-memberlist'] = 'tx-conpassione-memberlist';
 
     ExtensionManagementUtility::addTcaSelectItemGroup(
         'pages',
