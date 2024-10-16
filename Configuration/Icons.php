@@ -5,6 +5,16 @@ use TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider;
 use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
 
 return [
+    'tx-conpassione-memberlist' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:cpdevsite/Resources/Public/Icons/cpmemberlist.svg',
+    ],
+
+    'tx-conpassione-member' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:cpdevsite/Resources/Public/Icons/cpmember.svg',
+    ],
+
      //  Im BackendLayout wird das Icon direkt vom File geladen, damit das Icon grösser dargestellt werden kann
     'tx-conpassione-backendlayout' => [
         'provider' => SvgIconProvider::class,

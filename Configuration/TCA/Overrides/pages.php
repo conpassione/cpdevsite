@@ -14,10 +14,10 @@ call_user_func(static function(): void {
     // zusätzliche Icons für Folder-Seiten
     $GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] = [
         'label' => 'Members',
-        'icon' => 'mimetypes-x-content-login',
-        'value'=>   'members'
+        'icon' => 'tx-conpassione-memberlist',
+        'value'=>   'memberlist'
     ];
-    $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-members'] = 'mimetypes-x-content-login';
+    $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-members'] = 'tx-conpassione-memberlist';
 
     ExtensionManagementUtility::addTcaSelectItemGroup(
         'pages',
