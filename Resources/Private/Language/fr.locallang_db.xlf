@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="fr" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-10-09T18:02:54+02:00">
-        <header></header>
+    <file source-language="en" target-language="fr" original="" datatype="plaintext" date="2024-10-16T16:35:04+02:00">
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
                 <source>Agenda</source>
                 <target>Agenda</target>
-            </trans-unit>
-            <trans-unit id="recordtype.member.board.1" resname="recordtype.member.board.1">
-                <source>Comitee</source>
-                <target>Comitée</target>
-            </trans-unit>
-            <trans-unit id="recordtype.member.board.2" resname="recordtype.member.board.2">
-                <source>Breeders comitee</source>
-                <target>Commision d&#39;élevage</target>
-            </trans-unit>
-            <trans-unit id="backendlayout.event.title" resname="backendlayout.event.title">
-                <source>Event</source>
-                <target>Veranstaltung</target>
             </trans-unit>
             <trans-unit id="backendlayout.col0" resname="backendlayout.col0">
                 <source>Content</source>
@@ -30,6 +17,10 @@
             <trans-unit id="backendlayout.defaultcontentpage.title" resname="backendlayout.defaultcontentpage.title">
                 <source>Standard content page</source>
                 <target>Page de contenu standard</target>
+            </trans-unit>
+            <trans-unit id="backendlayout.event.title" resname="backendlayout.event.title">
+                <source>Event</source>
+                <target>Veranstaltung</target>
             </trans-unit>
             <trans-unit id="backendlayout.gallery.title" resname="backendlayout.gallery.title">
                 <source>Gallery</source>
@@ -47,6 +38,10 @@
                 <source>conPassione</source>
                 <target>conPassione</target>
             </trans-unit>
+            <trans-unit id="pagetype.memberlist.label" resname="pagetype.memberlist.label">
+                <source>Members</source>
+                <target>Membres</target>
+            </trans-unit>
             <trans-unit id="pagewizard.agenda.groupLabel" resname="pagewizard.agenda.groupLabel">
                 <source>Agenda</source>
                 <target>Agenda</target>
@@ -54,6 +49,14 @@
             <trans-unit id="pagewizard.gallery.groupLabel" resname="pagewizard.gallery.groupLabel">
                 <source>Gallery</source>
                 <target>Galerie</target>
+            </trans-unit>
+            <trans-unit id="recordtype.member.board.1" resname="recordtype.member.board.1">
+                <source>Comitee</source>
+                <target>Comitée</target>
+            </trans-unit>
+            <trans-unit id="recordtype.member.board.2" resname="recordtype.member.board.2">
+                <source>Breeders comitee</source>
+                <target>Commision d&#39;élevage</target>
             </trans-unit>
             <trans-unit id="tceform.page.media.label" resname="tceform.page.media.label">
                 <source>Title image</source>

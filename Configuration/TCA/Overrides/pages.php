@@ -13,7 +13,7 @@ call_user_func(static function(): void {
 
     // zusätzliche Icons für Folder-Seiten
     $GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] = [
-        'label' => 'Members',
+        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:pagetype.memberlist.label',
         'icon' => 'tx-conpassione-memberlist',
         'value'=>   'memberlist'
     ];
