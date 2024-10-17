@@ -10,6 +10,6 @@
 .cpmember--body {
   display: grid;
   grid: auto / repeat(2, 1fr);
-  grid-gap: 2em;
+  grid-gap: 1.5em;
 }
 

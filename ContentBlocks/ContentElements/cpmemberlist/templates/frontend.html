@@ -5,7 +5,7 @@
 <div class="cpmemberlist">
     <h1>{data.header}</h1>
     <f:for as="member" each="{data.members}">
-        <h2>{member.title} - X<f:translate key="LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:recordtype.member.board.{member.board}" />:{member.board}</h2>
+        <h2>{member.title} - <f:translate key="LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:recordtype.member.board.{member.board}" />:{member.board}</h2>
         <p>{member.feuser.name}</p>
     </f:for>
 </div>
