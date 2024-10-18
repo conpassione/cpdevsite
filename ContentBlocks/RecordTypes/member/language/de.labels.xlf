@@ -4,8 +4,8 @@
         <header/>
         <body>
             <trans-unit id="title" resname="title">
-                <source>Function</source>
-                <target>Funktion</target>
+                <source>FunctionX</source>
+                <target>FunktionX</target>
             </trans-unit>
 			<trans-unit id="board" resname="board">
 				<source>Board</source>

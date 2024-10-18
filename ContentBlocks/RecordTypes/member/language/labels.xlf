@@ -4,7 +4,7 @@
 		<header/>
 		<body>
 			<trans-unit id="title" resname="title">
-				<source>Function</source>
+				<source>FunctionX</source>
 			</trans-unit>
 			<trans-unit id="board" resname="board">
 				<source>Board</source>

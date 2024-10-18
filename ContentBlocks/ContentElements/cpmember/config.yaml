@@ -11,12 +11,10 @@ fields:
     label: 'FE-User'
     renderType: selectSingle
     foreign_table: fe_users
+    foreign_table_where: 'ORDER BY fe_users.name'
     labelField: name
     minitems: 0
     maxitems: 1
     items:
-      - value: 0
-        label: vakant
-basics:
-- TYPO3/Appearance
-- TYPO3/Categories
+      - label: vakant
+        value: 0

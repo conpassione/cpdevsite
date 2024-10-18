@@ -26,6 +26,7 @@ page.10 {
   }
   dataProcessing.10 = page-content
   dataProcessing.10.as = pagecontent
+
   variables {
     templateName = TEXT
     templateName.value = test

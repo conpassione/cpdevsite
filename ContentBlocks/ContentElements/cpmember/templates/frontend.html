@@ -1,25 +1,22 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:cb="http://typo3.org/ns/Contentblocks/ContentBlocks/ViewHelpers">
+      xmlns:cb="http://typo3.org/ns/Friendsoftypo3/ContentBlocks/ViewHelpers">
 
 <f:asset.css identifier="cpmember-css" href="{cb:assetPath()}/frontend.css" />
 <f:asset.script identifier="cpmember-js" file="{cb:assetPath()}frontend.js"/>
 
 <div class="cpmember">
+    <h2>{data.header}</h2>
 
     <f:if condition="{data.feuser}">
         <f:then>
-            <h2>{data.header}</h2>
-
             <div class="cpmember--body">
                 <div class="cpmember--img">
-                    <f:for as="member" each="{data._raw.feuser}">
-                        <f:if condition="{member.image}">
-                            <f:for as="image" each="{member.image}">
-                                <f:image image="{image}"/>
-                            </f:for>
-                        </f:if>
-                    </f:for>
+                    <f:if condition="{data.feuser.image}">
+                        <f:for as="image" each="{data.feuser.image}">
+                            <f:image image="{image}"/>
+                        </f:for>
+                    </f:if>
                 </div>
                 <p>{data.feuser.last_name} - {data.feuser.first_name}<br>
                     {data.feuser.address}<br>
@@ -29,9 +26,7 @@
             </div>
         </f:then>
         <f:else>
-            <h2>{data.header}</h2>
             <p>(vakant)</p>
         </f:else>
-
     </f:if>
 </div>

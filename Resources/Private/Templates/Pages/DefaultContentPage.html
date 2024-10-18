@@ -16,7 +16,7 @@
         <f:for each="{pagecontent.content.records}" as="contentelement">
             <f:cObject
                 typoscriptObjectPath="tt_content.{contentelement.CType}"
-                data="{contentelement}"
+                data="{contentelement.rawRecord}"
                 table="tt_content"
             />
         </f:for>

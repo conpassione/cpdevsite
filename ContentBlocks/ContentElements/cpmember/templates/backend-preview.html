@@ -1,7 +1,11 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:cb="http://typo3.org/ns/Contentblocks/ContentBlocks/ViewHelpers">
+      xmlns:cb="http://typo3.org/ns/Friendsoftypo3/ContentBlocks/ViewHelpers">
 
 <f:asset.css identifier="cpmember-backend-preview" href="{cb:assetPath()}/backend-preview.css"/>
 
-<p>{data.feuser.name}</p>
+<f:if condition="{data.feuser}==0">
+    <f:then><p>vakant</p></f:then>
+    <f:else><p>{data.feuser.name}</p></f:else>
+</f:if>
+
