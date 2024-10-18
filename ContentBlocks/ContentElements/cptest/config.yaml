@@ -1,6 +1,0 @@
-name: conpassione/cptest
-languageAware: true
-title: 'MyTest'
-fields:
-  - identifier: header
-    useExistingField: true
