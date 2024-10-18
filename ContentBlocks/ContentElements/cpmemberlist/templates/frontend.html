@@ -1,6 +1,9 @@
-<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:cb="http://typo3.org/ns/Contentblocks/ContentBlocks/ViewHelpers">
-<cb:asset.css identifier="content-block-css-conpassione-conpassione/cpmemberlist" file="Frontend.css" />
-<cb:asset.script identifier="content-block-js-conpassione-conpassione/cpmemberlist" file="Frontend.js"/>
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/Friendsoftypo3/ContentBlocks/ViewHelpers">
+
+<f:asset.css identifier="cpmember-css" href="{cb:assetPath()}/frontend.css" />
+<f:asset.script identifier="cpmember-js" file="{cb:assetPath()}frontend.js"/>
 
 <div class="cpmemberlist">
     <h1>{data.header}</h1>
