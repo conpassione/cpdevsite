@@ -29,7 +29,7 @@ page.10 {
 
   variables {
     templateName = TEXT
-    templateName.value = test
+    templateName.value = Test-TemplateName
 #    templateName {
 #      cObject = CASE
 #      cObject {
