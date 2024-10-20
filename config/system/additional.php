@@ -12,6 +12,10 @@ $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive(
                     'password' => getenv('TYPO3_DB_PASSWORD'),
                     'port' => getenv('TYPO3_DB_PORT'),
                     'user' => getenv('TYPO3_DB_USERNAME'),
+                    'tableoptions' => [
+                        'charset' => 'utf8mb4',
+                        'collate' => 'utf8mb4_unicode_ci',
+                    ],
                 ],
             ],
         ],
