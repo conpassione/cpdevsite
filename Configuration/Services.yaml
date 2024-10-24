@@ -1,0 +1,13 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Conpassione\Cpdevsite\:
+    resource: '../Classes/*'
+
+  Conpassione\Cpdevsite\EventListener\TcaToRteConfiguration:
+    tags:
+      - name: 'event.listener'
+        event: 'TYPO3\CMS\RteCKEditor\Form\Element\Event\AfterPrepareConfigurationForEditorEvent'

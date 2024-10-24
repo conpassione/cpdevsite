@@ -33,11 +33,11 @@ config {
 
   absRefPrefix = auto
 
-#  additionalHeaders {
-#    10.header = Strict-Transport-Security: max-age=31536000; inludeSubDomains
-#    20.header = X-Content-Type-Options: nosniff
-#    30.header = X-Powered-By: Unicorns
-#    40.header = Referrer-Policy: same-origin
-#    60.header = Content-Security-Policy: frame-ancestors 'self'
-#  }
+  additionalHeaders {
+    10.header = Strict-Transport-Security: max-age=31536000; inludeSubDomains
+    20.header = X-Content-Type-Options: nosniff
+    30.header = X-Powered-By: Unicorns
+    40.header = Referrer-Policy: same-origin
+    60.header = Content-Security-Policy: frame-ancestors 'self'
+  }
 }

@@ -4,20 +4,36 @@ mod.linkvalidator.linkhandler.reportHiddenRecords = 1
 # New ContentElement Wizard konfigurieren
 
 # Konfiguration des Content-Elements Wizards
-#mod.wizards.newContentElement.wizardItems.common {
+# mod.wizards.newContentElement.wizardItems.default {
 #  elements {
 #    shortcut < mod.wizards.newContentElement.wizardItems.special.elements.shortcut
 #  }
 #  show:=addToList(shortcut)
-#}
+# }
 
-#mod.wizards.newContentElement.wizardItems.common {
-# # show:=removeFromList(bullets,textpic,table,upload)
-#}
+mod.wizards.newContentElement.wizardItems {
+  default {
+    # header,text,textpic,image,textmedia
+    removeItems := addToList(header,textpic)
+  }
+  lists {
+    # bullets,table,uploads
+    removeItems := addToList(bullets,table,uploads)
+  }
+  special {
+    # shortcut
+    removeItems := addToList(html,div)
+  }
+}
+[!backend.user.isAdmin]
+  mod.wizards.newContentElement.wizardItems {
+    forms {
+      removeItems := addToList(felogin_login)
+    }
+  }
+[END]
 
-# mod.wizards.newContentElement.wizardItems.special.show:=removeFromList(html,div)
-
-#mod.wizards.newContentElement.wizardItems.sliders {
+# mod.wizards.newContentElement.wizardItems.sliders {
 #  header = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.groupLabel
 #  elements {
 #    cpdevsite_testce {

@@ -3,13 +3,23 @@ declare(strict_types=1);
 defined('TYPO3') or die();
 
 // CK-Editor Konfiguration laden
-if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['cpdefault'])) {
-    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['cpdefault'] = 'EXT:cpdevsite/Configuration/RTE/RTEsettings.yaml';
+if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['CpDefault'])) {
+    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['CpDefault'] = 'EXT:cpdevsite/Configuration/RTE/CpDefault.yaml';
 }
 
 // CK-Editor Konfiguration laden mit Code-Auszeichnung
-if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['cpdefaultCode'])) {
-    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['cpdefaultCode'] = 'EXT:cpdevsite/Configuration/RTE/RTEsettingsCode.yaml';
+if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['CpDefaultCode'])) {
+    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['CpDefaultCode'] = 'EXT:cpdevsite/Configuration/RTE/CpDefaultCode.yaml';
+}
+
+// CK-Editor Konfiguration laden mit Tablellen-Auszeichnung
+if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['CpDefaultTable'])) {
+    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['CpDefaultTable'] = 'EXT:cpdevsite/Configuration/RTE/CpDefaultTable.yaml';
+}
+
+// CK-Editor minimale Konfiguration laden
+if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['CpMinimal'])) {
+    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['CpMinimal'] = 'EXT:cpdevsite/Configuration/RTE/CpMinimal.yaml';
 }
 
 

@@ -24,48 +24,95 @@ page.10 {
   paths {
     10 = EXT:cpdevsite/Resources/Private/Templates/
   }
+
   dataProcessing.10 = page-content
   dataProcessing.10.as = pagecontent
 
+  dataProcessing.20 = menu
+  dataProcessing.20 {
+    as = flyinmenu
+    levels = 2
+    expandAll = 1
+    titleField = subtitle // title
+    dataProcessing.10 = files
+    dataProcessing.10 {
+      references.fieldName = media
+    }
+  }
+
+  dataProcessing.30 = menu
+  dataProcessing.30 {
+    as = mainmenu
+    levels = 1
+    expandAll = 1
+    titleField = subtitle // title
+    dataProcessing.10 = files
+    dataProcessing.10 {
+      references.fieldName = media
+    }
+  }
+
+  dataProcessing.40 = menu
+  dataProcessing.40 {
+    as = submenu
+    levels = 1
+    entryLevel = 1
+    expandAll = 1
+    titleField = sutitle // title
+  }
+
+  dataProcessing.50 = menu
+  dataProcessing.50 {
+    as = rootline
+    special = rootline
+    special.range = 0|-1
+    includeNotInMenu = 0
+  }
+
   variables {
+    parentPageTitle = TEXT
+    parentPageTitle.value = TestPageTitle
+    #parentPageTitle.data = levelfield:-1:title
+    parentPageLink = TEXT
+    parentPageLink.data = levelfield:-1:title
+
+    cp-test = TEXT
+    cp-test.value = {$TCEpage.cp-test}
+
     templateName = TEXT
     templateName.value = Test-TemplateName
-#    templateName {
-#      cObject = CASE
-#      cObject {
-#        key.field = doktype
-#
-#        default = TEXT
-#        default.value = Default
-#
-#        1 = TEXT
-#        1.value = Defaultcontentpagex
-#
-#        36650001 = TEXT
-#        36650001.value = Homepagex
-#
-#        36650011 = TEXT
-#        36650011.value = Gallerymenu
-#
-#        36650012 = TEXT
-#        36650012.value = Gallery
-#
-#        36650021 = TEXT
-#        36650021.value = Agenda
-#
-#        36650022 = TEXT
-#        36650022.value = Event
-#
-#      }
-#    }
+    templateName {
+      cObject = CASE
+      cObject {
+        key.field = doktype
+
+        1 = TEXT
+        1.value = Defaultcontentpage
+
+        36650001 = TEXT
+        36650001.value = Homepage
+
+        36650011 = TEXT
+        36650011.value = Gallerymenu
+
+        36650012 = TEXT
+        36650012.value = Gallery
+
+        36650021 = TEXT
+        36650021.value = Agenda
+
+        36650022 = TEXT
+        36650022.value = Event
+      }
+    }
     layoutName = TEXT
     layoutName {
       cObject = CASE
       cObject {
         key.field = layout
 
-        default = TEXT
-        default.value = Default
+        0 = TEXT
+        0.value = Default
       }
     }
   }

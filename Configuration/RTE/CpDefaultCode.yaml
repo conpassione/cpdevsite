@@ -2,4 +2,4 @@
 # Load default processing options
 imports:
   - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/CodeBlock.yaml' }
-  - { resource: 'EXT:cpdevsite/Configuration/RTE/RTEsettings.yaml' }
+  - { resource: 'EXT:cpdevsite/Configuration/RTE/CpDefault.yaml' }

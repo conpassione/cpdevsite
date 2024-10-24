@@ -1,7 +1,7 @@
 base: 'https://www.cpdev.ch'
 baseVariants:
   -
-    base: 'https://cpdevsite.ddev.site'
+    base: 'https://%env(TYPO3_SYS_HOSTPATTERN)%'
     condition: 'applicationContext == "Development"'
 dependencies:
   - conpassione/cpdevsite

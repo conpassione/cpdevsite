@@ -11,7 +11,7 @@ call_user_func(static function(): void {
     $GLOBALS['TCA']['pages']['columns']['layout']['config']['items'] = [];
     unset($GLOBALS['TCA']['pages']['columns']['layout']['config']['default']);
 
-    // zusätzliche Icons für Folder-Seiten
+    // zusätzliche Icons für Folder-Seiten ... enthält Plugin Feld
     $GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] = [
         'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:pagetype.memberlist.label',
         'icon' => 'tx-conpassione-memberlist',
@@ -19,6 +19,7 @@ call_user_func(static function(): void {
     ];
     $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-memberlist'] = 'tx-conpassione-memberlist';
 
+    // Add group 'gallery' to Page Types Selection
     ExtensionManagementUtility::addTcaSelectItemGroup(
         'pages',
         'doktype',
@@ -27,6 +28,7 @@ call_user_func(static function(): void {
         'after:default'
     );
 
+    // Add group 'agenda' to Page Types Selection
     ExtensionManagementUtility::addTcaSelectItemGroup(
         'pages',
         'doktype',
@@ -35,7 +37,7 @@ call_user_func(static function(): void {
         'after:default'
     );
 
-    // List all pages that are to be supplemented with the standard fields
+    // List all pages ot add the standard fields
     $doktypes = '36650001,36650011,36650012,36650021,36650022';
 
     // update TCA to unify BE for Standard and Custom Pages

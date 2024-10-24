@@ -6,7 +6,7 @@
 <f:asset.script identifier="cpmember-js" file="{cb:assetPath()}frontend.js"/>
 
 <div class="cpmember">
-    <h2>{data.header}</h2>
+    <h2><f:format.html>{data.header}</f:format.html></h2>
 
     <f:if condition="{data.feuser}">
         <f:then>

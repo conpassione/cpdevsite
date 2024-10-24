@@ -15,6 +15,7 @@ imports:
 # For complete documentation see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
 editor:
   config:
+    forcePasteAsPlainText: true
     # the CSS file to be used inside the editor
     # contentsCss: 'EXT:cpdevsite/Resources/Public/Css/Rte.css'
     toolbar:
@@ -43,8 +44,6 @@ editor:
         - '|'
         - link
         - '|'
-        - { label: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.toolbar.items.table', withText: true, items: [ 'insertTable', 'tableColumn', 'tableRow', 'mergeTableCells' ] }
-        - '|'
         - showBlocks
         - '|'
         - sourceEditing
@@ -57,13 +56,3 @@ editor:
         - { name: 'center', className: 'text-center' }
         - { name: 'right', className: 'text-end' }
         - { name: 'justify', className: 'text-justify' }
-
-    table:
-      defaultHeadings: { rows: 1, columns: 1 }
-      contentToolbar:
-        - tableColumn
-        - tableRow
-        - mergeTableCells
-        - tableProperties
-        - tableCellProperties
-        - toggleTableCaption

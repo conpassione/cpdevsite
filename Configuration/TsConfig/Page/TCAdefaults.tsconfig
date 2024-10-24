@@ -9,8 +9,6 @@ TCAdefaults.pages {
   author_email = {$TCEpage.author_email}
   #TAB-Erscheinungsbild
   layout = 0
-  #backend_layout = pagets__SimplePage
-  #backend_layout_next_level = pagets__SimplePage
   #TAB-Verhalten
   #TAB-Ressourcen
   #TAB-Sprache
@@ -27,4 +25,5 @@ TCAdefaults.tt_content {
   frame_class = default
   imagecols = 1
   imageorient = 0
+  image_zoom = 1
 }

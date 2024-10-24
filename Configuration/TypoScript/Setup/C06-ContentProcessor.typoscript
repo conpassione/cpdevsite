@@ -1,19 +1,5 @@
-/* page.10 {
-  dataProcessing {
-    10 = page-content
-    20 = database-query
-    20 {
-      table = tt_content
-      orderBy = sorting
-      where = colPos = 0
-      as = mycontent
-    }
-    30 = database-query
-    30 {
-      table = tt_content
-      orderBy = sorting
-      where = colPos = 1
-      as = col2content
-    }
-  }
-} */
+lib.contentElement {
+  templateRootPaths.120 = EXT:cpdevsite/Resources/Private/CoreTemplates/Templates/
+  partialRootPaths.120 = EXT:cpdevsite/Resources/Private/CoreTemplates/Partials/
+  layoutRootPaths.120 = EXT:cpdevsite/Resources/Private/CoreTemplates/Layouts/
+}

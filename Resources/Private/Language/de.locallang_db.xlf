@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="de" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-10-16T16:35:04+02:00">
-        <header></header>
+    <file source-language="en" target-language="de" original="" datatype="plaintext" date="2024-10-24T16:09:09+02:00">
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
                 <source>Agenda</source>
@@ -122,6 +121,10 @@
             <trans-unit id="rte.style.blockquote" resname="rte.style.blockquote">
                 <source>Blockquote</source>
                 <target>Zitat</target>
+            </trans-unit>
+            <trans-unit id="rte.style.labelaccent" resname="rte.style.labelaccent">
+                <source>Accent</source>
+                <target>Hervorhebung</target>
             </trans-unit>
             <trans-unit id="rte.style.paragraph" resname="rte.style.paragraph">
                 <source>Paragraph</source>

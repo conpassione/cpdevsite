@@ -13,6 +13,7 @@ call_user_func(static function(): void {
     $GLOBALS['TCA']['tt_content']['columns']['frame_class']['config']['items'] = [];
     unset($GLOBALS['TCA']['tt_content']['columns']['frame_class']['config']['default']);
 
+    // Zusätzliche Gruppe im newContentWizard erstellen
     ExtensionManagementUtility::addTcaSelectItemGroup(
         'tt_content',
         'CType',
@@ -21,18 +22,15 @@ call_user_func(static function(): void {
         'before:default'
     );
 
-    /*ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            'label' => 'LLL:EXT:' . getenv('TYPO3_EXT_IDENTIFIER') . '/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.slider1.label',
-            'value' => 'cpdevsite_testce',
-            'icon' => 'tx-conpassione-alfabeta',
-            'group' => 'sliders',
-            'description' => 'LLL:EXT:' . getenv('TYPO3_EXT_IDENTIFIER') . '/Resources/Private/Language/locallang_db.xlf:contentwizard.sliders.slider1.description'
-        ],
-        'text',
-        'after'
-    );*/
 
+    // TCA für header-Field überschreiben, damit der RTE zum Editieren verwendet werden kann
+    // siehe: https://daniel-siepmann.de/typo3-rte-for-input-fields.html
+    $GLOBALS['TCA']['tt_content']['columns']['header']['config'] = [
+        'type' =>'text',
+        'max' => 35,
+        'rows' => 1,
+        'cols' => 35,
+        'enableRichtext' => true,
+        'richtextConfiguration' => 'CpMinimal'
+    ];
 });

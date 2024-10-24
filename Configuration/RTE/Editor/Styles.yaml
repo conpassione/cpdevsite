@@ -18,7 +18,7 @@ editor:
 
     heading:
       options:
-        - { model: 'paragraph', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.style.paragraph' }
+        - { model: 'paragraph', view: 'p', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.style.paragraph' }
         - { model: 'heading3', view: 'h3', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh3' }
         - { model: 'heading4', view: 'h4', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.header_layout.labelh4' }
         #- { model: 'blockquote', view: 'blockquote', title: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.style.quote' }

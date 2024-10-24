@@ -1,0 +1,38 @@
+# CKE-Editor CpBase-Configuration
+# Load default processing options
+imports:
+  - { resource: 'EXT:rte-ckeditor/Configuration/RTE/Editor/Base.yaml' }
+  - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Base.yaml' }
+
+# Add configuration for the editor
+# For complete documentation see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
+editor:
+  config:
+    allowedContent: true
+    enableContextMenu: false
+    forcePasteAsPlainText: true
+    # the CSS file to be used inside the editor
+    # contentsCss: 'EXT:cpdevsite/Resources/Public/Css/Rte.css'
+    toolbar:
+      items:
+        - bold
+        - italic
+        - specialCharacters
+        #- underline
+        - softhyphen
+
+    removePlugins:
+      - resize
+      - autogrow
+
+processing:
+  overruleMode: 'nothing'
+  entryHTMLparser_db:
+    stripEmptyTags:
+      treatNonBreakingSpaceAsEmpty: true
+      tags: 'p'
+    allowTags: 'strong,i,br,p'
+  exitHTMLparser_db:
+    denyTags:
+      - 'p'
+    allowTags: 'strong,i,br'
