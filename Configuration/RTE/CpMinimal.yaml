@@ -2,6 +2,7 @@
 # Load default processing options
 imports:
   - { resource: 'EXT:rte-ckeditor/Configuration/RTE/Editor/Base.yaml' }
+  - { resource: 'EXT:cpdevsite/Configuration/RTE/Processing.yaml' }
   - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Base.yaml' }
 
 # Add configuration for the editor
@@ -11,6 +12,7 @@ editor:
     allowedContent: true
     enableContextMenu: false
     forcePasteAsPlainText: true
+    clipboard_defaultContentType: 'text'
     # the CSS file to be used inside the editor
     # contentsCss: 'EXT:cpdevsite/Resources/Public/Css/Rte.css'
     toolbar:
@@ -20,19 +22,45 @@ editor:
         - specialCharacters
         #- underline
         - softhyphen
+        - sourceEditing
+
+    wordcount:
+      showRemaining: true
+      showParagraphs: false
+      showWordCount: false
+      showCharCount: true
+
+    autoParagraph: false
+    enterMode: 2 # <br> instead of <p>
+
+    extraPlugins:
+      - wordcount
+      - specialchar
 
     removePlugins:
       - resize
       - autogrow
 
 processing:
-  overruleMode: 'nothing'
+  overruleMode: nothing
+  allowTags:
+    - strong
+    - b
+    - i
+    - em
+    - br
+    - span
+  denyTags:
+    - p
+
   entryHTMLparser_db:
-    stripEmptyTags:
+    stripeEmptyTags:
       treatNonBreakingSpaceAsEmpty: true
       tags: 'p'
-    allowTags: 'strong,i,br,p'
-  exitHTMLparser_db:
+    allowTags: 'strong,b,i,em,br,span'
     denyTags:
-      - 'p'
-    allowTags: 'strong,i,br'
+      - p
+  exitHTMLparser_db:
+    allowTags: 'strong,b,i,em,br,span'
+    denyTags:
+      - p
