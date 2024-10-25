@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="it" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-10-24T16:09:09+02:00">
+    <file source-language="en" target-language="it" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-10-26T00:33:34+02:00">
         <header></header>
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
@@ -62,6 +62,42 @@
             <trans-unit id="rte.style.labelaccent" resname="rte.style.labelaccent">
                 <source>Accent</source>
                 <target>Accento</target>
+            </trans-unit>
+            <trans-unit id="rte.style.paragraph" resname="rte.style.paragraph">
+                <source>Paragraph</source>
+                <target>Paragrafo</target>
+            </trans-unit>
+            <trans-unit id="rte.toolbar.items.table" resname="rte.toolbar.items.table">
+                <source>Table</source>
+                <target>Tavolo</target>
+            </trans-unit>
+            <trans-unit id="tceform.frame_class.labeldefault" resname="tceform.frame_class.labeldefault">
+                <source>Standard</source>
+                <target>Standard</target>
+            </trans-unit>
+            <trans-unit id="tceform.header_layout.labelh1" resname="tceform.header_layout.labelh1">
+                <source>Header H1</source>
+                <target>Titolo H1</target>
+            </trans-unit>
+            <trans-unit id="tceform.header_layout.labelh2" resname="tceform.header_layout.labelh2">
+                <source>Header H2</source>
+                <target>Titolo H2</target>
+            </trans-unit>
+            <trans-unit id="tceform.header_layout.labelh3" resname="tceform.header_layout.labelh3">
+                <source>Title H3</source>
+                <target>Titolo H3</target>
+            </trans-unit>
+            <trans-unit id="tceform.header_layout.labelh4" resname="tceform.header_layout.labelh4">
+                <source>Subtitle H4</source>
+                <target>Titolo H4</target>
+            </trans-unit>
+            <trans-unit id="tceform.layout.label0" resname="tceform.layout.label0">
+                <source>Default</source>
+                <target>Standard</target>
+            </trans-unit>
+            <trans-unit id="tceform.page.layout.0" resname="tceform.page.layout.0">
+                <source>Default</source>
+                <target>Standard</target>
             </trans-unit>
             <trans-unit id="tceform.page.media.label" resname="tceform.page.media.label">
                 <source>Title image</source>

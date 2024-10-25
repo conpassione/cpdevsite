@@ -1,6 +1,6 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:layout name={layoutName} />
+<f:layout name="Layout{page.pagerecord.layout}" />
 
 <f:section name="Header">
     <f:render partial="Menu/Headermenu" arguments="{mainmenu: mainmenu}" />
@@ -10,9 +10,7 @@
     <main>
         <f:debug inline="true">{_all}</f:debug>
         <h1>Hello World from DefaultContentPage</h1>
-        <p>From settings.yaml: {settings.TYPO3copyright}</p>
-        <p>Home: {parentPageTitle} - {page.pageRecord.pid} </p>
-        <p>ParentPage: {parentPageLink} - {page.pageRecord.title} X</p>
+        <p>page.title: {page.pagerecord.title} </p>
         <hr>
         <f:for each="{pagecontent.content.records}" as="contentelement">
             <f:cObject

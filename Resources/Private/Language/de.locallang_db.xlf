@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="de" original="" datatype="plaintext" date="2024-10-24T16:09:09+02:00">
+    <file source-language="en" target-language="de" original="" datatype="plaintext" date="2024-10-26T00:39:12+02:00">
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
                 <source>Agenda</source>
@@ -171,7 +171,7 @@
                 <target>mitterechts</target>
             </trans-unit>
             <trans-unit id="tceform.layout.label0" resname="tceform.layout.label0">
-                <source>Standard</source>
+                <source>Default</source>
                 <target>Standard</target>
             </trans-unit>
             <trans-unit id="tceform.page.layout.0" resname="tceform.page.layout.0">
@@ -192,11 +192,11 @@
             </trans-unit>
             <trans-unit id="tceform.page.subtitle.label" resname="tceform.page.subtitle.label">
                 <source>Pageheader</source>
-                <target>Seitentitel</target>
+                <target>Seitentitel und Menuanzeige</target>
             </trans-unit>
             <trans-unit id="tceform.page.title.label" resname="tceform.page.title.label">
                 <source>Pagetree title</source>
-                <target>Seitenbaum Titel</target>
+                <target>Navigations- und Seitenbaumtitel</target>
             </trans-unit>
         </body>
     </file>
