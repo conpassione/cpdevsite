@@ -1,20 +1,13 @@
-page = PAGE
-page {
-  typeNum = 0
-  meta {
-    viewport = width=device-width, initial-scale=1.0
-    vieport.replace = 1
-  }
-}
-
 config {
   headerComment (
       {$TYPO3copyright}
   )
   linkVars = L(0-3)
+  absRefPrefix = auto
+  disablePrefixComment = 1
 
-#  spamProtectEmailAddresses = -4
-#  spamProtectEmailAddresses_atSubst = (at)
+  spamProtectEmailAddresses = -4
+  spamProtectEmailAddresses_atSubst = (at)
 
   index_enable = 1
   index_externals = 1
@@ -31,7 +24,6 @@ config {
   cache_period = 86400
   cache_clearAtMidnight = 1
 
-  absRefPrefix = auto
 
   additionalHeaders {
     10.header = Strict-Transport-Security: max-age=31536000; inludeSubDomains
@@ -39,5 +31,18 @@ config {
     30.header = X-Powered-By: Unicorns
     40.header = Referrer-Policy: same-origin
     60.header = Content-Security-Policy: frame-ancestors 'self'
+  }
+}
+
+page = PAGE
+page {
+  typeNum = 0
+  meta {
+    viewport = width=device-width, initial-scale=1.0
+    vieport.replace = 1
+  }
+  includeJSFooterlibs {
+    mail = EXT:cpdevsite/Resources/Public/JavaScript/mail.min.js
+    mail.async = 1
   }
 }
