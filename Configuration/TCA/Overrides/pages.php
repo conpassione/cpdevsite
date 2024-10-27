@@ -19,6 +19,15 @@ call_user_func(static function(): void {
     ];
     $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-memberlist'] = 'tx-conpassione-memberlist';
 
+    // Add group 'landingpage' to Page Types Selection
+    ExtensionManagementUtility::addTcaSelectItemGroup(
+        'pages',
+        'doktype',
+        'landingpage',
+        'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:pagewizard.landingpage.groupLabel',
+        'after:default'
+    );
+
     // Add group 'gallery' to Page Types Selection
     ExtensionManagementUtility::addTcaSelectItemGroup(
         'pages',
@@ -37,10 +46,11 @@ call_user_func(static function(): void {
         'after:default'
     );
 
+    // Bugfix for content-blocks
     // List all pages ot add the standard fields
     $doktypes = '36650001,36650011,36650012,36650021,36650022';
 
-    // update TCA to unify BE for Standard and Custom Pages
+    // update TCA (add abstract) to unify BE for Standard and Custom Pages
     ExtensionManagementUtility::addToAllTCAtypes(
         'pages',
         'abstract',
@@ -48,12 +58,14 @@ call_user_func(static function(): void {
         'before:keywords'
     );
 
+    // add editorial fields to palette
     ExtensionManagementUtility::addFieldsToPalette(
         'pages',
         'editorial',
         'author, author_email, lastUpdated'
     );
 
+    // add editorial palette to pages
     ExtensionManagementUtility::addToAllTCAtypes(
         'pages',
         '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.editorial;editorial',
@@ -61,6 +73,7 @@ call_user_func(static function(): void {
         'after:palette:metatags'
     );
 
+    // add media palette to pages
     ExtensionManagementUtility::addToAllTCAtypes(
         'pages',
         'media',
@@ -68,12 +81,14 @@ call_user_func(static function(): void {
         'before:tsconfig_includes'
     );
 
+    // layout fields to palette
     ExtensionManagementUtility::addFieldsToPalette(
         'pages',
         'layout',
         'layout,newUntil'
     );
 
+    // add layout palette to pages
     ExtensionManagementUtility::addToAllTCAtypes(
         'pages',
         '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.layout;layout',

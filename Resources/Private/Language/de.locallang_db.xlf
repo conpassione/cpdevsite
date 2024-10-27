@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="de" original="" datatype="plaintext" date="2024-10-26T00:39:12+02:00">
+    <file source-language="en" target-language="de" original="" datatype="plaintext" date="2024-10-27T23:03:36+01:00">
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
                 <source>Agenda</source>
@@ -13,6 +13,10 @@
             <trans-unit id="backendlayout.col1" resname="backendlayout.col1">
                 <source>Footer</source>
                 <target>Fusszeile</target>
+            </trans-unit>
+            <trans-unit id="backendlayout.col9" resname="backendlayout.col9">
+                <source>Jumbotron</source>
+                <target>Grosse Bilder</target>
             </trans-unit>
             <trans-unit id="backendlayout.defaultcontentpage.title" resname="backendlayout.defaultcontentpage.title">
                 <source>Standard content page</source>
@@ -30,9 +34,13 @@
                 <source>Gallery menu</source>
                 <target>Galerie Verzeichnis</target>
             </trans-unit>
-            <trans-unit id="backendlayout.homepage.title" resname="backendlayout.homepage.title">
+            <trans-unit id="backendlayout.homepage1.title" resname="backendlayout.homepage1.title">
                 <source>Homepage</source>
                 <target>Startseite</target>
+            </trans-unit>
+            <trans-unit id="backendlayout.submenu" resname="backendlayout.submenu">
+                <source>Menu of subpages</source>
+                <target>Menü der Unterseiten</target>
             </trans-unit>
             <trans-unit id="contentwizard.conpassione.groupLabel" resname="contentwizard.conpassione.groupLabel">
                 <source>conPassione</source>
@@ -49,6 +57,10 @@
             <trans-unit id="pagewizard.gallery.groupLabel" resname="pagewizard.gallery.groupLabel">
                 <source>Gallery</source>
                 <target>Galerie</target>
+            </trans-unit>
+            <trans-unit id="pagewizard.landingpage.groupLabel" resname="pagewizard.landingpage.groupLabel">
+                <source>Landingpages</source>
+                <target>Startseiten</target>
             </trans-unit>
             <trans-unit id="recordtype.member.board.1" resname="recordtype.member.board.1">
                 <source>Comitee</source>

@@ -3,13 +3,13 @@
 <f:layout name="Layout{page.pagerecord.layout}" />
 
 <f:section name="Header">
-    <f:render partial="Menu/Headermenu" arguments="{mainmenu: mainmenu}" />
+    <f:render partial="Header1" arguments="{_all}" />
 </f:section>
 
 <f:section name="Main">
     <main>
-        <f:debug inline="true">{_all}</f:debug>
-        <p>Das ist ein Test: {cp-test}</p>
+        <div class="jumbotron">Hier kommt das Jumbotron</div>
+        <div class="submenu">Hier kommt das Submenu</div>
         <f:for each="{pagecontent.content.records}" as="contentelement">
             <f:cObject
                 typoscriptObjectPath="tt_content.{contentelement.CType}"
@@ -21,7 +21,9 @@
 </f:section>
 
 <f:section name="Footer">
-
+    <footer>
+        <p>Footer</p>
+    </footer>
 </f:section>
 
 </html>

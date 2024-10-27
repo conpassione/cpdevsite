@@ -1,16 +1,35 @@
 mod {
   web_layout {
-		BackendLayouts {
-			HomePage {
-				title =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.homepage.title
+    BackendLayouts {
+      HomePage1 {
+        title =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.homepage1.title
         icon = tx-conpassione-backendlayout
         config {
           backend_layout {
             doktype = 36650001
             colCount = 1
-            rowCount = 2
+            rowCount = 4
             rows {
               1 {
+                columns {
+                  1 {
+                    name = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.col9
+                    identifier = jumbo
+                    colPos = 9
+                    #allowed {
+                    #  CType = text, textpic
+                    #}
+                  }
+                }
+              }
+              2 {
+                columns {
+                  1 {
+                    name = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.submenu
+                  }
+                }
+              }
+              3 {
                 columns {
                   1 {
                     name = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.col0
@@ -22,7 +41,7 @@ mod {
                   }
                 }
               }
-              2 {
+              4 {
                 columns {
                   1 {
                     name =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.col1
@@ -34,7 +53,7 @@ mod {
             }
           }
         }
-			}
-	  }
+      }
+    }
   }
 }

@@ -12,4 +12,7 @@ page {
     <link rel="manifest" href="/site.webmanifest" />
 
   )
+
+  # <link rel="icon" href="/white-logo.png" media="(prefers-color-scheme: dark)"/>
+  # <link rel="icon" href="/black-logo.png" media="(prefers-color-scheme: light)"/>
 }

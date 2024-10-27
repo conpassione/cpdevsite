@@ -1,13 +1,14 @@
-name: conpassione/homepage
+name: conpassione/homepage1
 typeName: 36650001
-title: Startpage
-group: default
-description: Das ist die Startseite für alle Websiten
+title: HomePage1
+group: landingpage
+description: This is the rootpage of theme 1
+prefixFields: false
 fields:
   - identifier: subtitle
     useExistingField: true
-  - identifier: logo
-    label: newlogo
+  - identifier: cplogo
+    label: Brand Logo
     type: File
     extendedPalette: true
     minitems: 0
