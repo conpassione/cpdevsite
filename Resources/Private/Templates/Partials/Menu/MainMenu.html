@@ -1,0 +1,38 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:comment>MainMenu für alle Seiten (ohne Bilder)</f:comment>
+
+<f:debug>{_all}</f:debug>
+<f:if condition="{mainmenu}">
+    <input type="checkbox" id="mainmenu-toggle" class="mainmenu-toggle">
+    <nav class="mainmenu">
+        <ul>
+            <li>
+                <a href="{homePageSlug}" role="menuitem" title="{homePageTitle}" class="cp-nav--itemLink">{homePageTitle}</a>
+            </li>
+            <f:for as="menuItem" each="{mainmenu}">
+                <li>
+                    <f:link.page pageUid="{menuItem.data.uid}" class="nav-link {f:if(condition: menuItem.active, then:'active')} {f:if(condition: menuItem.current, then:'current')}">
+                        {menuItem.title}
+                    </f:link.page>
+                    <f:if condition="{menuItem.hasSubpages}">
+                        <ul>
+                            <f:for as="submenuItem" each="{menuItem.children}">
+                                <li>
+                                    <f:link.page pageUid="{submenuItem.data.uid}" class="nav-link {f:if(condition: submenuItem.active, then:'active')} {f:if(condition: submenuItem.current, then:'current')}">
+                                        {submenuItem.title}
+                                    </f:link.page>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </f:if>
+                </li>
+            </f:for>
+        </ul>
+    </nav>
+    <label for="mainmenu-toggle" class="mainmenu-toggle-label">
+        <span></span>
+    </label>
+</f:if>
+
+</html>

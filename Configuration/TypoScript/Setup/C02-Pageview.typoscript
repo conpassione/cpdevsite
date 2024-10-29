@@ -35,13 +35,13 @@ page.10 {
   dataProcessing.20 = menu
   dataProcessing.20 {
     as = mainmenu
-    levels = 1
+    levels = 2
     expandAll = 1
     titleField = subtitle // title
-    dataProcessing.10 = files
-    dataProcessing.10 {
-      references.fieldName = media
-    }
+#    dataProcessing.10 = files
+#    dataProcessing.10 {
+#      references.fieldName = media
+#    }
   }
 
   # Menu der Unterseiten der aktuellen Seite

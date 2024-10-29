@@ -3,26 +3,16 @@
 <f:layout name="Layout{page.pagerecord.layout}" />
 
 <f:section name="Header">
-
 </f:section>
 
 <f:section name="Main">
     <main>
-        <h1>Hello World from None</h1>
-        <p>From settings.yaml: {settings.TYPO3copyright}</p>
-        <hr>
-        <f:for each="{pagecontent.content.records}" as="contentelement">
-            <f:cObject
-                typoscriptObjectPath="tt_content.{contentelement.CType}"
-                data="{contentelement.rawRecord}"
-                table="tt_content"
-            />
-        </f:for>
+        <h1>Error</h1>
+        <p>This Page-Template should not be shown</p>
     </main>
 </f:section>
 
 <f:section name="Footer">
-
 </f:section>
 
 </html>
