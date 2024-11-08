@@ -116,7 +116,9 @@ return [
         'encryptionKey' => '3ed1a7e8559425f4fadf07bfaab2479fa5f9f6ba4d5e37ba773455cb4e3476f9beed40bd366d729acda4d27789ca0d58',
         'exceptionalErrors' => 12290,
         'features' => [
+            'redirects.hitCount' => true,
             'security.backend.htmlSanitizeRte' => true,
+            'security.frontend.enforceContentSecurityPolicy' => true,
         ],
         'phpTimeZone' => 'Europe/Zurich',
         'sitename' => 'CPdev-cpdevsite',

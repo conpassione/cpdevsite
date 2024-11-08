@@ -1,10 +1,12 @@
-base: 'https://www.cpdev.ch'
-baseVariants:
-  -
-    base: 'https://%env(TYPO3_SYS_HOSTPATTERN)%'
-    condition: 'applicationContext == "Development"'
+base: 'https://cpdevsite.ddev.site'
 dependencies:
   - conpassione/cpdevsite
+  - typo3/fluid-styled-content
+  - typo3/felogin
+  - typo3/form
+  - typo3/redirects
+  - typo3/seo-sitemap
+
 errorHandling:
   -
     errorCode: 404
@@ -14,6 +16,7 @@ errorHandling:
     errorCode: 500
     errorHandler: Page
     errorContentSource: 't3://page?uid=5'
+
 languages:
   -
     languageId: 0
@@ -26,11 +29,11 @@ languages:
     direction: ltr
     flag: ch
     enabled: true
-    websiteTitle: 'conPassione Entwicklungsinstanz'
+    websiteTitle: 'conPassione gmbh'
   -
     languageId: 1
     title: Français
-    navigationTitle: Franc
+    navigationTitle: Français
     base: /fr/
     locale: fr_FR.UTF-8
     iso-639-1: fr
@@ -40,7 +43,7 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     enabled: true
-    websiteTitle: 'conPassione | site de develeopement'
+    websiteTitle: 'conPassione gmbh'
   -
     languageId: 2
     title: Italiano
@@ -54,7 +57,7 @@ languages:
     fallbackType: fallback
     fallbacks: '1,0'
     enabled: true
-    websiteTitle: 'conPassione | sito di sviluppo'
+    websiteTitle: 'conPassione gmbh'
   -
     languageId: 3
     title: English
@@ -68,7 +71,7 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     enabled: true
-    websiteTitle: 'conPassion DevSite'
+    websiteTitle: 'conPassione gmbh'
 rootPageId: 1
 routeEnhancers:
   PageTypeSuffix:
@@ -76,8 +79,14 @@ routeEnhancers:
     map:
       sitemap.xml: 1533906435
 routes:
-  -
-    route: robots.txt
+  - route: robots.txt
     type: staticText
-    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3conf/\r\nSitemap: https://cpdevsite.ddev.site/sitemap.xml\r\n"
-websiteTitle: CpDevSite
+    content: |
+      User-agent: *
+      Disallow: /typo3/
+      Disallow: /typo3conf/
+      Sitemap: https://cpdevsite.ddev.site//sitemap.xml
+  - route: favicon.ico
+    type: asset
+    asset: 'EXT:cpdevsite/Resources/Public/Icons/Favicon/favicon.ico'
+websiteTitle: 'DDEV cpdevsite'

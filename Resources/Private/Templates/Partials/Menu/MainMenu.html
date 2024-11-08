@@ -2,13 +2,16 @@
 
 <f:comment>MainMenu für alle Seiten (ohne Bilder)</f:comment>
 
-<f:debug>{_all}</f:debug>
+
 <f:if condition="{mainmenu}">
     <input type="checkbox" id="mainmenu-toggle" class="mainmenu-toggle">
     <nav class="mainmenu">
         <ul>
             <li>
-                <a href="{homePageSlug}" role="menuitem" title="{homePageTitle}" class="cp-nav--itemLink">{homePageTitle}</a>
+                <a href="{homePageSlug}" role="menuitem" title="{homePageTitle}"
+                   class="nav-link {f:if(condition: '{page.id} == {homePageUid}', then:'active')}">
+                    {homePageTitle}
+                </a>
             </li>
             <f:for as="menuItem" each="{mainmenu}">
                 <li>

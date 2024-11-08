@@ -37,7 +37,7 @@ page.10 {
     as = mainmenu
     levels = 2
     expandAll = 1
-    titleField = subtitle // title
+    titleField = seo_title // subtitle // title
 #    dataProcessing.10 = files
 #    dataProcessing.10 {
 #      references.fieldName = media
@@ -51,7 +51,7 @@ page.10 {
     levels = 1
     entryLevel.data = level
     expandAll = 1
-    titleField = sutitle // title
+    titleField = subtitle // title
     dataProcessing.10 = files
     dataProcessing.10 {
       references.fieldName = media
@@ -69,7 +69,11 @@ page.10 {
 
   variables {
     homePageTitle = TEXT
-    homePageTitle.data = leveltitle : 0
+    homePageTitle.data = levelfield : 0, title
+    homePageTitle.stdWrap.override.cObject = TEXT
+    homePageTitle.stdWrap.override.cObject.data = levelfield : 0, subtitle
+    #homePageTitle.stdWrap.override.cObject.stdWrap.override.cObject = TEXT
+    #homePageTitle.stdWrap.override.cObject.stdWrap.override.cObject.data = levelfield : 0, seo_title
     homePageSlug = TEXT
     homePageSlug.data = levelfield : 0, slug
     homePageUid = TEXT

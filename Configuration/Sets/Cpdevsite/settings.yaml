@@ -1,7 +1,5 @@
 # yamllint disable rule:line-length
 
-TYPO3copyright: 'created by conPassione gmbh using HTML5, CSS3, www.conpassione.ch'
-
 TCEpage:
   author: 'conPassione gmbh'
   author_email: info@conpassione.ch

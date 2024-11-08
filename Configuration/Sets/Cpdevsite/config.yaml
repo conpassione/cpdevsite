@@ -1,7 +1,1 @@
 name: conpassione/cpdevsite
-label: conPassione Base
-dependencies:
-  - typo3/form
-  - typo3/fluid-styled-content
-  - typo3/redirects
-  - typo3/seo-sitemap

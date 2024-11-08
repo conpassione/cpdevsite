@@ -25,7 +25,7 @@ mod.wizards.newContentElement.wizardItems {
     removeItems := addToList(html,div)
   }
 }
-[!backend.user.isAdmin]
+[! backend.user.isAdmin]
   mod.wizards.newContentElement.wizardItems {
     forms {
       removeItems := addToList(felogin_login)

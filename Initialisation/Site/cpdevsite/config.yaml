@@ -1,9 +1,20 @@
-rootPageId: 1
 base: 'https://cpdevsite.ddev.site'
-baseVariants:
+dependencies:
+  - conpassione/cpdevsite
+  - typo3/fluid-styled-content
+  - typo3/felogin
+  - typo3/form
+  - typo3/redirects
+  - typo3/seo-sitemap
+errorHandling:
   -
-    base: 'https://cpdevsite.ddev.site'
-    condition: 'applicationContext == "Development"'
+    errorCode: 404
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=4'
+  -
+    errorCode: 500
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=5'
 languages:
   -
     languageId: 0
@@ -14,23 +25,23 @@ languages:
     iso-639-1: de
     hreflang: de_CH
     direction: ltr
-    typo3Language: default
     flag: ch
     enabled: true
+    websiteTitle: Entwicklungswebsite
   -
     languageId: 1
     title: Français
-    navigationTitle: Franc
+    navigationTitle: Français
     base: /fr/
     locale: fr_FR.UTF-8
     iso-639-1: fr
     hreflang: fr_FR
     direction: ltr
-    typo3Language: default
     flag: fr
     fallbackType: fallback
     fallbacks: '0'
     enabled: true
+    websiteTitle: 'Site de Developement'
   -
     languageId: 2
     title: Italiano
@@ -40,11 +51,11 @@ languages:
     iso-639-1: it
     hreflang: it_IT
     direction: ltr
-    typo3Language: default
     flag: it
     fallbackType: fallback
     fallbacks: '1,0'
     enabled: true
+    websiteTitle: 'Pagina di sviluppo'
   -
     languageId: 3
     title: English
@@ -54,30 +65,20 @@ languages:
     iso-639-1: en
     hreflang: en_US
     direction: ltr
-    typo3Language: default
     flag: gb
     fallbackType: fallback
     fallbacks: '0'
     enabled: true
-errorHandling:
-  -
-    errorCode: 404
-    errorHandler: Page
-    errorContentSource: 't3://page?uid=4'
-  -
-    errorCode: 500
-    errorHandler: Page
-    errorContentSource: 't3://page?uid=5'
+    websiteTitle: 'Dev Site'
+rootPageId: 1
 routeEnhancers:
   PageTypeSuffix:
     type: PageType
     map:
       sitemap.xml: 1533906435
-      browserconfig.xml: 2943879438
-      site.webmanifest: 3478304621
 routes:
   -
     route: robots.txt
     type: staticText
-    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n"
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3conf/\r\nSitemap: https://cpdevsite.ddev.site/sitemap.xml\r\n"
 websiteTitle: ''

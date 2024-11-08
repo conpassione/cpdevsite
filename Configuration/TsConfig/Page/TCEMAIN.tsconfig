@@ -1,0 +1,5 @@
+TCEMAIN {
+  table.pages {
+    disablePrependAtCopy = 1
+  }
+}

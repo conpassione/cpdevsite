@@ -4,14 +4,18 @@ setup.fields.colorScheme.disabled = 0
 // Configuration Pagetree
 options.pageTree.showPageIdWithTitle = 1
 options.pageTree.showDomainNameWithTitle = 1
+options.pageTree.showPathAboveMounts = 1
 // options.pageTree.showNavTitle = 1
-// options.pageTree.backgroundColor.(pageID) = color
-options.pageTree.doktypesToShowInNewPageDragArea = 36650001,1,36650011,36650012,3,4,254
-// options.pageTree.doktypesToShowInNewPageDragArea:=addToList()
+options.pageTree.doktypesToShowInNewPageDragArea = 1,254
+options.pageTree.doktypesToShowInNewPageDragArea := addToList(36650001,36650012,36650011)
 // options.pageTree.doktypesToShowInNewPageDragArea:=removeFromList()
 
 // Toolbar
-options.clearCache.pages = 1
+[! backend.user.isAdmin]
+  options.clearCache.all := getEnv(USR_CLEARCACHE_ALL)
+  options.clearCache.pages := getEnv(USR_CLEARCACHE_PAGES)
+[END]
+
 // Clipboard
 options.clipboardNumberPads = 1
 
@@ -26,7 +30,7 @@ options.file_list.thumbnail.height = 128
 options.file_list.thumbnail.width = 128
 
 // folderTree
-options.folderTree.uploadFieldsInLinkBrowser = 5
+options.folderTree.uploadFieldsInLinkBrowser = 0
 
 // Configuration User Settings: Persönliche Daten
 setup.default.lang = de
@@ -34,8 +38,7 @@ setup.default.lang = de
 setup.default.startModule = web_layout
 setup.default.backendTitleFormat = titleFirst
 // Configuration User Settings: Bearbeiten und erweiterte Funktionen
-// setup.default.titleLen = 50
+setup.default.titleLen = 50
 setup.default.edit_docModuleUpload = 0
 setup.default.showHiddenFilesAndFolders = 1
 // setup.default.copyLevels >
-

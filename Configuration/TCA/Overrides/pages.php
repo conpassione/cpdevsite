@@ -58,7 +58,7 @@ call_user_func(static function(): void {
         'before:keywords'
     );
 
-    // add editorial fields to palette
+    // add fields to palette editorial
     ExtensionManagementUtility::addFieldsToPalette(
         'pages',
         'editorial',
@@ -81,7 +81,7 @@ call_user_func(static function(): void {
         'before:tsconfig_includes'
     );
 
-    // layout fields to palette
+    // add fields to palette layout
     ExtensionManagementUtility::addFieldsToPalette(
         'pages',
         'layout',

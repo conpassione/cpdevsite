@@ -32,9 +32,13 @@ TCEFORM.pages {
     disabled = 1
     disableNoMatchingValueElement = 1
   }
+  newUntil.disabled = 1
   #TAB-Verhalten
   php_tree_stop.disabled = 1
   content_from_pid.disabled = 1
+  target.disabled = 1
+  cache_timeout.disabled = 1
+  cache_tags.disabled = 1
 
   #TAB-Ressourcen
   media.label = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.media.label
@@ -44,7 +48,7 @@ TCEFORM.pages {
   #TAB-Hinweis
 }
 
-[!backend.user.isAdmin]
+[! backend.user.isAdmin]
   # Definition der Seitenattribute für Redaktoren
   TCEFORM.pages {
     #TAB-Allgemein
@@ -53,14 +57,16 @@ TCEFORM.pages {
     #TAB-Metadaten
     #TAB-Erscheinungsbild
     #TAB-Verhalten
-    module.disabled = 1
     is_siteroot.disabled = 1
+    no_search.disabled = 1
+    module.disabled = 1
     #TAB-Ressourcen
     tsconfig_includes.disabled = 1
     TSconfig.disabled = 1
     #TAB-Sprache
+    l18n_cfg.disabled = 1
     #TAB-Zugriff
-    editlock.disabled = 1
+    fe_group.disabled = 1
     #TAB-Kategorien
     #TAB-Hinweis
   }
@@ -116,7 +122,6 @@ TCEFORM.tt_content {
   imageborder.disabled = 1
 
 # Zugriff
-  # fe_group.disabled = 0
   editlock.disabled = 1
 
 # Hinweise

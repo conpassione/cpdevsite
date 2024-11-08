@@ -29,7 +29,7 @@ call_user_func(static function(): void {
         'type' =>'text',
         'max' => 35,
         'rows' => 1,
-        'cols' => 35,
+        'cols' => 30,
         'enableRichtext' => true,
         'richtextConfiguration' => 'CpMinimal'
     ];
