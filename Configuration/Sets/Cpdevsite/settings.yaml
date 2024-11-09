@@ -4,3 +4,16 @@ TCEpage:
   author: 'conPassione gmbh'
   author_email: info@conpassione.ch
   author_phone: '+41793301011'
+
+#styles:
+#  templates:
+#    layoutRootPath: EXT:cpdevsite/Resources/Private/Templates/ContentElements/Layouts
+#    partialRootPath: EXT:cpdevsite/Resources/Private/Templates/ContentElements/Partials
+#    templateRootPath: EXT:cpdevsite/Resources/Private/Templates/ContentElements/Templates
+#  content:
+#    textmedia:
+#      maxW: 1200
+#      maxWInText: 623
+#      linkWrap:
+#        lightboxEnabled: true
+#        lightboxCssClass: lightbox

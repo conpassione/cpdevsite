@@ -13,6 +13,6 @@ body {
 }
 
 body >*:nth-last-child(-n + 1) {
-  border-block-end: 1px solid var(--clr-extralight);
+  border-block-end: 0;
   padding-block-end: 0.25em;
 }

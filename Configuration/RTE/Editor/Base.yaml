@@ -3,7 +3,7 @@
 editor:
   config:
     # the CSS file to be used inside the editor
-    contentsCss: [ 'EXT:cpdevsite/Resources/Public/Css/Rte.css' ]
+    # contentsCss: [ 'EXT:cpdevsite/Resources/Public/Css/Rte.css' ]
     height: 400
     width: 'auto'
     ui:
