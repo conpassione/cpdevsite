@@ -23,6 +23,7 @@
 		"b13/doktypemapper": "^2.0",
 		"friendsoftypo3/content-blocks": "^1.0",
 		"helhum/dotenv-connector": "*",
+		"skaras/skjsonlylightbox": "^0.5.0",
 		"typo3/cms-adminpanel": "^13",
 		"typo3/cms-backend": "^13",
 		"typo3/cms-belog": "^13",

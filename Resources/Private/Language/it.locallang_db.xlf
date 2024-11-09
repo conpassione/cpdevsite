@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="it" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-10-27T23:03:36+01:00">
-        <header></header>
+    <file source-language="en" target-language="it" original="" datatype="plaintext" date="2024-11-09T17:31:51+01:00">
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
                 <source>Agenda</source>
@@ -46,6 +45,22 @@
             <trans-unit id="contentwizard.conpassione.groupLabel" resname="contentwizard.conpassione.groupLabel">
                 <source>conPassione</source>
                 <target>conPassione</target>
+            </trans-unit>
+            <trans-unit id="crop.default.free.title" resname="crop.default.free.title">
+                <source>free</source>
+                <target>libero</target>
+            </trans-unit>
+            <trans-unit id="crop.small.free.title" resname="crop.small.free.title">
+                <source>free</source>
+                <target>libero</target>
+            </trans-unit>
+            <trans-unit id="crop.default.title" resname="crop.default.title">
+                <source>Desktop</source>
+                <target>Desktop</target>
+            </trans-unit>
+            <trans-unit id="crop.small.title" resname="crop.small.title">
+                <source>Mobile</source>
+                <target>Mobile</target>
             </trans-unit>
             <trans-unit id="pagetype.memberlist.label" resname="pagetype.memberlist.label">
                 <source>Members</source>
