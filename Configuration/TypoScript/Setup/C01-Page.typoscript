@@ -15,13 +15,16 @@ config {
   noPageTitle = 0
   pageTitle.field = subtitle // title
   pageTitle.postCObject = TEXT
-  pageTitle.postCObject.field = seo_title // subtitle // title
-  pageTitle.postCObject.noTrimWrap = | : ||
-  pageTitle.postCObject.postCObject = TEXT
-  pageTitle.postCObject.postCObject.data = siteLanguage:websiteTitle
-  pageTitle.postCObject.postCObject.noTrimWrap = * | **
-  pageTitle.postCObject.postCObject.noTrimWrap.splitChar = *
-
+  pageTitle.postCObject {
+    field = seo_title // subtitle // title
+    noTrimWrap = | : ||
+    postCObject = TEXT
+    postCObject {
+      data = siteLanguage:websiteTitle
+      noTrimWrap = * | **
+      noTrimWrap.splitChar = *
+    }
+  }
   pageTitleFirst = 1
   pageTitleSeparator = |
   pageTitleSeparator.noTrimWrap = | | |

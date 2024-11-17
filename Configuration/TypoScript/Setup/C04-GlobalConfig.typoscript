@@ -1,3 +1,16 @@
+lib.contentElement {
+  templateRootPaths.120 = EXT:cpdevsite/Resources/Private/CoreTemplates/Templates/
+  partialRootPaths.120 = EXT:cpdevsite/Resources/Private/CoreTemplates/Partials/
+  layoutRootPaths.120 = EXT:cpdevsite/Resources/Private/CoreTemplates/Layouts/
+}
+
+lib.parseFunc_RTE {
+  nonTypoTagStdWrap {
+    encapsLines.remapTag >
+    encapsLines.nonWrappedTag >
+  }
+}
+
 plugin.tx_seo {
   config {
     xmlSitemap {

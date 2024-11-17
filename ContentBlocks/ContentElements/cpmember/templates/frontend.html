@@ -29,4 +29,8 @@
             <p>(vakant)</p>
         </f:else>
     </f:if>
+    <f:if condition="{data.dbboard}">
+        <p>Board-1: {data.feuser.conpassione_member_board}</p>
+        <p>Board: {data.dbboard.title}</p>
+    </f:if>
 </div>

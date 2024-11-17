@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2024-11-09T17:31:51+01:00">
+    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2024-11-17T23:30:07+01:00">
         <header></header>
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
@@ -27,7 +27,7 @@
             <trans-unit id="backendlayout.gallerymenu.title" resname="backendlayout.gallerymenu.title">
                 <source>Gallery menu</source>
             </trans-unit>
-            <trans-unit id="backendlayout.homepage1.title" resname="backendlayout.homepage1.title">
+            <trans-unit id="backendlayout.homepage.title" resname="backendlayout.homepage.title">
                 <source>Homepage</source>
             </trans-unit>
             <trans-unit id="backendlayout.submenu" resname="backendlayout.submenu">
@@ -39,14 +39,23 @@
             <trans-unit id="crop.default.free.title" resname="crop.default.free.title">
                 <source>free</source>
             </trans-unit>
-            <trans-unit id="crop.small.free.title" resname="crop.small.free.title">
-                <source>free</source>
-            </trans-unit>
             <trans-unit id="crop.default.title" resname="crop.default.title">
                 <source>Desktop</source>
             </trans-unit>
+            <trans-unit id="crop.small.free.title" resname="crop.small.free.title">
+                <source>free</source>
+            </trans-unit>
             <trans-unit id="crop.small.title" resname="crop.small.title">
                 <source>Mobile</source>
+            </trans-unit>
+            <trans-unit id="fe_users.column.mobile" resname="fe_users.column.mobile">
+                <source>Mobile</source>
+            </trans-unit>
+            <trans-unit id="fe_users.column.active" resname="fe_users.column.active">
+                <source>Status</source>
+            </trans-unit>
+            <trans-unit id="fe_users.column.active.label" resname="fe_users.column.active.label">
+                <source>active</source>
             </trans-unit>
             <trans-unit id="pagetype.memberlist.label" resname="pagetype.memberlist.label">
                 <source>Members</source>
@@ -60,11 +69,8 @@
             <trans-unit id="pagewizard.landingpage.groupLabel" resname="pagewizard.landingpage.groupLabel">
                 <source>Landingpages</source>
             </trans-unit>
-            <trans-unit id="recordtype.member.board.1" resname="recordtype.member.board.1">
-                <source>Comitee</source>
-            </trans-unit>
-            <trans-unit id="recordtype.member.board.2" resname="recordtype.member.board.2">
-                <source>Breeders comitee</source>
+            <trans-unit id="recordType.groupname" resname="recordType.groupname">
+                <source>conPassione</source>
             </trans-unit>
             <trans-unit id="rte.codeblock.kbd" resname="rte.codeblock.kbd">
                 <source>Keystroke</source>
@@ -163,7 +169,7 @@
                 <source>Pagelayout</source>
             </trans-unit>
             <trans-unit id="tceform.page.media.label" resname="tceform.page.media.label">
-                <source>Title image</source>
+                <source>Images</source>
             </trans-unit>
             <trans-unit id="tceform.page.subtitle.label" resname="tceform.page.subtitle.label">
                 <source>Pageheader</source>

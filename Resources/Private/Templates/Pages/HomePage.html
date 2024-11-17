@@ -1,0 +1,33 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="Layout-{page.pagerecord.layout}" />
+
+
+<f:section name="Header">
+    <div class="cplogo">
+        <f:render partial="Logo" arguments="{settings: settings}"/>
+    </div>
+    <nav>
+        <f:render partial="Nav" arguments="{_all}" />
+    </nav>
+</f:section>
+
+<f:section name="Main">
+    <div class="jumbotron">Hier kommt das Jumbotron</div>
+    <div class="submenu">Hier kommt das Submenu</div>
+    <f:for each="{pagecontent.content.records}" as="contentelement">
+        <f:cObject
+            typoscriptObjectPath="tt_content.{contentelement.CType}"
+            data="{contentelement.rawRecord}"
+            table="tt_content"
+        />
+    </f:for>
+</f:section>
+
+<f:section name="Footer">
+    <footer>
+        <p>Footer</p>
+    </footer>
+</f:section>
+
+</html>

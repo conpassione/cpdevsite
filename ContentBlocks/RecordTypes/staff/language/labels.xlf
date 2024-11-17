@@ -1,22 +1,25 @@
 <?xml version="1.0"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-09-28T21:37:39+00:00" product-name="conpassione/homepage">
+	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-09-28T21:37:39+00:00" product-name="conpassione/staff">
 		<header/>
 		<body>
 			<trans-unit id="title" resname="title">
-				<source>FunctionX</source>
+				<source>Staff</source>
+			</trans-unit>
+			<trans-unit id="feuser" resname="feuser">
+				<source>Member</source>
 			</trans-unit>
 			<trans-unit id="board" resname="board">
 				<source>Board</source>
 			</trans-unit>
 			<trans-unit id="board.items.label" resname="board.items.label">
-				<source>Comitee</source>
+				<source>Type of board</source>
 			</trans-unit>
 			<trans-unit id="board.items.1.label" resname="board.items.1.label">
-				<source>Comitee</source>
+				<source>Board</source>
 			</trans-unit>
 			<trans-unit id="board.items.2.label" resname="board.items.2.label">
-				<source>Breeding comission</source>
+				<source>Breeding commission</source>
 			</trans-unit>
 		</body>
 	</file>

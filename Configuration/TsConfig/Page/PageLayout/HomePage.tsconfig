@@ -1,8 +1,8 @@
 mod {
   web_layout {
     BackendLayouts {
-      HomePage1 {
-        title =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.homepage1.title
+      HomePage {
+        title =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.homepage.title
         icon = tx-conpassione-backendlayout
         config {
           backend_layout {

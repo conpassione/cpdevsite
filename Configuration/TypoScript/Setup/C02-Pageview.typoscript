@@ -18,7 +18,6 @@
 #     52 | Zweispalten (Prospect)
 #     53 | Dreispalten (Customerinfo)
 
-
 page.10 = PAGEVIEW
 page.10 {
 
@@ -29,7 +28,15 @@ page.10 {
 
   # Inhalt holen, aufgeteilt in die colPos aus dem backend_layout
   dataProcessing.10 = page-content
-  dataProcessing.10.as = pagecontent
+  dataProcessing.10 {
+    as = pagecontent
+  }
+  dataProcessing.15 = files
+  dataProcessing.15 {
+    as = pagemedia
+    references.fieldName = media
+    references.table = pages
+  }
 
   # Hauptmenu erstellen, inkl. Medien aus den Seiteneigenschaften
   dataProcessing.20 = menu
@@ -37,10 +44,11 @@ page.10 {
     as = mainmenu
     levels = 2
     expandAll = 1
-    titleField = seo_title // subtitle // title
+    titleField = subtitle // title
 #    dataProcessing.10 = files
 #    dataProcessing.10 {
 #      references.fieldName = media
+#      references.table = pages
 #    }
   }
 
@@ -55,16 +63,8 @@ page.10 {
     dataProcessing.10 = files
     dataProcessing.10 {
       references.fieldName = media
+      references.table = pages
     }
-  }
-
-  dataProcessing.40 = menu
-  dataProcessing.40 {
-    as = rootline
-    special = rootline
-    special.range = 0|-1
-    includeNotInMenu = 0
-    titleField = subtitle // title
   }
 
   variables {

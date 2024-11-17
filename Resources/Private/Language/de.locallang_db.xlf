@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="de" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-11-09T17:31:51+01:00">
+    <file source-language="en" target-language="de" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-11-17T23:30:07+01:00">
         <header></header>
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
@@ -35,7 +35,7 @@
                 <source>Gallery menu</source>
                 <target>Galerie Verzeichnis</target>
             </trans-unit>
-            <trans-unit id="backendlayout.homepage1.title" resname="backendlayout.homepage1.title">
+            <trans-unit id="backendlayout.homepage.title" resname="backendlayout.homepage.title">
                 <source>Homepage</source>
                 <target>Startseite</target>
             </trans-unit>
@@ -51,17 +51,29 @@
                 <source>free</source>
                 <target>frei</target>
             </trans-unit>
-            <trans-unit id="crop.small.free.title" resname="crop.small.free.title">
-                <source>free</source>
-                <target>frei</target>
-            </trans-unit>
             <trans-unit id="crop.default.title" resname="crop.default.title">
                 <source>Desktop</source>
                 <target>Desktop</target>
             </trans-unit>
+            <trans-unit id="crop.small.free.title" resname="crop.small.free.title">
+                <source>free</source>
+                <target>frei</target>
+            </trans-unit>
             <trans-unit id="crop.small.title" resname="crop.small.title">
                 <source>Mobile</source>
                 <target>Mobile</target>
+            </trans-unit>
+            <trans-unit id="fe_users.column.mobile" resname="fe_users.column.mobile">
+                <source>Mobile</source>
+                <target>Handy</target>
+            </trans-unit>
+            <trans-unit id="fe_users.column.active" resname="fe_users.column.active">
+                <source>Status</source>
+                <target>Status</target>
+            </trans-unit>
+            <trans-unit id="fe_users.column.active.label" resname="fe_users.column.active.label">
+                <source>active</source>
+                <target>aktiv</target>
             </trans-unit>
             <trans-unit id="pagetype.memberlist.label" resname="pagetype.memberlist.label">
                 <source>Members</source>
@@ -79,13 +91,9 @@
                 <source>Landingpages</source>
                 <target>Startseiten</target>
             </trans-unit>
-            <trans-unit id="recordtype.member.board.1" resname="recordtype.member.board.1">
-                <source>Comitee</source>
-                <target>Vorstand</target>
-            </trans-unit>
-            <trans-unit id="recordtype.member.board.2" resname="recordtype.member.board.2">
-                <source>Breeders comitee</source>
-                <target>Zuchtkommission</target>
+            <trans-unit id="recordType.groupname" resname="recordType.groupname">
+                <source>conPassione</source>
+                <target>conPassione</target>
             </trans-unit>
             <trans-unit id="rte.codeblock.kbd" resname="rte.codeblock.kbd">
                 <source>Keystroke</source>
@@ -216,8 +224,8 @@
                 <target>Seitenlayout</target>
             </trans-unit>
             <trans-unit id="tceform.page.media.label" resname="tceform.page.media.label">
-                <source>Title image</source>
-                <target>Titelbild</target>
+                <source>Images</source>
+                <target>Bilder</target>
             </trans-unit>
             <trans-unit id="tceform.page.subtitle.label" resname="tceform.page.subtitle.label">
                 <source>Pageheader</source>

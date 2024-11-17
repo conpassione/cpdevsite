@@ -3,6 +3,9 @@
 $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive(
     $GLOBALS['TYPO3_CONF_VARS'],
     [
+        'BE' => [
+            'lockSSL' => true,
+        ],
         'DB' => [
             'Connections' => [
                 'Default' => [

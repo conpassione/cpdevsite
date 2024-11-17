@@ -1,0 +1,44 @@
+name: conpassione/homepage1
+typeName: 36650001
+title: HomePage1
+group: landingpage
+description: This is the rootpage of theme 1
+prefixFields: false
+fields:
+  - identifier: subtitle
+    useExistingField: true
+  - identifier: cplogo
+    label: Brand Logo
+    type: File
+    extendedPalette: true
+    minitems: 0
+    maxitems: 1
+    allowed: svg
+    allowLanguageSynchronization: 1
+    cropVariants:
+      default:
+        disabled: 1
+      logocrop:
+        title: 'Logo'
+#        focusArea:
+#          x: 0.3
+#          y: 0.3
+#          width: 0.4
+#          height: 0.4
+#        coverAreas:
+#          -
+#            x: 0.1
+#            y: 0.8
+#            width: 0.8
+#            height: 0.1
+        allowedAspectRatios:
+          Logo:
+            title: '1:1'
+            value: 1.0
+          LogoL:
+            title: '2:1'
+            value: 2 / 1
+          LogoP:
+            title: '1:2'
+            value: 1 / 2
+        selectedRatio: Logo

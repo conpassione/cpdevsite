@@ -7,7 +7,7 @@ fields:
   - identifier: header
     useExistingField: true
   - identifier: feuser
-    type: 'Select'
+    type: Select
     label: 'FE-User'
     renderType: selectSingle
     foreign_table: fe_users
