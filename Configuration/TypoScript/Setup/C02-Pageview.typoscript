@@ -31,16 +31,17 @@ page.10 {
   dataProcessing.10 {
     as = pagecontent
   }
-  dataProcessing.15 = files
-  dataProcessing.15 {
+
+  dataProcessing.20 = files
+  dataProcessing.20 {
     as = pagemedia
     references.fieldName = media
     references.table = pages
   }
 
   # Hauptmenu erstellen, inkl. Medien aus den Seiteneigenschaften
-  dataProcessing.20 = menu
-  dataProcessing.20 {
+  dataProcessing.30 = menu
+  dataProcessing.30 {
     as = mainmenu
     levels = 2
     expandAll = 1
@@ -53,8 +54,8 @@ page.10 {
   }
 
   # Menu der Unterseiten der aktuellen Seite
-  dataProcessing.30 = menu
-  dataProcessing.30 {
+  dataProcessing.40 = menu
+  dataProcessing.40 {
     as = submenu
     levels = 1
     entryLevel.data = level

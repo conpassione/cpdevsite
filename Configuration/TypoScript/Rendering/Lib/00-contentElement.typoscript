@@ -1,0 +1,13 @@
+lib.contentElement = FLUIDTEMPLATE
+lib.contentElement {
+  templateName = Default
+  templateRootPaths {
+    0 = EXT:cpdevsite/Resources/Private/ContentElements/Templates
+  }
+  layoutRootPaths {
+    0 = EXT:cpdevsite/Resources/Private/ContentElements/Layouts/
+  }
+  partialRootPaths {
+    0 = EXT:cpdevsite/Resources/Private/ContentElements/Partials
+  }
+}

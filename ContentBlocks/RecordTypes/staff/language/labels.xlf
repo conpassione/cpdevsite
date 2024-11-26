@@ -6,20 +6,14 @@
 			<trans-unit id="title" resname="title">
 				<source>Staff</source>
 			</trans-unit>
-			<trans-unit id="feuser" resname="feuser">
+			<trans-unit id="function.label" resname="function.label">
+				<source>Function</source>
+			</trans-unit>
+			<trans-unit id="feuser.label" resname="feuser.label">
 				<source>Member</source>
 			</trans-unit>
-			<trans-unit id="board" resname="board">
-				<source>Board</source>
-			</trans-unit>
-			<trans-unit id="board.items.label" resname="board.items.label">
-				<source>Type of board</source>
-			</trans-unit>
-			<trans-unit id="board.items.1.label" resname="board.items.1.label">
-				<source>Board</source>
-			</trans-unit>
-			<trans-unit id="board.items.2.label" resname="board.items.2.label">
-				<source>Breeding commission</source>
+			<trans-unit id="responsibility.label" resname="responsibility.label">
+				<source>Responsibility</source>
 			</trans-unit>
 		</body>
 	</file>

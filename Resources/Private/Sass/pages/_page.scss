@@ -1,4 +1,5 @@
 /* page */
+@use '../settings' as *;
 
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {
@@ -15,7 +16,41 @@ article {
   container-type: inline-size;
 }
 
-.header1 {
-  background-color: #0a53be;
+.content-grid {
+  --padding-inline: 1rem;
+  --content-max-width: var(--mediasize--large);
+  --breakout-size: 50px;
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start]
+    minmax(var(--padding-inline), 1fr)
+    [breakout-start]
+    minmax(0, var(--breakout-size))
+    [content-start]
+    min(var(--content-max-width), 100% - 2 * var(--padding-inline))
+    [content-end]
+    minmax(0, var(--breakout-size))
+    [breakout-end]
+    minmax(var(--padding-inline), 1fr)
+    [full-width-end];
 }
 
+.content-grid > * {
+  grid-column: content;
+}
+
+.content-grid > .breakout {
+  grid-column: breakout;
+}
+
+.content-grid > .full-width {
+  grid-column: full-width;
+}
+
+.jumbotron {
+  //background-color: #0a58ca;
+}
+.submenu {
+  //outline: indianred 2px solid;
+}

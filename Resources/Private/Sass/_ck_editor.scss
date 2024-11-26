@@ -1,18 +1,18 @@
 /* ck-editor */
 
-@use 'atoms/color' as *;
-@use 'atoms/fonts' as *;
-
+@use 'vars' as *;
+@use 'atoms' as *;
 
 body {
   // font-family: var(--ff), sans-serif;
-  //font-size:   16px;
-  //line-height: 20px;
+  font-size:   16px;
+  line-height: 20px;
   padding: 5px;
+  color: var(--clr-text);
   // background-color: var(--clr-lightgray);
 }
 
 body >*:nth-last-child(-n + 1) {
-  border-block-end: 1px solid var(--clr-extralight);
+  border-block-end: 1px solid var(--clr-bw-050);
   padding-block-end: 0.25em;
 }

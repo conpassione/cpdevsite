@@ -1,0 +1,26 @@
+name: conpassione/stafflist
+typeName: stafflist
+group: z-cpextensions
+prefixFields: false
+fields:
+  - identifier: conpassione/Header
+    type: Basic
+  - identifier: members
+    type: Select
+    renderType: selectTree
+    size: 15
+    minitems: 0
+    maxitems: 1
+    foreign_table: pages
+    foreign_table_where: 'AND ({#pages}.{#sys_language_uid} = 0)'
+    #foreign_table_where: 'AND ({#pages}.{#sys_language_uid} = ###REC_FIELD_sys_language_uid###) ORDER BY sorting'
+    #wenn selectSingel dann
+    #foreign_table_where: 'AND ({#pages}.{#module} = "memberfunction") AND ({#pages}.{#sys_language_uid} = ###REC_FIELD_sys_language_uid###)'
+    treeConfig:
+      parentField: pid
+      appearance:
+        expandAll: true
+        nonSelectableLevels: 0,1
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links

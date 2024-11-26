@@ -15,6 +15,11 @@ return [
         'source' => 'EXT:cpdevsite/Resources/Public/Icons/cpmember.svg',
     ],
 
+    'tx-conpassione-memberfunction' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:cpdevsite/Resources/Public/Icons/cpmemberfunction.svg',
+    ],
+
      //  Im BackendLayout wird das Icon direkt vom File geladen, damit das Icon grösser dargestellt werden kann
     'tx-conpassione-backendlayout' => [
         'provider' => SvgIconProvider::class,

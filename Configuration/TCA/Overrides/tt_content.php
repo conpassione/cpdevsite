@@ -17,11 +17,18 @@ call_user_func(static function(): void {
     ExtensionManagementUtility::addTcaSelectItemGroup(
         'tt_content',
         'CType',
-        'conpassione',
-        'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.conpassione.groupLabel',
-        'before:default'
+        'z-cpextensions',
+        'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.z-cpextensions.groupLabel',
+        'after:default'
     );
-
+    // Zusätzliche Gruppe im newContentWizard erstellen
+    ExtensionManagementUtility::addTcaSelectItemGroup(
+        'tt_content',
+        'CType',
+        'z-cplayout',
+        'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:contentwizard.z-cplayout.groupLabel',
+        'after:default'
+    );
 
     // TCA für header-Field überschreiben, damit der RTE zum Editieren verwendet werden kann
     // siehe: https://daniel-siepmann.de/typo3-rte-for-input-fields.html
@@ -33,4 +40,32 @@ call_user_func(static function(): void {
         'enableRichtext' => true,
         'richtextConfiguration' => 'CpMinimal'
     ];
+
+    $additionalColumns = [
+        'displaywidth' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.column.displaywidth',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'default' => 0,
+                'items' => [
+                    [
+                        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.column.displaywidth.item0',
+                        'value' => '0',
+                    ],
+                    [
+                        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.column.displaywidth.item1',
+                        'value' => '1',
+                    ],
+                    [
+                        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.column.displaywidth.item2',
+                        'value' => '2',
+                    ],
+                ]
+            ]
+        ],
+    ];
+    ExtensionManagementUtility::addTCAcolumns('tt_content', $additionalColumns);
+    ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'displaywidth','','after:sectionIndex');
 });

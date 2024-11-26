@@ -1,8 +1,6 @@
-@forward '../atoms/fonts';
-@forward '../atoms/color';
-@forward '../atoms/mediaquerie';
-@forward '../atoms/metrics';
-@forward '../atoms/paragraph';
-@forward '../atoms/heading';
-@forward '../atoms/list';
-@forward '../atoms/link';
+@forward 'link';
+@forward 'list';
+@forward 'image';
+@forward 'heading';
+@forward 'paragraph';
+

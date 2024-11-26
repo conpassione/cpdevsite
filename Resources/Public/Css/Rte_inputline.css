@@ -1,7 +1,70 @@
-@charset "UTF-8";
 /* import utilities */
-/* reset by conPassione gmbh */
+/* cp_base:constants */
+/* Baseline Colors */
+/* as css constants (light theme) */
+:root {
+  --clr-bw-000: oklch(0 0 0);
+  --clr-bw-030: oklch(0.3 0 0);
+  --clr-bw-040: oklch(0.4 0 0);
+  --clr-bw-050: oklch(0.5 0 0);
+  --clr-bw-060: oklch(0.6 0 0);
+  --clr-bw-075: oklch(0.75 0 0);
+  --clr-bw-090: oklch(0.9 0 0);
+  --clr-bw-100: oklch(1 0 0);
+  --clr-success: oklch(0.5 0.12 150);
+  --clr-info: oklch(0.5 0.12 220);
+  --clr-error: oklch(0.5 0.16 20);
+  --clr-brand--primary: oklch(0.50 0.19 220.75);
+  --clr-brand--secondary: oklch(0.50 0.03 149.54);
+  --clr-brand--tertiary: oklch(0.50 0.05 231.77);
+  --clr-brand--quaternary: oklch(0.50 0.13 318.63);
+  /* buttons */
+  --clr-primarybtn--active: var(--clr-bw-100);
+  --clr-primarybtnbg--active: var(--clr-brand--primary);
+  --clr-primarybtn--disabled: oklch(from var(--clr-primarybtn--active) calc(l + .5) c h);
+  /* typographic colors */
+  --clr-background: var(--clr-bw-100);
+  --clr-text: var(--clr-bw-030);
+  --clr-h: var(--clr-brand--primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* buttons */
+    --clr-primarybtn--active: var(--clr-bw-075);
+    --clr-primarybtnbg--active: var(--clr-brand--primary);
+    --clr-primarybtn--disabled: oklch(from var(--clr-primarybtn--active) calc(l + .5) c h);
+    /* typographic colors */
+    --clr-background: var(--clr-bw-030);
+    --clr-text: var(--clr-bw-075);
+    --clr-h: var(--clr-brand--primary);
+  }
+}
 /* fonts */
+:root {
+  /* fontfaces */
+  --ff: "Ubuntu";
+  --ff-condensed: "UbuntuCondensed";
+  --ff-serif: "Ubuntu";
+  --ff-h: "UbuntuCondensed";
+  --ff-nav: "UbuntuCondensed";
+  --ff-mono: "UbuntuMono";
+  --ff-symbol: "Symbols";
+  /* font weight */
+  --fw-regular: 300;
+  --fw-mono: 400;
+  --fw-bold: 700;
+  /* font size */
+  --fs-regular: 24px;
+  --fs-regular--big: 32px;
+  /* line height */
+  --lh-regular: 1.5;
+  --lh-small: 1.2;
+  --lh-paragraph: var(--lh-regular);
+  --lh-h: var(--lh-small);
+  --lh-list: var(--lh-small) ;
+}
+
 @font-face {
   font-family: "Ubuntu";
   font-weight: 300;
@@ -37,23 +100,23 @@
 }
 @font-face {
   font-family: "Ubuntu";
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   src: url("../Fonts/Ubuntu/ubuntu-b-webfont.woff2") format("woff2");
 }
 @font-face {
   font-family: "Ubuntu";
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   font-style: italic;
   src: url("../Fonts/Ubuntu/ubuntu-bi-webfont.woff2") format("woff2");
 }
 @font-face {
   font-family: "UbuntuCondensed";
-  font-weight: 300;
+  font-weight: var(--fw-regular);
   src: url("../Fonts/Ubuntu/ubuntu-c-webfont.woff2") format("woff2");
 }
 @font-face {
   font-family: "UbuntuMono";
-  font-weight: 400;
+  font-weight: var(--fw-mono);
   src: url("../Fonts/Ubuntu/ubuntumono-r-webfont.woff2") format("woff2");
 }
 @font-face {
@@ -62,50 +125,54 @@
   font-weight: normal;
   font-style: normal;
 }
-:root {
-  --ff: Ubuntu;
-  --ff-condensed: UbuntuCondensed;
-  --ff-serif: Ubuntu;
-  --ff-h: UbuntuCondensed;
-  --ff-nav: Ubuntu;
-  --ff-mono: UbuntuMono;
-  --ff-symbol: Symbols;
-}
-
 /* metrics */
-/* Baseline */
 :root {
-  --gutter: 1.5rem;
-  --line-height: 1.6rem;
+  --gutter: 1em;
   --flow-spacer: 1em;
+  --border-radius: 1em;
+  --mediasize--small: 480px;
+  --mediasize--medium: 960px;
+  --mediasize--large: 1600px;
 }
 
-*, ::before, ::after {
+/* reset by conPassione gmbh */
+/* reset */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 * {
   margin: 0;
-}
-
-.flow > * + * {
-  margin-top: var(--flow-spacer, 1em);
-}
-
-html,
-body {
-  color: var(--clr-text);
-  background-color: var(--clr-white);
-  margin: 0;
   padding: 0;
+}
+
+/* Prevent font size inflation*/
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  color-scheme: dark light;
+  /*   and set standard styling */
+  color: var(--clr-text);
+  background-color: var(--clr-background);
   font-family: var(--ff), sans-serif;
-  font-size: 16px;
-  line-height: 1.6rem;
+  font-size: clamp(var(--fs-regular), 2vw, var(--fs-regular--big));
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-regular);
   display: block;
+  height: 100%;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
 body {
+  height: 100%;
   overflow-y: scroll;
+  text-rendering: optimizeSpeed;
 }
 
 hr {
@@ -158,284 +225,46 @@ audio:not([controls]) {
   display: none;
 }
 
-/* @docs
-label: Responsive Images
-
-    note: |
-        These new elements display inline by default,
-        but that's not the expected behavior for either one.
-        This can interfere with proper layout and aspect-ratio handling.
-
-        1. Remove the unnecessary wrapping `picture`, while maintaining contents
-        2. Source elements have nothing to display, so we hide them entirely
-
-category: embedded elements
-*/
-picture {
-  display: contents;
-}
-
 source {
   display: none;
 }
 
-/* @docs
-label: Aspect Ratios
-
-    note: |
-        Maintain intrinsic aspect ratios when `max-width` is applied.
-    `iframe`, `embed`, and `object` are also embedded,
-        but have no intrinsic ratio,
-        so their `height` needs to be set explicitly.
-
-category: embedded elements
-*/
-img, svg, video, canvas {
-  height: auto;
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
-
-/* @docs
-label: Image Borders
-
-    note: |
-        Remove the border on images inside links in IE 10 and earlier.
-
-category: legacy browsers
-*/
-img {
-  border-style: none;
-}
-
-/* @docs
-label: SVG Overflow
-
-    note: |
-        Hide the overflow in IE 10 and earlier.
-
-category: legacy browsers
-*/
-svg {
-  overflow: hidden;
-}
-
-/* @docs
-label: HTML5 Elements
-
-    note: |
-        Default block display on HTML5 elements.
-        For oldIE to apply this styling one needs to add some JS as well (i.e. `document.createElement("main")`)
-
-    links:
-    - https://www.sitepoint.com/html5-older-browsers-and-the-shiv/
-
-category: legacy browsers
-*/
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section {
-  display: block;
-}
-
-/* @docs
-label: Checkbox & Radio Inputs
-
-    note: |
-        1. Add the correct box sizing in IE 10
-        2. Remove the padding in IE 10
-
-category: legacy browsers
-*/
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-/*doc
- * cp_base:mixins
-*/
-/*doc
- * cp_base:clearfix
-*/
-.cp-clearfix:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-/*doc
- * cp_base:hidding
-*/
-[hidden],
-template {
-  display: none;
-}
-
-.cp-hidding {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  left: -50000px;
-  width: 1px;
-}
-
-/*doc
- * cp_base:fsc_styles
- * Fluid Styled Content CSS Definitions
- * Anpassung conPassione für Benutzung von Constants
- * und für rem anstatt em
- */
-/* cp_base:constants */
-/* Baseline Colors */
-:root {
-  --clr-black: oklch(0% 0 0deg);
-  --clr-extradark: oklch(30% 0 0deg);
-  --clr-dark: oklch(40% 0 0deg);
-  --clr-gray: oklch(60% 0 0deg);
-  --clr-lightgray: oklch(75% 0 0deg);
-  --clr-extralight: oklch(90% 0 0deg);
-  --clr-white: oklch(100% 0 0deg);
-  --clr-success: oklch(78% 0.12 152deg);
-  --clr-info: oklch(78% 0.12 222deg);
-  --clr-error: oklch(78% 0.12 0deg);
-  --clr-color: oklch(30% 0 0deg);
-  --clr-brand1: oklch(49.6% 0.137 318.633deg);
-  --clr-brand2: oklch(64.6% 0.034 149.54deg);
-  --clr-brand3: oklch(70.6% 0.189 303.591deg);
-  --clr-brand4: oklch(50.3% 0.057 231.771deg);
-  --clr-highlight: oklch(49.6% 0.137 318.633deg);
-  --clr-h: oklch(49.6% 0.137 318.633deg);
-  --clr-text: oklch(40% 0 0deg);
-  --code-bg: oklch(75% 0 0deg);
-  --code-bc: oklch(40% 0 0deg);
-}
-
-/* :root {
-  --clr-black:      oklch(100% 0 0deg);
-  --clr-extradark:  oklch(90% 0 0deg);
-  --clr-dark:       oklch(75% 0 0deg);
-  --clr-gray:       oklch(60% 0 0deg);
-  --clr-lightgray:  oklch(40% 0 0deg);
-  --clr-extralight: oklch(30% 0 0deg);
-  --clr-white:      oklch(0% 0 0deg);
-  --clr-success:    oklch(78% 0.12 152deg);
-  --clr-info:       oklch(78% 0.12 222deg);
-  --clr-error:      oklch(78% 0.12 0deg);
-  --clr-color:      oklch(30% 0 0deg);
-  --clr-brand1:     oklch(49.6% 0.137 318.633deg);
-  --clr-brand2:     oklch(64.6% 0.034 149.54deg);
-  --clr-brand3:     oklch(70.6% 0.189 303.591deg);
-  --clr-brand4:     oklch(50.3% 0.057 231.771deg);
-  --clr-highlight:  oklch(49.6% 0.137 318.633deg);
-
-  --code-bg:        oklch(40% 0 0deg);
-  --code-bc:        oklch(75% 0 0deg);
-} */
-/* mediaqueries */
-/* media brakepoints */
-p {
-  max-width: 70ch;
-  text-wrap: pretty;
-  orphans: inherit;
-}
-
-pre {
-  font-family: var(--ff-mono), monospace;
-  font-size: 1rem;
-}
-
-pre:has(code),
-pre[data-language] {
-  padding: 1em;
-  background-color: var(--code-bg);
-  border: 1px solid var(--code-bc);
-  line-height: 1.2em;
-}
-
-/* pre:has(.cbcss),
-pre[data-language="CSS"] {
-  --code-bg: var(--clr-lightgray);
-  --code-bc: var(--clr-dark);
-} */
-kbd {
-  font-family: var(--ff-mono), monospace;
-  background: inherit;
-  color: inherit;
-}
-
-.cp-accent {
-  color: var(--clr-highlight);
-  font-weight: 500;
-}
-
-/* headings */
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
-  font-family: var(--ff-h), sans-serif;
-  margin-block-end: 1rem;
-  margin-inline: 0;
-  line-height: 1.2em;
-}
-
-h1 {
-  font-size: clamp(3rem, 5vw, 5rem);
-  margin-block-start: 2em;
-  color: var(--clr-h);
-}
-
-h2 {
-  font-size: clamp(2rem, 3vw, 4rem);
-  margin-block-start: 1.5em;
-  color: var(--clr-h);
-}
-
-h3,
-h4 {
-  font-size: clamp(1.25rem, 2vw, 2rem);
-  margin-block-start: 1em;
-}
-
-h3 {
-  color: var(--clr-h);
-}
-
-/* list */
-ol,
-ul {
-  list-style-type: disc;
-}
-
-ul {
-  padding-inline-start: 1rem;
-}
-
-ul > ::marker {
-  color: var(--clr-brand1);
-}
-
-li {
-  margin: 0;
-  line-height: 1.2rem;
-}
-
+/* import utilities */
 /* link */
-a, .insta-link--icon, .fb-link--icon, .mail-link--icon, .phone-link--icon, .url-link--icon, .folder-link--icon, .file-link--icon, .page-link--icon {
-  color: inherit;
+a:not([class]), a, .vimeo-link--icon, .youtube-link--icon, .github-link--icon, .pinterest-link--icon, .linkedin-link--icon, .insta-link--icon, .fb-link--icon, .mail-link--icon, .phone-link--icon, .url-link--icon, .folder-link--icon, .file-link--icon, .page-link--icon {
+  color: currentColor;
   background-color: inherit;
   text-decoration: none;
 }
-a:active, .insta-link--icon:active, .fb-link--icon:active, .mail-link--icon:active, .phone-link--icon:active, .url-link--icon:active, .folder-link--icon:active, .file-link--icon:active, .page-link--icon:active, a:hover, .insta-link--icon:hover, .fb-link--icon:hover, .mail-link--icon:hover, .phone-link--icon:hover, .url-link--icon:hover, .folder-link--icon:hover, .file-link--icon:hover, .page-link--icon:hover {
+a:active, .vimeo-link--icon:active, .youtube-link--icon:active, .github-link--icon:active, .pinterest-link--icon:active, .linkedin-link--icon:active, .insta-link--icon:active, .fb-link--icon:active, .mail-link--icon:active, .phone-link--icon:active, .url-link--icon:active, .folder-link--icon:active, .file-link--icon:active, .page-link--icon:active, a:hover, .vimeo-link--icon:hover, .youtube-link--icon:hover, .github-link--icon:hover, .pinterest-link--icon:hover, .linkedin-link--icon:hover, .insta-link--icon:hover, .fb-link--icon:hover, .mail-link--icon:hover, .phone-link--icon:hover, .url-link--icon:hover, .folder-link--icon:hover, .file-link--icon:hover, .page-link--icon:hover, a:focus-visible, .vimeo-link--icon:focus-visible, .youtube-link--icon:focus-visible, .github-link--icon:focus-visible, .pinterest-link--icon:focus-visible, .linkedin-link--icon:focus-visible, .insta-link--icon:focus-visible, .fb-link--icon:focus-visible, .mail-link--icon:focus-visible, .phone-link--icon:focus-visible, .url-link--icon:focus-visible, .folder-link--icon:focus-visible, .file-link--icon:focus-visible, .page-link--icon:focus-visible {
   background-color: oklch(from currentColor 0.9 c h);
   text-decoration: none;
   outline: 0;
 }
 
-.insta-link--icon:before, .fb-link--icon:before, .mail-link--icon:before, .phone-link--icon:before, .url-link--icon:before, .folder-link--icon:before, .file-link--icon:before, .page-link--icon:before {
-  font-family: Symbols;
+.vimeo-link--icon:before, .youtube-link--icon:before, .github-link--icon:before, .pinterest-link--icon:before, .linkedin-link--icon:before, .insta-link--icon:before, .fb-link--icon:before, .mail-link--icon:before, .phone-link--icon:before, .url-link--icon:before, .folder-link--icon:before, .file-link--icon:before, .page-link--icon:before {
+  font-family: var(--ff-symbol), sans-serif;
   content: "";
   padding-inline-end: 0.1em;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
 }
 
 .page-link--icon:before {
@@ -470,247 +299,163 @@ a:active, .insta-link--icon:active, .fb-link--icon:active, .mail-link--icon:acti
   content: "instagram";
 }
 
-.ce-table td,
-.ce-table th {
-  vertical-align: top;
+.linkedin-link--icon:before {
+  content: "linkedin";
 }
 
-.ce-textpic,
-.ce-image,
-.ce-nowrap .ce-bodytext,
-.ce-gallery,
-.ce-row,
-.ce-uploads li,
-.ce-uploads div {
-  overflow: hidden;
+.pinterest-link--icon:before {
+  content: "pinterest";
 }
 
-.ce-left .ce-gallery, .ce-column {
-  float: left;
+.github-link--icon:before {
+  content: "github";
 }
 
-.ce-center .ce-outer {
-  float: right;
-  position: relative;
-  right: 50%;
+.youtube-link--icon:before {
+  content: "youtube";
 }
 
-.ce-center .ce-inner {
-  float: right;
-  position: relative;
-  right: -50%;
+.vimeo-link--icon:before {
+  content: "vimeo";
 }
 
-.ce-right .ce-gallery {
-  float: right;
+/* import utilities */
+/* list */
+/* reset */
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
 }
 
-.ce-gallery figure {
-  display: table;
-  margin: 0 0 1rem;
+ol,
+ul {
+  list-style-type: disc;
+  padding-inline-start: 1em;
 }
 
-.ce-gallery figcaption {
-  caption-side: bottom;
-  display: table-caption;
+ul > ::marker {
+  color: var(--clr-brand--primary);
 }
 
-.ce-gallery img {
-  display: block;
+/* import utilities */
+/* images */
+/* @docs
+label: Responsive Images
+
+    note: |
+        These new elements display inline by default,
+        but that's not the expected behavior for either one.
+        This can interfere with proper layout and aspect-ratio handling.
+
+        1. Remove the unnecessary wrapping `picture`, while maintaining contents
+        2. Source elements have nothing to display, so we hide them entirely
+
+category: embedded elements
+*/
+picture {
+  display: contents;
 }
 
-.ce-gallery iframe {
-  border-width: 0;
-}
+/* @docs
+label: Aspect Ratios
 
-.ce-border img,
-.ce-border iframe {
-  border: 1px solid transparent;
-  padding: 1.5rem;
-}
+    note: |
+        Maintain intrinsic aspect ratios when `max-width` is applied.
+    `iframe`, `embed`, and `object` are also embedded,
+        but have no intrinsic ratio,
+        so their `height` needs to be set explicitly.
 
-.ce-above .ce-gallery,
-.ce-below .ce-gallery,
-.ce-intext.ce-right .ce-gallery,
-.ce-intext.ce-left .ce-gallery {
-  margin-bottom: 0;
+category: embedded elements
+*/
+img, svg, video, canvas, figure {
+  height: auto;
   max-width: 100%;
-}
-
-.ce-intext.ce-right .ce-gallery {
-  margin-left: 1.5rem;
-}
-
-.ce-intext.ce-left .ce-gallery {
-  margin-right: 1.5rem;
-}
-
-.ce-intext.ce-right.ce-nowrap .ce-gallery,
-.ce-intext.ce-left.ce-nowrap .ce-gallery {
-  max-width: 45%;
-}
-
-.ce-column {
-  margin-right: 1.5rem;
-}
-
-.ce-column:last-child {
-  margin-right: 0;
-}
-
-.ce-right.ce-above .ce-row {
-  float: right;
-}
-
-.ce-row {
-  margin-bottom: 0;
-  padding-top: 1.5rem;
-}
-
-.ce-row:last-child {
-  margin-bottom: 0;
-}
-
-.ce-above .ce-bodytext {
-  clear: both;
-}
-
-.ce-above .ce-gallery {
-  margin: 0;
-  width: 100%;
-}
-
-.ce-headline-left {
-  text-align: left;
-}
-
-.ce-headline-center {
-  text-align: center;
-}
-
-.ce-headline-right {
-  text-align: right;
-}
-
-.ce-uploads {
-  margin: 0;
-  padding: 0;
-}
-
-.ce-uploads li {
-  list-style: none outside none;
-  margin: 1rem 0;
-}
-
-.ce-uploads img {
-  float: left;
-  padding-right: 1rem;
-  vertical-align: top;
-  width: 2rem;
-}
-
-.ce-uploads span {
   display: block;
 }
 
-.ce-table {
-  max-width: 100%;
-  width: 100%;
+/* import utilities */
+/* headings */
+/* reset */
+h1, h2, h3, h4, h5, h6 {
+  /*font-family: var(--ff-h), sans-serif;
+  font-size: var(--fs-regular);
+  font-weight: normal;*/
+  font: inherit;
+  line-height: inherit;
 }
 
-.ce-table th,
-.ce-table td {
-  padding: 0.25rem 0.5rem;
-  vertical-align: top;
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  text-wrap: balance;
+  font-family: var(--ff-h), sans-serif;
+  margin-block-end: 1em;
+  line-height: var(--lh-h);
 }
 
-.ce-table thead th {
-  border-bottom: 2px solid oklch(40% 0 0deg);
+.h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-block-start: 1.5em;
+  color: var(--clr-h);
 }
 
-.ce-table th,
-.ce-table td {
-  border-top: 1px solid oklch(40% 0 0deg);
+.h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-block-start: 1.5em;
+  color: var(--clr-h);
 }
 
-.ce-table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05);
+.h3,
+.h4 {
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  margin-block-start: 1em;
 }
 
-.ce-table-bordered th,
-.ce-table-bordered td {
-  border: 1px solid oklch(30% 0 0deg);
+.h3 {
+  color: var(--clr-h);
 }
 
-.frame-space-before-extra-small {
-  margin-top: 1rem;
+/* import utilities */
+p {
+  max-width: 900ch;
+  text-wrap: pretty;
+  orphans: inherit;
 }
 
-.frame-space-before-small {
-  margin-top: 2rem;
+pre {
+  font-family: var(--ff-mono), monospace;
+  font-size: 1rem;
+  line-height: var(--lh-small);
 }
 
-.frame-space-before-medium {
-  margin-top: 3rem;
+pre:has(code),
+pre[data-language] {
+  padding: 1em;
+  background-color: var(--code-bg);
+  border: 1px solid var(--code-bc);
+  line-height: var(--lh-small);
 }
 
-.frame-space-before-large {
-  margin-top: 4rem;
+/* pre:has(.cpcss),
+pre[data-language="CSS"] {
+  --code-bg: var(--clr-text);
+  --code-bc: var(--clr-bw-090);
+} */
+kbd {
+  font-family: var(--ff-mono), monospace;
+  background: inherit;
+  color: inherit;
 }
 
-.frame-space-before-extra-large {
-  margin-top: 5rem;
+.cp-accent {
+  color: var(--clr-highlight);
+  font-weight: var(--fw-regular);
 }
 
-.frame-space-after-extra-small {
-  margin-bottom: 1rem;
-}
-
-.frame-space-after-small {
-  margin-bottom: 2rem;
-}
-
-.frame-space-after-medium {
-  margin-bottom: 3rem;
-}
-
-.frame-space-after-large {
-  margin-bottom: 4rem;
-}
-
-.frame-space-after-extra-large {
-  margin-bottom: 5rem;
-}
-
-.frame-ruler-before:before {
-  border-top: 1px solid rgba(0, 0, 0, 0.25);
-  content: "";
-  display: block;
-  margin-bottom: 2rem;
-}
-
-.frame-ruler-after:after {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-  content: "";
-  display: block;
-  margin-top: 2rem;
-}
-
-.frame-indent {
-  margin-left: 15%;
-  margin-right: 15%;
-}
-
-.frame-indent-left {
-  margin-left: 33%;
-}
-
-.frame-indent-right {
-  margin-right: 33%;
-}
-
+/* import utilities */
 /* ck-editor */
 body {
+  font-size: 16px;
+  line-height: 20px;
   padding: 5px;
 }
 

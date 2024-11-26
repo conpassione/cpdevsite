@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2024-11-17T23:30:07+01:00">
+    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2024-11-26T15:34:13+01:00">
         <header></header>
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
@@ -33,8 +33,11 @@
             <trans-unit id="backendlayout.submenu" resname="backendlayout.submenu">
                 <source>Menu of subpages</source>
             </trans-unit>
-            <trans-unit id="contentwizard.conpassione.groupLabel" resname="contentwizard.conpassione.groupLabel">
-                <source>conPassione</source>
+            <trans-unit id="contentwizard.z-cpextensions.groupLabel" resname="contentwizard.z-cpextensions.groupLabel">
+                <source>Additional extensions</source>
+            </trans-unit>
+            <trans-unit id="contentwizard.z-cplayout.groupLabel" resname="contentwizard.z-cplayout.groupLabel">
+                <source>Design elements</source>
             </trans-unit>
             <trans-unit id="crop.default.free.title" resname="crop.default.free.title">
                 <source>free</source>
@@ -48,14 +51,17 @@
             <trans-unit id="crop.small.title" resname="crop.small.title">
                 <source>Mobile</source>
             </trans-unit>
-            <trans-unit id="fe_users.column.mobile" resname="fe_users.column.mobile">
-                <source>Mobile</source>
-            </trans-unit>
             <trans-unit id="fe_users.column.active" resname="fe_users.column.active">
                 <source>Status</source>
             </trans-unit>
             <trans-unit id="fe_users.column.active.label" resname="fe_users.column.active.label">
                 <source>active</source>
+            </trans-unit>
+            <trans-unit id="fe_users.column.mobile" resname="fe_users.column.mobile">
+                <source>Mobile</source>
+            </trans-unit>
+            <trans-unit id="pagetype.memberfunction.label" resname="pagetype.memberfunction.label">
+                <source>Staff</source>
             </trans-unit>
             <trans-unit id="pagetype.memberlist.label" resname="pagetype.memberlist.label">
                 <source>Members</source>
@@ -90,8 +96,14 @@
             <trans-unit id="rte.linkbrowser.folder-link--icon" resname="rte.linkbrowser.folder-link--icon">
                 <source>Marked link to Folder</source>
             </trans-unit>
+            <trans-unit id="rte.linkbrowser.github-link--icon" resname="rte.linkbrowser.github-link--icon">
+                <source>Marked link to github</source>
+            </trans-unit>
             <trans-unit id="rte.linkbrowser.insta-link--icon" resname="rte.linkbrowser.insta-link--icon">
                 <source>Marked link to Instagram</source>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.linkedin-link--icon" resname="rte.linkbrowser.linkedin-link--icon">
+                <source>Marked link to LinedIn</source>
             </trans-unit>
             <trans-unit id="rte.linkbrowser.mail-link" resname="rte.linkbrowser.mail-link">
                 <source>Link to eMail</source>
@@ -111,11 +123,20 @@
             <trans-unit id="rte.linkbrowser.phone-link--icon" resname="rte.linkbrowser.phone-link--icon">
                 <source>Marked link to Phonenumber</source>
             </trans-unit>
+            <trans-unit id="rte.linkbrowser.pinterest-link--icon" resname="rte.linkbrowser.pinterest-link--icon">
+                <source>Marked link to pinterest</source>
+            </trans-unit>
             <trans-unit id="rte.linkbrowser.url-link" resname="rte.linkbrowser.url-link">
                 <source>Link to URL</source>
             </trans-unit>
             <trans-unit id="rte.linkbrowser.url-link--icon" resname="rte.linkbrowser.url-link--icon">
                 <source>Marked link to URL</source>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.vimeo-link--icon" resname="rte.linkbrowser.vimeo-link--icon">
+                <source>Market link to vimeo</source>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.youtube-link--icon" resname="rte.linkbrowser.youtube-link--icon">
+                <source>Market link to youtube</source>
             </trans-unit>
             <trans-unit id="rte.style.blockquote" resname="rte.style.blockquote">
                 <source>Blockquote</source>
@@ -176,6 +197,18 @@
             </trans-unit>
             <trans-unit id="tceform.page.title.label" resname="tceform.page.title.label">
                 <source>Pagetree title</source>
+            </trans-unit>
+            <trans-unit id="tt_content.column.displaywidth" resname="tt_content.column.displaywidth">
+                <source>Display width</source>
+            </trans-unit>
+            <trans-unit id="tt_content.column.displaywidth.item1" resname="tt_content.column.displaywidth.item1">
+                <source>breakout</source>
+            </trans-unit>
+            <trans-unit id="tt_content.column.displaywidth.item2" resname="tt_content.column.displaywidth.item2">
+                <source>full-width</source>
+            </trans-unit>
+            <trans-unit id="tt_content.column.displaywidth.item0" resname="tt_content.column.displaywidth.item0">
+                <source>normal</source>
             </trans-unit>
         </body>
     </file>

@@ -1,13 +1,12 @@
 /* ck-editor */
 
-@use 'atoms/color' as *;
-@use 'atoms/fonts' as *;
-
+@use 'settings' as *;
+@use 'atoms' as *;
 
 body {
   // font-family: var(--ff), sans-serif;
-  //font-size:   16px;
-  //line-height: 20px;
+  font-size:   16px;
+  line-height: 20px;
   padding: 5px;
   // background-color: var(--clr-lightgray);
 }

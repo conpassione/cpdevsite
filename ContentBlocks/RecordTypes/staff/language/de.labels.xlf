@@ -5,27 +5,19 @@
         <body>
             <trans-unit id="title" resname="title">
                 <source>Staff</source>
-                <target>Funktioäre</target>
+                <target>Funktionäre</target>
             </trans-unit>
-			<trans-unit id="feuser" resname="feuser">
+			<trans-unit id="function.label" resname="function.label">
+				<source>Function</source>
+				<target>Funktion</target>
+			</trans-unit>
+			<trans-unit id="feuser.label" resname="feuser.label">
 				<source>Member</source>
 				<target>Mitglied</target>
 			</trans-unit>
-			<trans-unit id="board" resname="board">
-				<source>Board</source>
-				<target>Kommission</target>
-			</trans-unit>
-			<trans-unit id="board.items.label" resname="board.items.label">
-				<source>Type of Board</source>
-				<target>Kommissionstyp</target>
-			</trans-unit>
-			<trans-unit id="board.items.1.label" resname="board.items.1.label">
-				<source>Board</source>
-				<target>Vorstand</target>
-			</trans-unit>
-			<trans-unit id="board.items.2.label" resname="board.items.2.label">
-				<source>Breeding commission</source>
-				<target>Zuchtkommission</target>
+			<trans-unit id="responsibility.label" resname="responsibility.label">
+				<source>Responsibility</source>
+				<target>Verantwortung</target>
 			</trans-unit>
         </body>
     </file>

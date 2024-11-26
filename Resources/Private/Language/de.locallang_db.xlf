@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="de" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-11-17T23:30:07+01:00">
-        <header></header>
+    <file source-language="en" target-language="de" original="" datatype="plaintext" date="2024-11-26T15:34:13+01:00">
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
                 <source>Agenda</source>
@@ -43,9 +42,13 @@
                 <source>Menu of subpages</source>
                 <target>Menü der Unterseiten</target>
             </trans-unit>
-            <trans-unit id="contentwizard.conpassione.groupLabel" resname="contentwizard.conpassione.groupLabel">
-                <source>conPassione</source>
-                <target>conPassione</target>
+            <trans-unit id="contentwizard.z-cpextensions.groupLabel" resname="contentwizard.z-cpextensions.groupLabel">
+                <source>Additional extensions</source>
+                <target>Zusätzliche Funktionen</target>
+            </trans-unit>
+            <trans-unit id="contentwizard.z-cplayout.groupLabel" resname="contentwizard.z-cplayout.groupLabel">
+                <source>Design elements</source>
+                <target>Gestalterische Elemente</target>
             </trans-unit>
             <trans-unit id="crop.default.free.title" resname="crop.default.free.title">
                 <source>free</source>
@@ -63,10 +66,6 @@
                 <source>Mobile</source>
                 <target>Mobile</target>
             </trans-unit>
-            <trans-unit id="fe_users.column.mobile" resname="fe_users.column.mobile">
-                <source>Mobile</source>
-                <target>Handy</target>
-            </trans-unit>
             <trans-unit id="fe_users.column.active" resname="fe_users.column.active">
                 <source>Status</source>
                 <target>Status</target>
@@ -74,6 +73,14 @@
             <trans-unit id="fe_users.column.active.label" resname="fe_users.column.active.label">
                 <source>active</source>
                 <target>aktiv</target>
+            </trans-unit>
+            <trans-unit id="fe_users.column.mobile" resname="fe_users.column.mobile">
+                <source>Mobile</source>
+                <target>Handy</target>
+            </trans-unit>
+            <trans-unit id="pagetype.memberfunction.label" resname="pagetype.memberfunction.label">
+                <source>Staff</source>
+                <target>Funtionäre</target>
             </trans-unit>
             <trans-unit id="pagetype.memberlist.label" resname="pagetype.memberlist.label">
                 <source>Members</source>
@@ -119,9 +126,17 @@
                 <source>Marked link to Folder</source>
                 <target>Verzeichnislink mit Icon</target>
             </trans-unit>
+            <trans-unit id="rte.linkbrowser.github-link--icon" resname="rte.linkbrowser.github-link--icon">
+                <source>Marked link to github</source>
+                <target>Github Link mit Icon</target>
+            </trans-unit>
             <trans-unit id="rte.linkbrowser.insta-link--icon" resname="rte.linkbrowser.insta-link--icon">
                 <source>Marked link to Instagram</source>
                 <target>Instagram Link mit Icon</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.linkedin-link--icon" resname="rte.linkbrowser.linkedin-link--icon">
+                <source>Marked link to LinedIn</source>
+                <target>LinedIn Link mit Icon</target>
             </trans-unit>
             <trans-unit id="rte.linkbrowser.mail-link" resname="rte.linkbrowser.mail-link">
                 <source>Link to eMail</source>
@@ -147,6 +162,10 @@
                 <source>Marked link to Phonenumber</source>
                 <target>Telefon-Nummer Link mit Icon</target>
             </trans-unit>
+            <trans-unit id="rte.linkbrowser.pinterest-link--icon" resname="rte.linkbrowser.pinterest-link--icon">
+                <source>Marked link to pinterest</source>
+                <target>Pinterest Link mit Icon</target>
+            </trans-unit>
             <trans-unit id="rte.linkbrowser.url-link" resname="rte.linkbrowser.url-link">
                 <source>Link to URL</source>
                 <target>URL-Link</target>
@@ -154,6 +173,14 @@
             <trans-unit id="rte.linkbrowser.url-link--icon" resname="rte.linkbrowser.url-link--icon">
                 <source>Marked link to URL</source>
                 <target>URL-Link mit Icon</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.vimeo-link--icon" resname="rte.linkbrowser.vimeo-link--icon">
+                <source>Market link to vimeo</source>
+                <target>Vimeo Link mit Icon</target>
+            </trans-unit>
+            <trans-unit id="rte.linkbrowser.youtube-link--icon" resname="rte.linkbrowser.youtube-link--icon">
+                <source>Market link to youtube</source>
+                <target>Youtube Link mit Icon</target>
             </trans-unit>
             <trans-unit id="rte.style.blockquote" resname="rte.style.blockquote">
                 <source>Blockquote</source>
@@ -234,6 +261,22 @@
             <trans-unit id="tceform.page.title.label" resname="tceform.page.title.label">
                 <source>Pagetree title</source>
                 <target>Navigations- und Seitenbaumtitel</target>
+            </trans-unit>
+            <trans-unit id="tt_content.column.displaywidth" resname="tt_content.column.displaywidth">
+                <source>Display width</source>
+                <target>Breit des Abschnitts</target>
+            </trans-unit>
+            <trans-unit id="tt_content.column.displaywidth.item1" resname="tt_content.column.displaywidth.item1">
+                <source>breakout</source>
+                <target>verbreitert</target>
+            </trans-unit>
+            <trans-unit id="tt_content.column.displaywidth.item2" resname="tt_content.column.displaywidth.item2">
+                <source>full-width</source>
+                <target>volle breite</target>
+            </trans-unit>
+            <trans-unit id="tt_content.column.displaywidth.item0" resname="tt_content.column.displaywidth.item0">
+                <source>normal</source>
+                <target>normal</target>
             </trans-unit>
         </body>
     </file>

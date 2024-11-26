@@ -4,6 +4,7 @@ TCEpage:
   author: 'conPassione gmbh'
   author_email: info@conpassione.ch
   author_phone: '+41793301011'
+  org_name: 'conPassione gmbh'
   org_logo: 'EXT:cpdevsite/Resources/Public/Images/logo_cp_core_G35_black_mit.png'
 
 #styles:
@@ -18,3 +19,4 @@ TCEpage:
 #      linkWrap:
 #        lightboxEnabled: true
 #        lightboxCssClass: lightbox
+

@@ -1,0 +1,65 @@
+/* Created by Content Blocks */
+
+:root {
+  --clr-staffcard--title: var(--clr-bw-090);
+  --clr-staffcard--bg: transparent;
+  --clr-staffcard--titlebg: var(--clr-brand--primary);
+}
+
+/* Stafflist Content Block */
+.staffcards {
+  display: grid;
+  gap: var(--gutter);
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--mediasize--small), 100%), 1fr));
+
+  container: staffcards / inline-size;
+}
+
+.staffcard {
+  border: 1px solid var(--clr-staffcard--titlebg);
+  border-radius: 1em;
+  overflow: hidden;
+
+  container: staffcard / inline-size;
+}
+
+.staffcard--content {
+  display: grid;
+  gap: 0;
+
+  @container staffcard (inline-size > 580px) {
+    grid-template-columns: auto minmax(25ch, 1fr);
+    > h3 {
+      grid-column: 1 / -1
+    }
+  }
+}
+
+.staffcard--title {
+  color: var(--clr-staffcard--title);
+  background-color: var(--clr-staffcard--titlebg);
+  margin-block: 0;
+  padding: 0.5em;
+}
+
+.staffcard--header {
+  figcaption {
+    display: none;
+  }
+}
+
+.staffcard--main {
+  padding-block-end: 1em;
+  p {
+    padding-inline: 1em;
+    padding-block-end: 0.5em;
+  };
+  p:first-child {
+    padding-block-start: 1em;
+  }
+  ul {
+    padding-inline-start: 2rem;
+    padding-inline-end: 1rem;
+  }
+}
+

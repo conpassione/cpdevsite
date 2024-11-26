@@ -19,6 +19,13 @@ call_user_func(static function(): void {
     ];
     $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-memberlist'] = 'tx-conpassione-memberlist';
 
+    $GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] = [
+        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:pagetype.memberfunction.label',
+        'icon' => 'tx-conpassione-memberfunction',
+        'value'=>   'memberfunction'
+    ];
+    $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-memberfunction'] = 'tx-conpassione-memberfunction';
+
     // Add group 'landingpage' to Page Types Selection
     ExtensionManagementUtility::addTcaSelectItemGroup(
         'pages',

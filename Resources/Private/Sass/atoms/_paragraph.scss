@@ -1,15 +1,17 @@
-@use '../atoms/color' as *;
-@use '../atoms/fonts' as *;
+@use '../settings' as *;
 
 p {
-  max-width: 70ch;
+  max-width: 900ch;
   text-wrap: pretty;
   orphans: inherit;
+  //font-size: clamp(var(--fs-regular), 1.5vw, 1.5rem);
+  //line-height: var(--lh-regular);
 }
 
 pre {
   font-family: var(--ff-mono), monospace;
   font-size: 1rem;
+  line-height: var(--lh-small);
 }
 
 pre:has(code),
@@ -17,13 +19,13 @@ pre[data-language] {
   padding: 1em;
   background-color: var(--code-bg);
   border: 1px solid var(--code-bc);
-  line-height: 1.2em;
+  line-height: var(--lh-small);
 }
 
-/* pre:has(.cbcss),
+/* pre:has(.cpcss),
 pre[data-language="CSS"] {
-  --code-bg: var(--clr-lightgray);
-  --code-bc: var(--clr-dark);
+  --code-bg: var(--clr-text);
+  --code-bc: var(--clr-bw-090);
 } */
 
 kbd {
@@ -34,5 +36,5 @@ kbd {
 
 .cp-accent {
   color: var(--clr-highlight);
-  font-weight: 500;
+  font-weight: var(--fw-regular);
 }

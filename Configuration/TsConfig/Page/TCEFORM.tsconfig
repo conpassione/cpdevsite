@@ -80,7 +80,7 @@ TCEFORM.pages {
 
 TCEFORM.tt_content {
 # Allgemein
-  CType.removeItems := addToList(header,text,textpic,image,textmedia,bullets,table,uploads,html,div)
+  CType.removeItems := addToList(header,textpic,textmedia,bullets,table,uploads,html,div)
 
   colPos.disabled = 1
   header_layout {

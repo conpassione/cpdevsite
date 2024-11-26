@@ -14,7 +14,7 @@ mod.linkvalidator.linkhandler.reportHiddenRecords = 1
 mod.wizards.newContentElement.wizardItems {
   default {
     # header,text,textpic,image,textmedia
-    removeItems := addToList(header,text,textpic,image,textmedia)
+    removeItems := addToList(header,textpic,textmedia)
   }
   lists {
     # bullets,table,uploads

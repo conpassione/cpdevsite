@@ -4,30 +4,23 @@
 
 
 <f:section name="Header">
-    <div class="cplogo">
-        <f:render partial="Logo" arguments="{settings: settings}"/>
-    </div>
-    <nav>
-        <f:render partial="Nav" arguments="{_all}" />
-    </nav>
+    <f:render partial="Header" arguments="{_all}"/>
 </f:section>
 
 <f:section name="Main">
-    <div class="jumbotron">Hier kommt das Jumbotron</div>
-    <div class="submenu">Hier kommt das Submenu</div>
-    <f:for each="{pagecontent.content.records}" as="contentelement">
+    <div class="jumbotron full-width">Hier kommt das Jumbotron</div>
+    <div class="submenu breakout">Hier kommt das Submenu</div>
+    <f:for each="{pagecontent.content.records}" as="record">
         <f:cObject
-            typoscriptObjectPath="tt_content.{contentelement.CType}"
-            data="{contentelement.rawRecord}"
+            typoscriptObjectPath="tt_content.{record.CType}"
+            data="{record.rawRecord}"
             table="tt_content"
         />
     </f:for>
 </f:section>
 
 <f:section name="Footer">
-    <footer>
-        <p>Footer</p>
-    </footer>
+    <p>Footer</p>
 </f:section>
 
 </html>

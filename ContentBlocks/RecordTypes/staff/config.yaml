@@ -1,19 +1,16 @@
 name: conpassione/staff
 typeName: staff
 title: 'Staff'
-group: conpassione
 table: tx_conpassione_staff
 prefixFields: false
 labelField:
-  - title
+  - function
   - feuser
-sortField:
-  - identifier: title
 security:
   ignorePageTypeRestriction: true
 
 fields:
-- identifier: title
+- identifier: function
   type: Text
   label: 'Function'
   required: true

@@ -41,6 +41,11 @@ classesAnchor:
   - { class: 'mail-link--icon', type: 'email', target: '_blank' }
   - { class: 'fb-link--icon', type: 'url', target: '_blank' }
   - { class: 'insta-link--icon', type: 'url', target: '_blank' }
+  - { class: 'linkedin-link--icon', type: 'url', target: '_blank' }
+  - { class: 'pinterest-link--icon', type: 'url', target: '_blank' }
+  - { class: 'github-link--icon', type: 'url', target: '_blank' }
+  - { class: 'youtube-link--icon', type: 'url', target: '_blank' }
+  - { class: 'vimeo-link--icon', type: 'url', target: '_blank' }
 
 buttons:
   link:
@@ -80,6 +85,11 @@ buttons:
         - mail-link--icon
         - fb-link--icon
         - insta-link--icon
+        - linkedin-link--icon
+        - pinterest-link--icon
+        - github-link--icon
+        - youtub-link--icon
+        - vimeo-link--icon
 
     # Define default CSS linkbrowser per LinkType. The CSS class name listed here
     # must also be part of the "allowedClasses" attribute above.
@@ -141,3 +151,13 @@ classes:
     name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.fb-link--icon'
   insta-link--icon:
     name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.insta-link--icon'
+  linkedin-link--icon:
+    name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.linkedin-link--icon'
+  pinterest-link--icon:
+    name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.pinterest-link--icon'
+  github-link--icon:
+    name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.github-link--icon'
+  youtube-link--icon:
+    name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.youtube-link--icon'
+  vimeo-link--icon:
+    name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.linkbrowser.vimeo-link--icon'

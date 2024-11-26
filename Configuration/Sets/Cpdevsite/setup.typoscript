@@ -7,5 +7,5 @@ lib.contentElement.settings.media.popup {
   height >
 }
 
+@import 'EXT:cpdevsite/Configuration/TypoScript/Rendering/*.typoscript'
 @import 'EXT:cpdevsite/Configuration/TypoScript/Setup/*.typoscript'
-

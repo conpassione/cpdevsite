@@ -1,0 +1,19 @@
+# CType: text and variants
+
+# TYPO CE text
+tt_content.text =< lib.contentElement
+tt_content.text {
+  templateName = Text
+}
+
+# text breakout and colored background
+tt_content.textbreakoutbox =< lib.contentElement
+tt_content.textbreakoutbox {
+  templateName = Textbreakoutbox
+}
+
+# text full-width and colored background
+tt_content.textfullwbox =< lib.contentElement
+tt_content.textfullwbox {
+  templateName = Textfullwbox
+}

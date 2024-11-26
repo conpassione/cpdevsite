@@ -1,9 +1,8 @@
-@use '../atoms/color' as *;
-@use '../atoms/fonts' as *;
+@use '../vars' as *;
 
 /* additional, not originally from Magnific Popup CSS */
 .white-popup-block {
-  background: var(--clr--white);
+  background: var(--clr-bw-100);
   padding:    20px 30px;
   text-align: left;
   max-width:  650px;
@@ -21,7 +20,7 @@
   z-index:    1042;
   overflow:   hidden;
   position:   fixed;
-  background: var(--clr-extralight);
+  background: var(--clr-bw-090);
   opacity:    0.8;
 }
 
@@ -107,7 +106,7 @@
 }
 
 .mfp-preloader {
-  color:      $cp-color--gray;
+  color:      var(--clr-bw-075);
   position:   absolute;
   top:        50%;
   width:      auto;
@@ -119,11 +118,11 @@
 }
 
 .mfp-preloader a {
-  color: $cp-color--gray;
+  color: var(--clr-bw-075);
 }
 
 .mfp-preloader a:hover {
-  color: $cp-color--white;
+  color: var(--clr-bw-100);
 }
 
 .mfp-s-ready .mfp-preloader {
@@ -149,7 +148,7 @@ button.mfp-arrow {
   touch-action:       manipulation;
 
   &:hover {
-    background-color: $cp-color;
+    background-color: var(--clr-bw-030);
   }
 }
 
@@ -169,7 +168,7 @@ button::-moz-focus-inner {
   text-align:      center;
   opacity:         0.65;
   padding:         0 0 18px 10px;
-  color:           $cp-color--white;
+  color:           var(--clr-bw-100);
   font-style:      normal;
   font-size:       28px;
   font-family:     $cp-fontFamily
@@ -185,12 +184,12 @@ button::-moz-focus-inner {
 }
 
 .mfp-close-btn-in .mfp-close {
-  color: $cp-color--dark;
+  color: var(--clr-bw-030);
 }
 
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close {
-  color:         $cp-color--white;
+  color:         var(--clr-bw-100);
   right:         -6px;
   text-align:    right;
   padding-right: 6px;
@@ -201,7 +200,7 @@ button::-moz-focus-inner {
   position:    absolute;
   top:         0;
   right:       0;
-  color:       $cp-color--gray;
+  color:       var(--clr-bw-060);
   font-size:   12px;
   line-height: 18px;
   white-space: nowrap;
@@ -257,13 +256,13 @@ button::-moz-focus-inner {
 }
 
 .mfp-arrow-left:after {
-  border-right: 17px solid $cp-color--white;
+  border-right: 17px solid var(--clr-bw-100);
   margin-left:  31px;
 }
 
 .mfp-arrow-left:before {
   margin-left:  25px;
-  border-right: 27px solid $cp-color--dark;
+  border-right: 27px solid var(--clr-bw-030);
 }
 
 .mfp-arrow-right {
@@ -271,12 +270,12 @@ button::-moz-focus-inner {
 }
 
 .mfp-arrow-right:after {
-  border-left: 17px solid $cp-color--white;
+  border-left: 17px solid var(--clr-bw-100);
   margin-left: 39px;
 }
 
 .mfp-arrow-right:before {
-  border-left: 27px solid $cp-color--dark;
+  border-left: 27px solid var(--clr-bw-030);
 }
 
 .mfp-iframe-holder {
@@ -308,8 +307,8 @@ button::-moz-focus-inner {
   left:       0;
   width:      100%;
   height:     100%;
-  box-shadow: 0 0 8px rgba($cp-color--black, 0.6);
-  background: $cp-color--black;
+  box-shadow: 0 0 8px rgba(var(--clr-bw-000), 0.6);
+  background: var(--clr-bw-000);
 }
 
 /* Main image in popup */
@@ -340,12 +339,12 @@ img.mfp-img {
   width:      auto;
   height:     auto;
   z-index:    -1;
-  box-shadow: 0 0 8px rgba($cp-color--black, 0.6);
-  background: $cp-color--dark;
+  box-shadow: 0 0 8px rgba(var(--clr-bw-000), 0.6);
+  background: var(--clr-bw-000);
 }
 
 .mfp-figure small {
-  color:       $cp-color--lightgray;
+  color:       var(--clr-bw-075);
   display:     block;
   font-size:   12px;
   line-height: 14px;
@@ -367,7 +366,7 @@ img.mfp-img {
 .mfp-title {
   text-align:    left;
   line-height:   18px;
-  color:         $cp-color--extralight;
+  color:         var(--clr-bw-090);
   word-wrap:     break-word;
   padding-right: 36px;
 }
@@ -400,7 +399,7 @@ img.mfp-img {
     margin-left: 5px;
   }
   .mfp-img-mobile .mfp-bottom-bar {
-    background: rgba($cp-color--black, 0.6);
+    background: rgba(var(--clr-bw-000), 0.6);
     bottom:     0;
     margin:     0;
     top:        auto;
@@ -421,7 +420,7 @@ img.mfp-img {
     width:       35px;
     height:      35px;
     line-height: 35px;
-    background:  rgba($cp-color--black, 0.6);
+    background:  rgba(var(--clr-bw-000), 0.6);
     position:    fixed;
     text-align:  center;
     padding:     0;

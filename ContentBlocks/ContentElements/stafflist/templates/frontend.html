@@ -1,0 +1,51 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/Friendsoftypo3/ContentBlocks/ViewHelpers">
+
+<f:asset.css identifier="stafflist-css" href="{cb:assetPath()}/frontend.css" />
+<f:asset.script identifier="stafflist-js" file="{cb:assetPath()}frontend.js"/>
+
+<section class="stafflist">
+    <f:cObject
+        typoscriptObjectPath="tt_content.header"
+        data="{data}"
+        table="tt_content"
+    />
+    <div class="staffcards">
+        <f:for as="member" each="{staffmembers}">
+
+            <div class="staffcard" aria-label="Member">
+                <div class="staffcard--content">
+                    <h3 class="h3 staffcard--title">{member.data.function}</h3>
+                    <div class="staffcard--header">
+                        <f:if condition="{member.feusers.0.files}">
+                            <f:then>
+                                <f:cObject
+                                    typoscriptObjectPath="tt_content.image"
+                                    data="{header: '', showcaption:'0', files: member.feusers.0.files}"
+                                    table="tt_content"
+                                />
+                            </f:then>
+                            <f:else>
+                                <p>&nbsp;</p>
+                            </f:else>
+                        </f:if>
+                    </div>
+                    <div class="staffcard--main">
+                        <p><strong><f:format.html>{member.feusers.0.data.name}</f:format.html></strong><br>
+                            <f:format.html>{member.feusers.0.data.address}</f:format.html><br>
+                            <f:format.html>{member.feusers.0.data.zip} - {member.feusers.0.data.city}</f:format.html>
+                        </p>
+                        <p>
+                            <f:link.external uri="tel:{member.feusers.0.data.mobile}" class="phone-link--icon">{member.feusers.0.data.mobile}</f:link.external>
+                        </p>
+                        <p>
+                            <f:link.external uri="mailto:{member.feusers.0.data.email}" class="mail-link--icon">{member.feusers.0.data.email}</f:link.external>
+                        </p>
+                        <f:format.html>{member.data.responsibility}</f:format.html>
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</section>

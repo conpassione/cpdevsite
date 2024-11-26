@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-05-01T12:29:50+00:00" product-name="conpassione/cp-textblock">
+		<header/>
+		<body>
+			<trans-unit id="title" resname="title">
+				<source>Stafflist</source>
+			</trans-unit>
+			<trans-unit id="description" resname="description">
+				<source>List of Board-members (Staff)</source>
+			</trans-unit>
+			<trans-unit id="header.label" resname="header.label">
+				<source>Board</source>
+			</trans-unit>
+			<trans-unit id="members.label" resname="members.label">
+				<source>Page with Staff members</source>
+			</trans-unit>
+			<trans-unit id="be.description" resname="be.description">
+				<source>Displays Staffmembers of pages:</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,49 @@
+/* cp_base:constants */
+
+/* Baseline Colors */
+/* as css constants (light theme) */
+:root {
+  --clr-bw-000: oklch(0 0 0);
+  --clr-bw-030: oklch(0.3 0 0);
+  --clr-bw-040: oklch(0.4 0 0);
+  --clr-bw-050: oklch(0.5 0 0);
+  --clr-bw-060: oklch(0.6 0 0);
+  --clr-bw-075: oklch(0.75 0 0);
+  --clr-bw-090: oklch(0.9 0 0);
+  --clr-bw-100: oklch(1 0 0);
+
+  --clr-success: oklch(0.5 0.12 150);
+  --clr-info:    oklch(0.5 0.12 220);
+  --clr-error:   oklch(0.5 0.16 20);
+
+  --clr-brand--primary:    oklch(0.50 0.19 220.75);
+  --clr-brand--secondary:  oklch(0.50 0.03 149.54);
+  --clr-brand--tertiary:   oklch(0.50 0.05 231.77);
+  --clr-brand--quaternary: oklch(0.50 0.13 318.63);
+
+
+  /* buttons */
+  --clr-primarybtn--active: var(--clr-bw-100);
+  --clr-primarybtnbg--active: var(--clr-brand--primary);
+  --clr-primarybtn--disabled: oklch(from var(--clr-primarybtn--active) calc(l + .5) c h);
+
+  /* typographic colors */
+  --clr-background: var(--clr-bw-100);
+  --clr-text: var(--clr-bw-030);
+  --clr-h: var(--clr-brand--primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* buttons */
+    --clr-primarybtn--active: var(--clr-bw-075);
+    --clr-primarybtnbg--active: var(--clr-brand--primary);
+    --clr-primarybtn--disabled: oklch(from var(--clr-primarybtn--active) calc(l + .5) c h);
+
+    /* typographic colors */
+    --clr-background: var(--clr-bw-030);
+    --clr-text: var(--clr-bw-075);
+    --clr-h: var(--clr-brand--primary);
+  }
+}
+

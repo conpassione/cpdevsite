@@ -2,6 +2,7 @@ config {
   headerComment (
       created by conPassione gmbh using HTML5, CSS3, www.conpassione.ch
   )
+  doctype = html5
   linkVars = L(0-3)
   absRefPrefix = auto
   disablePrefixComment = 1
@@ -49,6 +50,7 @@ config {
 page = PAGE
 page {
   typeNum = 0
+  # bodyTagAdd = class="content-grid"
   meta {
     viewport = width=device-width, initial-scale=1.0
     vieport.replace = 1
