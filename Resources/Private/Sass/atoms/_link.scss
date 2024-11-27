@@ -9,7 +9,8 @@
   &:active,
   &:hover,
   &:focus-visible {
-    background-color: oklch( from currentColor 0.9 c h);
+    //background-color: oklch( from currentColor 90% c h);
+    background-color: red;
     text-decoration: none;
     outline: 0;
   }

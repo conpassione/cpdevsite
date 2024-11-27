@@ -1,21 +1,30 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:if condition="{mainmenu}">
-    <nav class="mainmenu">
-        <ul>
-            <li>
-                home
-            </li>
-            <f:for as="navItem" each="{mainmenu}">
-                <li>
-                    <a href="{navItem.link}">{navItem.subtitle}</a>
+<f:if condition="{submenu}">
+    <nav class="submenu">
+
+        <ul class="navsubmenu">
+            <f:for as="navItem" each="{submenu}">
+                <li class="navsubmenu--card">
+                    <f:if condition="{navItem.files}">
+                        <f:then>
+                            <f:cObject
+                                typoscriptObjectPath="tt_content.image"
+                                data="{header: '', showcaption:'0', files: navItem.files}"
+                                table="tt_content"
+                            />
+                        </f:then>
+                        <f:else>
+                            <p>&nbsp;</p>
+                        </f:else>
+                    </f:if>
+                    <h3 class="navsubmenu--heading"><a href="{navItem.link}">{navItem.title}</a></h3>
+                    <p class="navsubmenu--description fs-small">{navItem.data.description} ...</p>
+                    <a href="{navItem.link}"><button type="button">Weiter...</button></a>
                 </li>
             </f:for>
         </ul>
     </nav>
 </f:if>
-
-
-
 
 </html>

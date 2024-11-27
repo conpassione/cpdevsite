@@ -1,0 +1,48 @@
+/* page */
+@use '../settings' as *;
+
+.navsubmenu {
+  --gutter--list: 0.5rem;
+
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+  padding-inline-start: 0;
+
+  .navsubmenu--card {
+    list-style-type: none;
+    outline: 1px solid var(--clr-brand--primary);
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 0.25rem;
+
+
+    > *:not(section) {
+      padding-inline: var(--gutter--list);
+    }
+
+    > section {
+      //grid-area: image;
+    }
+
+    > .navsubmenu--heading {
+      font-weight: bold;
+      font-family: var(--ff-condensed);
+      font-size: var(--fs-regular);
+      padding-block-start: var(--gutter--list);
+      //grid-area: heading;
+    }
+
+    > .navsubmenu--description {
+      //grid-area: description;
+    }
+
+    button {
+      //grid-area: link;
+      margin: 0 0 var(--gutter--list) 0;
+      align-self: end;
+    }
+  };
+}

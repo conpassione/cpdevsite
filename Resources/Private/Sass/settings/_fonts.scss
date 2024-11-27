@@ -16,6 +16,7 @@
   --fw-bold: 700;
 
   /* font size */
+  --fs-small: 16px;
   --fs-regular: 24px;
   --fs-regular--big: 32px;
 
@@ -27,6 +28,10 @@
   --lh-paragraph: var(--lh-regular);
   --lh-h: var(--lh-small);
   --lh-list: var(--lh-small)
+}
+
+.fs-small {
+  font-size: var(--fs-small);
 }
 
 @font-face {

@@ -4,11 +4,13 @@
 
 
 <f:if condition="{mainmenu}">
-    <input type="checkbox" id="mainmenu-toggle" class="mainmenu-toggle">
-    <label for="mainmenu-toggle" class="mainmenu-toggle-label">
-        <span>Cremeschnitte</span><hr>
+    <label for="navmainmenu-toggle" class="navmainmenu-toggle-label">
+        <span>-</span>
+        <span></span>
+        <span></span>
     </label>
-    <nav class="mainmenu">
+    <input type="checkbox" name="navmainmenu-toggle" id="navmainmenu-toggle" class="navmainmenu-toggle">
+    <nav class="navmainmenu">
         <ul>
             <li>
                 <a href="{homePageSlug}" role="menuitem" title="{homePageTitle}"

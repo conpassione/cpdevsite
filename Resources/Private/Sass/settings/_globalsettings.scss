@@ -30,7 +30,7 @@ html {
   font-weight: var(--fw-regular);
   line-height: var(--lh-regular);
   display:block;
-  height: 100%;
+  min-height: 100%;
 }
 
 html:focus-within {
@@ -38,9 +38,9 @@ html:focus-within {
 }
 
 body {
-  height: 100%;
   overflow-y: scroll;
   text-rendering: optimizeSpeed;
+  height: fit-content;
 }
 
 hr {

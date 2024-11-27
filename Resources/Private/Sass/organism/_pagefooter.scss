@@ -1,0 +1,7 @@
+/* page */
+@use '../settings' as *;
+
+footer {
+  //outline: 1px solid rebeccapurple;
+  background-color: var(--clr-brand--primary)
+}

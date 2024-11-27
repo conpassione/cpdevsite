@@ -1,0 +1,54 @@
+/* navmainmenu */
+@use '../settings' as *;
+
+.mainmenu {
+  position: relative;
+}
+
+.navmainmenu-toggle {
+  //position: absolute;
+  //display: none;
+  //visibility: hidden;
+}
+
+.navmainmenu-toggle-label {
+  --nav-dim: 60px;
+  --nav-wide: 4px;
+  --nav-gap: 5px;
+
+  position: relative;
+  width: var(--nav-dim);
+  height: var(--nav-dim);
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+.navmainmenu-toggle-label > span {
+  display: block;
+  position: absolute;
+  height: var(--nav-wide);
+  width: calc(var(--nav-dim) - 2 * var(--nav-gap));
+  left: var(--nav-gap);
+  background-color: var(--clr-brand--primary);
+}
+
+.navmainmenu-toggle-label span:nth-of-type(1) {
+  top: var(--nav-gap);
+}
+
+.navmainmenu-toggle-label span:nth-of-type(2) {
+  top: calc((var(--nav-dim) - var(--nav-gap)) / 2);
+}
+
+.navmainmenu-toggle-label span:nth-of-type(3) {
+  bottom: var(--nav-gap);
+}
+
+.navmainmenu {
+  display: none;
+}
+
+input:checked + nav {
+  display:block;
+}

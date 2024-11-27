@@ -2,8 +2,8 @@
 
 <f:asset.css identifier="globalcss" href="EXT:cpdevsite/Resources/Public/Css/Layout.css" />
 
-<header>
-    <f:render section="Header"/>
+<header class="content-grid">
+    <f:render partial="Header" arguments="{_all}"/>
 </header>
 
 <main class="content-grid">
@@ -12,8 +12,8 @@
     <!--TYPO3SEARCH_end-->
 </main>
 
-<footer>
-    <f:render section="Footer"/>
+<footer class="content-grid">
+    <f:render partial="Footer" arguments="{_all}"/>
 </footer>
 
 </html>

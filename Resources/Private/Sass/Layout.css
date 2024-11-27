@@ -1,4 +1,3 @@
-/* import utilities */
 /* cp_base:constants */
 /* Baseline Colors */
 /* as css constants (light theme) */
@@ -256,7 +255,6 @@ source {
     scroll-behavior: auto !important;
   }
 }
-/* import utilities */
 /* link */
 a:not([class]), a, .vimeo-link--icon, .youtube-link--icon, .github-link--icon, .pinterest-link--icon, .linkedin-link--icon, .insta-link--icon, .fb-link--icon, .mail-link--icon, .phone-link--icon, .url-link--icon, .folder-link--icon, .file-link--icon, .page-link--icon {
   color: currentColor;
@@ -332,7 +330,6 @@ a:not([class]) {
   content: "vimeo";
 }
 
-/* import utilities */
 /* list */
 /* reset */
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -351,7 +348,6 @@ ul > ::marker {
   color: var(--clr-brand--primary);
 }
 
-/* import utilities */
 /* images */
 /* @docs
 label: Responsive Images
@@ -387,7 +383,6 @@ img, svg, video, canvas, figure {
   display: block;
 }
 
-/* import utilities */
 /* headings */
 /* reset */
 h1, h2, h3, h4, h5, h6 {
@@ -440,7 +435,6 @@ button :hover {
   background-color: var(--clr-primarybtnbg--hover);
 }
 
-/* import utilities */
 p {
   max-width: 900ch;
   text-wrap: pretty;
@@ -477,17 +471,130 @@ kbd {
   font-weight: var(--fw-regular);
 }
 
-/* import utilities */
-/* ck-editor */
-body {
-  font-size: 16px;
-  line-height: 20px;
-  padding: 5px;
+/* page */
+/* navmainmenu */
+.mainmenu {
+  position: relative;
 }
 
-body > *:nth-last-child(-n+1) {
-  border-block-end: 0;
-  padding-block-end: 0.25em;
+.navmainmenu-toggle-label {
+  --nav-dim: 60px;
+  --nav-wide: 4px;
+  --nav-gap: 5px;
+  position: relative;
+  width: var(--nav-dim);
+  height: var(--nav-dim);
+  background: transparent;
+  cursor: pointer;
+  display: block;
 }
 
-/*# sourceMappingURL=Rte_inputline.css.map */
+.navmainmenu-toggle {
+  position: absolute;
+  display: none;
+  visibility: hidden;
+}
+
+.navmainmenu-toggle-label > span {
+  display: block;
+  position: absolute;
+  height: var(--nav-wide);
+  width: calc(var(--nav-dim) - 2 * var(--nav-gap));
+  left: var(--nav-gap);
+  background-color: var(--clr-brand--primary);
+}
+
+.navmainmenu-toggle-label span:nth-of-type(1) {
+  top: var(--nav-gap);
+}
+
+.navmainmenu-toggle-label span:nth-of-type(2) {
+  top: calc((var(--nav-dim) - var(--nav-gap)) / 2);
+}
+
+.navmainmenu-toggle-label span:nth-of-type(3) {
+  bottom: var(--nav-gap);
+}
+
+/* page */
+.navsubmenu {
+  --gutter--list: 0.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+  padding-inline-start: 0;
+}
+.navsubmenu .navsubmenu--card {
+  list-style-type: none;
+  outline: 1px solid var(--clr-brand--primary);
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 0.25rem;
+}
+.navsubmenu .navsubmenu--card > *:not(section) {
+  padding-inline: var(--gutter--list);
+}
+.navsubmenu .navsubmenu--card > .navsubmenu--heading {
+  font-weight: bold;
+  font-family: var(--ff-condensed);
+  font-size: var(--fs-regular);
+  padding-block-start: var(--gutter--list);
+}
+.navsubmenu .navsubmenu--card button {
+  margin: 0 0 var(--gutter--list) 0;
+  align-self: end;
+}
+
+/* page */
+header {
+  background-color: var(--clr-brand--secondary);
+}
+
+.headercontent {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+}
+
+.logo {
+  max-width: 200px;
+}
+
+/* page */
+footer {
+  background-color: var(--clr-brand--primary);
+}
+
+/* page */
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+}
+.content-grid {
+  --padding-inline: 1rem;
+  --content-max-width: var(--mediasize--large);
+  --breakout-size: 20ch;
+  display: grid;
+  grid-template-columns: [full-width-start] minmax(var(--padding-inline), 1fr) [breakout-start] minmax(0, var(--breakout-size)) [content-start] min(var(--content-max-width), 100% - 2 * var(--padding-inline)) [content-end] minmax(0, var(--breakout-size)) [breakout-end] minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.content-grid > * {
+  grid-column: content;
+}
+
+.content-grid > .breakout {
+  grid-column: breakout;
+}
+
+.content-grid > .full-width {
+  grid-column: full-width;
+}
+
+.text {
+  background-color: red;
+}
+
+/*# sourceMappingURL=Layout.css.map */

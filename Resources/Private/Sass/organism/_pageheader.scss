@@ -2,8 +2,15 @@
 @use '../settings' as *;
 
 header {
-  //outline: 1px solid rebeccapurple;
+  background-color: var(--clr-brand--secondary);
+}
+
+.headercontent {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+}
+
+.logo {
+  max-width: 200px;
 }

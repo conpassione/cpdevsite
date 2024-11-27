@@ -27,7 +27,7 @@
             <f:for as="image" each="{files}">
                 <figure class="files">
                     <f:render partial="Image" arguments="{file: image, settings: settings}" />
-                    <f:if condition="{image.description}  && !{showcaption}">
+                    <f:if condition="{image.description} && !({data.showcaption} == '0')">
                         <figcaption>{image.description}</figcaption>
                     </f:if>
                 </figure>
@@ -37,7 +37,7 @@
             <f:for as="image" each="{data.files}">
                 <figure class="data.files">
                     <f:render partial="Image" arguments="{file: image, settings: settings}" />
-                    <f:if condition="{image.description}  && !{showcaption}">
+                    <f:if condition="{image.description} && !({data.showcaption} == '0')">
                         <figcaption>{image.description}</figcaption>
                     </f:if>
                 </figure>

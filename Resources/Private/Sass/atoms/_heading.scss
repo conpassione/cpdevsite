@@ -5,11 +5,10 @@
 /* reset */
 
 h1, h2, h3, h4, h5, h6 {
-  /*font-family: var(--ff-h), sans-serif;
-  font-size: var(--fs-regular);
-  font-weight: normal;*/
-  font: inherit;
-  line-height: inherit;
+  font-family: var(--ff-h), sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.2;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6 {

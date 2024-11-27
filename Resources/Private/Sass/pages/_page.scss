@@ -8,18 +8,10 @@
   }
 }
 
-header,
-main,
-footer,
-section,
-article {
-  container-type: inline-size;
-}
-
 .content-grid {
   --padding-inline: 1rem;
   --content-max-width: var(--mediasize--large);
-  --breakout-size: 50px;
+  --breakout-size: 20ch;
 
   display: grid;
   grid-template-columns:
@@ -48,9 +40,3 @@ article {
   grid-column: full-width;
 }
 
-.jumbotron {
-  //background-color: #0a58ca;
-}
-.submenu {
-  //outline: indianred 2px solid;
-}
