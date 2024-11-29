@@ -2,13 +2,14 @@
 @use '../settings' as *;
 
 header {
-  background-color: var(--clr-brand--secondary);
+  background-color: var(--clr-headerbg);
 }
 
 .headercontent {
   display: grid;
   grid-template-columns: auto 1fr;
   justify-content: space-between;
+  padding-block: 0.5rem;
 }
 
 .logo {

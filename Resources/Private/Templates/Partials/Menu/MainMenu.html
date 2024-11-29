@@ -4,40 +4,65 @@
 
 
 <f:if condition="{mainmenu}">
-    <label for="navmainmenu-toggle" class="navmainmenu-toggle-label">
-        <span>-</span>
-        <span></span>
-        <span></span>
-    </label>
-    <input type="checkbox" name="navmainmenu-toggle" id="navmainmenu-toggle" class="navmainmenu-toggle">
+    <div id="hamburger" class="hamburger" tabindex="0">
+        <span class="hamburger--strip strip-1"></span>
+        <span class="hamburger--strip strip-2"></span>
+        <span class="hamburger--strip strip-3"></span>
+    </div>
     <nav class="navmainmenu">
-        <ul>
+        <ul class="menu-items">
             <li>
-                <a href="{homePageSlug}" role="menuitem" title="{homePageTitle}"
-                   class="nav-link {f:if(condition: '{page.id} == {homePageUid}', then:'active')}">
+                <a href="{homePageSlug}" role="menuitem" title="{homePageTitle}" tabindex="0"
+                   class="menu-item {f:if(condition: '{page.id} == {homePageUid}', then:'active')}">
                     {homePageTitle}
                 </a>
             </li>
             <f:for as="menuItem" each="{mainmenu}">
-                <li>
-                    <f:link.page pageUid="{menuItem.data.uid}" class="nav-link {f:if(condition: menuItem.active, then:'active')} {f:if(condition: menuItem.current, then:'current')}">
-                        {menuItem.title}
-                    </f:link.page>
-                    <f:if condition="{menuItem.hasSubpages}">
-                        <ul>
-                            <f:for as="submenuItem" each="{menuItem.children}">
-                                <li>
-                                    <f:link.page pageUid="{submenuItem.data.uid}" class="nav-link {f:if(condition: submenuItem.active, then:'active')} {f:if(condition: submenuItem.current, then:'current')}">
-                                        {submenuItem.title}
-                                    </f:link.page>
-                                </li>
-                            </f:for>
-                        </ul>
-                    </f:if>
-                </li>
+
+                <f:switch expression="{menuItem.data.doktype}">
+                    <f:case value="36650001">
+                        <f:comment>Homepage</f:comment>
+                        <f:render section="dropdown-items" arguments="{menuItem: menuItem}" />
+                    </f:case>
+                    <f:case value="36650011">
+                        <f:comment>Gallerymenu</f:comment>
+                        <f:render section="dropdown-items" arguments="{menuItem: menuItem}" />
+                    </f:case>
+                    <f:defaultCase>
+                        <f:comment>Standardseite doktype 1 and undefined</f:comment>
+                        <f:render section="dropdown-items" arguments="{menuItem: menuItem}" />
+                    </f:defaultCase>
+                </f:switch>
             </f:for>
         </ul>
     </nav>
 </f:if>
 
+<f:section name="dropdown-items">
+    <f:if condition="{menuItem.hasSubpages}">
+        <f:then>
+            <li class="dropdown{f:if(condition: '{type} == 1', then:' dropdown-right')}">
+                <f:link.page pageUid="{menuItem.data.uid}"
+                             class="menu-item {f:if(condition: menuItem.active, then:'active')}
+                             {f:if(condition: menuItem.current, then:'current')}" additionalAttributes="{tabindex: '0'}">
+                    {menuItem.title}&nbsp;<i class="icon">right</i>
+                </f:link.page>
+                <ul class="{f:if(condition: '{type} == 1', then:'menu-right', else:'dropdown-menu')}">
+                    <f:for as="submenuItem" each="{menuItem.children}">
+                        <f:render section="dropdown-items" arguments="{menuItem: submenuItem, type: 1}" />
+                    </f:for>
+                </ul>
+            </li>
+        </f:then>
+        <f:else>
+            <li>
+                <f:link.page pageUid="{menuItem.data.uid}"
+                             class="menu-item {f:if(condition: menuItem.active, then:'active')}
+                             {f:if(condition: menuItem.current, then:'current')}" additionalAttributes="{tabindex: '0'}">
+                    {menuItem.title}
+                </f:link.page>
+            </li>
+        </f:else>
+    </f:if>
+</f:section>
 </html>

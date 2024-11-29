@@ -9,8 +9,6 @@
   &:active,
   &:hover,
   &:focus-visible {
-    //background-color: oklch( from currentColor 90% c h);
-    background-color: red;
     text-decoration: none;
     outline: 0;
   }
@@ -41,7 +39,6 @@ a {
 a:not([class]) {
   @extend %link;
   text-decoration-skip-ink: auto;
-  color: currentColor;
 }
 
 .page-link--icon {

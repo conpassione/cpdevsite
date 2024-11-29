@@ -8,19 +8,21 @@
                 <li class="navsubmenu--card">
                     <f:if condition="{navItem.files}">
                         <f:then>
+                            <a href="{navItem.link}">
                             <f:cObject
                                 typoscriptObjectPath="tt_content.image"
                                 data="{header: '', showcaption:'0', files: navItem.files}"
                                 table="tt_content"
                             />
+                            </a>
                         </f:then>
                         <f:else>
                             <p>&nbsp;</p>
                         </f:else>
                     </f:if>
                     <h3 class="navsubmenu--heading"><a href="{navItem.link}">{navItem.title}</a></h3>
-                    <p class="navsubmenu--description fs-small">{navItem.data.description} ...</p>
-                    <a href="{navItem.link}"><button type="button">Weiter...</button></a>
+                    <p class="navsubmenu--description fs-small"><a href="{navItem.link}">{navItem.data.description}</a></p>
+                    <a href="{navItem.link}" class="button button--small navsubmenu--link">Weiter...</a>
                 </li>
             </f:for>
         </ul>

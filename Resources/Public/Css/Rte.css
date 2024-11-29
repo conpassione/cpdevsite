@@ -20,17 +20,30 @@
   --clr-brand--quaternary: oklch(0.50 0.13 318.63);
   --clr-highlight: var(--clr-brand--primary);
   /* code */
-  --clr-code-bg: var(--clr-bw-060);
-  --clr-code-bc: var(--clr-bw-030);
+  --clr-code--bg: var(--clr-bw-060);
+  --clr-code--bc: var(--clr-bw-030);
   /* buttons */
   --clr-primarybtn--active: var(--clr-bw-100);
   --clr-primarybtnbg--active: var(--clr-brand--primary);
-  --clr-primarybtnbg--hover: oklch(from var(--clr-primarybtn--active) calc(l + .25) c h);
-  --clr-primarybtn--disabled: oklch(from var(--clr-primarybtn--active) calc(l + .5) c h);
+  --clr-primarybtnbg--hover: oklch(from var(--clr-primarybtnbg--active) calc(l + 25%) c h);
+  --clr-primarybtnbg--disabled: oklch(from var(--clr-primarybtn--active) calc(l + 50%) c h);
+  --clr-secondarybtn--active: var(--clr-bw-090);
+  --clr-secondarybtnbg--active: var(--clr-brand--secondary);
+  --clr-secondarybtnbg--hover: oklch(from var(--clr-secondarybtnbg--active) calc(l + 25%) c h);
+  --clr-secondarxbtnbg--disabled: oklch(from var(--clr-secondarybtnbg--active) calc(l + 50%) c h);
   /* typographic colors */
   --clr-background: var(--clr-bw-100);
   --clr-text: var(--clr-bw-030);
   --clr-h: var(--clr-brand--primary);
+  /* page colors */
+  --clr-headerbg: var(--clr-bw-060);
+  /* menu colors */
+  --clr-mnu: var(--clr-bw-100);
+  --clr-mnu--active: var(--clr-bw-100);
+  --clr-mnu--hover: var(--clr-bw-100);
+  --clr-mnubg: transparent;
+  --clr-mnubg--active: var(--clr-bw-040);
+  --clr-mnubg--hover: var(--clr-brand--primary);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -264,7 +277,6 @@ a:not([class]), a, .vimeo-link--icon, .youtube-link--icon, .github-link--icon, .
   text-decoration: none;
 }
 a:active, .vimeo-link--icon:active, .youtube-link--icon:active, .github-link--icon:active, .pinterest-link--icon:active, .linkedin-link--icon:active, .insta-link--icon:active, .fb-link--icon:active, .mail-link--icon:active, .phone-link--icon:active, .url-link--icon:active, .folder-link--icon:active, .file-link--icon:active, .page-link--icon:active, a:hover, .vimeo-link--icon:hover, .youtube-link--icon:hover, .github-link--icon:hover, .pinterest-link--icon:hover, .linkedin-link--icon:hover, .insta-link--icon:hover, .fb-link--icon:hover, .mail-link--icon:hover, .phone-link--icon:hover, .url-link--icon:hover, .folder-link--icon:hover, .file-link--icon:hover, .page-link--icon:hover, a:focus-visible, .vimeo-link--icon:focus-visible, .youtube-link--icon:focus-visible, .github-link--icon:focus-visible, .pinterest-link--icon:focus-visible, .linkedin-link--icon:focus-visible, .insta-link--icon:focus-visible, .fb-link--icon:focus-visible, .mail-link--icon:focus-visible, .phone-link--icon:focus-visible, .url-link--icon:focus-visible, .folder-link--icon:focus-visible, .file-link--icon:focus-visible, .page-link--icon:focus-visible {
-  background-color: red;
   text-decoration: none;
   outline: 0;
 }
@@ -277,7 +289,6 @@ a:active, .vimeo-link--icon:active, .youtube-link--icon:active, .github-link--ic
 
 a:not([class]) {
   text-decoration-skip-ink: auto;
-  color: currentColor;
 }
 
 .page-link--icon:before {
@@ -426,7 +437,8 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--clr-h);
 }
 
-button {
+button,
+.button {
   color: var(--clr-primarybtn--active);
   background-color: var(--clr-primarybtnbg--active);
   border: 0;
@@ -436,8 +448,14 @@ button {
   padding: 0.5em 1em;
 }
 button :focus-visible,
-button :hover {
+button :hover,
+.button :focus-visible,
+.button :hover {
   background-color: var(--clr-primarybtnbg--hover);
+}
+
+.button--small {
+  font-size: var(--fs-small);
 }
 
 /* import utilities */
@@ -456,8 +474,8 @@ pre {
 pre:has(code),
 pre[data-language] {
   padding: 1em;
-  background-color: var(--code-bg);
-  border: 1px solid var(--code-bc);
+  background-color: var(--clr-code--bg);
+  border: 1px solid var(--clr-code--bc);
   line-height: var(--lh-small);
 }
 
@@ -475,6 +493,13 @@ kbd {
 .cp-accent {
   color: var(--clr-highlight);
   font-weight: var(--fw-regular);
+}
+
+i.icon {
+  font-family: var(--ff-symbol), sans-serif;
+  font-size: inherit;
+  font-style: normal;
+  color: inherit;
 }
 
 /* import utilities */

@@ -19,11 +19,7 @@
     gap: 0.25rem;
 
 
-    > *:not(section) {
-      padding-inline: var(--gutter--list);
-    }
-
-    > section {
+    > a {
       //grid-area: image;
     }
 
@@ -32,16 +28,18 @@
       font-family: var(--ff-condensed);
       font-size: var(--fs-regular);
       padding-block-start: var(--gutter--list);
+      padding-inline: var(--gutter--list);
       //grid-area: heading;
     }
 
     > .navsubmenu--description {
+      padding-inline: var(--gutter--list);
       //grid-area: description;
     }
 
-    button {
+    >.navsubmenu--link {
       //grid-area: link;
-      margin: 0 0 var(--gutter--list) 0;
+      margin: 0 var(--gutter--list) var(--gutter--list) var(--gutter--list);
       align-self: end;
     }
   };

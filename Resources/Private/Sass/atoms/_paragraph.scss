@@ -17,8 +17,8 @@ pre {
 pre:has(code),
 pre[data-language] {
   padding: 1em;
-  background-color: var(--code-bg);
-  border: 1px solid var(--code-bc);
+  background-color: var(--clr-code--bg);
+  border: 1px solid var(--clr-code--bc);
   line-height: var(--lh-small);
 }
 
@@ -37,4 +37,11 @@ kbd {
 .cp-accent {
   color: var(--clr-highlight);
   font-weight: var(--fw-regular);
+}
+
+i.icon {
+  font-family: var(--ff-symbol), sans-serif;
+  font-size: inherit;
+  font-style: normal;
+  color: inherit;
 }

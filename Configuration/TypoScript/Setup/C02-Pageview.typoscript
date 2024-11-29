@@ -43,7 +43,7 @@ page.10 {
   dataProcessing.30 = menu
   dataProcessing.30 {
     as = mainmenu
-    levels = 2
+    levels = 3
     expandAll = 1
     titleField = subtitle // title
 #    dataProcessing.10 = files
