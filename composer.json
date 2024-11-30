@@ -20,6 +20,7 @@
 	"prefer-stable" : true,
 	"version": "1.0.0",
 	"require": {
+		"b13/container": "^3.1",
 		"b13/doktypemapper": "^2.0",
 		"friendsoftypo3/content-blocks": "^1.0",
 		"helhum/dotenv-connector": "*",

@@ -1,0 +1,7 @@
+/* 2col5050 */
+
+.cp-2cols5050 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gutter);
+}

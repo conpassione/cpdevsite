@@ -1,5 +1,5 @@
 # CType: stafflist
-
+# tt_content.stafflist < lib.contentElement ### don't do this for Content Blocks
 tt_content.stafflist {
   dataProcessing {
     200 = database-query

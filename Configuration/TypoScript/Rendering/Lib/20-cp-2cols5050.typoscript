@@ -1,0 +1,18 @@
+
+// if needed you can use ContainerProcessor with explicitly set colPos/variable values
+tt_content.cp-2cols5050 < lib.contentElement
+tt_content.cp-2cols5050 {
+  templateName = 2Cols5050
+  dataProcessing {
+    201 = B13\Container\DataProcessing\ContainerProcessor
+    201 {
+      colPos = 201
+      as = children_201
+    }
+    202 = B13\Container\DataProcessing\ContainerProcessor
+    202 {
+      colPos = 202
+      as = children_202
+    }
+  }
+}

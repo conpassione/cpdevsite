@@ -3,6 +3,7 @@ declare(strict_types=1);
 defined('TYPO3') or die();
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use \TYPO3\CMS\Core\Utility\GeneralUtility;
 
 call_user_func(static function(): void {
     // Defaulteinstellungen für Feld layout löschen
@@ -69,3 +70,23 @@ call_user_func(static function(): void {
     ExtensionManagementUtility::addTCAcolumns('tt_content', $additionalColumns);
     ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'displaywidth','','after:sectionIndex');
 });
+
+/* containers */
+GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer (
+    (
+        new \B13\Container\Tca\ContainerConfiguration(
+            'cp-2cols5050', // CType
+            '2 Column Container', // label
+            'Some Description of the Container', // description
+            [
+                [
+                    ['name' => 'left side', 'colPos' => 201],
+                    ['name' => 'right side', 'colPos' => 202]
+                ],
+            ] // grid configuration
+        )
+    )
+    // set an optional icon configuration
+    ->setIcon('EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg')
+    ->setGroup('z-cplayout')
+);
