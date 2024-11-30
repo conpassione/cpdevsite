@@ -42,6 +42,26 @@ call_user_func(static function(): void {
         'richtextConfiguration' => 'CpMinimal'
     ];
 
+    /* containers */
+    GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer (
+        (
+        new \B13\Container\Tca\ContainerConfiguration(
+            'cp-2cols5050', // CType
+            'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2col5050', // label
+            'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2col5050.description', // description
+            [
+                [
+                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2col5050.col201', 'colPos' => 201],
+                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2col5050.col202', 'colPos' => 202]
+                ],
+            ] // grid configuration
+        )
+        )
+            // set an optional icon configuration
+            ->setIcon('EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg')
+            ->setGroup('z-cplayout')
+    );
+
     $additionalColumns = [
         'displaywidth' => [
             'exclude' => true,
@@ -68,25 +88,11 @@ call_user_func(static function(): void {
         ],
     ];
     ExtensionManagementUtility::addTCAcolumns('tt_content', $additionalColumns);
-    ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'displaywidth','','after:sectionIndex');
-});
 
-/* containers */
-GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer (
-    (
-        new \B13\Container\Tca\ContainerConfiguration(
-            'cp-2cols5050', // CType
-            '2 Column Container', // label
-            'Some Description of the Container', // description
-            [
-                [
-                    ['name' => 'left side', 'colPos' => 201],
-                    ['name' => 'right side', 'colPos' => 202]
-                ],
-            ] // grid configuration
-        )
-    )
-    // set an optional icon configuration
-    ->setIcon('EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg')
-    ->setGroup('z-cplayout')
-);
+    $sections = 'cp-2cols5050';
+    ExtensionManagementUtility::addToAllTCAtypes(
+        'tt_content',
+        'displaywidth',
+        $sections,
+        'after:sectionIndex');
+});

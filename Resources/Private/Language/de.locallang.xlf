@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="de" datatype="plaintext"
-    original="EXT:cpdevsite/Resources/Private/Language/locallang.xlf" date="2024-03-18T18:20:51Z"
-    product-name="cpdevsite">
-        <header/>
+    <file source-language="en" target-language="de" original="EXT:cpdevsite/Resources/Private/Language/locallang.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-11-30T22:18:16+01:00">
+        <header></header>
         <body>
+            <trans-unit id="generator" resname="generator">
+                <source>The &#34;Generator&#34; Meta Tag.</source>
+                <target>Das &#34;Generator&#34; Meta Tag.</target>
+            </trans-unit>
             <trans-unit id="headerComment" resname="headerComment">
                 <source>The default Header Comment.</source>
                 <target>Titelkommentar vorgegeben.</target>
-            </trans-unit>
-            <trans-unit id="generator" resname="generator">
-                <source>The "Generator" Meta Tag.</source>
-                <target>Das "Generator" Meta Tag.</target>
             </trans-unit>
         </body>
     </file>

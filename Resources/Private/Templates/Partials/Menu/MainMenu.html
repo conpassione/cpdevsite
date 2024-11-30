@@ -43,7 +43,7 @@
         <f:then>
             <li class="dropdown{f:if(condition: '{type} == 1', then:' dropdown-right')}">
                 <f:link.page pageUid="{menuItem.data.uid}"
-                             class="menu-item {f:if(condition: menuItem.active, then:'active')}
+                             class="menu-item{f:if(condition: menuItem.active, then:' active')}
                              {f:if(condition: menuItem.current, then:'current')}" additionalAttributes="{tabindex: '0'}">
                     {menuItem.title}&nbsp;<i class="icon">right</i>
                 </f:link.page>

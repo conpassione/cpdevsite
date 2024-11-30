@@ -3,7 +3,7 @@
 <f:layout />
 
 <f:section name="Main">
-    <div class="cp-2cols5050">
+    <section class="cp-2cols5050{f:if(condition: displaywidth, then:' {displaywidth}')}">
        <div class="cp-col201">
            <f:for each="{children_201}" as="record">
                <f:format.raw>{record.renderedContent}</f:format.raw>
@@ -14,7 +14,7 @@
                 <f:format.raw>{record.renderedContent}</f:format.raw>
             </f:for>
         </div>
-    </div>
+    </section>
 
 </f:section>
 

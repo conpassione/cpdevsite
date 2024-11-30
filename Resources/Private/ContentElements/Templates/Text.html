@@ -3,24 +3,13 @@
 <f:layout />
 
 <f:section name="Main">
-    <f:switch expression="{data.displaywidth}">
-        <f:case value="1">
-            <f:variable name="sectionclass">breakout</f:variable>
-        </f:case>
-        <f:case value="2">
-            <f:variable name="sectionclass">full-width content-grid</f:variable>
-        </f:case>
-        <f:defaultCase>
-            <f:variable name="sectionclass"></f:variable>
-        </f:defaultCase>
-    </f:switch>
-
-    <section class="{sectionclass}">
+    <div class="cp-text">
         <f:render partial="HeaderTag" arguments="{
         header_layout: data.header_layout,
         header: data.header,
         link: data.header_link}" />
         <f:format.raw>{data.bodytext}</f:format.raw>
-    </section>
+    </div>
 </f:section>
+
 </html>

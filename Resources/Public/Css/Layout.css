@@ -692,6 +692,14 @@ i.icon {
   gap: var(--gutter);
 }
 
+.full-width > .cp-col201 > *:not(.cp-image) {
+  padding-inline-start: var(--gutter);
+}
+
+.full-width > .cp-col202 > *:not(.cp-image) {
+  padding-inline-end: var(--gutter);
+}
+
 /* page */
 header {
   background-color: var(--clr-headerbg);

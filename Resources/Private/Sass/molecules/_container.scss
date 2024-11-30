@@ -5,3 +5,10 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--gutter);
 }
+
+.full-width > .cp-col201 > *:not(.cp-image)  {
+  padding-inline-start: var(--gutter);
+}
+.full-width > .cp-col202 > *:not(.cp-image)  {
+  padding-inline-end: var(--gutter);
+}

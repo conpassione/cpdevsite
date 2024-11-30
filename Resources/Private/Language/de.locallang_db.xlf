@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="de" original="" datatype="plaintext" date="2024-11-26T15:34:13+01:00">
+    <file source-language="en" target-language="de" original="" datatype="plaintext" date="2024-11-30T22:18:22+01:00">
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
                 <source>Agenda</source>
@@ -41,6 +41,22 @@
             <trans-unit id="backendlayout.submenu" resname="backendlayout.submenu">
                 <source>Menu of subpages</source>
                 <target>Menü der Unterseiten</target>
+            </trans-unit>
+            <trans-unit id="container.2col5050" resname="container.2col5050">
+                <source>2-Columns 50-50</source>
+                <target>2-Spalten 50-50</target>
+            </trans-unit>
+            <trans-unit id="container.2col5050.col201" resname="container.2col5050.col201">
+                <source>Left column</source>
+                <target>Linke Spalte</target>
+            </trans-unit>
+            <trans-unit id="container.2col5050.col202" resname="container.2col5050.col202">
+                <source>Right column</source>
+                <target>Rechte Spalte</target>
+            </trans-unit>
+            <trans-unit id="container.2col5050.description" resname="container.2col5050.description">
+                <source>A two column section</source>
+                <target>Zweispaltiger Abschnitt</target>
             </trans-unit>
             <trans-unit id="contentwizard.z-cpextensions.groupLabel" resname="contentwizard.z-cpextensions.groupLabel">
                 <source>Additional extensions</source>
@@ -266,6 +282,10 @@
                 <source>Display width</source>
                 <target>Breit des Abschnitts</target>
             </trans-unit>
+            <trans-unit id="tt_content.column.displaywidth.item0" resname="tt_content.column.displaywidth.item0">
+                <source>normal</source>
+                <target>normal</target>
+            </trans-unit>
             <trans-unit id="tt_content.column.displaywidth.item1" resname="tt_content.column.displaywidth.item1">
                 <source>breakout</source>
                 <target>verbreitert</target>
@@ -273,10 +293,6 @@
             <trans-unit id="tt_content.column.displaywidth.item2" resname="tt_content.column.displaywidth.item2">
                 <source>full-width</source>
                 <target>volle breite</target>
-            </trans-unit>
-            <trans-unit id="tt_content.column.displaywidth.item0" resname="tt_content.column.displaywidth.item0">
-                <source>normal</source>
-                <target>normal</target>
             </trans-unit>
         </body>
     </file>

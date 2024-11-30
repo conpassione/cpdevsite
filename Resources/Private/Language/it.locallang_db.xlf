@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="it" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-11-26T15:34:13+01:00">
+    <file source-language="en" target-language="it" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-11-30T22:18:22+01:00">
         <header></header>
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
@@ -42,6 +42,22 @@
             <trans-unit id="backendlayout.submenu" resname="backendlayout.submenu">
                 <source>Menu of subpages</source>
                 <target>Submenu</target>
+            </trans-unit>
+            <trans-unit id="container.2col5050" resname="container.2col5050">
+                <source>2-Columns 50-50</source>
+                <target>2 Colonne 50-50</target>
+            </trans-unit>
+            <trans-unit id="container.2col5050.col201" resname="container.2col5050.col201">
+                <source>Left column</source>
+                <target>Colonna sinistra</target>
+            </trans-unit>
+            <trans-unit id="container.2col5050.col202" resname="container.2col5050.col202">
+                <source>Right column</source>
+                <target>Colonna destra</target>
+            </trans-unit>
+            <trans-unit id="container.2col5050.description" resname="container.2col5050.description">
+                <source>A two column section</source>
+                <target>Sezione con due colonne</target>
             </trans-unit>
             <trans-unit id="contentwizard.z-cpextensions.groupLabel" resname="contentwizard.z-cpextensions.groupLabel">
                 <source>Additional extensions</source>
@@ -267,6 +283,10 @@
                 <source>Display width</source>
                 <target>Larghezza di sezione</target>
             </trans-unit>
+            <trans-unit id="tt_content.column.displaywidth.item0" resname="tt_content.column.displaywidth.item0">
+                <source>normal</source>
+                <target>normale</target>
+            </trans-unit>
             <trans-unit id="tt_content.column.displaywidth.item1" resname="tt_content.column.displaywidth.item1">
                 <source>breakout</source>
                 <target>evasione</target>
@@ -274,10 +294,6 @@
             <trans-unit id="tt_content.column.displaywidth.item2" resname="tt_content.column.displaywidth.item2">
                 <source>full-width</source>
                 <target>massima</target>
-            </trans-unit>
-            <trans-unit id="tt_content.column.displaywidth.item0" resname="tt_content.column.displaywidth.item0">
-                <source>normal</source>
-                <target>normale</target>
             </trans-unit>
         </body>
     </file>
