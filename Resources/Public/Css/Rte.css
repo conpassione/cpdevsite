@@ -25,11 +25,11 @@
   /* buttons */
   --clr-primarybtn--active: var(--clr-bw-100);
   --clr-primarybtnbg--active: var(--clr-brand--primary);
-  --clr-primarybtnbg--hover: oklch(from var(--clr-primarybtnbg--active) calc(l + 25%) c h);
-  --clr-primarybtnbg--disabled: oklch(from var(--clr-primarybtn--active) calc(l + 50%) c h);
+  --clr-primarybtnbg--hover: var(--clr-bw-060);
+  --clr-primarybtnbg--disabled: oklch(from var(--clr-primarybtn--active) calc(l * .2) c h);
   --clr-secondarybtn--active: var(--clr-bw-090);
   --clr-secondarybtnbg--active: var(--clr-brand--secondary);
-  --clr-secondarybtnbg--hover: oklch(from var(--clr-secondarybtnbg--active) calc(l + 25%) c h);
+  --clr-secondarybtnbg--hover: oklch(from var(--clr-secondarybtnbg--active) l + 5% c h);
   --clr-secondarxbtnbg--disabled: oklch(from var(--clr-secondarybtnbg--active) calc(l + 50%) c h);
   /* typographic colors */
   --clr-background: var(--clr-bw-100);
@@ -74,11 +74,13 @@
   --fw-bold: 700;
   /* font size */
   --fs-small: 16px;
-  --fs-regular: 24px;
-  --fs-regular--big: 32px;
+  --fs-regular: 18px;
+  --fs-regular--big: 24px;
+  font-size: clamp(var(--fs-regular), 2vw, var(--fs-regular--big));
   /* line height */
   --lh-regular: 1.5;
   --lh-small: 1.2;
+  line-height: var(--lh-regular);
   --lh-paragraph: var(--lh-regular);
   --lh-h: var(--lh-small);
   --lh-list: var(--lh-small) ;
@@ -167,6 +169,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font: inherit;
+  line-height: inherit;
 }
 
 * {
@@ -184,11 +188,10 @@ html {
   color: var(--clr-text);
   background-color: var(--clr-background);
   font-family: var(--ff), sans-serif;
-  font-size: clamp(var(--fs-regular), 2vw, var(--fs-regular--big));
   font-weight: var(--fw-regular);
-  line-height: var(--lh-regular);
   display: block;
   min-height: 100%;
+  container-type: inline-size;
 }
 
 html:focus-within {
@@ -199,6 +202,11 @@ body {
   overflow-y: scroll;
   text-rendering: optimizeSpeed;
   height: fit-content;
+  container-type: inline-size;
+}
+
+main {
+  container: main/inline-size;
 }
 
 hr {
@@ -287,6 +295,10 @@ a:active, .vimeo-link--icon:active, .youtube-link--icon:active, .github-link--ic
   padding-inline-end: 0.1em;
 }
 
+a:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
+
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -294,53 +306,92 @@ a:not([class]) {
 .page-link--icon:before {
   content: "arrowright";
 }
+.page-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
 
 .file-link--icon:before {
   content: "download";
+}
+.file-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
 }
 
 .folder-link--icon:before {
   content: "folder";
 }
+.folder-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
 
 .url-link--icon:before {
   content: "external";
+}
+.url-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
 }
 
 .phone-link--icon:before {
   content: "phone";
 }
+.phone-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
 
 .mail-link--icon:before {
   content: "mail";
+}
+.mail-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
 }
 
 .fb-link--icon:before {
   content: "facebook";
 }
+.fb-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
 
 .insta-link--icon:before {
   content: "instagram";
+}
+.insta-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
 }
 
 .linkedin-link--icon:before {
   content: "linkedin";
 }
+.linkedin-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
 
 .pinterest-link--icon:before {
   content: "pinterest";
+}
+.pinterest-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
 }
 
 .github-link--icon:before {
   content: "github";
 }
+.github-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
 
 .youtube-link--icon:before {
   content: "youtube";
 }
+.youtube-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
 
 .vimeo-link--icon:before {
   content: "vimeo";
+}
+.vimeo-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
 }
 
 /* import utilities */
@@ -386,7 +437,7 @@ label: Aspect Ratios
 
     note: |
         Maintain intrinsic aspect ratios when `max-width` is applied.
-    `iframe`, `embed`, and `object` are also embedded,
+        `iframe`, `embed`, and `object` are also embedded,
         but have no intrinsic ratio,
         so their `height` needs to be set explicitly.
 
@@ -415,21 +466,35 @@ h1, h2, h3, h4, h5, h6 {
   line-height: var(--lh-h);
 }
 
+.h1-font,
 .h1 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.h1 {
   margin-block-start: 1.5em;
   color: var(--clr-h);
 }
 
-.h2 {
+.h2-font,
+h2 {
   font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.h2 {
   margin-block-start: 1.5em;
   color: var(--clr-h);
+}
+
+.h3-font,
+.h4-font,
+.h3,
+.h4 {
+  font-size: clamp(1.25rem, 2vw, 2rem);
 }
 
 .h3,
 .h4 {
-  font-size: clamp(1.25rem, 2vw, 2rem);
   margin-block-start: 1em;
 }
 
@@ -437,6 +502,8 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--clr-h);
 }
 
+/* import utilities */
+/* button */
 button,
 .button {
   color: var(--clr-primarybtn--active);
@@ -447,11 +514,14 @@ button,
   margin: 0.25rem;
   padding: 0.5em 1em;
 }
-button :focus-visible,
-button :hover,
-.button :focus-visible,
-.button :hover {
+button:hover, button:focus,
+.button:hover,
+.button:focus {
   background-color: var(--clr-primarybtnbg--hover);
+}
+button:focus-visible,
+.button:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
 }
 
 .button--small {

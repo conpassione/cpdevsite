@@ -53,18 +53,26 @@
   align-items: start;
 }
 
-.menu-items  li {
+.menu-items li {
   padding: 0;
   width: 100%;
   transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 .menu-items li:hover,
-.menu-items li:focus,
-.menu-item:focus-visible{
+.menu-item.active {
   color: var(--clr-mnu--hover);
   background-color: var(--clr-mnubg--hover);
 }
+
+.menu-items li:focus,
+.menu-items li:focus-visible,
+.menu-item:focus-visible {
+  color: var(--clr-mnu--hover);
+  background-color: var(--clr-mnubg--hover);
+  @include outline;
+}
+
 
 .dropdown-menu {
   display: none;

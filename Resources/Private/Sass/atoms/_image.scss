@@ -19,13 +19,12 @@ picture {
   display: contents;
 }
 
-
 /* @docs
 label: Aspect Ratios
 
     note: |
         Maintain intrinsic aspect ratios when `max-width` is applied.
-    `iframe`, `embed`, and `object` are also embedded,
+        `iframe`, `embed`, and `object` are also embedded,
         but have no intrinsic ratio,
         so their `height` needs to be set explicitly.
 

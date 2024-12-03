@@ -17,13 +17,14 @@
 
   /* font size */
   --fs-small: 16px;
-  --fs-regular: 24px;
-  --fs-regular--big: 32px;
-
+  --fs-regular: 18px;
+  --fs-regular--big: 24px;
+  font-size: clamp(var(--fs-regular), 2vw, var(--fs-regular--big));
 
   /* line height */
   --lh-regular: 1.5;
   --lh-small: 1.2;
+  line-height: var(--lh-regular);
 
   --lh-paragraph: var(--lh-regular);
   --lh-h: var(--lh-small);

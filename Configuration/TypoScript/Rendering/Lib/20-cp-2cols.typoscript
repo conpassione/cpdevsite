@@ -34,3 +34,13 @@ tt_content.cp-2cols5050 {
     }
   }
 }
+
+tt_content.cp-2cols3366 < tt_content.cp-2cols5050
+tt_content.cp-2cols3366 {
+  templateName = 2Cols3366
+}
+
+tt_content.cp-2cols6633 < tt_content.cp-2cols5050
+tt_content.cp-2cols6633 {
+  templateName = 2Cols6633
+}

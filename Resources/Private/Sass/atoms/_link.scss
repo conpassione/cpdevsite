@@ -36,6 +36,10 @@ a {
   @extend %link;
 }
 
+a:focus-visible {
+  @include outline;
+}
+
 a:not([class]) {
   @extend %link;
   text-decoration-skip-ink: auto;
@@ -46,6 +50,7 @@ a:not([class]) {
   &:before {
     content: 'arrowright';
   }
+  &:focus-visible {@include outline;}
 }
 
 .file-link--icon {
@@ -53,6 +58,7 @@ a:not([class]) {
   &:before {
     content: 'download';
   }
+  &:focus-visible {@include outline;}
 }
 
 .folder-link--icon {
@@ -60,6 +66,7 @@ a:not([class]) {
   &:before {
     content: 'folder';
   }
+  &:focus-visible {@include outline;}
 }
 
 .url-link--icon {
@@ -67,6 +74,7 @@ a:not([class]) {
   &:before {
     content: 'external';
   }
+  &:focus-visible {@include outline;}
 }
 
 .phone-link--icon {
@@ -74,6 +82,7 @@ a:not([class]) {
   &:before {
     content: 'phone';
   }
+  &:focus-visible {@include outline;}
 }
 
 .mail-link--icon {
@@ -81,6 +90,7 @@ a:not([class]) {
   &:before {
     content: 'mail';
   }
+  &:focus-visible {@include outline;}
 }
 
 .fb-link--icon {
@@ -88,6 +98,7 @@ a:not([class]) {
   &:before {
     content: 'facebook';
   }
+  &:focus-visible {@include outline;}
 }
 
 .insta-link--icon {
@@ -95,6 +106,7 @@ a:not([class]) {
   &:before {
     content: 'instagram';
   }
+  &:focus-visible {@include outline;}
 }
 
 .linkedin-link--icon {
@@ -102,6 +114,7 @@ a:not([class]) {
   &:before {
     content: 'linkedin';
   }
+  &:focus-visible {@include outline;}
 }
 
 .pinterest-link--icon {
@@ -109,6 +122,7 @@ a:not([class]) {
   &:before {
     content: 'pinterest';
   }
+  &:focus-visible {@include outline;}
 }
 
 .github-link--icon {
@@ -116,6 +130,7 @@ a:not([class]) {
   &:before {
     content: 'github';
   }
+  &:focus-visible {@include outline;}
 }
 
 .youtube-link--icon {
@@ -123,10 +138,13 @@ a:not([class]) {
   &:before {
     content: 'youtube';
   }
+  &:focus-visible {@include outline;}
 }
+
 .vimeo-link--icon {
   @extend %link-iconb;
   &:before {
     content: 'vimeo';
   }
+  &:focus-visible {@include outline;}
 }

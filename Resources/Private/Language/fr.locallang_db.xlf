@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="fr" original="" datatype="plaintext" date="2024-11-30T22:18:22+01:00">
+    <file source-language="en" target-language="fr" original="" datatype="plaintext" date="2024-12-01T22:09:34+01:00">
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
                 <source>Agenda</source>
@@ -42,21 +42,57 @@
                 <source>Menu of subpages</source>
                 <target>Submenu</target>
             </trans-unit>
-            <trans-unit id="container.2col5050" resname="container.2col5050">
-                <source>2-Columns 50-50</source>
-                <target>2 Colonnes 50-50</target>
-            </trans-unit>
-            <trans-unit id="container.2col5050.col201" resname="container.2col5050.col201">
+            <trans-unit id="container.2cols.col201" resname="container.2cols.col201">
                 <source>Left column</source>
                 <target>Colonne gauche</target>
             </trans-unit>
-            <trans-unit id="container.2col5050.col202" resname="container.2col5050.col202">
+            <trans-unit id="container.2cols.col202" resname="container.2cols.col202">
                 <source>Right column</source>
                 <target>Colonne droite</target>
             </trans-unit>
-            <trans-unit id="container.2col5050.description" resname="container.2col5050.description">
+            <trans-unit id="container.2cols3366" resname="container.2cols3366">
+                <source>2-Columns 33-66</source>
+                <target>2 Colonnes 33-66</target>
+            </trans-unit>
+            <trans-unit id="container.2cols3366.description" resname="container.2cols3366.description">
                 <source>A two column section</source>
                 <target>Section avec deux colonnes</target>
+            </trans-unit>
+            <trans-unit id="container.2cols5050" resname="container.2cols5050">
+                <source>2-Columns 50-50</source>
+                <target>2 Colonnes 50-50</target>
+            </trans-unit>
+            <trans-unit id="container.2cols5050.description" resname="container.2cols5050.description">
+                <source>A two column section</source>
+                <target>Section avec deux colonnes</target>
+            </trans-unit>
+            <trans-unit id="container.2cols6633" resname="container.2cols6633">
+                <source>2-Columns 66-33</source>
+                <target>2 Colonnes 66-33</target>
+            </trans-unit>
+            <trans-unit id="container.2cols6633.description" resname="container.2cols6633.description">
+                <source>A two column sesction</source>
+                <target>Section avec dex colonnes</target>
+            </trans-unit>
+            <trans-unit id="container.3cols" resname="container.3cols">
+                <source>3-Columns</source>
+                <target>2 Coonnes</target>
+            </trans-unit>
+            <trans-unit id="container.3cols.col201" resname="container.3cols.col201">
+                <source>Left column</source>
+                <target>Colonne gauche</target>
+            </trans-unit>
+            <trans-unit id="container.3cols.col202" resname="container.3cols.col202">
+                <source>Middle column</source>
+                <target>Colonne centrale</target>
+            </trans-unit>
+            <trans-unit id="container.3cols.col203" resname="container.3cols.col203">
+                <source>Right column</source>
+                <target>Colonne droite</target>
+            </trans-unit>
+            <trans-unit id="container.3cols.description" resname="container.3cols.description">
+                <source>A three column section</source>
+                <target>Section avec trois colonnes</target>
             </trans-unit>
             <trans-unit id="contentwizard.z-cpextensions.groupLabel" resname="contentwizard.z-cpextensions.groupLabel">
                 <source>Additional extensions</source>

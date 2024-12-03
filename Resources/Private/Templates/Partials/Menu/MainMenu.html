@@ -4,7 +4,7 @@
 
 
 <f:if condition="{mainmenu}">
-    <div id="hamburger" class="hamburger" tabindex="0">
+    <div id="hamburger" class="hamburger">
         <span class="hamburger--strip strip-1"></span>
         <span class="hamburger--strip strip-2"></span>
         <span class="hamburger--strip strip-3"></span>
@@ -12,7 +12,7 @@
     <nav class="navmainmenu">
         <ul class="menu-items">
             <li>
-                <a href="{homePageSlug}" role="menuitem" title="{homePageTitle}" tabindex="0"
+                <a href="{homePageSlug}" role="menuitem" title="{homePageTitle}"
                    class="menu-item {f:if(condition: '{page.id} == {homePageUid}', then:'active')}">
                     {homePageTitle}
                 </a>
@@ -43,8 +43,7 @@
         <f:then>
             <li class="dropdown{f:if(condition: '{type} == 1', then:' dropdown-right')}">
                 <f:link.page pageUid="{menuItem.data.uid}"
-                             class="menu-item{f:if(condition: menuItem.active, then:' active')}
-                             {f:if(condition: menuItem.current, then:'current')}" additionalAttributes="{tabindex: '0'}">
+                             class="menu-item{f:if(condition: menuItem.active, then:' active')}">
                     {menuItem.title}&nbsp;<i class="icon">right</i>
                 </f:link.page>
                 <ul class="{f:if(condition: '{type} == 1', then:'menu-right', else:'dropdown-menu')}">
@@ -57,8 +56,7 @@
         <f:else>
             <li>
                 <f:link.page pageUid="{menuItem.data.uid}"
-                             class="menu-item {f:if(condition: menuItem.active, then:'active')}
-                             {f:if(condition: menuItem.current, then:'current')}" additionalAttributes="{tabindex: '0'}">
+                             class="menu-item {f:if(condition: menuItem.active, then:'active')}">
                     {menuItem.title}
                 </f:link.page>
             </li>

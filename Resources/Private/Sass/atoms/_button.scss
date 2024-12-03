@@ -1,16 +1,23 @@
+/* button */
+
+@use '../settings' as *;
+
 button,
 .button {
   color: var(--clr-primarybtn--active);
   background-color: var(--clr-primarybtnbg--active);
-  :focus-visible,
-  :hover {
-    background-color: var(--clr-primarybtnbg--hover);
-  }
   border: 0;
   border-radius: 0;
   display: inline-block;
   margin: 0.25rem;
   padding: 0.5em 1em;
+  &:hover,
+  &:focus {
+    background-color: var(--clr-primarybtnbg--hover);
+  }
+  &:focus-visible {
+    @include outline;
+  }
 }
 
 .button--small {

@@ -2,7 +2,31 @@
 
 .cp-2cols5050 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(var(--mediasize--small), 1fr));
+  gap: var(--gutter);
+}
+
+.cp-2cols3366 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--gutter);
+  @container (width < 75ch) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cp-2cols6633 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--gutter);
+  @container (width < 75ch) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cp-3cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: var(--gutter);
 }
 
@@ -10,5 +34,9 @@
   padding-inline-start: var(--gutter);
 }
 .full-width > .cp-col202 > *:not(.cp-image)  {
+  padding-inline-end: var(--gutter);
+}
+
+.full-width > .cp-col203 > *:not(.cp-image)  {
   padding-inline-end: var(--gutter);
 }

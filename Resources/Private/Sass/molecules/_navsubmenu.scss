@@ -2,45 +2,36 @@
 @use '../settings' as *;
 
 .navsubmenu {
-  --gutter--list: 0.5rem;
+  --gutter--list:          calc(var(--gutter) / 2);
+  --navsubmenu-card--size: calc(var(--mediasize--small) * 5 / 8);
 
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
-  padding-inline-start: 0;
+  display:                 grid;
+  gap:                     var(--gutter);
+  grid-template-columns: repeat(auto-fit, minmax(var(--navsubmenu-card--size), 1fr));
+  justify-content:         center;
+  padding-inline-start:    0;
+}
 
-  .navsubmenu--card {
-    list-style-type: none;
-    outline: 1px solid var(--clr-brand--primary);
-    overflow: hidden;
+.navsubmenu--card {
+  list-style-type:    none;
+  outline:            1px solid var(--clr-brand--primary);
+  overflow:           hidden;
 
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    gap: 0.25rem;
+  display:            grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap:                0.25rem;
+}
 
+.navsubmenu--heading {
+  padding-block-start: var(--gutter--list);
+  padding-inline: var(--gutter--list);
+}
 
-    > a {
-      //grid-area: image;
-    }
+.navsubmenu--description {
+   padding-inline: var(--gutter--list);
+}
 
-    > .navsubmenu--heading {
-      font-weight: bold;
-      font-family: var(--ff-condensed);
-      font-size: var(--fs-regular);
-      padding-block-start: var(--gutter--list);
-      padding-inline: var(--gutter--list);
-      //grid-area: heading;
-    }
-
-    > .navsubmenu--description {
-      padding-inline: var(--gutter--list);
-      //grid-area: description;
-    }
-
-    >.navsubmenu--link {
-      //grid-area: link;
-      margin: 0 var(--gutter--list) var(--gutter--list) var(--gutter--list);
-      align-self: end;
-    }
-  };
+.navsubmenu--link {
+  margin: var(--gutter--list);
+  align-self: end;
 }

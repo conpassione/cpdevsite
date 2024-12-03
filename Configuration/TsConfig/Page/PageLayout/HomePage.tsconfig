@@ -7,7 +7,7 @@ mod {
         config {
           backend_layout {
             doktype = 36650001
-            colCount = 1
+            colCount =1
             rowCount = 4
             rows {
               1 {

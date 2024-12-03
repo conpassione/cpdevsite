@@ -29,12 +29,12 @@
   /* buttons */
   --clr-primarybtn--active: var(--clr-bw-100);
   --clr-primarybtnbg--active: var(--clr-brand--primary);
-  --clr-primarybtnbg--hover: oklch(from var(--clr-primarybtnbg--active) calc(l + 25%) c h);
-  --clr-primarybtnbg--disabled: oklch(from var(--clr-primarybtn--active) calc(l + 50%) c h);
+  --clr-primarybtnbg--hover: var(--clr-bw-060);
+  --clr-primarybtnbg--disabled: oklch(from var(--clr-primarybtn--active) calc(l * .2) c h);
 
   --clr-secondarybtn--active: var(--clr-bw-090);
   --clr-secondarybtnbg--active: var(--clr-brand--secondary);
-  --clr-secondarybtnbg--hover: oklch(from var(--clr-secondarybtnbg--active) calc(l + 25%) c h);
+  --clr-secondarybtnbg--hover: oklch(from var(--clr-secondarybtnbg--active) l + 5% c h);
   --clr-secondarxbtnbg--disabled: oklch(from var(--clr-secondarybtnbg--active) calc(l + 50%) c h);
 
   /* typographic colors */

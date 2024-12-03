@@ -24,11 +24,11 @@
   /* buttons */
   --clr-primarybtn--active: var(--clr-bw-100);
   --clr-primarybtnbg--active: var(--clr-brand--primary);
-  --clr-primarybtnbg--hover: oklch(from var(--clr-primarybtnbg--active) calc(l + 25%) c h);
-  --clr-primarybtnbg--disabled: oklch(from var(--clr-primarybtn--active) calc(l + 50%) c h);
+  --clr-primarybtnbg--hover: var(--clr-bw-060);
+  --clr-primarybtnbg--disabled: oklch(from var(--clr-primarybtn--active) calc(l * .2) c h);
   --clr-secondarybtn--active: var(--clr-bw-090);
   --clr-secondarybtnbg--active: var(--clr-brand--secondary);
-  --clr-secondarybtnbg--hover: oklch(from var(--clr-secondarybtnbg--active) calc(l + 25%) c h);
+  --clr-secondarybtnbg--hover: oklch(from var(--clr-secondarybtnbg--active) l + 5% c h);
   --clr-secondarxbtnbg--disabled: oklch(from var(--clr-secondarybtnbg--active) calc(l + 50%) c h);
   /* typographic colors */
   --clr-background: var(--clr-bw-100);
@@ -73,11 +73,13 @@
   --fw-bold: 700;
   /* font size */
   --fs-small: 16px;
-  --fs-regular: 24px;
-  --fs-regular--big: 32px;
+  --fs-regular: 18px;
+  --fs-regular--big: 24px;
+  font-size: clamp(var(--fs-regular), 2vw, var(--fs-regular--big));
   /* line height */
   --lh-regular: 1.5;
   --lh-small: 1.2;
+  line-height: var(--lh-regular);
   --lh-paragraph: var(--lh-regular);
   --lh-h: var(--lh-small);
   --lh-list: var(--lh-small) ;
@@ -166,6 +168,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font: inherit;
+  line-height: inherit;
 }
 
 * {
@@ -183,11 +187,10 @@ html {
   color: var(--clr-text);
   background-color: var(--clr-background);
   font-family: var(--ff), sans-serif;
-  font-size: clamp(var(--fs-regular), 2vw, var(--fs-regular--big));
   font-weight: var(--fw-regular);
-  line-height: var(--lh-regular);
   display: block;
   min-height: 100%;
+  container-type: inline-size;
 }
 
 html:focus-within {
@@ -198,6 +201,11 @@ body {
   overflow-y: scroll;
   text-rendering: optimizeSpeed;
   height: fit-content;
+  container-type: inline-size;
+}
+
+main {
+  container: main/inline-size;
 }
 
 hr {
@@ -285,6 +293,10 @@ a:active, .vimeo-link--icon:active, .youtube-link--icon:active, .github-link--ic
   padding-inline-end: 0.1em;
 }
 
+a:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
+
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -292,53 +304,92 @@ a:not([class]) {
 .page-link--icon:before {
   content: "arrowright";
 }
+.page-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
 
 .file-link--icon:before {
   content: "download";
+}
+.file-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
 }
 
 .folder-link--icon:before {
   content: "folder";
 }
+.folder-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
 
 .url-link--icon:before {
   content: "external";
+}
+.url-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
 }
 
 .phone-link--icon:before {
   content: "phone";
 }
+.phone-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
 
 .mail-link--icon:before {
   content: "mail";
+}
+.mail-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
 }
 
 .fb-link--icon:before {
   content: "facebook";
 }
+.fb-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
 
 .insta-link--icon:before {
   content: "instagram";
+}
+.insta-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
 }
 
 .linkedin-link--icon:before {
   content: "linkedin";
 }
+.linkedin-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
 
 .pinterest-link--icon:before {
   content: "pinterest";
+}
+.pinterest-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
 }
 
 .github-link--icon:before {
   content: "github";
 }
+.github-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
 
 .youtube-link--icon:before {
   content: "youtube";
 }
+.youtube-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
 
 .vimeo-link--icon:before {
   content: "vimeo";
+}
+.vimeo-link--icon:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
 }
 
 /* list */
@@ -382,7 +433,7 @@ label: Aspect Ratios
 
     note: |
         Maintain intrinsic aspect ratios when `max-width` is applied.
-    `iframe`, `embed`, and `object` are also embedded,
+        `iframe`, `embed`, and `object` are also embedded,
         but have no intrinsic ratio,
         so their `height` needs to be set explicitly.
 
@@ -410,21 +461,35 @@ h1, h2, h3, h4, h5, h6 {
   line-height: var(--lh-h);
 }
 
+.h1-font,
 .h1 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.h1 {
   margin-block-start: 1.5em;
   color: var(--clr-h);
 }
 
-.h2 {
+.h2-font,
+h2 {
   font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.h2 {
   margin-block-start: 1.5em;
   color: var(--clr-h);
+}
+
+.h3-font,
+.h4-font,
+.h3,
+.h4 {
+  font-size: clamp(1.25rem, 2vw, 2rem);
 }
 
 .h3,
 .h4 {
-  font-size: clamp(1.25rem, 2vw, 2rem);
   margin-block-start: 1em;
 }
 
@@ -432,6 +497,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--clr-h);
 }
 
+/* button */
 button,
 .button {
   color: var(--clr-primarybtn--active);
@@ -442,11 +508,14 @@ button,
   margin: 0.25rem;
   padding: 0.5em 1em;
 }
-button :focus-visible,
-button :hover,
-.button :focus-visible,
-.button :hover {
+button:hover, button:focus,
+.button:hover,
+.button:focus {
   background-color: var(--clr-primarybtnbg--hover);
+}
+button:focus-visible,
+.button:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
 }
 
 .button--small {
@@ -568,10 +637,17 @@ i.icon {
 }
 
 .menu-items li:hover,
+.menu-item.active {
+  color: var(--clr-mnu--hover);
+  background-color: var(--clr-mnubg--hover);
+}
+
 .menu-items li:focus,
+.menu-items li:focus-visible,
 .menu-item:focus-visible {
   color: var(--clr-mnu--hover);
   background-color: var(--clr-mnubg--hover);
+  outline: 2px solid var(--clr-bw-075);
 }
 
 .dropdown-menu {
@@ -656,13 +732,16 @@ i.icon {
 }
 /* page */
 .navsubmenu {
-  --gutter--list: 0.5rem;
+  --gutter--list: calc(var(--gutter) / 2);
+  --navsubmenu-card--size: calc(var(--mediasize--small) * 5 / 8);
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+  gap: var(--gutter);
+  grid-template-columns: repeat(auto-fit, minmax(var(--navsubmenu-card--size), 1fr));
+  justify-content: center;
   padding-inline-start: 0;
 }
-.navsubmenu .navsubmenu--card {
+
+.navsubmenu--card {
   list-style-type: none;
   outline: 1px solid var(--clr-brand--primary);
   overflow: hidden;
@@ -670,25 +749,53 @@ i.icon {
   grid-template-rows: auto auto 1fr auto;
   gap: 0.25rem;
 }
-.navsubmenu .navsubmenu--card > .navsubmenu--heading {
-  font-weight: bold;
-  font-family: var(--ff-condensed);
-  font-size: var(--fs-regular);
+
+.navsubmenu--heading {
   padding-block-start: var(--gutter--list);
   padding-inline: var(--gutter--list);
 }
-.navsubmenu .navsubmenu--card > .navsubmenu--description {
+
+.navsubmenu--description {
   padding-inline: var(--gutter--list);
 }
-.navsubmenu .navsubmenu--card > .navsubmenu--link {
-  margin: 0 var(--gutter--list) var(--gutter--list) var(--gutter--list);
+
+.navsubmenu--link {
+  margin: var(--gutter--list);
   align-self: end;
 }
 
 /* 2col5050 */
 .cp-2cols5050 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(var(--mediasize--small), 1fr));
+  gap: var(--gutter);
+}
+
+.cp-2cols3366 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--gutter);
+}
+@container (width < 75ch) {
+  .cp-2cols3366 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cp-2cols6633 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--gutter);
+}
+@container (width < 75ch) {
+  .cp-2cols6633 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cp-3cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: var(--gutter);
 }
 
@@ -697,6 +804,10 @@ i.icon {
 }
 
 .full-width > .cp-col202 > *:not(.cp-image) {
+  padding-inline-end: var(--gutter);
+}
+
+.full-width > .cp-col203 > *:not(.cp-image) {
   padding-inline-end: var(--gutter);
 }
 
@@ -712,7 +823,11 @@ header {
   padding-block: 0.5rem;
 }
 
-.logo {
+.logo a:focus-visible {
+  outline: 2px solid var(--clr-bw-075);
+}
+
+.logo--img {
   max-width: 200px;
 }
 

@@ -12,6 +12,9 @@ header {
   padding-block: 0.5rem;
 }
 
-.logo {
+.logo a:focus-visible {
+  @include outline;
+}
+.logo--img {
   max-width: 200px;
 }

@@ -8,6 +8,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font: inherit;
+  line-height: inherit;
 }
 
 * {
@@ -26,11 +28,16 @@ html {
   color: var(--clr-text);
   background-color: var(--clr-background);
   font-family: var(--ff), sans-serif;
-  font-size: clamp(var(--fs-regular), 2vw, var(--fs-regular--big));
+//  font-size: clamp(var(--fs-regular), 2vw, var(--fs-regular--big));
   font-weight: var(--fw-regular);
-  line-height: var(--lh-regular);
+//  line-height: var(--lh-regular);
   display:block;
   min-height: 100%;
+  container-type: inline-size;
+}
+
+@mixin outline {
+  outline: 2px solid var(--clr-bw-075);
 }
 
 html:focus-within {
@@ -41,6 +48,11 @@ body {
   overflow-y: scroll;
   text-rendering: optimizeSpeed;
   height: fit-content;
+  container-type: inline-size;
+}
+
+main {
+  container: main / inline-size;
 }
 
 hr {
