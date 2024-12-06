@@ -10,14 +10,13 @@
 .staffcards {
   display: grid;
   gap: var(--gutter);
-  grid-template-columns: repeat(auto-fit, minmax(min(var(--mediasize--small), 100%), 1fr));
-
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   container: staffcards / inline-size;
 }
 
 .staffcard {
   border: 1px solid var(--clr-staffcard--titlebg);
-  border-radius: 1em;
+  /* border-radius: 1em; */
   overflow: hidden;
 
   container: staffcard / inline-size;
@@ -27,8 +26,8 @@
   display: grid;
   gap: 0;
 
-  @container staffcard (inline-size > 580px) {
-    grid-template-columns: auto minmax(25ch, 1fr);
+  @container staffcard (inline-size > 480px) {
+    grid-template-columns: auto 55%;
     > h3 {
       grid-column: 1 / -1
     }

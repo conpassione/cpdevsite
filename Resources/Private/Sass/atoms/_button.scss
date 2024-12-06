@@ -2,25 +2,37 @@
 
 @use '../settings' as *;
 
-button,
-.button {
-  color: var(--clr-primarybtn--active);
-  background-color: var(--clr-primarybtnbg--active);
-  border: 0;
-  border-radius: 0;
-  display: inline-block;
-  margin: 0.25rem;
-  padding: 0.5em 1em;
-  &:hover,
-  &:focus {
-    background-color: var(--clr-primarybtnbg--hover);
-  }
-  &:focus-visible {
-    @include outline;
-  }
-}
+@layer basestyles {
 
-.button--small {
-  font-size: var(--fs-small);
-}
+  button,
+  .button {
+    /* default colors for primary button */
+    --_clr-btn: var(--clr-btn,  var(--clr-primarybtn--active));
+    --_clr-btnbg: var(--clr-btnbg,  var(--clr-primarybtnbg--active));
+    --_clr-btn--hover: var(--clr-btn--hover, var(--clr-primarybtn--hover));
+    --_clr-btnbg--hover: var(--clr-btnbg--hover, var(--clr-primarybtnbg--hover));
 
+    color:            var(--_clr-btn);
+    background-color: var(--_clr-btnbg);
+    border:           0;
+    border-radius:    0;
+    display:          inline-block;
+    margin:           0.25rem;
+    padding:          0.5em 1em;
+
+    &:hover,
+    &:focus {
+      color: var(--_clr-btn--hover);
+      background-color: var(--_clr-btnbg--hover);
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .button--small {
+    font-size: var(--fs-small);
+  }
+
+}

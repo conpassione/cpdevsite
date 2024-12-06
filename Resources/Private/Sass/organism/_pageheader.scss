@@ -1,20 +1,23 @@
 /* page */
 @use '../settings' as *;
 
-header {
-  background-color: var(--clr-headerbg);
-}
+@layer basestyles {
 
-.headercontent {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  justify-content: space-between;
-  padding-block: 0.5rem;
-}
+  header {
+    background-color: var(--clr-headerbg);
+  }
 
-.logo a:focus-visible {
-  @include outline;
-}
-.logo--img {
-  max-width: 200px;
+  .headercontent {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+  }
+
+  .logo a:focus-visible {
+    @include outline;
+  }
+  .logo--img {
+    max-width: 150px;
+  }
+
 }

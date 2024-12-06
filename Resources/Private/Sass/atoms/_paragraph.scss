@@ -1,45 +1,48 @@
 @use '../settings' as *;
 
-p {
-  max-width: 900ch;
-  text-wrap: pretty;
-  orphans: inherit;
-}
+@layer basestyles {
 
-pre {
-  font-family: var(--ff-mono), monospace;
-  font-size: 1rem;
-  line-height: var(--lh-small);
-}
+  p {
+    max-width: 900ch;
+    text-wrap: pretty;
+    orphans:   inherit;
+  }
 
-pre:has(code),
-pre[data-language] {
-  padding: 1em;
-  background-color: var(--clr-code--bg);
-  border: 1px solid var(--clr-code--bc);
-  line-height: var(--lh-small);
-}
+  pre {
+    font-family: var(--ff-mono), monospace;
+    font-size:   1rem;
+    line-height: var(--lh-small);
+  }
 
-/* pre:has(.cpcss),
-pre[data-language="CSS"] {
-  --code-bg: var(--clr-text);
-  --code-bc: var(--clr-bw-090);
-} */
+  pre:has(code),
+  pre[data-language] {
+    padding:          1em;
+    background-color: var(--clr-code--bg);
+    border:           1px solid var(--clr-code--bc);
+    line-height:      var(--lh-small);
+  }
 
-kbd {
-  font-family:  var(--ff-mono), monospace;;
-  background: inherit;
-  color: inherit;
-}
+  /* pre:has(.cpcss),
+  pre[data-language="CSS"] {
+    --code-bg: var(--clr-text);
+    --code-bc: var(--clr-bw-090);
+  } */
+  kbd {
+    font-family: var(--ff-mono), monospace;;
+    background:  inherit;
+    color:       inherit;
+  }
 
-.cp-accent {
-  color: var(--clr-highlight);
-  font-weight: var(--fw-regular);
-}
+  .cp-accent {
+    color:       var(--clr-highlight);
+    font-weight: var(--fw-regular);
+  }
 
-i.icon {
-  font-family: var(--ff-symbol), sans-serif;
-  font-size: inherit;
-  font-style: normal;
-  color: inherit;
+  i.icon {
+    font-family: var(--ff-symbol), sans-serif;
+    font-size:   inherit;
+    font-style:  normal;
+    color:       inherit;
+  }
+
 }

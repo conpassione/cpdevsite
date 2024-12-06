@@ -1,16 +1,20 @@
 /* metrics */
 
-:root {
-  --gutter: 1em;
-  --flow-spacer: 1em;
+@layer basestyles {
 
-  --border-radius: 1em;
+  :root {
+    --gutter: 1rem;
+    --flow-spacer: 1em;
 
-  --mediasize--small: 480px;
-  --mediasize--medium: 960px;
-  --mediasize--large: 1600px;
+    --border-radius: 1em;
 
-  --blocksize--small: 200px;
-  --blocksize--medium: 360px;
-  --blocksize--big: 480px;
+    --mediasize--small: 480px;
+    --mediasize--medium: 960px;
+    --mediasize--large: 1600px;
+
+    --blocksize--small: 200px;
+    --blocksize--medium: 360px;
+    --blocksize--big: 480px;
+  }
 }
+

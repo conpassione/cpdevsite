@@ -1,42 +1,55 @@
 /* page */
 @use '../settings' as *;
 
-@media (prefers-reduced-motion: no-preference) {
-  :has(:target) {
-    scroll-behavior: smooth;
-    scroll-padding-top: 3rem;
+@layer basestyles {
+
+
+  @media (prefers-reduced-motion: no-preference) {
+    :has(:target) {
+      scroll-behavior: smooth;
+      scroll-padding-top: 3rem;
+    }
   }
+
+  header {
+    position: fixed;
+    width: 100svw;
+  }
+
+  main {
+    margin-block-start: calc(32px + 1rem);
+  }
+
+  .content-grid {
+    --padding-inline: 1rem;
+    --content-max-width: var(--mediasize--large);
+    --breakout-size: 20ch;
+
+    display: grid;
+    grid-template-columns:
+      [full-width-start]
+      minmax(var(--padding-inline), 1fr)
+      [breakout-start]
+      minmax(0, var(--breakout-size))
+      [content-start]
+      min(var(--content-max-width), 100% - 2 * var(--padding-inline))
+      [content-end]
+      minmax(0, var(--breakout-size))
+      [breakout-end]
+      minmax(var(--padding-inline), 1fr)
+      [full-width-end];
+  }
+
+  .content-grid > * {
+    grid-column: content;
+  }
+
+  .content-grid > .breakout {
+    grid-column: breakout;
+  }
+
+  .content-grid > .full-width {
+    grid-column: full-width;
+  }
+
 }
-
-.content-grid {
-  --padding-inline: 1rem;
-  --content-max-width: var(--mediasize--large);
-  --breakout-size: 20ch;
-
-  display: grid;
-  grid-template-columns:
-    [full-width-start]
-    minmax(var(--padding-inline), 1fr)
-    [breakout-start]
-    minmax(0, var(--breakout-size))
-    [content-start]
-    min(var(--content-max-width), 100% - 2 * var(--padding-inline))
-    [content-end]
-    minmax(0, var(--breakout-size))
-    [breakout-end]
-    minmax(var(--padding-inline), 1fr)
-    [full-width-end];
-}
-
-.content-grid > * {
-  grid-column: content;
-}
-
-.content-grid > .breakout {
-  grid-column: breakout;
-}
-
-.content-grid > .full-width {
-  grid-column: full-width;
-}
-

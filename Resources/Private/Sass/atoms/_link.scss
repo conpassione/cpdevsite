@@ -2,149 +2,207 @@
 
 @use '../settings' as *;
 
-%link {
-  color: currentColor;
-  background-color: inherit;
-  text-decoration: none;
-  &:active,
-  &:hover,
-  &:focus-visible {
-    text-decoration: none;
-    outline: 0;
+@layer basestyles {
+
+  %link {
+    color:            currentColor;
+    background-color: inherit;
+    text-decoration:  none;
+
+    &:active,
+    &:hover,
+    &:focus-visible {
+      text-decoration: none;
+      outline:         0;
+    }
   }
-}
 
-%link-iconb {
-  @extend %link;
-  &:before {
-    font-family: var(--ff-symbol), sans-serif;
-    content: '';
-    padding-inline-end: 0.1em;
+  %link-iconbefore {
+    @extend %link;
+
+    &:before {
+      font-family:        var(--ff-symbol), sans-serif;
+      content:            '';
+      padding-inline-end: 0.1em;
+    }
   }
-}
 
-%link-icona {
-  @extend %link;
-  &:after {
-    font-family: var(--ff-symbol), sans-serif;
-    content: '';
-    padding-inline-start: 0.1em;
+  %link-iconafter {
+    @extend %link;
+
+    &:after {
+      font-family:          var(--ff-symbol), sans-serif;
+      content:              '';
+      padding-inline-start: 0.1em;
+    }
   }
-}
 
-a {
-  @extend %link;
-}
-
-a:focus-visible {
-  @include outline;
-}
-
-a:not([class]) {
-  @extend %link;
-  text-decoration-skip-ink: auto;
-}
-
-.page-link--icon {
-  @extend %link-iconb;
-  &:before {
-    content: 'arrowright';
+  a {
+    @extend %link;
   }
-  &:focus-visible {@include outline;}
-}
 
-.file-link--icon {
-  @extend %link-iconb;
-  &:before {
-    content: 'download';
+  a:focus-visible {
+    @include outline;
   }
-  &:focus-visible {@include outline;}
-}
 
-.folder-link--icon {
-  @extend %link-iconb;
-  &:before {
-    content: 'folder';
+  a:not([class]) {
+    @extend %link;
+    text-decoration-skip-ink: auto;
   }
-  &:focus-visible {@include outline;}
-}
 
-.url-link--icon {
-  @extend %link-iconb;
-  &:before {
-    content: 'external';
-  }
-  &:focus-visible {@include outline;}
-}
+  .page-link--icon {
+    @extend %link-iconbefore;
 
-.phone-link--icon {
-  @extend %link-iconb;
-  &:before {
-    content: 'phone';
-  }
-  &:focus-visible {@include outline;}
-}
+    &:before {
+      content: 'arrowright';
+    }
 
-.mail-link--icon {
-  @extend %link-iconb;
-  &:before {
-    content: 'mail';
+    &:focus-visible {
+      @include outline;
+    }
   }
-  &:focus-visible {@include outline;}
-}
 
-.fb-link--icon {
-  @extend %link-iconb;
-  &:before {
-    content: 'facebook';
-  }
-  &:focus-visible {@include outline;}
-}
+  .file-link--icon {
+    @extend %link-iconbefore;
 
-.insta-link--icon {
-  @extend %link-iconb;
-  &:before {
-    content: 'instagram';
-  }
-  &:focus-visible {@include outline;}
-}
+    &:before {
+      content: 'download';
+    }
 
-.linkedin-link--icon {
-  @extend %link-iconb;
-  &:before {
-    content: 'linkedin';
+    &:focus-visible {
+      @include outline;
+    }
   }
-  &:focus-visible {@include outline;}
-}
 
-.pinterest-link--icon {
-  @extend %link-iconb;
-  &:before {
-    content: 'pinterest';
-  }
-  &:focus-visible {@include outline;}
-}
+  .folder-link--icon {
+    @extend %link-iconbefore;
 
-.github-link--icon {
-  @extend %link-iconb;
-  &:before {
-    content: 'github';
-  }
-  &:focus-visible {@include outline;}
-}
+    &:before {
+      content: 'folder';
+    }
 
-.youtube-link--icon {
-  @extend %link-iconb;
-  &:before {
-    content: 'youtube';
+    &:focus-visible {
+      @include outline;
+    }
   }
-  &:focus-visible {@include outline;}
-}
 
-.vimeo-link--icon {
-  @extend %link-iconb;
-  &:before {
-    content: 'vimeo';
+  .url-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'external';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
   }
-  &:focus-visible {@include outline;}
+
+  .phone-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'phone';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .mail-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'mail';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .fb-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'facebook';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .insta-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'instagram';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .linkedin-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'linkedin';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .pinterest-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'pinterest';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .github-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'github';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .youtube-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'youtube';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
+
+  .vimeo-link--icon {
+    @extend %link-iconbefore;
+
+    &:before {
+      content: 'vimeo';
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+  }
 }

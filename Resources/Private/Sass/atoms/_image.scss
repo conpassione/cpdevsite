@@ -2,36 +2,40 @@
 
 @use '../settings' as *;
 
-/* @docs
-label: Responsive Images
+@layer basestyles {
 
-    note: |
-        These new elements display inline by default,
-        but that's not the expected behavior for either one.
-        This can interfere with proper layout and aspect-ratio handling.
+  /* @docs
+  label: Responsive Images
 
-        1. Remove the unnecessary wrapping `picture`, while maintaining contents
-        2. Source elements have nothing to display, so we hide them entirely
+      note: |
+          These new elements display inline by default,
+          but that's not the expected behavior for either one.
+          This can interfere with proper layout and aspect-ratio handling.
 
-category: embedded elements
-*/
-picture {
-  display: contents;
-}
+          1. Remove the unnecessary wrapping `picture`, while maintaining contents
+          2. Source elements have nothing to display, so we hide them entirely
 
-/* @docs
-label: Aspect Ratios
+  category: embedded elements
+  */
+  picture {
+    display: contents;
+  }
 
-    note: |
-        Maintain intrinsic aspect ratios when `max-width` is applied.
-        `iframe`, `embed`, and `object` are also embedded,
-        but have no intrinsic ratio,
-        so their `height` needs to be set explicitly.
+  /* @docs
+  label: Aspect Ratios
 
-category: embedded elements
-*/
-img, svg, video, canvas, figure {
-  height: auto;
-  max-width: 100%;
-  display: block;
+      note: |
+          Maintain intrinsic aspect ratios when `max-width` is applied.
+          `iframe`, `embed`, and `object` are also embedded,
+          but have no intrinsic ratio,
+          so their `height` needs to be set explicitly.
+
+  category: embedded elements
+  */
+  img, svg, video, canvas, figure {
+    height:    auto;
+    max-width: 100%;
+    display:   block;
+  }
+
 }

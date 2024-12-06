@@ -1,10 +1,10 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:comment>MainMenu für alle Seiten (ohne Bilder)</f:comment>
+<f:comment><!--MainMenu für alle Seiten (ohne Bilder)--></f:comment>
 
 
 <f:if condition="{mainmenu}">
-    <div id="hamburger" class="hamburger">
+    <div id="hamburger" class="hamburger" tabindex="0">
         <span class="hamburger--strip strip-1"></span>
         <span class="hamburger--strip strip-2"></span>
         <span class="hamburger--strip strip-3"></span>
@@ -21,15 +21,15 @@
 
                 <f:switch expression="{menuItem.data.doktype}">
                     <f:case value="36650001">
-                        <f:comment>Homepage</f:comment>
+                        <f:comment><!--Homepage--></f:comment>
                         <f:render section="dropdown-items" arguments="{menuItem: menuItem}" />
                     </f:case>
                     <f:case value="36650011">
-                        <f:comment>Gallerymenu</f:comment>
+                        <f:comment><!--Gallerymenu--></f:comment>
                         <f:render section="dropdown-items" arguments="{menuItem: menuItem}" />
                     </f:case>
                     <f:defaultCase>
-                        <f:comment>Standardseite doktype 1 and undefined</f:comment>
+                        <f:comment><!--Standardseite doktype 1 and undefined--></f:comment>
                         <f:render section="dropdown-items" arguments="{menuItem: menuItem}" />
                     </f:defaultCase>
                 </f:switch>

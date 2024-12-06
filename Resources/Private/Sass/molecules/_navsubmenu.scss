@@ -1,37 +1,49 @@
 /* page */
 @use '../settings' as *;
 
-.navsubmenu {
-  --gutter--list:          calc(var(--gutter) / 2);
-  --navsubmenu-card--size: calc(var(--mediasize--small) * 5 / 8);
+@layer basestyles {
 
-  display:                 grid;
-  gap:                     var(--gutter);
-  grid-template-columns: repeat(auto-fit, minmax(var(--navsubmenu-card--size), 1fr));
-  justify-content:         center;
-  padding-inline-start:    0;
-}
+  .navsubmenu {
 
-.navsubmenu--card {
-  list-style-type:    none;
-  outline:            1px solid var(--clr-brand--primary);
-  overflow:           hidden;
+    /* local settings */
+    --_gutter--list:          calc(var(--gutter) / 2);
+    --_navsubmenu-card--size: calc(var(--mediasize--small) * 5 / 8);
 
-  display:            grid;
-  grid-template-rows: auto auto 1fr auto;
-  gap:                0.25rem;
-}
+    display:                 grid;
+    gap:                     var(--gutter);
+    grid-template-columns:  repeat(auto-fit, minmax(var(--_navsubmenu-card--size), 1fr));
+    justify-content:         center;
+    padding-inline-start:    0;
+  }
 
-.navsubmenu--heading {
-  padding-block-start: var(--gutter--list);
-  padding-inline: var(--gutter--list);
-}
+  .navsubmenu--card {
+    /* use default colors */
+    --clr-btn:  var(--clr-primarybtn--active);
+    --clr-btnbg:  var(--clr-primarybtnbg--active);
+    --clr-btn--hover: var(--clr-primarybtn--hover);
+    --clr-btnbg--hover: var(--clr-primarybtnbg--hover);
 
-.navsubmenu--description {
-   padding-inline: var(--gutter--list);
-}
+    list-style-type:    none;
+    outline:            1px solid var(--clr-primarybtnbg--active);
+    overflow:           hidden;
 
-.navsubmenu--link {
-  margin: var(--gutter--list);
-  align-self: end;
+    display:            grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap:                calc(var(--_gutter--list) / 2);
+  }
+
+  .navsubmenu--heading {
+    padding-block-start: var(--_gutter--list);
+    padding-inline:      var(--_gutter--list);
+  }
+
+  .navsubmenu--description {
+    padding-inline: var(--_gutter--list);
+  }
+
+  .navsubmenu--link {
+    margin:             var(--gutter--list);
+    align-self:         end;
+  }
+
 }

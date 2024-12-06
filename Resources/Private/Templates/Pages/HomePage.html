@@ -4,7 +4,8 @@
 
 
 <f:section name="Main">
-    <f:render section="Jumbo" />
+
+    <f:render section="Hero" />
     <f:render section="Submenu" arguments="{submenu: submenu}" />
     <f:for each="{pagecontent.content.records}" as="record">
         <f:cObject
@@ -15,8 +16,8 @@
     </f:for>
 </f:section>
 
-<f:section name="Jumbo">
-    <div class="jumbotron full-width">Hier kommt das Jumbotron</div>
+<f:section name="Hero">
+    <div class="hero full-width">Hier kommt das Hero-Bild</div>
 </f:section>
 
 <f:section name="Submenu">

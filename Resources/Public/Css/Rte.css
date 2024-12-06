@@ -1,577 +1,562 @@
 /* import utilities */
+/* reset by conPassione gmbh */
 /* cp_base:constants */
-/* Baseline Colors */
-/* as css constants (light theme) */
-:root {
-  --clr-bw-000: oklch(0 0 0);
-  --clr-bw-030: oklch(0.3 0 0);
-  --clr-bw-040: oklch(0.4 0 0);
-  --clr-bw-050: oklch(0.5 0 0);
-  --clr-bw-060: oklch(0.6 0 0);
-  --clr-bw-075: oklch(0.75 0 0);
-  --clr-bw-090: oklch(0.9 0 0);
-  --clr-bw-100: oklch(1 0 0);
-  --clr-success: oklch(0.5 0.12 150);
-  --clr-info: oklch(0.5 0.12 220);
-  --clr-error: oklch(0.5 0.16 20);
-  --clr-brand--primary: oklch(0.50 0.19 220.75);
-  --clr-brand--secondary: oklch(0.50 0.03 149.54);
-  --clr-brand--tertiary: oklch(0.50 0.05 231.77);
-  --clr-brand--quaternary: oklch(0.50 0.13 318.63);
-  --clr-highlight: var(--clr-brand--primary);
-  /* code */
-  --clr-code--bg: var(--clr-bw-060);
-  --clr-code--bc: var(--clr-bw-030);
-  /* buttons */
-  --clr-primarybtn--active: var(--clr-bw-100);
-  --clr-primarybtnbg--active: var(--clr-brand--primary);
-  --clr-primarybtnbg--hover: var(--clr-bw-060);
-  --clr-primarybtnbg--disabled: oklch(from var(--clr-primarybtn--active) calc(l * .2) c h);
-  --clr-secondarybtn--active: var(--clr-bw-090);
-  --clr-secondarybtnbg--active: var(--clr-brand--secondary);
-  --clr-secondarybtnbg--hover: oklch(from var(--clr-secondarybtnbg--active) l + 5% c h);
-  --clr-secondarxbtnbg--disabled: oklch(from var(--clr-secondarybtnbg--active) calc(l + 50%) c h);
-  /* typographic colors */
-  --clr-background: var(--clr-bw-100);
-  --clr-text: var(--clr-bw-030);
-  --clr-h: var(--clr-brand--primary);
-  /* page colors */
-  --clr-headerbg: var(--clr-bw-060);
-  /* menu colors */
-  --clr-mnu: var(--clr-bw-100);
-  --clr-mnu--active: var(--clr-bw-100);
-  --clr-mnu--hover: var(--clr-bw-100);
-  --clr-mnubg: transparent;
-  --clr-mnubg--active: var(--clr-bw-040);
-  --clr-mnubg--hover: var(--clr-brand--primary);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer basestyles {
+  /* Baseline Colors */
+  /* as css constants (light theme) */
   :root {
-    /* buttons */
-    --clr-primarybtn--active: var(--clr-bw-075);
-    --clr-primarybtnbg--active: var(--clr-brand--primary);
-    --clr-primarybtn--disabled: oklch(from var(--clr-primarybtn--active) calc(l + .5) c h);
-    /* typographic colors */
-    --clr-background: var(--clr-bw-030);
-    --clr-text: var(--clr-bw-075);
+    --clr-bw-000: oklch(0 0 0);
+    --clr-bw-020: oklch(0.2 0 0);
+    --clr-bw-030: oklch(0.3 0 0);
+    --clr-bw-040: oklch(0.4 0 0);
+    --clr-bw-050: oklch(0.5 0 0);
+    --clr-bw-060: oklch(0.6 0 0);
+    --clr-bw-070: oklch(0.7 0 0);
+    --clr-bw-080: oklch(0.8 0 0);
+    --clr-bw-090: oklch(0.9 0 0);
+    --clr-bw-100: oklch(1 0 0);
+    --clr-success: oklch(0.5 0.12 150);
+    --clr-info: oklch(0.5 0.12 220);
+    --clr-error: oklch(0.5 0.12 0);
+    --clr-brand--primary: oklch(0.5 0.19 220);
+    --clr-brand--secondary: oklch(0.5 0.13 318);
+    --clr-brand--tertiary: oklch(0.5 0.07 231);
+    --clr-brand--quaternary: oklch(0.5 0.03 149);
+    --clr-branddimmed--primary: oklch(from var(--clr-brand--primary) calc(l * .8) calc(c * .8) 220);
+    --clr-branddimmed--secondary: oklch(from var(--clr-brand--secondary) calc(l * .8) calc(c * .8) 220);
+    --clr-branddimmed--tertiary: oklch(from var(--clr-brand--tertiary) calc(l * .8) calc(c * .8) 220);
+    --clr-branddimmed--quaternary: oklch(from var(--clr-brand--quaternary) calc(l * .8) calc(c * .8) 220);
+    /* ============================ */
+    /* Color Theme light            */
+    /* ============================ */
+    /* application colors */
+    --clr-text: var(--clr-bw-020);
+    --clr-bg: var(--clr-bw-100);
     --clr-h: var(--clr-brand--primary);
+    --clr-accent: var(--clr-brand--secondary);
+    /* element colors */
+    --clr-list--marker: var(--clr-brand--primary);
+    --clr-code--bg: var(--clr-bw-060);
+    --clr-code--bc: var(--clr-bw-030);
+    /* buttons */
+    --clr-primarybtn--active: var(--clr-bw-090);
+    --clr-primarybtn--hover: var(--clr-bw-090);
+    --clr-primarybtnbg--active: var(--clr-brand--primary);
+    --clr-primarybtnbg--hover: var(--clr-bw-050);
+    --clr-primarybtnbg--disabled: oklch(from var(--clr-primarybtn--active) calc(l * .75) c h);
+    --clr-secondarybtn--active: var(--clr-bw-090);
+    --clr-secondarybtnbg--active: var(--clr-brand--secondary);
+    --clr-secondarybtnbg--hover: var(--clr-bw-050);
+    --clr-secondarxbtnbg--disabled: oklch(from var(--clr-secondarybtnbg--active) calc(l * .75) c h);
+    /* menu colors */
+    --clr-mnu: var(--clr-bw-100);
+    --clr-mnu--active: var(--clr-brand--primary);
+    --clr-mnu--hover: var(--clr-bw-030);
+    --clr-mnubg: transparent;
+    --clr-mnubg--active: var(--clr-bw-040);
+    --clr-mnubg--hover: var(--clr-bw-075);
+    /* section colors */
+    --clr-headerbg: var(--clr-bw-060);
+    --clr-footerbg: var(--clr-brand--primary);
+    --clr-sectionbg--important: var(--clr-brand--primary);
+    --clr-sectionbg--gray: var(--clr-bw-075);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* buttons */
+      --clr-primarybtn--active: var(--clr-bw-075);
+      --clr-primarybtnbg--active: var(--clr-brand--primary);
+      --clr-primarybtn--disabled: oklch(from var(--clr-primarybtn--active) calc(l + .5) c h);
+      /* typographic colors */
+      --clr-background: var(--clr-bw-020);
+      --clr-text: var(--clr-bw-090);
+    }
+  }
+}
+/* metrics */
+@layer basestyles {
+  :root {
+    --gutter: 1rem;
+    --flow-spacer: 1em;
+    --border-radius: 1em;
+    --mediasize--small: 480px;
+    --mediasize--medium: 960px;
+    --mediasize--large: 1600px;
+    --blocksize--small: 200px;
+    --blocksize--medium: 360px;
+    --blocksize--big: 480px;
   }
 }
 /* fonts */
-:root {
-  /* fontfaces */
-  --ff: "Ubuntu";
-  --ff-condensed: "UbuntuCondensed";
-  --ff-serif: "Ubuntu";
-  --ff-h: "UbuntuCondensed";
-  --ff-nav: "UbuntuCondensed";
-  --ff-mono: "UbuntuMono";
-  --ff-symbol: "Symbols";
-  /* font weight */
-  --fw-regular: 300;
-  --fw-mono: 400;
-  --fw-bold: 700;
-  /* font size */
-  --fs-small: 16px;
-  --fs-regular: 18px;
-  --fs-regular--big: 24px;
-  font-size: clamp(var(--fs-regular), 2vw, var(--fs-regular--big));
-  /* line height */
-  --lh-regular: 1.5;
-  --lh-small: 1.2;
-  line-height: var(--lh-regular);
-  --lh-paragraph: var(--lh-regular);
-  --lh-h: var(--lh-small);
-  --lh-list: var(--lh-small) ;
-}
-
-.fs-small {
-  font-size: var(--fs-small);
-}
-
-@font-face {
-  font-family: "Ubuntu";
-  font-weight: 300;
-  src: url("../Fonts/Ubuntu/ubuntu-l-webfont.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Ubuntu";
-  font-weight: 300;
-  font-style: italic;
-  src: url("../Fonts/Ubuntu/ubuntu-li-webfont.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Ubuntu";
-  font-weight: 400;
-  src: url("../Fonts/Ubuntu/ubuntu-r-webfont.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Ubuntu";
-  font-weight: 400;
-  font-style: italic;
-  src: url("../Fonts/Ubuntu/ubuntu-ri-webfont.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Ubuntu";
-  font-weight: 500;
-  src: url("../Fonts/Ubuntu/ubuntu-m-webfont.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Ubuntu";
-  font-weight: 500;
-  font-style: italic;
-  src: url("../Fonts/Ubuntu/ubuntu-mi-webfont.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Ubuntu";
-  font-weight: var(--fw-bold);
-  src: url("../Fonts/Ubuntu/ubuntu-b-webfont.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Ubuntu";
-  font-weight: var(--fw-bold);
-  font-style: italic;
-  src: url("../Fonts/Ubuntu/ubuntu-bi-webfont.woff2") format("woff2");
-}
-@font-face {
-  font-family: "UbuntuCondensed";
-  font-weight: var(--fw-regular);
-  src: url("../Fonts/Ubuntu/ubuntu-c-webfont.woff2") format("woff2");
-}
-@font-face {
-  font-family: "UbuntuMono";
-  font-weight: var(--fw-mono);
-  src: url("../Fonts/Ubuntu/ubuntumono-r-webfont.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Symbols";
-  src: url("../Fonts/LigatureSymbols/LigatureSymbols-2.11.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-/* metrics */
-:root {
-  --gutter: 1em;
-  --flow-spacer: 1em;
-  --border-radius: 1em;
-  --mediasize--small: 480px;
-  --mediasize--medium: 960px;
-  --mediasize--large: 1600px;
-  --blocksize--small: 200px;
-  --blocksize--medium: 360px;
-  --blocksize--big: 480px;
-}
-
-/* reset by conPassione gmbh */
-/* reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  font: inherit;
-  line-height: inherit;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* Prevent font size inflation*/
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-  color-scheme: dark light;
-  /*   and set standard styling */
-  color: var(--clr-text);
-  background-color: var(--clr-background);
-  font-family: var(--ff), sans-serif;
-  font-weight: var(--fw-regular);
-  display: block;
-  min-height: 100%;
-  container-type: inline-size;
-}
-
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-body {
-  overflow-y: scroll;
-  text-rendering: optimizeSpeed;
-  height: fit-content;
-  container-type: inline-size;
-}
-
-main {
-  container: main/inline-size;
-}
-
-hr {
-  border-style: solid;
-  border-width: 1px 0 0;
-  color: inherit;
-  height: 0;
-  overflow: visible;
-}
-
-b,
-strong {
-  font-weight: 700;
-}
-
-/* @docs
-label: Responsive Embeds
-
-    note: |
-        1. Block display is usually what we want
-        2. The `vertical-align` removes strange space-below in case authors overwrite the display value
-        3. Responsive by default
-        4. Audio without `[controls]` remains hidden by default
-
-category: embedded elements
-*/
-img, svg, video, canvas, audio, iframe, embed, object {
-  display: block;
-  vertical-align: middle;
-  max-width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  shape-margin: 1rem;
-}
-
-/* @docs
-label: Audio Width
-
-    note: |
-        There is no good reason elements default to 300px,
-        and audio files are unlikely to come with a width attribute.
-
-category: embedded elements
-*/
-audio {
-  width: 100%;
-}
-
-audio:not([controls]) {
-  display: none;
-}
-
-source {
-  display: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
+@layer basestyles {
+  @font-face {
+    font-family: "Ubuntu";
+    font-weight: 300;
+    src: url("../Fonts/Ubuntu/ubuntu-l-webfont.woff2") format("woff2");
   }
+  @font-face {
+    font-family: "Ubuntu";
+    font-weight: 300;
+    font-style: italic;
+    src: url("../Fonts/Ubuntu/ubuntu-li-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Ubuntu";
+    font-weight: 400;
+    src: url("../Fonts/Ubuntu/ubuntu-r-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Ubuntu";
+    font-weight: 400;
+    font-style: italic;
+    src: url("../Fonts/Ubuntu/ubuntu-ri-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Ubuntu";
+    font-weight: 500;
+    src: url("../Fonts/Ubuntu/ubuntu-m-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Ubuntu";
+    font-weight: 500;
+    font-style: italic;
+    src: url("../Fonts/Ubuntu/ubuntu-mi-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Ubuntu";
+    font-weight: 700;
+    src: url("../Fonts/Ubuntu/ubuntu-b-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Ubuntu";
+    font-weight: 700;
+    font-style: italic;
+    src: url("../Fonts/Ubuntu/ubuntu-bi-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "UbuntuCondensed";
+    font-weight: 400;
+    src: url("../Fonts/Ubuntu/ubuntu-c-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "UbuntuMono";
+    font-weight: 400;
+    src: url("../Fonts/Ubuntu/ubuntumono-r-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Symbols";
+    src: url("../Fonts/LigatureSymbols/LigatureSymbols-2.11.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  /* =============================== */
+  :root {
+    /* fontfaces */
+    --ff: "Ubuntu";
+    --ff-condensed: "UbuntuCondensed";
+    --ff-serif: "Ubuntu";
+    --ff-h: "UbuntuCondensed";
+    --ff-nav: "UbuntuCondensed";
+    --ff-mono: "UbuntuMono";
+    --ff-symbol: "Symbols";
+    /* font weight */
+    --fw-regular: 300;
+    --fw-mono: 400;
+    --fw-bold: 700;
+    /* font size */
+    --fs-small: 16px;
+    --fs-regular: 18px;
+    --fs-regular--big: 24px;
+    /* line height */
+    --lh-regular: 1.5;
+    --lh-small: 1.2;
+    --lh-h: var(--lh-small);
+    /* regular font */
+    font-size: clamp(var(--fs-regular), (100vw - 960px) / 100 + var(--fs-regular), var(--fs-regular--big));
+    line-height: var(--lh-regular);
+  }
+  .fs-small {
+    font-size: clamp(var(--fs-snall), 1.5vw, var(--fs-small) + 6px);
+  }
+}
+/* reset by conPassione gmbh */
+@layer basestyles {
+  /* reset */
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    box-sizing: border-box;
+    font: inherit;
+    line-height: inherit;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  /* Prevent font size inflation*/
+  html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    color-scheme: dark light;
+    /*   and set standard styling */
+    color: var(--clr-text);
+    background-color: var(--clr-background);
+    font-family: var(--ff), sans-serif;
+    font-weight: var(--fw-regular);
+    display: block;
+    min-height: 100%;
+    container-type: inline-size;
+  }
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  body {
+    overflow-y: scroll;
+    text-rendering: optimizeSpeed;
+    min-height: 100svh;
+    container-type: inline-size;
+    position: relative;
+  }
+  main {
+    container: main/inline-size;
+  }
+  hr {
+    border-style: solid;
+    border-width: 1px 0 0;
+    color: inherit;
+    height: 0;
+    overflow: visible;
+  }
+  b,
+  strong {
+    font-weight: 700;
+  }
+  /* @docs
+  label: Responsive Embeds
+
+      note: |
+          1. Block display is usually what we want
+          2. The `vertical-align` removes strange space-below in case authors overwrite the display value
+          3. Responsive by default
+          4. Audio without `[controls]` remains hidden by default
+
+  category: embedded elements
+  */
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 1rem;
+  }
+  /* @docs
+  label: Audio Width
+
+      note: |
+          There is no good reason elements default to 300px,
+          and audio files are unlikely to come with a width attribute.
+
+  category: embedded elements
+  */
+  audio {
+    width: 100%;
+  }
+  audio:not([controls]) {
+    display: none;
+  }
+  source {
+    display: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      -webkit-animation-iteration-count: 1 !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 /* import utilities */
 /* link */
-a:not([class]), a, .vimeo-link--icon, .youtube-link--icon, .github-link--icon, .pinterest-link--icon, .linkedin-link--icon, .insta-link--icon, .fb-link--icon, .mail-link--icon, .phone-link--icon, .url-link--icon, .folder-link--icon, .file-link--icon, .page-link--icon {
-  color: currentColor;
-  background-color: inherit;
-  text-decoration: none;
+@layer basestyles {
+  a:not([class]), a, .vimeo-link--icon, .youtube-link--icon, .github-link--icon, .pinterest-link--icon, .linkedin-link--icon, .insta-link--icon, .fb-link--icon, .mail-link--icon, .phone-link--icon, .url-link--icon, .folder-link--icon, .file-link--icon, .page-link--icon {
+    color: currentColor;
+    background-color: inherit;
+    text-decoration: none;
+  }
+  a:active, .vimeo-link--icon:active, .youtube-link--icon:active, .github-link--icon:active, .pinterest-link--icon:active, .linkedin-link--icon:active, .insta-link--icon:active, .fb-link--icon:active, .mail-link--icon:active, .phone-link--icon:active, .url-link--icon:active, .folder-link--icon:active, .file-link--icon:active, .page-link--icon:active, a:hover, .vimeo-link--icon:hover, .youtube-link--icon:hover, .github-link--icon:hover, .pinterest-link--icon:hover, .linkedin-link--icon:hover, .insta-link--icon:hover, .fb-link--icon:hover, .mail-link--icon:hover, .phone-link--icon:hover, .url-link--icon:hover, .folder-link--icon:hover, .file-link--icon:hover, .page-link--icon:hover, a:focus-visible, .vimeo-link--icon:focus-visible, .youtube-link--icon:focus-visible, .github-link--icon:focus-visible, .pinterest-link--icon:focus-visible, .linkedin-link--icon:focus-visible, .insta-link--icon:focus-visible, .fb-link--icon:focus-visible, .mail-link--icon:focus-visible, .phone-link--icon:focus-visible, .url-link--icon:focus-visible, .folder-link--icon:focus-visible, .file-link--icon:focus-visible, .page-link--icon:focus-visible {
+    text-decoration: none;
+    outline: 0;
+  }
+  .vimeo-link--icon:before, .youtube-link--icon:before, .github-link--icon:before, .pinterest-link--icon:before, .linkedin-link--icon:before, .insta-link--icon:before, .fb-link--icon:before, .mail-link--icon:before, .phone-link--icon:before, .url-link--icon:before, .folder-link--icon:before, .file-link--icon:before, .page-link--icon:before {
+    font-family: var(--ff-symbol), sans-serif;
+    content: "";
+    padding-inline-end: 0.1em;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+  }
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  .page-link--icon:before {
+    content: "arrowright";
+  }
+  .page-link--icon:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+  }
+  .file-link--icon:before {
+    content: "download";
+  }
+  .file-link--icon:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+  }
+  .folder-link--icon:before {
+    content: "folder";
+  }
+  .folder-link--icon:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+  }
+  .url-link--icon:before {
+    content: "external";
+  }
+  .url-link--icon:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+  }
+  .phone-link--icon:before {
+    content: "phone";
+  }
+  .phone-link--icon:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+  }
+  .mail-link--icon:before {
+    content: "mail";
+  }
+  .mail-link--icon:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+  }
+  .fb-link--icon:before {
+    content: "facebook";
+  }
+  .fb-link--icon:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+  }
+  .insta-link--icon:before {
+    content: "instagram";
+  }
+  .insta-link--icon:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+  }
+  .linkedin-link--icon:before {
+    content: "linkedin";
+  }
+  .linkedin-link--icon:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+  }
+  .pinterest-link--icon:before {
+    content: "pinterest";
+  }
+  .pinterest-link--icon:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+  }
+  .github-link--icon:before {
+    content: "github";
+  }
+  .github-link--icon:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+  }
+  .youtube-link--icon:before {
+    content: "youtube";
+  }
+  .youtube-link--icon:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+  }
+  .vimeo-link--icon:before {
+    content: "vimeo";
+  }
+  .vimeo-link--icon:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+  }
 }
-a:active, .vimeo-link--icon:active, .youtube-link--icon:active, .github-link--icon:active, .pinterest-link--icon:active, .linkedin-link--icon:active, .insta-link--icon:active, .fb-link--icon:active, .mail-link--icon:active, .phone-link--icon:active, .url-link--icon:active, .folder-link--icon:active, .file-link--icon:active, .page-link--icon:active, a:hover, .vimeo-link--icon:hover, .youtube-link--icon:hover, .github-link--icon:hover, .pinterest-link--icon:hover, .linkedin-link--icon:hover, .insta-link--icon:hover, .fb-link--icon:hover, .mail-link--icon:hover, .phone-link--icon:hover, .url-link--icon:hover, .folder-link--icon:hover, .file-link--icon:hover, .page-link--icon:hover, a:focus-visible, .vimeo-link--icon:focus-visible, .youtube-link--icon:focus-visible, .github-link--icon:focus-visible, .pinterest-link--icon:focus-visible, .linkedin-link--icon:focus-visible, .insta-link--icon:focus-visible, .fb-link--icon:focus-visible, .mail-link--icon:focus-visible, .phone-link--icon:focus-visible, .url-link--icon:focus-visible, .folder-link--icon:focus-visible, .file-link--icon:focus-visible, .page-link--icon:focus-visible {
-  text-decoration: none;
-  outline: 0;
-}
-
-.vimeo-link--icon:before, .youtube-link--icon:before, .github-link--icon:before, .pinterest-link--icon:before, .linkedin-link--icon:before, .insta-link--icon:before, .fb-link--icon:before, .mail-link--icon:before, .phone-link--icon:before, .url-link--icon:before, .folder-link--icon:before, .file-link--icon:before, .page-link--icon:before {
-  font-family: var(--ff-symbol), sans-serif;
-  content: "";
-  padding-inline-end: 0.1em;
-}
-
-a:focus-visible {
-  outline: 2px solid var(--clr-bw-075);
-}
-
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-.page-link--icon:before {
-  content: "arrowright";
-}
-.page-link--icon:focus-visible {
-  outline: 2px solid var(--clr-bw-075);
-}
-
-.file-link--icon:before {
-  content: "download";
-}
-.file-link--icon:focus-visible {
-  outline: 2px solid var(--clr-bw-075);
-}
-
-.folder-link--icon:before {
-  content: "folder";
-}
-.folder-link--icon:focus-visible {
-  outline: 2px solid var(--clr-bw-075);
-}
-
-.url-link--icon:before {
-  content: "external";
-}
-.url-link--icon:focus-visible {
-  outline: 2px solid var(--clr-bw-075);
-}
-
-.phone-link--icon:before {
-  content: "phone";
-}
-.phone-link--icon:focus-visible {
-  outline: 2px solid var(--clr-bw-075);
-}
-
-.mail-link--icon:before {
-  content: "mail";
-}
-.mail-link--icon:focus-visible {
-  outline: 2px solid var(--clr-bw-075);
-}
-
-.fb-link--icon:before {
-  content: "facebook";
-}
-.fb-link--icon:focus-visible {
-  outline: 2px solid var(--clr-bw-075);
-}
-
-.insta-link--icon:before {
-  content: "instagram";
-}
-.insta-link--icon:focus-visible {
-  outline: 2px solid var(--clr-bw-075);
-}
-
-.linkedin-link--icon:before {
-  content: "linkedin";
-}
-.linkedin-link--icon:focus-visible {
-  outline: 2px solid var(--clr-bw-075);
-}
-
-.pinterest-link--icon:before {
-  content: "pinterest";
-}
-.pinterest-link--icon:focus-visible {
-  outline: 2px solid var(--clr-bw-075);
-}
-
-.github-link--icon:before {
-  content: "github";
-}
-.github-link--icon:focus-visible {
-  outline: 2px solid var(--clr-bw-075);
-}
-
-.youtube-link--icon:before {
-  content: "youtube";
-}
-.youtube-link--icon:focus-visible {
-  outline: 2px solid var(--clr-bw-075);
-}
-
-.vimeo-link--icon:before {
-  content: "vimeo";
-}
-.vimeo-link--icon:focus-visible {
-  outline: 2px solid var(--clr-bw-075);
-}
-
 /* import utilities */
 /* list */
-/* reset */
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
-  list-style: none;
+@layer basestyles {
+  /* reset */
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role=list],
+  ol[role=list] {
+    list-style: none;
+  }
+  ol,
+  ul {
+    list-style-type: disc;
+    padding-inline-start: 1em;
+  }
+  ul > ::marker {
+    color: var(--clr-list--marker);
+  }
 }
-
-ol,
-ul {
-  list-style-type: disc;
-  padding-inline-start: 1em;
-}
-
-ul > ::marker {
-  color: var(--clr-brand--primary);
-}
-
 /* import utilities */
 /* images */
-/* @docs
-label: Responsive Images
+@layer basestyles {
+  /* @docs
+  label: Responsive Images
 
-    note: |
-        These new elements display inline by default,
-        but that's not the expected behavior for either one.
-        This can interfere with proper layout and aspect-ratio handling.
+      note: |
+          These new elements display inline by default,
+          but that's not the expected behavior for either one.
+          This can interfere with proper layout and aspect-ratio handling.
 
-        1. Remove the unnecessary wrapping `picture`, while maintaining contents
-        2. Source elements have nothing to display, so we hide them entirely
+          1. Remove the unnecessary wrapping `picture`, while maintaining contents
+          2. Source elements have nothing to display, so we hide them entirely
 
-category: embedded elements
-*/
-picture {
-  display: contents;
+  category: embedded elements
+  */
+  picture {
+    display: contents;
+  }
+  /* @docs
+  label: Aspect Ratios
+
+      note: |
+          Maintain intrinsic aspect ratios when `max-width` is applied.
+          `iframe`, `embed`, and `object` are also embedded,
+          but have no intrinsic ratio,
+          so their `height` needs to be set explicitly.
+
+  category: embedded elements
+  */
+  img, svg, video, canvas, figure {
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
 }
-
-/* @docs
-label: Aspect Ratios
-
-    note: |
-        Maintain intrinsic aspect ratios when `max-width` is applied.
-        `iframe`, `embed`, and `object` are also embedded,
-        but have no intrinsic ratio,
-        so their `height` needs to be set explicitly.
-
-category: embedded elements
-*/
-img, svg, video, canvas, figure {
-  height: auto;
-  max-width: 100%;
-  display: block;
-}
-
 /* import utilities */
 /* headings */
-/* reset */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--ff-h), sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.2;
+@layer basestyles {
+  /* reset */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    line-height: var(--lh-h);
+    font-family: var(--ff-h), sans-serif;
+  }
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    text-wrap: balance;
+  }
+  .h1-font,
+  .h1 {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+  }
+  .h1 {
+    margin-block-start: 1.5em;
+    margin-block-end: 1em;
+    color: var(--clr-h);
+  }
+  .h2-font,
+  .h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+  }
+  .h2 {
+    margin-block-start: 1.5em;
+    margin-block-end: 1em;
+    color: var(--clr-h);
+  }
+  .h3-font,
+  .h4-font,
+  .h3,
+  .h4 {
+    font-size: clamp(1.1rem, 1.75vw, 2rem);
+  }
+  .h3,
+  .h4 {
+    margin-block-start: 1em;
+    margin-block-end: 0.5em;
+  }
+  .h3 {
+    color: var(--clr-h);
+  }
 }
-
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  text-wrap: balance;
-  font-family: var(--ff-h), sans-serif;
-  margin-block-end: 1em;
-  line-height: var(--lh-h);
-}
-
-.h1-font,
-.h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-}
-
-.h1 {
-  margin-block-start: 1.5em;
-  color: var(--clr-h);
-}
-
-.h2-font,
-h2 {
-  font-size: clamp(2rem, 3vw, 3rem);
-}
-
-.h2 {
-  margin-block-start: 1.5em;
-  color: var(--clr-h);
-}
-
-.h3-font,
-.h4-font,
-.h3,
-.h4 {
-  font-size: clamp(1.25rem, 2vw, 2rem);
-}
-
-.h3,
-.h4 {
-  margin-block-start: 1em;
-}
-
-.h3 {
-  color: var(--clr-h);
-}
-
 /* import utilities */
 /* button */
-button,
-.button {
-  color: var(--clr-primarybtn--active);
-  background-color: var(--clr-primarybtnbg--active);
-  border: 0;
-  border-radius: 0;
-  display: inline-block;
-  margin: 0.25rem;
-  padding: 0.5em 1em;
+@layer basestyles {
+  button,
+  .button {
+    /* default colors for primary button */
+    --_clr-btn: var(--clr-btn, var(--clr-primarybtn--active));
+    --_clr-btnbg: var(--clr-btnbg, var(--clr-primarybtnbg--active));
+    --_clr-btn--hover: var(--clr-btn--hover, var(--clr-primarybtn--hover));
+    --_clr-btnbg--hover: var(--clr-btnbg--hover, var(--clr-primarybtnbg--hover));
+    color: var(--_clr-btn);
+    background-color: var(--_clr-btnbg);
+    border: 0;
+    border-radius: 0;
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.5em 1em;
+  }
+  button:hover, button:focus,
+  .button:hover,
+  .button:focus {
+    color: var(--_clr-btn--hover);
+    background-color: var(--_clr-btnbg--hover);
+  }
+  button:focus-visible,
+  .button:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+  }
+  .button--small {
+    font-size: var(--fs-small);
+  }
 }
-button:hover, button:focus,
-.button:hover,
-.button:focus {
-  background-color: var(--clr-primarybtnbg--hover);
-}
-button:focus-visible,
-.button:focus-visible {
-  outline: 2px solid var(--clr-bw-075);
-}
-
-.button--small {
-  font-size: var(--fs-small);
-}
-
 /* import utilities */
-p {
-  max-width: 900ch;
-  text-wrap: pretty;
-  orphans: inherit;
+@layer basestyles {
+  p {
+    max-width: 900ch;
+    text-wrap: pretty;
+    orphans: inherit;
+  }
+  pre {
+    font-family: var(--ff-mono), monospace;
+    font-size: 1rem;
+    line-height: var(--lh-small);
+  }
+  pre:has(code),
+  pre[data-language] {
+    padding: 1em;
+    background-color: var(--clr-code--bg);
+    border: 1px solid var(--clr-code--bc);
+    line-height: var(--lh-small);
+  }
+  /* pre:has(.cpcss),
+  pre[data-language="CSS"] {
+    --code-bg: var(--clr-text);
+    --code-bc: var(--clr-bw-090);
+  } */
+  kbd {
+    font-family: var(--ff-mono), monospace;
+    background: inherit;
+    color: inherit;
+  }
+  .cp-accent {
+    color: var(--clr-highlight);
+    font-weight: var(--fw-regular);
+  }
+  i.icon {
+    font-family: var(--ff-symbol), sans-serif;
+    font-size: inherit;
+    font-style: normal;
+    color: inherit;
+  }
 }
-
-pre {
-  font-family: var(--ff-mono), monospace;
-  font-size: 1rem;
-  line-height: var(--lh-small);
-}
-
-pre:has(code),
-pre[data-language] {
-  padding: 1em;
-  background-color: var(--clr-code--bg);
-  border: 1px solid var(--clr-code--bc);
-  line-height: var(--lh-small);
-}
-
-/* pre:has(.cpcss),
-pre[data-language="CSS"] {
-  --code-bg: var(--clr-text);
-  --code-bc: var(--clr-bw-090);
-} */
-kbd {
-  font-family: var(--ff-mono), monospace;
-  background: inherit;
-  color: inherit;
-}
-
-.cp-accent {
-  color: var(--clr-highlight);
-  font-weight: var(--fw-regular);
-}
-
-i.icon {
-  font-family: var(--ff-symbol), sans-serif;
-  font-size: inherit;
-  font-style: normal;
-  color: inherit;
-}
-
 /* import utilities */
 /* ck-editor */
 body {

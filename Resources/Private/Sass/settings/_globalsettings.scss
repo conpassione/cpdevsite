@@ -3,124 +3,124 @@
 @use 'fonts' as *;
 @use 'metrics' as *;
 
-/* reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  font: inherit;
-  line-height: inherit;
-}
+@layer basestyles {
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* Prevent font size inflation*/
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-  color-scheme: dark light;
-
-  /*   and set standard styling */
-  color: var(--clr-text);
-  background-color: var(--clr-background);
-  font-family: var(--ff), sans-serif;
-//  font-size: clamp(var(--fs-regular), 2vw, var(--fs-regular--big));
-  font-weight: var(--fw-regular);
-//  line-height: var(--lh-regular);
-  display:block;
-  min-height: 100%;
-  container-type: inline-size;
-}
-
-@mixin outline {
-  outline: 2px solid var(--clr-bw-075);
-}
-
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-body {
-  overflow-y: scroll;
-  text-rendering: optimizeSpeed;
-  height: fit-content;
-  container-type: inline-size;
-}
-
-main {
-  container: main / inline-size;
-}
-
-hr {
-  border-style: solid;
-  border-width: 1px 0 0;
-  color:        inherit;
-  height:       0;
-  overflow:     visible;
-}
-
-b,
-strong {
-  font-weight: 700;
-}
-
-/* @docs
-label: Responsive Embeds
-
-    note: |
-        1. Block display is usually what we want
-        2. The `vertical-align` removes strange space-below in case authors overwrite the display value
-        3. Responsive by default
-        4. Audio without `[controls]` remains hidden by default
-
-category: embedded elements
-*/
-img, svg, video, canvas, audio, iframe, embed, object {
-  display:        block;
-  vertical-align: middle;
-  max-width:      100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  shape-margin: 1rem;
-}
-
-/* @docs
-label: Audio Width
-
-    note: |
-        There is no good reason elements default to 300px,
-        and audio files are unlikely to come with a width attribute.
-
-category: embedded elements
-*/
-audio {
-  width: 100%;
-}
-
-audio:not([controls]) {
-  display: none;
-}
-
-source {
-  display: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
+  /* reset */
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    box-sizing:  border-box;
+    font:        inherit;
+    line-height: inherit;
   }
+
+  * {
+    margin:  0;
+    padding: 0;
+  }
+
+  /* Prevent font size inflation*/
+  html {
+    -moz-text-size-adjust:    none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust:         none;
+    color-scheme:             dark light;
+
+    /*   and set standard styling */
+    color:                    var(--clr-text);
+    background-color:         var(--clr-background);
+    font-family:              var(--ff), sans-serif;
+    font-weight:              var(--fw-regular);
+    display:                  block;
+    min-height:               100%;
+    container-type:           inline-size;
+  }
+
+
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-y:     scroll;
+    text-rendering: optimizeSpeed;
+    min-height:         100svh;
+    container-type: inline-size;
+    position: relative;
+  }
+
+  main {
+    container: main / inline-size;
+  }
+
+  hr {
+    border-style: solid;
+    border-width: 1px 0 0;
+    color:        inherit;
+    height:       0;
+    overflow:     visible;
+  }
+
+  b,
+  strong {
+    font-weight: 700;
+  }
+
+  /* @docs
+  label: Responsive Embeds
+
+      note: |
+          1. Block display is usually what we want
+          2. The `vertical-align` removes strange space-below in case authors overwrite the display value
+          3. Responsive by default
+          4. Audio without `[controls]` remains hidden by default
+
+  category: embedded elements
+  */
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display:           block;
+    vertical-align:    middle;
+    max-width:         100%;
+    background-repeat: no-repeat;
+    background-size:   cover;
+    shape-margin:      1rem;
+  }
+
+  /* @docs
+  label: Audio Width
+
+      note: |
+          There is no good reason elements default to 300px,
+          and audio files are unlikely to come with a width attribute.
+
+  category: embedded elements
+  */
+  audio {
+    width: 100%;
+  }
+
+  audio:not([controls]) {
+    display: none;
+  }
+
+  source {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration:                0.01ms !important;
+      -webkit-animation-iteration-count: 1 !important;
+      animation-iteration-count:         1 !important;
+      transition-duration:               0.01ms !important;
+      scroll-behavior:                   auto !important;
+    }
+  }
+
 }
