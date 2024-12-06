@@ -1,0 +1,206 @@
+/* navmainmenu */
+@use '../settings' as *;
+
+@layer basestyles {
+
+  .mainmenu {
+    position:            relative;
+    margin-inline-start: auto;
+  }
+
+  .mainmenu a {
+    text-decoration: none;
+    color:           var(--clr-mnu);
+    display:         block;
+    padding:         0.25rem 0.5rem;
+    width:           100%;
+  }
+
+  .mainmenu ul {
+    list-style-type:      none;
+    padding-inline-start: 0;
+  }
+
+  .hamburger {
+    --_size: 36px;
+    --_stripewidth: 4px;
+
+    display:  block;
+    width:    var(--_size);
+    height:   var(--_size);
+    position: relative;
+    z-index:  5;
+  }
+
+  .hamburger--strip {
+    height:           var(--_stripewidth);
+    position:         absolute;
+    background-color: var(--clr-mnu--active);
+    transition:       all 0.2s ease-in-out;
+  }
+
+  .strip-1 {
+    top:  var(--_stripewidth);
+    left: var(--_stripewidth);
+    right: var(--_stripewidth);
+  }
+
+  .strip-2 {
+    top:  calc((var(--_size) - var(--_stripewidth)) / 2 );
+    left: var(--_stripewidth);
+    right: var(--_stripewidth);
+  }
+
+  .strip-3 {
+    bottom: var(--_stripewidth);
+    left:   var(--_stripewidth);
+    right: var(--_stripewidth);
+  }
+
+  .navmainmenu {
+    display:          none;
+    position:         absolute;
+    right:            -1px;
+    top:              calc(1rem + 1em);
+    background-color: var(--clr-headerbg);
+    z-index:          10;
+  }
+
+  .menu-items {
+    display:        flex;
+    flex-direction: column;
+    align-items:    start;
+  }
+
+  .menu-items li {
+    padding:    0;
+    width:      100%;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+  }
+
+  .menu-items li a.active {
+    color:            var(--clr-mnu--active);
+    background-color: var(--clr-mnubg--active);
+  }
+
+  .menu-items li a:hover {
+    color:            var(--clr-mnu--hover);
+    background-color: var(--clr-mnubg--hover);
+  }
+
+
+  .menu-items li:focus,
+  .menu-items li:focus-visible,
+  .menu-item:focus-visible {
+    color:            var(--clr-mnu--hover);
+    background-color: var(--clr-mnubg--hover);
+    @include outline;
+  }
+
+
+  .dropdown-menu {
+    display: none;
+    z-index: 9;
+  }
+
+  i.icon {
+    display: none;
+  }
+
+  .mainmenu:focus,
+  .mainmenu:focus-within {
+    .strip-1 {
+      transform-origin: center;
+      transform:
+        translateY(calc(.5 * (var(--_size) - (3 * var(--_stripewidth)))))
+        rotate(45deg);
+    }
+
+    .strip-2 {
+      transform-origin: center;
+      transform: scale(0, 0);
+    }
+
+    .strip-3 {
+      transform-origin: center;
+      transform:
+        translateY(calc(-.5 * (var(--_size) - (3 * var(--_stripewidth)))))
+        rotate(-45deg);
+    }
+
+    .navmainmenu {
+      display: block;
+    }
+  }
+
+
+  //@media screen and (width > var(--mediasize--medium)) {
+  @media screen and (width > 960px) {
+    .hamburger {
+      display: none;
+    }
+  ;
+
+    i.icon {
+      display: inline;
+    }
+
+    .navmainmenu {
+      display:  block;
+      position: relative;
+      top:      auto;
+      right:    auto;
+    }
+    .menu-items {
+      display:         flex;
+      justify-content: space-between;
+      align-content:   center;
+      flex-direction:  row;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu,
+    .menu-right {
+      position:         absolute;
+      display:          flex;
+      width:            max-content;
+      top:              calc(1rem + 1em);
+      left:             0;
+      opacity:          0;
+      visibility:       hidden;
+      background-color: var(--clr-headerbg);
+      flex-direction:   column;
+      transition:       opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+
+    .menu-right {
+      top:  0;
+      left: 110%;
+    }
+
+    .menu-item {
+      flex-direction:  column;
+      justify-content: space-between;
+      align-items:     center;
+      width:           100%;
+    }
+
+    .dropdown:hover > .dropdown-menu,
+    .dropdown:focus-within > .dropdown-menu {
+//      top:        calc(1rem + 1em);
+      opacity:    1;
+      visibility: visible;
+    }
+
+    .dropdown-right:hover > .menu-right,
+    .dropdown-right:focus-within > .menu-right {
+      left:       100%;
+      opacity:    1;
+      visibility: visible;
+    }
+  }
+}
+

@@ -553,165 +553,103 @@
 /* navmainmenu */
 @layer basestyles {
   .mainmenu {
+    --_bor-width: var(--hamburger--bar-width, 60px);
+    --_bar-height: var(--hamburger--bar-height, 8px);
+    --_bar-gap: var(--hamburger--bar-gap, 6px);
     position: relative;
-    margin-inline-start: auto;
   }
-  .mainmenu a {
-    text-decoration: none;
-    color: var(--clr-mnu);
-    display: block;
-    padding: 0.25rem 0.5rem;
-    width: 100%;
+  .vh {
+    /*     position: absolute !important;
+        clip: rect(1px, 1px, 1px, 1px);
+        padding:0 !important;
+        border:0 !important;
+        height: 1px !important;
+        width: 1px !important;
+        overflow: hidden; */
   }
-  .mainmenu ul {
-    list-style-type: none;
-    padding-inline-start: 0;
+  label {
+    display: inline-block;
   }
-  .hamburger {
-    --_size: 36px;
-    --_stripewidth: 4px;
-    display: block;
-    width: var(--_size);
-    height: var(--_size);
-    position: relative;
-    z-index: 5;
-  }
-  .hamburger--strip {
-    height: var(--_stripewidth);
-    position: absolute;
-    background-color: var(--clr-mnu--active);
-    transition: all 0.2s ease-in-out;
-  }
-  .strip-1 {
-    top: var(--_stripewidth);
-    left: var(--_stripewidth);
-    right: var(--_stripewidth);
-  }
-  .strip-2 {
-    top: calc((var(--_size) - var(--_stripewidth)) / 2);
-    left: var(--_stripewidth);
-    right: var(--_stripewidth);
-  }
-  .strip-3 {
-    bottom: var(--_stripewidth);
-    left: var(--_stripewidth);
-    right: var(--_stripewidth);
-  }
-  .navmainmenu {
-    display: none;
-    position: absolute;
-    right: -1px;
-    top: calc(1rem + 1em);
-    background-color: var(--clr-headerbg);
-    z-index: 10;
-  }
-  .menu-items {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-  .menu-items li {
+  nav ul {
+    list-style: none;
+    margin: 0;
     padding: 0;
-    width: 100%;
-    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
   }
-  .menu-items li a.active {
-    color: var(--clr-mnu--active);
-    background-color: var(--clr-mnubg--active);
+  li.active {
+    background-color: #0a3622;
   }
-  .menu-items li a:hover {
-    color: var(--clr-mnu--hover);
-    background-color: var(--clr-mnubg--hover);
+  [data-opens-menu],
+  [role=menu] {
+    background-color: dodgerblue;
   }
-  .menu-items li:focus,
-  .menu-items li:focus-visible,
-  .menu-item:focus-visible {
-    color: var(--clr-mnu--hover);
-    background-color: var(--clr-mnubg--hover);
-    outline: 2px solid var(--clr-bw-070);
+  .hamburger-menu:focus-within,
+  .hamburger-menu:hover,
+  a:focus,
+  a:hover {
+    background-color: rebeccapurple;
   }
-  .dropdown-menu {
-    display: none;
-    z-index: 9;
+  #hamburger:checked ~ .hamburger-expanded {
+    display: inline;
   }
-  i.icon {
+  #hamburger:checked ~ .hamburger-collapsed {
     display: none;
   }
-  .mainmenu:focus .strip-1,
-  .mainmenu:focus-within .strip-1 {
-    transform-origin: center;
-    transform: translateY(calc(0.5 * (var(--_size) - 3 * var(--_stripewidth)))) rotate(45deg);
+  #hamburger:not(:checked) ~ .hamburger-expanded {
+    display: none;
   }
-  .mainmenu:focus .strip-2,
-  .mainmenu:focus-within .strip-2 {
-    transform-origin: center;
-    transform: scale(0, 0);
+  #hamburger:not(:checked) ~ .hamburger-collapsed {
+    display: inline;
   }
-  .mainmenu:focus .strip-3,
-  .mainmenu:focus-within .strip-3 {
-    transform-origin: center;
-    transform: translateY(calc(-0.5 * (var(--_size) - 3 * var(--_stripewidth)))) rotate(-45deg);
+  nav {
+    display: none;
   }
-  .mainmenu:focus .navmainmenu,
-  .mainmenu:focus-within .navmainmenu {
+  .hamburger-menu:has(input:checked) + nav {
     display: block;
+    background-color: #0b2241;
   }
-  @media screen and (width > 960px) {
-    .hamburger {
-      display: none;
-    }
-    i.icon {
-      display: inline;
-    }
-    .navmainmenu {
-      display: block;
-      position: relative;
-      top: auto;
-      right: auto;
-    }
-    .menu-items {
-      display: flex;
-      justify-content: space-between;
-      align-content: center;
-      flex-direction: row;
-    }
-    .dropdown {
-      position: relative;
-    }
-    .dropdown-menu,
-    .menu-right {
-      position: absolute;
-      display: flex;
-      width: max-content;
-      top: calc(1rem + 1em);
-      left: 0;
-      opacity: 0;
-      visibility: hidden;
-      background-color: var(--clr-headerbg);
-      flex-direction: column;
-      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    }
-    .menu-right {
-      top: 0;
-      left: 110%;
-    }
-    .menu-item {
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-    .dropdown:hover > .dropdown-menu,
-    .dropdown:focus-within > .dropdown-menu {
-      opacity: 1;
-      visibility: visible;
-    }
-    .dropdown-right:hover > .menu-right,
-    .dropdown-right:focus-within > .menu-right {
-      left: 100%;
-      opacity: 1;
-      visibility: visible;
-    }
+  .level-2 {
+    padding-left: 1rem;
+  }
+  .level-2 > .submenu-2 {
+    display: none;
+  }
+  .level-2 .dropdown-icon input:checked ~ .dropdown-expanded {
+    display: inline;
+  }
+  .level-2 .dropdown-icon input:checked ~ .dropdown-collapsed {
+    display: none;
+  }
+  .level-2 .dropdown-icon input:not(:checked) ~ .dropdown-expanded {
+    display: none;
+  }
+  .level-2 .dropdown-icon input:not(:checked) ~ .dropdown-collapsed {
+    display: inline;
+  }
+  .level-2 .dropdown-icon:has(input:checked) + .submenu-2 {
+    display: block;
+    background-color: green;
+  }
+  .level-3 {
+    padding-left: 1rem;
+  }
+  .level-3 > .submenu-3 {
+    display: none;
+  }
+  .level-3 .dropdown-icon input:checked ~ .dropdown-expanded {
+    display: inline;
+  }
+  .level-3 .dropdown-icon input:checked ~ .dropdown-collapsed {
+    display: none;
+  }
+  .level-3 .dropdown-icon input:not(:checked) ~ .dropdown-expanded {
+    display: none;
+  }
+  .level-3 .dropdown-icon input:not(:checked) ~ .dropdown-collapsed {
+    display: inline;
+  }
+  .level-3 .dropdown-icon:has(input:checked) + .submenu-3 {
+    display: block;
+    background-color: limegreen;
   }
 }
 /* page */

@@ -3,7 +3,7 @@
 <div class="headercontent">
     <f:render partial="Header/Logo" arguments="{_all}"/>
     <div class="mainmenu">
-        <f:render partial="Menu/MainMenu" arguments="{
+        <f:render partial="Menu/MainMenu-{settings.TCEpage.menutype}" arguments="{
             page: page,
             mainmenu: mainmenu,
             homePageTitle: homePageTitle,
