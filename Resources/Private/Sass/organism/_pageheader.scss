@@ -3,14 +3,13 @@
 
 @layer basestyles {
 
-  header {
-    background-color: var(--clr-headerbg);
-  }
-
   .headercontent {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    container-type: inline-size;
+    container-name: headercontent;
+    position: relative;
   }
 
   .logo a:focus-visible {

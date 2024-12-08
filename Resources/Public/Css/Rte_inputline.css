@@ -50,11 +50,11 @@
     --clr-secondarxbtnbg--disabled: oklch(from var(--clr-secondarybtnbg--active) calc(l * .75) c h);
     /* menu colors */
     --clr-mnu: var(--clr-bw-100);
-    --clr-mnu--active: var(--clr-brand--primary);
-    --clr-mnu--hover: var(--clr-bw-030);
+    --clr-mnu--active: var(--clr-bw-100);
+    --clr-mnu--hover: var(--clr-bw-100);
     --clr-mnubg: transparent;
     --clr-mnubg--active: var(--clr-bw-040);
-    --clr-mnubg--hover: var(--clr-bw-075);
+    --clr-mnubg--hover: var(--clr-brand--primary);
     /* section colors */
     --clr-headerbg: var(--clr-bw-060);
     --clr-footerbg: var(--clr-brand--primary);
@@ -283,6 +283,15 @@
       scroll-behavior: auto !important;
     }
   }
+  .visually-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+  }
 }
 /* import utilities */
 /* link */
@@ -500,7 +509,7 @@
     border: 0;
     border-radius: 0;
     display: inline-block;
-    margin: 0.25rem;
+    margin-inline: 0.25rem;
     padding: 0.5em 1em;
   }
   button:hover, button:focus,

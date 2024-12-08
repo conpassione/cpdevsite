@@ -3,134 +3,132 @@
 
 @layer basestyles {
 
-  .mainmenu {
+  /* main navigation */
+  .nav-main {
+    display: none;
+    margin-inline: auto;
+  }
+
+  .menu-items {
+    list-style:      none;
+    padding:         0;
+    margin:          0;
+    display:         flex;
+    flex-wrap:       nowrap;
+    justify-content: center;
+  }
+
+  .menu-items > li {
+    a {
+      display: block;
+      padding: 0.5em;
+    }
+
+    &.active {
+      background-color: var(--clr-mnubg--active);
+    }
+  }
+
+  .menu-items > li:hover {
+    background-color: var(--clr-mnubg--hover);
+  }
+
+  .menu-item a:focus-visible {
+    @include outline;
+  }
+
+  .cta-menu button:first-child {
+    margin-inline-start: 0;
+  }
+
+  .cta-menu button:last-child {
+    margin-inline-end: 0;
+  }
+
+  @container headercontent (width > 780px) {
+    .nav-main {
+      display: block;
+    }
+  }
+
+  /* mobile navigation */
+  .mobilemenu {
     --_bor-width: var(--hamburger--bar-width, 60px);
     --_bar-height: var(--hamburger--bar-height, 8px);
     --_bar-gap: var(--hamburger--bar-gap, 6px);
 
-    position: relative;
-  }
-
-  .vh {
-/*     position: absolute !important;
-    clip: rect(1px, 1px, 1px, 1px);
-    padding:0 !important;
-    border:0 !important;
-    height: 1px !important;
-    width: 1px !important;
-    overflow: hidden; */
-  }
-
-  label {
-    display: inline-block;
-  }
-
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  li.active {
-    background-color: #0a3622;
-  }
-
-  [data-opens-menu],
-  [role=menu] {
-    background-color: dodgerblue;
-  }
-
-  .hamburger-menu:focus-within,
-  .hamburger-menu:hover,
-  a:focus,
-  a:hover {
-    background-color: rebeccapurple;
-  }
-
-  #hamburger:checked ~ .hamburger-expanded {
-    display: inline;
-  }
-
-  #hamburger:checked ~ .hamburger-collapsed {
-    display: none;
-  }
-
-  #hamburger:not(:checked) ~ .hamburger-expanded {
-    display: none;
-  }
-
-  #hamburger:not(:checked) ~ .hamburger-collapsed {
-    display: inline;
-  }
-
-  nav {
-    display: none;
-  }
-
-  .hamburger-menu:has(input:checked) + nav {
     display: block;
-    background-color: #0b2241;
+    margin-inline: auto var(--gutter);
+  }
+  .hamburger-menu:focus-visible {
+    @include outline;
   }
 
-  .level-2 {
-    padding-left: 1rem;
+  .nav-mobile {
+    display: none;
 
-    > .submenu-2 {
-      display: none;
+    /* z-index hack für safari */
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+
+    position: absolute;
+    z-index: 100;
+
+    top:2.5rem;
+    right: 0;
+    width: 80%;
+    background-color: oklch(from var(--clr-bw-020) l c h / 0.8);
+  }
+
+  .mmenu-items {
+    list-style:      none;
+    padding:         0;
+    margin:          0;
+   }
+
+  .mmenu-items > li {
+    a {
+      display: block;
+      padding: 0.5em;
     }
 
-    .dropdown-icon {
-      input:checked ~ .dropdown-expanded {
-        display: inline;
-      }
-
-      input:checked ~ .dropdown-collapsed {
-        display: none;
-      }
-
-      input:not(:checked) ~ .dropdown-expanded {
-        display: none;
-      }
-
-      input:not(:checked) ~ .dropdown-collapsed {
-        display: inline;
-      }
-
-      &:has(input:checked) + .submenu-2 {
-        display:          block;
-        background-color: green;
-      }
+    &.active {
+      background-color: var(--clr-mnubg--active);
     }
   }
 
-  .level-3 {
-    padding-left: 1rem;
-
-    > .submenu-3 {
-      display: none;
-    }
-
-    .dropdown-icon {
-      input:checked ~ .dropdown-expanded {
-        display: inline;
-      }
-
-      input:checked ~ .dropdown-collapsed {
-        display: none;
-      }
-
-      input:not(:checked) ~ .dropdown-expanded {
-        display: none;
-      }
-
-      input:not(:checked) ~ .dropdown-collapsed {
-        display: inline;
-      }
-
-      &:has(input:checked) + .submenu-3 {
-        display:          block;
-        background-color: limegreen;
-      }
-    }
+  .mmenu-items > li:hover {
+    background-color: var(--clr-mnubg--hover);
   }
+
+  .mmenu-item a:focus-visible {
+    @include outline;
+  }
+
+  .mlevel-0 {
+    columns: 3;
+    column-width: 20ch;
+    column-rule: 1px dotted var(--clr-bw-030);
+  }
+
+  .mlevel-00,
+  .mlevel-01,
+  .mlevel-02,
+  .mlevel-03 {
+    display:block;
+  }
+  .mlevel-00,
+  .mlevel-01 {
+    color: red !important;
+  }
+  .mlevel-02,
+  .mlevel-03 {
+    break-before: avoid;
+  }
+
+  #hamburger:checked ~ .nav-mobile {
+    display: block;
+  }
+
 }
 

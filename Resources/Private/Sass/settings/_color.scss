@@ -57,11 +57,11 @@
 
     /* menu colors */
     --clr-mnu:                      var(--clr-bw-100);
-    --clr-mnu--active:              var(--clr-brand--primary);
-    --clr-mnu--hover:               var(--clr-bw-030);
+    --clr-mnu--active:              var(--clr-bw-100);
+    --clr-mnu--hover:               var(--clr-bw-100);
     --clr-mnubg:                    transparent;
     --clr-mnubg--active:            var(--clr-bw-040);
-    --clr-mnubg--hover:             var(--clr-bw-075);
+    --clr-mnubg--hover:             var(--clr-brand--primary);
 
     /* section colors */
     --clr-headerbg:                 var(--clr-bw-060);

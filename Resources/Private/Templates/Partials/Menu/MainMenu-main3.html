@@ -1,0 +1,79 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:comment><!--MainMenu für alle Seiten (ohne Bilder)--></f:comment>
+
+
+<f:if condition="{mainmenu}">
+
+    <nav role="menu" class="nav-main">
+        <ul class="menu-items">
+            <li class="level-0{f:if(condition: '{page.id} == {homePageUid}', then:' active')}">
+                <a href="{homePageSlug}" role="menuitem" title="{homePageTitle}"
+                   class="menu-item">
+                    {homePageTitle}
+                </a>
+            </li>
+            <f:for as="menuItem" each="{mainmenu}">
+                <li class="{f:if(condition: menuItem.active, then:'active ')}level-1">
+                    <f:link.page pageUid="{menuItem.data.uid}" class="menu-item">
+                        {menuItem.title}
+                    </f:link.page>
+                </li>
+            </f:for>
+        </ul>
+    </nav>
+
+    <div class="mobilemenu">
+        <label for="hamburger" class="hamburger-menu" data-opens-menu tabindex="0">X</label>
+        <input type="checkbox" role="button" aria-haspopup="true" id="hamburger" class="visually-hidden" />
+        <span class="visually-hidden hamburger-expanded">Menu expanded</span>
+        <span class="visually-hidden hamburger-collapsed">Menu collapsed</span>
+        <label id="overlay" for="hamburger" tabindex="0">O</label>
+
+        <nav role="menu" class="nav-mobile">
+            <f:render section="nav-mobile" arguments="{_all}" />
+        </nav>
+    </div>
+    <div class="cta-menu">
+        <button>Login</button><button>Einsatzanfrage</button>
+    </div>
+</f:if>
+
+<f:section name="nav-mobile">
+
+    <ul class="mmenu-items mlevel-0">
+        <li class="mlevel-00{f:if(condition: '{page.id} == {homePageUid}', then:' active')}">
+            <a href="{homePageSlug}" role="menuitem" title="{homePageTitle}"
+               class="mmenu-item">
+                {homePageTitle}
+            </a>
+        </li>
+        <f:for as="menuItem" each="{mainmenu}">
+            <li class="{f:if(condition: menuItem.active, then:'active ')}mlevel-01">
+                <f:link.page pageUid="{menuItem.data.uid}" class="mmenu-item">
+                    {menuItem.title}
+                </f:link.page>
+            </li>
+            <f:if condition="{menuItem.hasSubpages}">
+                <f:for as="menuItemc" each="{menuItem.children}">
+                    <li class="{f:if(condition: menuItemc.active, then:'active ')}mlevel-02">
+                        <f:link.page pageUid="{menuItemc.data.uid}" class="mmenu-item">
+                            {menuItemc.title}
+                        </f:link.page>
+                    </li>
+                    <f:if condition="{menuItemc.hasSubpages}">
+                        <f:for as="menuItemcc" each="{menuItemc.children}">
+                            <li class="{f:if(condition: menuItemcc.active, then:'active ')}mlevel-03">
+                                <f:link.page pageUid="{menuItemcc.data.uid}" class="mmenu-item">
+                                    {menuItemcc.title}
+                                </f:link.page>
+                            </li>
+                        </f:for>
+                    </f:if>
+                </f:for>
+            </f:if>
+        </f:for>
+    </ul>
+
+</f:section>
+</html>

@@ -6,7 +6,7 @@ TCEpage:
   author_phone: '+41793301011'
   org_name: 'conPassione gmbh'
   org_logo: 'EXT:cpdevsite/Resources/Public/Images/logo_cp_core_G35_black_mit.png'
-  menutype: 'main2'
+  menutype: 'main3'
 #styles:
 #  templates:
 #    layoutRootPath: EXT:cpdevsite/Resources/Private/Templates/ContentElements/Layouts

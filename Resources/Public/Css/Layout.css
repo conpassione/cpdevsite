@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* reset by conPassione gmbh */
 /* cp_base:constants */
 @layer basestyles {
@@ -49,11 +50,11 @@
     --clr-secondarxbtnbg--disabled: oklch(from var(--clr-secondarybtnbg--active) calc(l * .75) c h);
     /* menu colors */
     --clr-mnu: var(--clr-bw-100);
-    --clr-mnu--active: var(--clr-brand--primary);
-    --clr-mnu--hover: var(--clr-bw-030);
+    --clr-mnu--active: var(--clr-bw-100);
+    --clr-mnu--hover: var(--clr-bw-100);
     --clr-mnubg: transparent;
     --clr-mnubg--active: var(--clr-bw-040);
-    --clr-mnubg--hover: var(--clr-bw-075);
+    --clr-mnubg--hover: var(--clr-brand--primary);
     /* section colors */
     --clr-headerbg: var(--clr-bw-060);
     --clr-footerbg: var(--clr-brand--primary);
@@ -282,6 +283,15 @@
       scroll-behavior: auto !important;
     }
   }
+  .visually-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+  }
 }
 /* link */
 @layer basestyles {
@@ -494,7 +504,7 @@
     border: 0;
     border-radius: 0;
     display: inline-block;
-    margin: 0.25rem;
+    margin-inline: 0.25rem;
     padding: 0.5em 1em;
   }
   button:hover, button:focus,
@@ -552,104 +562,105 @@
 }
 /* navmainmenu */
 @layer basestyles {
-  .mainmenu {
+  /* main navigation */
+  .nav-main {
+    display: none;
+    margin-inline: auto;
+  }
+  .menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .menu-items > li a {
+    display: block;
+    padding: 0.5em;
+  }
+  .menu-items > li.active {
+    background-color: var(--clr-mnubg--active);
+  }
+  .menu-items > li:hover {
+    background-color: var(--clr-mnubg--hover);
+  }
+  .menu-item a:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+  }
+  .cta-menu button:first-child {
+    margin-inline-start: 0;
+  }
+  .cta-menu button:last-child {
+    margin-inline-end: 0;
+  }
+  @container headercontent (width > 780px) {
+    .nav-main {
+      display: block;
+    }
+  }
+  /* mobile navigation */
+  .mobilemenu {
     --_bor-width: var(--hamburger--bar-width, 60px);
     --_bar-height: var(--hamburger--bar-height, 8px);
     --_bar-gap: var(--hamburger--bar-gap, 6px);
-    position: relative;
+    display: block;
+    margin-inline: auto var(--gutter);
   }
-  .vh {
-    /*     position: absolute !important;
-        clip: rect(1px, 1px, 1px, 1px);
-        padding:0 !important;
-        border:0 !important;
-        height: 1px !important;
-        width: 1px !important;
-        overflow: hidden; */
+  .hamburger-menu:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
   }
-  label {
-    display: inline-block;
+  .nav-mobile {
+    display: none;
+    /* z-index hack für safari */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    position: absolute;
+    z-index: 100;
+    top: 2.5rem;
+    right: 0;
+    width: 80%;
+    background-color: oklch(from var(--clr-bw-020) l c h/0.8);
   }
-  nav ul {
+  .mmenu-items {
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
-  li.active {
-    background-color: #0a3622;
-  }
-  [data-opens-menu],
-  [role=menu] {
-    background-color: dodgerblue;
-  }
-  .hamburger-menu:focus-within,
-  .hamburger-menu:hover,
-  a:focus,
-  a:hover {
-    background-color: rebeccapurple;
-  }
-  #hamburger:checked ~ .hamburger-expanded {
-    display: inline;
-  }
-  #hamburger:checked ~ .hamburger-collapsed {
-    display: none;
-  }
-  #hamburger:not(:checked) ~ .hamburger-expanded {
-    display: none;
-  }
-  #hamburger:not(:checked) ~ .hamburger-collapsed {
-    display: inline;
-  }
-  nav {
-    display: none;
-  }
-  .hamburger-menu:has(input:checked) + nav {
+  .mmenu-items > li a {
     display: block;
-    background-color: #0b2241;
+    padding: 0.5em;
   }
-  .level-2 {
-    padding-left: 1rem;
+  .mmenu-items > li.active {
+    background-color: var(--clr-mnubg--active);
   }
-  .level-2 > .submenu-2 {
-    display: none;
+  .mmenu-items > li:hover {
+    background-color: var(--clr-mnubg--hover);
   }
-  .level-2 .dropdown-icon input:checked ~ .dropdown-expanded {
-    display: inline;
+  .mmenu-item a:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
   }
-  .level-2 .dropdown-icon input:checked ~ .dropdown-collapsed {
-    display: none;
+  .mlevel-0 {
+    columns: 3;
+    column-width: 20ch;
+    column-rule: 1px dotted var(--clr-bw-030);
   }
-  .level-2 .dropdown-icon input:not(:checked) ~ .dropdown-expanded {
-    display: none;
-  }
-  .level-2 .dropdown-icon input:not(:checked) ~ .dropdown-collapsed {
-    display: inline;
-  }
-  .level-2 .dropdown-icon:has(input:checked) + .submenu-2 {
+  .mlevel-00,
+  .mlevel-01,
+  .mlevel-02,
+  .mlevel-03 {
     display: block;
-    background-color: green;
   }
-  .level-3 {
-    padding-left: 1rem;
+  .mlevel-00,
+  .mlevel-01 {
+    color: red !important;
   }
-  .level-3 > .submenu-3 {
-    display: none;
+  .mlevel-02,
+  .mlevel-03 {
+    break-before: avoid;
   }
-  .level-3 .dropdown-icon input:checked ~ .dropdown-expanded {
-    display: inline;
-  }
-  .level-3 .dropdown-icon input:checked ~ .dropdown-collapsed {
-    display: none;
-  }
-  .level-3 .dropdown-icon input:not(:checked) ~ .dropdown-expanded {
-    display: none;
-  }
-  .level-3 .dropdown-icon input:not(:checked) ~ .dropdown-collapsed {
-    display: inline;
-  }
-  .level-3 .dropdown-icon:has(input:checked) + .submenu-3 {
+  #hamburger:checked ~ .nav-mobile {
     display: block;
-    background-color: limegreen;
   }
 }
 /* page */
@@ -733,13 +744,13 @@
 }
 /* page */
 @layer basestyles {
-  header {
-    background-color: var(--clr-headerbg);
-  }
   .headercontent {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    container-type: inline-size;
+    container-name: headercontent;
+    position: relative;
   }
   .logo a:focus-visible {
     outline: 2px solid var(--clr-bw-070);
@@ -765,6 +776,7 @@
   header {
     position: fixed;
     width: 100svw;
+    background-color: var(--clr-headerbg);
   }
   main {
     margin-block-start: calc(32px + 1rem);
