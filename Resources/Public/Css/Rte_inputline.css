@@ -48,18 +48,18 @@
     --clr-secondarybtnbg--active: var(--clr-brand--secondary);
     --clr-secondarybtnbg--hover: var(--clr-bw-050);
     --clr-secondarxbtnbg--disabled: oklch(from var(--clr-secondarybtnbg--active) calc(l * .75) c h);
-    /* menu colors */
-    --clr-mnu: var(--clr-bw-100);
-    --clr-mnu--active: var(--clr-bw-100);
-    --clr-mnu--hover: var(--clr-bw-100);
-    --clr-mnubg: transparent;
-    --clr-mnubg--active: var(--clr-bw-040);
-    --clr-mnubg--hover: var(--clr-brand--primary);
     /* section colors */
     --clr-headerbg: var(--clr-bw-060);
     --clr-footerbg: var(--clr-brand--primary);
     --clr-sectionbg--important: var(--clr-brand--primary);
     --clr-sectionbg--gray: var(--clr-bw-075);
+    /* menu colors */
+    --clr-mnu: var(--clr-bw-100);
+    --clr-mnu--active: var(--clr-bw-100);
+    --clr-mnu--hover: var(--clr-bw-100);
+    --clr-mnubg: var(--clr-headerbg);
+    --clr-mnubg--active: var(--clr-bw-040);
+    --clr-mnubg--hover: var(--clr-brand--primary);
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -217,6 +217,8 @@
     min-height: 100svh;
     container-type: inline-size;
     position: relative;
+    display: grid;
+    grid-template-rows: 1fr auto;
   }
   main {
     container: main/inline-size;

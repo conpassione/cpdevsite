@@ -24,54 +24,67 @@
     </nav>
 
     <div class="mobilemenu">
-        <label for="hamburger" class="hamburger-menu" data-opens-menu tabindex="0">X</label>
-        <input type="checkbox" role="button" aria-haspopup="true" id="hamburger" class="visually-hidden" />
+        <input type="checkbox" role="button" aria-haspopup="true" id="hamburger" class="hamburger visually-hidden" />
         <span class="visually-hidden hamburger-expanded">Menu expanded</span>
         <span class="visually-hidden hamburger-collapsed">Menu collapsed</span>
-        <label id="overlay" for="hamburger" tabindex="0">O</label>
+        <label for="hamburger" class="hamburger-menu" data-opens-menu>
+            <svg fill="var(--button-color, black)" class="hamburger-svg" viewBox="0 0 100 100" >
+                <rect class="line top" width="80" height="10" x="10" y="25" rx="5">
+                </rect>
+                <rect class="line middle" width="80" height="10" x="10" y="45" rx="5">
+                </rect>
+                <rect class="line bottom" width="80" height="10" x="10" y="65" rx="5">
+                </rect>
+            </svg>
+        </label>
+        <label for="hamburger" class="hamburger-overlay" tabindex="-1"></label>
 
         <nav role="menu" class="nav-mobile">
             <f:render section="nav-mobile" arguments="{_all}" />
         </nav>
     </div>
     <div class="cta-menu">
-        <button>Login</button><button>Einsatzanfrage</button>
+        <button>Login</button><button>Anfrage</button>
     </div>
 </f:if>
 
 <f:section name="nav-mobile">
 
-    <ul class="mmenu-items mlevel-0">
-        <li class="mlevel-00{f:if(condition: '{page.id} == {homePageUid}', then:' active')}">
+    <ul class="mmenu-items mlevel-1">
+        <li class="mlevel-01{f:if(condition: '{page.id} == {homePageUid}', then:' current')}">
             <a href="{homePageSlug}" role="menuitem" title="{homePageTitle}"
                class="mmenu-item">
                 {homePageTitle}
             </a>
         </li>
         <f:for as="menuItem" each="{mainmenu}">
-            <li class="{f:if(condition: menuItem.active, then:'active ')}mlevel-01">
+            <li class="mlevel-01{f:if(condition: menuItem.current, then:' current')}">
                 <f:link.page pageUid="{menuItem.data.uid}" class="mmenu-item">
                     {menuItem.title}
                 </f:link.page>
-            </li>
-            <f:if condition="{menuItem.hasSubpages}">
-                <f:for as="menuItemc" each="{menuItem.children}">
-                    <li class="{f:if(condition: menuItemc.active, then:'active ')}mlevel-02">
-                        <f:link.page pageUid="{menuItemc.data.uid}" class="mmenu-item">
-                            {menuItemc.title}
-                        </f:link.page>
-                    </li>
-                    <f:if condition="{menuItemc.hasSubpages}">
-                        <f:for as="menuItemcc" each="{menuItemc.children}">
-                            <li class="{f:if(condition: menuItemcc.active, then:'active ')}mlevel-03">
-                                <f:link.page pageUid="{menuItemcc.data.uid}" class="mmenu-item">
-                                    {menuItemcc.title}
+                <f:if condition="{menuItem.hasSubpages}">
+                    <ul class="mlevel-2">
+                        <f:for as="menuItemc" each="{menuItem.children}">
+                            <li class="mlevel-02{f:if(condition: menuItemc.current, then:' current')}">
+                                <f:link.page pageUid="{menuItemc.data.uid}" class="mmenu-item">
+                                    {menuItemc.title}
                                 </f:link.page>
+                                <f:if condition="{menuItemc.hasSubpages}">
+                                    <ul class="mlevel-3">
+                                        <f:for as="menuItemcc" each="{menuItemc.children}">
+                                            <li class="mlevel-03{f:if(condition: menuItemcc.current, then:' current')}">
+                                                <f:link.page pageUid="{menuItemcc.data.uid}" class="mmenu-item">
+                                                    {menuItemcc.title}
+                                                </f:link.page>
+                                            </li>
+                                        </f:for>
+                                    </ul>
+                                </f:if>
                             </li>
                         </f:for>
-                    </f:if>
-                </f:for>
-            </f:if>
+                    </ul>
+                </f:if>
+            </li>
         </f:for>
     </ul>
 

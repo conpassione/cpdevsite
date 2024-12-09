@@ -48,18 +48,18 @@
     --clr-secondarybtnbg--active: var(--clr-brand--secondary);
     --clr-secondarybtnbg--hover: var(--clr-bw-050);
     --clr-secondarxbtnbg--disabled: oklch(from var(--clr-secondarybtnbg--active) calc(l * .75) c h);
-    /* menu colors */
-    --clr-mnu: var(--clr-bw-100);
-    --clr-mnu--active: var(--clr-bw-100);
-    --clr-mnu--hover: var(--clr-bw-100);
-    --clr-mnubg: transparent;
-    --clr-mnubg--active: var(--clr-bw-040);
-    --clr-mnubg--hover: var(--clr-brand--primary);
     /* section colors */
     --clr-headerbg: var(--clr-bw-060);
     --clr-footerbg: var(--clr-brand--primary);
     --clr-sectionbg--important: var(--clr-brand--primary);
     --clr-sectionbg--gray: var(--clr-bw-075);
+    /* menu colors */
+    --clr-mnu: var(--clr-bw-100);
+    --clr-mnu--active: var(--clr-bw-100);
+    --clr-mnu--hover: var(--clr-bw-100);
+    --clr-mnubg: var(--clr-headerbg);
+    --clr-mnubg--active: var(--clr-bw-040);
+    --clr-mnubg--hover: var(--clr-brand--primary);
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -217,6 +217,8 @@
     min-height: 100svh;
     container-type: inline-size;
     position: relative;
+    display: grid;
+    grid-template-rows: 1fr auto;
   }
   main {
     container: main/inline-size;
@@ -574,19 +576,28 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    color: var(--clr-mnu);
+    background-color: var(--clr-mnubg);
   }
-  .menu-items > li a {
+  .menu-items > li.active {
+    color: var(--clr-mnu--active);
+    background-color: var(--clr-mnubg--active);
+  }
+  .menu-items > li a.menu-item {
     display: block;
     padding: 0.5em;
   }
-  .menu-items > li.active {
-    background-color: var(--clr-mnubg--active);
-  }
-  .menu-items > li:hover {
+  .menu-items > li a.menu-item:hover,
+  .menu-items > li a.menu-item:focus {
+    color: var(--clr-mnu--hover);
     background-color: var(--clr-mnubg--hover);
   }
-  .menu-item a:focus-visible {
+  .menu-items > li a.menu-item:focus-visible {
     outline: 2px solid var(--clr-bw-070);
+    background-color: var(--clr-mnubg--hover);
+  }
+  .cta-menu {
+    display: none;
   }
   .cta-menu button:first-child {
     margin-inline-start: 0;
@@ -594,8 +605,11 @@
   .cta-menu button:last-child {
     margin-inline-end: 0;
   }
-  @container headercontent (width > 780px) {
+  @container headercontent (width > 960px) {
     .nav-main {
+      display: block;
+    }
+    .cta-menu {
       display: block;
     }
   }
@@ -607,8 +621,47 @@
     display: block;
     margin-inline: auto var(--gutter);
   }
-  .hamburger-menu:focus-visible {
-    outline: 2px solid var(--clr-bw-070);
+  .hamburger-menu {
+    cursor: pointer;
+  }
+  .hamburger-menu svg {
+    width: 60px;
+    aspect-ratio: 1;
+    --button-color: var(--clr-mnu);
+    background-color: var(--clr-mnubg);
+  }
+  .hamburger-menu svg:hover {
+    --button-color: var(--clr-mnu--hover);
+    background-color: var(--clr-mnubg--hover);
+  }
+  .hamburger-menu .line {
+    transition: transform 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+    transform-origin: center;
+  }
+  .hamburger:checked ~ .hamburger-menu .line {
+    transition: transform 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+  }
+  .hamburger:checked ~ .hamburger-menu .top {
+    transform: translateY(20px);
+    rotate: 45deg;
+  }
+  .hamburger:checked ~ .hamburger-menu .middle {
+    opacity: 0;
+  }
+  .hamburger:checked ~ .hamburger-menu .bottom {
+    transform: translateY(-20px);
+    rotate: -45deg;
+  }
+  .hamburger-overlay {
+    position: absolute;
+    display: none;
+    top: 2.5rem;
+    left: -50vw;
+    width: 200vw;
+    height: 100vh;
+    background: transparent;
+    z-index: 99;
+    cursor: pointer;
   }
   .nav-mobile {
     display: none;
@@ -617,49 +670,83 @@
     transform: translate3d(0, 0, 0);
     position: absolute;
     z-index: 100;
-    top: 2.5rem;
-    right: 0;
-    width: 80%;
-    background-color: oklch(from var(--clr-bw-020) l c h/0.8);
+    top: 3.1rem;
+    right: 5%;
+    width: 90%;
+    padding: var(--gutter);
+    background-color: oklch(from var(--clr-mnubg) l c h/0.6);
+    backdrop-filter: blur(1rem);
   }
-  .mmenu-items {
+  .mlevel-1 {
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: var(--gutter);
+    align-content: flex-start;
+    background-color: var(--clr-mnubg);
+    padding: 0;
+    max-height: calc(100svh - 5rem);
+    overflow-y: scroll;
+  }
+  .mlevel-2,
+  .mlevel-3 {
     list-style: none;
     padding: 0;
-    margin: 0;
   }
-  .mmenu-items > li a {
-    display: block;
-    padding: 0.5em;
-  }
-  .mmenu-items > li.active {
+  .current:is(.mlevel-01, .mlevel-02, .mlevel-03) > a {
+    color: var(--clr-mnu--active);
     background-color: var(--clr-mnubg--active);
   }
-  .mmenu-items > li:hover {
-    background-color: var(--clr-mnubg--hover);
+  .mlevel-01 {
+    flex: 250px 1 1;
+    display: block;
+    border-block-start: 1px solid var(--clr-mnu);
   }
-  .mmenu-item a:focus-visible {
-    outline: 2px solid var(--clr-bw-070);
-  }
-  .mlevel-0 {
-    columns: 3;
-    column-width: 20ch;
-    column-rule: 1px dotted var(--clr-bw-030);
-  }
-  .mlevel-00,
-  .mlevel-01,
   .mlevel-02,
   .mlevel-03 {
     display: block;
+    font-size: var(--fs-small);
   }
-  .mlevel-00,
-  .mlevel-01 {
-    color: red !important;
+  .mlevel-02 {
+    padding-inline-start: var(--gutter);
   }
-  .mlevel-02,
   .mlevel-03 {
-    break-before: avoid;
+    padding-inline-start: calc(var(--gutter) * 2);
   }
-  #hamburger:checked ~ .nav-mobile {
+  a.mmenu-item {
+    display: block;
+    padding: 0.5em;
+    width: 100%;
+  }
+  a.mmenu-item:hover,
+  a.mmenu-item:focus {
+    color: var(--clr-menu--hover);
+    background-color: var(--clr-mnubg--hover);
+  }
+  a.mmenu-item:focus-visible {
+    outline: 2px solid var(--clr-bw-070);
+    color: var(--clr-menu--hover);
+    background-color: var(--clr-mnubg--hover);
+  }
+  .hamburger:checked ~ .nav-mobile {
+    display: block;
+  }
+  .hamburger:checked ~ .hamburger-menu svg {
+    --button-color: var(--clr-mnu--hover);
+    background-color: var(--clr-mnubg--hover);
+  }
+  .hamburger:focus ~ .hamburger-menu svg {
+    --button-color: var(--clr-mnu--hover);
+    background-color: var(--clr-mnubg--hover);
+  }
+  .hamburger:focus-visible ~ .hamburger-menu svg {
+    outline: 2px solid var(--clr-bw-070);
+    --button-color: var(--clr-mnu--hover);
+    background-color: var(--clr-mnubg--hover);
+  }
+  .hamburger:checked ~ .hamburger-overlay {
     display: block;
   }
 }
