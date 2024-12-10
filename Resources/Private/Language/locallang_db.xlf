@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2024-12-01T22:09:34+01:00">
+    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2024-12-10T18:02:50+01:00">
         <header></header>
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
@@ -13,7 +13,7 @@
                 <source>Footer</source>
             </trans-unit>
             <trans-unit id="backendlayout.col9" resname="backendlayout.col9">
-                <source>Jumbotron</source>
+                <source>Hero</source>
             </trans-unit>
             <trans-unit id="backendlayout.defaultcontentpage.title" resname="backendlayout.defaultcontentpage.title">
                 <source>Standard content page</source>
@@ -33,6 +33,15 @@
             <trans-unit id="backendlayout.submenu" resname="backendlayout.submenu">
                 <source>Menu of subpages</source>
             </trans-unit>
+            <trans-unit id="container.1col" resname="container.1col">
+                <source>1-Column</source>
+            </trans-unit>
+            <trans-unit id="container.1col.col201" resname="container.1col.col201">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="container.1col.description" resname="container.1col.description">
+                <source>A one column section</source>
+            </trans-unit>
             <trans-unit id="container.2cols.col201" resname="container.2cols.col201">
                 <source>Left column</source>
             </trans-unit>
@@ -43,19 +52,19 @@
                 <source>2-Columns 33-66</source>
             </trans-unit>
             <trans-unit id="container.2cols3366.description" resname="container.2cols3366.description">
-                <source>A two column section</source>
+                <source>A two columns section</source>
             </trans-unit>
             <trans-unit id="container.2cols5050" resname="container.2cols5050">
                 <source>2-Columns 50-50</source>
             </trans-unit>
             <trans-unit id="container.2cols5050.description" resname="container.2cols5050.description">
-                <source>A two column section</source>
+                <source>A two columns section</source>
             </trans-unit>
             <trans-unit id="container.2cols6633" resname="container.2cols6633">
                 <source>2-Columns 66-33</source>
             </trans-unit>
             <trans-unit id="container.2cols6633.description" resname="container.2cols6633.description">
-                <source>A two column sesction</source>
+                <source>A two columns sesction</source>
             </trans-unit>
             <trans-unit id="container.3cols" resname="container.3cols">
                 <source>3-Columns</source>

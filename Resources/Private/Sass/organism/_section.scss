@@ -1,0 +1,12 @@
+section {
+  padding-block: calc(var(--gutter) * 2);
+}
+
+.section-hero {
+  padding: 0;
+  img {
+    height: 55vh;
+    object-fit: cover;
+    object-position: center;
+  }
+}

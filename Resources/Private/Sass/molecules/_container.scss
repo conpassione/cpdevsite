@@ -2,16 +2,23 @@
 
 @layer basestyles {
 
+  .cp-col1 {
+    display: block;
+  }
+
   .cp-2cols5050 {
     display:               grid;
-    grid-template-columns: repeat(auto-fit, minmax(var(--mediasize--small), 1fr));
-    gap:                   var(--gutter);
+    grid-template-columns: 1fr 1fr;
+    gap:                   var(--container-gutter);
+    @container (width < 75ch) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .cp-2cols3366 {
     display:               grid;
     grid-template-columns: 1fr 2fr;
-    gap:                   var(--gutter);
+    gap:                   var(--container-gutter);
     @container (width < 75ch) {
       grid-template-columns: 1fr;
     }
@@ -20,7 +27,7 @@
   .cp-2cols6633 {
     display:               grid;
     grid-template-columns: 2fr 1fr;
-    gap:                   var(--gutter);
+    gap:                   var(--container-gutter);
     @container (width < 75ch) {
       grid-template-columns: 1fr;
     }
@@ -29,19 +36,7 @@
   .cp-3cols {
     display:               grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap:                   var(--gutter);
-  }
-
-  .full-width > .cp-col201 > *:not(.cp-image) {
-    padding-inline-start: var(--gutter);
-  }
-
-  .full-width > .cp-col202 > *:not(.cp-image) {
-    padding-inline-end: var(--gutter);
-  }
-
-  .full-width > .cp-col203 > *:not(.cp-image) {
-    padding-inline-end: var(--gutter);
+    gap:                   var(--container-gutter);
   }
 
 }

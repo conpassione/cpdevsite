@@ -15,10 +15,12 @@
     position: fixed;
     width: 100svw;
     background-color: var(--clr-headerbg);
+    z-index: 10;
   }
 
   main {
     margin-block-start: calc(32px + 1rem);
+    container: main / inline-size;
   }
 
   .content-grid {

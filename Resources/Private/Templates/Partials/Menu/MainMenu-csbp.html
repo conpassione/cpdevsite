@@ -4,14 +4,12 @@
 
 
 <f:if condition="{mainmenu}">
-
     <nav role="menu" class="nav-main">
         <ul class="menu-items">
             <li class="level-0{f:if(condition: '{page.id} == {homePageUid}', then:' active')}">
-                <a href="{homePageSlug}" role="menuitem" title="{homePageTitle}"
-                   class="menu-item">
+                <f:link.page pageUid="{homePageUid}" class="menu-item">
                     {homePageTitle}
-                </a>
+                </f:link.page>
             </li>
             <f:for as="menuItem" each="{mainmenu}">
                 <li class="{f:if(condition: menuItem.active, then:'active ')}level-1">
@@ -43,8 +41,18 @@
             <f:render section="nav-mobile" arguments="{_all}" />
         </nav>
     </div>
-    <div class="cta-menu">
-        <button>Login</button><button>Anfrage</button>
+    <div class="lan-menu">
+        <f:if condition="{languagemenu}">
+            <ul id="language-menu" class="language-menu">
+                <f:for each="{languagemenu}" as="item">
+                    <li class="lmenu{f:if(condition: item.active, then: ' active')} {f:if(condition: item.available, else: ' text-muted')}">
+                        <a href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">
+                            <span><f:format.case>{item.twoLetterIsoCode}</f:format.case></span>
+                        </a>
+                    </li>
+                </f:for>
+            </ul>
+        </f:if>
     </div>
 </f:if>
 
@@ -52,10 +60,9 @@
 
     <ul class="mmenu-items mlevel-1">
         <li class="mlevel-01{f:if(condition: '{page.id} == {homePageUid}', then:' current')}">
-            <a href="{homePageSlug}" role="menuitem" title="{homePageTitle}"
-               class="mmenu-item">
+            <f:link.page pageUid="{homePageUid}" class="mmenu-item">
                 {homePageTitle}
-            </a>
+            </f:link.page>
         </li>
         <f:for as="menuItem" each="{mainmenu}">
             <li class="mlevel-01{f:if(condition: menuItem.current, then:' current')}">

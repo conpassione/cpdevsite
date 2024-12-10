@@ -53,7 +53,7 @@ languages:
     flag: it
     fallbackType: fallback
     fallbacks: '1,0'
-    enabled: true
+    enabled: false
     websiteTitle: 'conPassione gmbh'
   -
     languageId: 3
@@ -67,7 +67,7 @@ languages:
     flag: gb
     fallbackType: fallback
     fallbacks: '0'
-    enabled: true
+    enabled: false
     websiteTitle: 'conPassione gmbh'
 rootPageId: 1
 routeEnhancers:

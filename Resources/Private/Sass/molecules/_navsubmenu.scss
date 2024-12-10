@@ -7,7 +7,7 @@
 
     /* local settings */
     --_gutter--list:          calc(var(--gutter) / 2);
-    --_navsubmenu-card--size: calc(var(--mediasize--small) * 5 / 8);
+    --_navsubmenu-card--size: calc(var(--mediasize--small) / 3);
 
     display:                 grid;
     gap:                     var(--gutter);

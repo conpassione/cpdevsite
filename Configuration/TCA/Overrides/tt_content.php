@@ -46,6 +46,25 @@ call_user_func(static function(): void {
     GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer (
         (
         new \B13\Container\Tca\ContainerConfiguration(
+            'cp-1col', // CType
+            'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col', // label
+            'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col.description', // description
+            [
+                [
+                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col.col201', 'colPos' => 201],
+                ],
+            ] // grid configuration
+        )
+        )
+            // set an optional icon configuration
+            ->setIcon('EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg')
+            ->setGroup('z-cplayout')
+    );
+
+    /* containers */
+    GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer (
+        (
+        new \B13\Container\Tca\ContainerConfiguration(
             'cp-2cols5050', // CType
             'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols5050', // label
             'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols5050.description', // description
@@ -147,7 +166,7 @@ call_user_func(static function(): void {
     ];
     ExtensionManagementUtility::addTCAcolumns('tt_content', $additionalColumns);
 
-    $sections = 'cp-2cols5050,cp-2cols3366,cp-2cols6633,cp-3cols';
+    $sections = 'cp-1col,cp-2cols5050,cp-2cols3366,cp-2cols6633,cp-3cols';
     ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
         'displaywidth',

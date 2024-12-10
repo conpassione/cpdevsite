@@ -3,7 +3,7 @@
 <f:layout />
 
 <f:section name="Main">
-    <section class="cp-3cols{f:if(condition: displaywidth, then:' {displaywidth}')}">
+    <section id="s{data.uid}" class="cp-3cols{f:if(condition: displaywidth, then:' {displaywidth}')}">
        <div class="cp-col201">
            <f:for each="{children_201}" as="record">
                <f:format.raw>{record.renderedContent}</f:format.raw>

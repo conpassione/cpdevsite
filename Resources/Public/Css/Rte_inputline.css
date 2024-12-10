@@ -18,7 +18,7 @@
     --clr-success: oklch(0.5 0.12 150);
     --clr-info: oklch(0.5 0.12 220);
     --clr-error: oklch(0.5 0.12 0);
-    --clr-brand--primary: oklch(0.5 0.19 220);
+    --clr-brand--primary: oklch(0.491 0.061 62);
     --clr-brand--secondary: oklch(0.5 0.13 318);
     --clr-brand--tertiary: oklch(0.5 0.07 231);
     --clr-brand--quaternary: oklch(0.5 0.03 149);
@@ -31,8 +31,9 @@
     /* ============================ */
     /* application colors */
     --clr-text: var(--clr-bw-020);
-    --clr-bg: var(--clr-bw-100);
-    --clr-h: var(--clr-brand--primary);
+    --clr-bg: var(--clr-bw-090);
+    --clr-h: var(--clr-bw-060);
+    --clr-h--border: var(--clr-brand--primary);
     --clr-accent: var(--clr-brand--secondary);
     /* element colors */
     --clr-list--marker: var(--clr-brand--primary);
@@ -68,7 +69,7 @@
       --clr-primarybtnbg--active: var(--clr-brand--primary);
       --clr-primarybtn--disabled: oklch(from var(--clr-primarybtn--active) calc(l + .5) c h);
       /* typographic colors */
-      --clr-background: var(--clr-bw-020);
+      --clr-background: var(--clr-bw-030);
       --clr-text: var(--clr-bw-090);
     }
   }
@@ -77,6 +78,7 @@
 @layer basestyles {
   :root {
     --gutter: 1rem;
+    --container-gutter: 2rem;
     --flow-spacer: 1em;
     --border-radius: 1em;
     --mediasize--small: 480px;
@@ -186,8 +188,6 @@
   *::before,
   *::after {
     box-sizing: border-box;
-    font: inherit;
-    line-height: inherit;
   }
   * {
     margin: 0;
@@ -219,9 +219,7 @@
     position: relative;
     display: grid;
     grid-template-rows: 1fr auto;
-  }
-  main {
-    container: main/inline-size;
+    z-index: 0;
   }
   hr {
     border-style: solid;
@@ -447,7 +445,7 @@
   */
   img, svg, video, canvas, figure {
     height: auto;
-    max-width: 100%;
+    width: 100%;
     display: block;
   }
 }
@@ -456,7 +454,7 @@
 @layer basestyles {
   /* reset */
   h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
+    font-size: var(--fs-regular);
     line-height: var(--lh-h);
     font-family: var(--ff-h), sans-serif;
   }
@@ -480,6 +478,7 @@
     margin-block-start: 1.5em;
     margin-block-end: 1em;
     color: var(--clr-h);
+    border-bottom: 0.1em solid var(--clr-h--border);
   }
   .h3-font,
   .h4-font,

@@ -25,37 +25,48 @@ page.10 {
   paths {
     10 = EXT:cpdevsite/Resources/Private/Templates/
   }
+}
 
-  # Inhalt holen, aufgeteilt in die colPos aus dem backend_layout
-  dataProcessing.10 = page-content
-  dataProcessing.10 {
+
+# Inhalt holen, aufgeteilt in die colPos aus dem backend_layout
+page.10.dataProcessing {
+  10 = page-content
+  10 {
     as = pagecontent
+    dataProcessing {
+      10 = files
+      10 {
+        as = images
+        references.fieldName = image
+        references.table = tt_content
+      }
+    }
   }
+}
 
-  dataProcessing.20 = files
-  dataProcessing.20 {
+
+# auslesen der Medien aus dem aktuellen Page-Record
+page.10.dataProcessing {
+  20 = files
+  20 {
     as = pagemedia
     references.fieldName = media
     references.table = pages
   }
+}
 
-  # Hauptmenu erstellen, inkl. Medien aus den Seiteneigenschaften
-  dataProcessing.30 = menu
-  dataProcessing.30 {
+# Menus erstellen
+page.10.dataProcessing {
+  30 = menu
+  30 {
     as = mainmenu
     levels = 3
     expandAll = 1
     titleField = subtitle // title
-#    dataProcessing.10 = files
-#    dataProcessing.10 {
-#      references.fieldName = media
-#      references.table = pages
-#    }
   }
 
-  # Menu der Unterseiten der aktuellen Seite
-  dataProcessing.40 = menu
-  dataProcessing.40 {
+  40 = menu
+  40 {
     as = submenu
     levels = 1
     entryLevel.data = level
@@ -68,6 +79,14 @@ page.10 {
     }
   }
 
+  50 = language-menu
+  50 {
+    languages = auto
+    as = languagemenu
+  }
+}
+
+page.10 {
   variables {
     homePageTitle = TEXT
     homePageTitle.data = levelfield : 0, title

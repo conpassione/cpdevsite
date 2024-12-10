@@ -10,8 +10,6 @@
   *::before,
   *::after {
     box-sizing:  border-box;
-    font:        inherit;
-    line-height: inherit;
   }
 
   * {
@@ -49,11 +47,9 @@
     position: relative;
     display: grid;
     grid-template-rows: 1fr auto;
+    z-index: 0;
   }
 
-  main {
-    container: main / inline-size;
-  }
 
   hr {
     border-style: solid;

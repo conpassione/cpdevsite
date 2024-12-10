@@ -1,9 +1,10 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
+
 <f:layout name="Layout-{page.pagerecord.layout}" />
 
 <f:section name="Main">
-    <f:render section="Hero" />
+    <f:render section="Hero" arguments="{hero: pagecontent.hero}" />
     <f:render section="Submenu" arguments="{submenu: submenu}" />
     <f:for each="{pagecontent.content.records}" as="record">
         <f:cObject
@@ -15,11 +16,11 @@
 </f:section>
 
 <f:section name="Hero">
-    <div class="hero full-width">Hier kommt das Hero-Bild</div>
+    <f:render partial="Hero" arguments="{hero: hero}"/>
 </f:section>
 
 <f:section name="Submenu">
-    <f:render partial="Menu/SubMenu" arguments="{submenu: submenu}"/>
+   <f:render partial="Menu/SubMenu" arguments="{submenu: submenu}"/>
 </f:section>
 
 </html>

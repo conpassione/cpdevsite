@@ -10,13 +10,22 @@
     container-type: inline-size;
     container-name: headercontent;
     position: relative;
+
+  }
+
+  .logo{
+    position: absolute;
+    top: 0;
+    width: 200px;
+    aspect-ratio: 1;
+    background-color: var(--clr-headerbg);
   }
 
   .logo a:focus-visible {
     @include outline;
   }
   .logo--img {
-    max-width: 150px;
+    width: 100%;
   }
 
 }

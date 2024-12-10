@@ -1,0 +1,13 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<section id="s{data.uid}" class="section-hero content-grid full-width">
+    <div class="hero full-width">
+        <f:for each="{hero.records}" as="record">
+            <f:cObject
+                typoscriptObjectPath="tt_content.{record.CType}"
+                data="{files: record.image, showcaption: '0'}"
+                table="tt_content"
+            />
+        </f:for>
+    </div>
+</section>

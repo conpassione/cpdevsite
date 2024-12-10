@@ -5,7 +5,7 @@
 @layer basestyles {
   /* reset */
   h1, h2, h3, h4, h5, h6 {
-    font-size:   inherit;
+    font-size:   var(--fs-regular);
     line-height: var(--lh-h);
     font-family: var(--ff-h), sans-serif;
   }
@@ -34,6 +34,7 @@
     margin-block-start: 1.5em;
     margin-block-end:   1em;
     color:              var(--clr-h);
+    border-bottom: 0.1em solid var(--clr-h--border);
   }
 
   .h3-font,
