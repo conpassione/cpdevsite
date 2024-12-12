@@ -23,6 +23,7 @@
     &:before {
       font-family:        var(--ff-symbol), sans-serif;
       content:            '';
+      padding-inline-start: 0.2em;
       padding-inline-end: 0.1em;
     }
   }
@@ -34,6 +35,7 @@
       font-family:          var(--ff-symbol), sans-serif;
       content:              '';
       padding-inline-start: 0.1em;
+      padding-inline-end: 0.2em;
     }
   }
 

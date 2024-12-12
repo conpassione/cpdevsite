@@ -1,6 +1,6 @@
 
 // if needed you can use ContainerProcessor with explicitly set colPos/variable values
-tt_content.cp-3cols =< tt_content.cp-2cols5050
+tt_content.cp-3cols < tt_content.cp-2cols5050
 tt_content.cp-3cols {
   templateName = 3Cols
   dataProcessing {
@@ -8,24 +8,6 @@ tt_content.cp-3cols {
     203 {
       colPos = 203
       as = children_203
-    }
-  }
-  variables {
-    displaywidth = TEXT
-    displaywidth {
-      cObject = CASE
-      cObject {
-        key.field = displaywidth
-
-        0 = TEXT
-        0.value >
-
-        1 = TEXT
-        1.value = breakout
-
-        2 = TEXT
-        2.value = full-width
-      }
     }
   }
 }

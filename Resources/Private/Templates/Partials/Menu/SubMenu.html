@@ -8,22 +8,23 @@
                     <li class="navsubmenu--card">
                         <f:if condition="{navItem.files}">
                             <f:then>
-                                <a href="{navItem.link}" tabindex="-1">
-                                <f:cObject
-                                    typoscriptObjectPath="tt_content.image"
-                                    data="{header: '', showcaption:'0', files: navItem.files}"
-                                    table="tt_content"
-                                />
+                                <a href="{navItem.link}" tabindex="-1" title="{f:translate(key: 'submenu.navitem.linktitle', extensionName: 'cpdevsite')}  {navItem.title}">
+                                <f:cObject typoscriptObjectPath="tt_content.image" data="{header: '', showcaption:'0', files: navItem.files}" table="tt_content" />
                                 </a>
                             </f:then>
                             <f:else>
                                 <p>&nbsp;</p>
                             </f:else>
                         </f:if>
-                        <h3 class="navsubmenu--heading h4-font"><a href="{navItem.link}" tabindex="-1">{navItem.title}</a></h3>
-                        <p class="navsubmenu--description"><a href="{navItem.link}" tabindex="-1">{navItem.data.description}</a></p>
-                        <a href="{navItem.link}" class="button navsubmenu--link" title="{f:translate(key: 'submenu.navitem.linktitle', extensionName: 'cpdevsite')}  {navItem.title}">{navItem.title}
-                            >>></a>
+                        <h3 class="navsubmenu--heading h4-font">
+                            <a href="{navItem.link}" tabindex="-1" title="{f:translate(key: 'submenu.navitem.linktitle', extensionName: 'cpdevsite')}  {navItem.title}">{navItem.title}</a>
+                        </h3>
+                        <p class="navsubmenu--description">
+                            <a href="{navItem.link}" tabindex="-1" title="{f:translate(key: 'submenu.navitem.linktitle', extensionName: 'cpdevsite')}  {navItem.title}">{navItem.data.description}</a>
+                        </p>
+                        <a href="{navItem.link}" class="button navsubmenu--link" title="{f:translate(key: 'submenu.navitem.linktitle', extensionName: 'cpdevsite')}  {navItem.title}">
+                            {navItem.title} >>>
+                        </a>
                     </li>
                 </f:for>
             </ul>

@@ -1,7 +1,7 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<section id="s{data.uid}" class="section-hero content-grid full-width">
-    <div class="hero full-width">
+<section id="s{data.uid}" class="section-hero-small content-grid full-width">
+    <div class="hero-small full-width">
         <f:if condition = "{hero.records.0}">
             <f:cObject
                 typoscriptObjectPath="tt_content.{hero.records.0.CType}"
@@ -10,7 +10,7 @@
             />
         </f:if>
     </div>
-    <div class="hero-overlay">
+    <div class="hero-small-overlay">
         <p>&nbsp;</p>
         <h1 class="h1 h1--pagetitle">{pageTitle}</h1>
     </div>

@@ -26,7 +26,7 @@
   .content-grid {
     --padding-inline: 1rem;
     --content-max-width: var(--mediasize--large);
-    --breakout-size: 20ch;
+    --breakout-size: 15ch;
 
     display: grid;
     grid-template-columns:
@@ -47,11 +47,15 @@
     grid-column: content;
   }
 
-  .content-grid > .breakout {
+  .content-grid > .breakout,
+  .content-grid > .breakout-accent,
+  .content-grid > .breakout-brandcolor {
     grid-column: breakout;
   }
 
-  .content-grid > .full-width {
+  .content-grid > .full-width,
+  .content-grid > .full-width-accent,
+  .content-grid > .full-width-brandcolor {
     grid-column: full-width;
   }
 

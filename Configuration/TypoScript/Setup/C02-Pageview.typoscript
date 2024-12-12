@@ -62,7 +62,7 @@ page.10.dataProcessing {
     as = mainmenu
     levels = 3
     expandAll = 1
-    titleField = subtitle // title
+    titleField = nav_title // title
   }
 
   40 = menu
@@ -71,7 +71,7 @@ page.10.dataProcessing {
     levels = 1
     entryLevel.data = level
     expandAll = 1
-    titleField = subtitle // title
+    titleField = nav_title // title
     dataProcessing.10 = files
     dataProcessing.10 {
       references.fieldName = media
@@ -91,13 +91,12 @@ page.10 {
     homePageTitle = TEXT
     homePageTitle.data = levelfield : 0, title
     homePageTitle.stdWrap.override.cObject = TEXT
-    homePageTitle.stdWrap.override.cObject.data = levelfield : 0, subtitle
+    homePageTitle.stdWrap.override.cObject.data = levelfield : 0, nav_title
     #homePageTitle.stdWrap.override.cObject.stdWrap.override.cObject = TEXT
     #homePageTitle.stdWrap.override.cObject.stdWrap.override.cObject.data = levelfield : 0, seo_title
     homePageSlug = TEXT
     homePageSlug.data = levelfield : 0, slug
-    homePageUid = TEXT
-    homePageUid.data = leveluid : 0
+
 
     layoutName = TEXT
     layoutName {

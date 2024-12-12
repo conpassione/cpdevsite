@@ -16,9 +16,17 @@
   .logo{
     position: absolute;
     top: 0;
-    width: 200px;
-    aspect-ratio: 1;
-    background-color: var(--clr-headerbg);
+    width: min(200px, 40vw);
+    padding-block: var(--gutter);
+    padding-inline: calc(var(--gutter) / 2);
+    // background-color: oklch(from var(--clr-headerbg) l c h / 0.5);
+
+    background: linear-gradient(to bottom in oklab, oklch(0.6 0 0) 50% 0%, oklch(0.6 0 0 / .25) 100%);
+
+    backdrop-filter: blur(0.25rem);
+    svg {
+      fill: var(--clr-logo);
+    }
   }
 
   .logo a:focus-visible {
@@ -26,6 +34,7 @@
   }
   .logo--img {
     width: 100%;
+
   }
 
 }

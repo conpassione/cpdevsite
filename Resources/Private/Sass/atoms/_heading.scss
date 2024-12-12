@@ -8,10 +8,13 @@
     font-size:   var(--fs-regular);
     line-height: var(--lh-h);
     font-family: var(--ff-h), sans-serif;
+    font-weight: normal;
+    margin: 0;
   }
 
   .h1, .h2, .h3, .h4, .h5, .h6 {
     text-wrap: balance;
+    color: var(--clr-h);
   }
 
   .h1-font,
@@ -20,9 +23,9 @@
   }
 
   .h1 {
-    margin-block-start: 1.5em;
-    margin-block-end:   1em;
-    color:              var(--clr-h);
+    padding-block: 0.25em;
+    margin-block-end: 0.25em;
+    color:              var(--clr-bw-090);
   }
 
   .h2-font,
@@ -31,7 +34,7 @@
   }
 
   .h2 {
-    margin-block-start: 1.5em;
+    margin-block-start: 1.2em;
     margin-block-end:   1em;
     color:              var(--clr-h);
     border-bottom: 0.1em solid var(--clr-h--border);

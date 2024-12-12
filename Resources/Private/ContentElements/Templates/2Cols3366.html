@@ -1,9 +1,7 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:layout />
-
-<f:section name="Main">
-    <section id="s{data.uid}" class="cp-2cols3366{f:if(condition: displaywidth, then:' content-grid {displaywidth}')}">
+<section id="s{data.uid}" class="cp-2cols3366{f:if(condition: '{data.sectionlayout}  && {data.sectionlayout} != \'accent\'  && {data.sectionlayout} != \'brandcolor\'', then:' content-grid {data.sectionlayout}', else:' {data.sectionlayout}')}">
+    <div class="cp-2cols3366--content{f:if(condition: data.contentlayout, then:' {data.contentlayout}')}">
        <div class="cp-col201">
            <f:for each="{children_201}" as="record">
                <f:format.raw>{record.renderedContent}</f:format.raw>
@@ -14,8 +12,7 @@
                 <f:format.raw>{record.renderedContent}</f:format.raw>
             </f:for>
         </div>
-    </section>
-
-</f:section>
+    </div>
+</section>
 
 </html>

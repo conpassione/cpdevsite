@@ -52,6 +52,32 @@ TCEFORM.sys_file_reference.crop.config.cropVariants {
 #      }
 #    }
   }
+  medium {
+    title = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:crop.medium.title
+    selectedRatio = free
+    allowedAspectRatios {
+      free {
+        title = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:crop.medium.free.title
+        value = 0.0
+      }
+      normal {
+        title = 4:3
+        value = 1.333
+      }
+      wide {
+        title = 16:9
+        value = 1.778
+      }
+      portrait {
+        title = 3:4
+        value = 0.75
+      }
+      square {
+        title = 1:1
+        value = 1.0
+      }
+    }
+  }
   small {
     title = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:crop.small.title
     selectedRatio = free

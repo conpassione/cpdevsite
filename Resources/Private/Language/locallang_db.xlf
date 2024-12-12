@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2024-12-10T18:02:50+01:00">
+    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2024-12-12T21:14:22+01:00">
         <header></header>
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
@@ -92,6 +92,12 @@
             </trans-unit>
             <trans-unit id="crop.default.title" resname="crop.default.title">
                 <source>Desktop</source>
+            </trans-unit>
+            <trans-unit id="crop.medium.free.title" resname="crop.medium.free.title">
+                <source>free</source>
+            </trans-unit>
+            <trans-unit id="crop.medium.title" resname="crop.medium.title">
+                <source>Tablet</source>
             </trans-unit>
             <trans-unit id="crop.small.free.title" resname="crop.small.free.title">
                 <source>free</source>
@@ -240,23 +246,56 @@
             <trans-unit id="tceform.page.media.label" resname="tceform.page.media.label">
                 <source>Images</source>
             </trans-unit>
+            <trans-unit id="tceform.page.nav_title.label" resname="tceform.page.nav_title.label">
+                <source>Navigation Title</source>
+            </trans-unit>
             <trans-unit id="tceform.page.subtitle.label" resname="tceform.page.subtitle.label">
-                <source>Pageheader</source>
+                <source>Pageheader descirptiv</source>
             </trans-unit>
             <trans-unit id="tceform.page.title.label" resname="tceform.page.title.label">
                 <source>Pagetree title</source>
             </trans-unit>
-            <trans-unit id="tt_content.column.displaywidth" resname="tt_content.column.displaywidth">
-                <source>Display width</source>
+            <trans-unit id="tt_content.column.contentlayout" resname="tt_content.column.contentlayout">
+                <source>Content width</source>
             </trans-unit>
-            <trans-unit id="tt_content.column.displaywidth.item0" resname="tt_content.column.displaywidth.item0">
+            <trans-unit id="tt_content.column.contentlayout.item0" resname="tt_content.column.contentlayout.item0">
                 <source>normal</source>
             </trans-unit>
-            <trans-unit id="tt_content.column.displaywidth.item1" resname="tt_content.column.displaywidth.item1">
+            <trans-unit id="tt_content.column.contentlayout.item1" resname="tt_content.column.contentlayout.item1">
                 <source>breakout</source>
             </trans-unit>
-            <trans-unit id="tt_content.column.displaywidth.item2" resname="tt_content.column.displaywidth.item2">
+            <trans-unit id="tt_content.column.contentlayout.item2" resname="tt_content.column.contentlayout.item2">
                 <source>full-width</source>
+            </trans-unit>
+            <trans-unit id="tt_content.column.sectionlayout" resname="tt_content.column.sectionlayout">
+                <source>Display width</source>
+            </trans-unit>
+            <trans-unit id="tt_content.column.sectionlayout.item0" resname="tt_content.column.sectionlayout.item0">
+                <source>normal</source>
+            </trans-unit>
+            <trans-unit id="tt_content.column.sectionlayout.item1" resname="tt_content.column.sectionlayout.item1">
+                <source>breakout</source>
+            </trans-unit>
+            <trans-unit id="tt_content.column.sectionlayout.item2" resname="tt_content.column.sectionlayout.item2">
+                <source>full-width</source>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.accent" resname="tt_content.sectionlayout.accent">
+                <source>greyed</source>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.breakout-accent" resname="tt_content.sectionlayout.breakout-accent">
+                <source>breakout greyed</source>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.full-width-accent" resname="tt_content.sectionlayout.full-width-accent">
+                <source>full-width grayed</source>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.brandcolor" resname="tt_content.sectionlayout.brandcolor">
+                <source>colored</source>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.breakout-brandcolor" resname="tt_content.sectionlayout.breakout-brandcolor">
+                <source>breakout colored</source>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.full-width-brandcolor" resname="tt_content.sectionlayout.full-width-brandcolor">
+                <source>full-width colored</source>
             </trans-unit>
         </body>
     </file>

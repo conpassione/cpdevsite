@@ -15,24 +15,6 @@ tt_content.cp-2cols5050 {
       as = children_202
     }
   }
-  variables {
-    displaywidth = TEXT
-    displaywidth {
-      cObject = CASE
-      cObject {
-        key.field = displaywidth
-
-        0 = TEXT
-        0.value >
-
-        1 = TEXT
-        1.value = breakout
-
-        2 = TEXT
-        2.value = full-width
-      }
-    }
-  }
 }
 
 tt_content.cp-2cols3366 < tt_content.cp-2cols5050

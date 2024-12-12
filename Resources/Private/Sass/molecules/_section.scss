@@ -1,0 +1,110 @@
+/* sections (typo3-containers) */
+
+@layer basestyles {
+
+  section {
+    padding-block: calc(var(--gutter) * 2);
+  }
+
+  .section-hero,
+  .section-hero-small{
+    padding: 0;
+    position: relative;
+    img {
+      object-fit: cover;
+      object-position: center;
+      min-height: 350px;
+    }
+
+    .hero-overlay,
+    .hero-small-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: grid;
+      grid-template-rows:
+          [empty-start]
+          1fr
+          [h1-start]
+          auto
+          [h1-end];
+    }
+    .h1--pagetitle {
+      grid-row: h1;
+      background-color: oklch(from var(--clr-brand--primary) l c h / .5);
+      backdrop-filter: blur(0.5rem);
+      padding-inline: 0.5rem;
+      margin-right: auto;
+    }
+  }
+  .section-hero {
+    img {
+      height: 60vh;
+    }
+  }
+  .section-hero-small {
+    img {
+      height: 30vh;
+    }
+  }
+
+
+  .cp-1col {
+    display: block;
+  }
+
+  .cp-1col--content {
+    // width = 1px;
+  }
+
+  .cp-2cols5050--content {
+    display:               grid;
+    grid-template-columns: 1fr 1fr;
+    gap:                   var(--container-gutter);
+    @container (width < 60ch) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .cp-2cols3366--content {
+    display:               grid;
+    grid-template-columns: 1fr 2fr;
+    gap:                   var(--container-gutter);
+    @container (width < 75ch) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .cp-2cols6633--content {
+    display:               grid;
+    grid-template-columns: 2fr 1fr;
+    gap:                   var(--container-gutter);
+    @container (width < 75ch) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .cp-3cols--content {
+    display:               grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:                   var(--container-gutter);
+    @container (width < 75ch) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .accent,
+  .breakout-accent,
+  .full-width-accent {
+    background-color: var(--clr-background-accent);
+  }
+
+  .brandcolor,
+  .breakout-brandcolor,
+  .full-width-brandcolor {
+    color: var(--clr-bw-090);
+    background-color: var(--clr-background-brandcolor);
+  }
+
+}

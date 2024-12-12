@@ -1,7 +1,8 @@
 TCEFORM.pages {
   #TAB-Allgemein
   title.label = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.title.label
-  nav_title.disabled = 1
+  # nav_title.disabled = 1
+  nav_title.label = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.nav_title.label
   # subtitle.disabled = 1
   subtitle.label = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.page.subtitle.label
   // Remove unwanted doktypes (1:Standard, 3:Externe URL, 4:Shortcut, 6:BE-Bereich, 7:Mountpoint, 199:Abstand, 254:Sysordner, 255:Recycler, --div--:Trennlinie
@@ -130,6 +131,19 @@ TCEFORM.tt_content {
   # rowDescription.disabled = 1
 }
 
+TCEFORM.tt_content {
+  sectionlayout {
+    addItems {
+      accent = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.sectionlayout.accent
+      breakout-accent = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.sectionlayout.breakout-accent
+      full-width-accent = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.sectionlayout.full-width-accent
+      brandcolor = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.sectionlayout.brandcolor
+      breakout-brandcolor = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.sectionlayout.breakout-brandcolor
+      full-width-brandcolor = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.sectionlayout.full-width-brandcolor
+    }
+  }
+}
+
 [! backend.user.isAdmin]
   TCEFORM.tt_content {
     CType.removeItems := addToList(list)
@@ -168,5 +182,8 @@ TCEFORM.tt_content.imageorient {
     34 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.leftbottom
     34.icon = tx-conpassione-content-beside-text-img-left-bottom
   }
-  types.image.removeItems = 8,9,10,17,18,25,26,31,32,33,34
+  types.image.removeItems = 1,2,8,9,10,17,18,25,26,31,32,33,34
+}
+TCEFORM.tt_content.imagecols {
+  removeItems = 5,6,7,8
 }

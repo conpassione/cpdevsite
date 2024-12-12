@@ -24,7 +24,8 @@
     --clr-btnbg--hover: var(--clr-primarybtnbg--hover);
 
     list-style-type:    none;
-    outline:            1px solid var(--clr-primarybtnbg--active);
+    border:             1px solid var(--clr-primarybtnbg--active);
+    border-radius:      var(--card-border-radius);
     overflow:           hidden;
 
     display:            grid;

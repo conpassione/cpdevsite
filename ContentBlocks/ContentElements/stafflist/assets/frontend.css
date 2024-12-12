@@ -16,7 +16,7 @@
 
 .staffcard {
   border: 1px solid var(--clr-staffcard--titlebg);
-  /* border-radius: 1em; */
+  border-radius: var(--card-border-radius);
   overflow: hidden;
 
   container: staffcard / inline-size;

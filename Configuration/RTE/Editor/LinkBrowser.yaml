@@ -88,7 +88,7 @@ buttons:
         - linkedin-link--icon
         - pinterest-link--icon
         - github-link--icon
-        - youtub-link--icon
+        - youtube-link--icon
         - vimeo-link--icon
 
     # Define default CSS linkbrowser per LinkType. The CSS class name listed here

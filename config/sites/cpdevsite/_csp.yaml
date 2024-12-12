@@ -1,0 +1,26 @@
+enforce:
+  #includeResolutions: false
+  inheritDefault: true
+  mutations:
+    - mode: "extend"
+      directive: "default-src"
+      sources:
+        - "'self'"
+
+    - mode: "extend"
+      directive: "script-src"
+      sources:
+        - "'nonce-*'"
+report:
+  #includeResolutions: false
+  inheritDefault: true
+  mutations:
+    - mode: "extend"
+      directive: "default-src"
+      sources:
+        - "'self'"
+
+    - mode: "extend"
+      directive: "script-src"
+      sources:
+        - "'nonce-*'"

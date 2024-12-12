@@ -38,4 +38,35 @@
     display:   block;
   }
 
+  figure {
+    position: relative;
+  }
+  figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.5em;
+    font-size: var(--fs-small);
+    backdrop-filter: blur(1em);
+  }
+
+  .gallery {
+    display: grid;
+    gap: var(--gutter);
+    &.columns1 {
+      grid-template-columns: repeat(1, minmax(200px, 100%));
+    }
+    &.columns2 {
+      grid-template-columns: repeat(2, minmax(200px, 50%));
+    }
+    &.columns3 {
+      grid-template-columns: repeat(3, minmax(200px, 50%));
+    }
+    &.columns4 {
+      grid-template-columns: repeat(4, minmax(200px, 50%));
+    }
+  }
+
+
 }

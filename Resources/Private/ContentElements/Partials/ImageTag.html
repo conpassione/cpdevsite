@@ -15,16 +15,17 @@
                 <source srcset="{f:uri.image(image:file, maxWidth: 2560, fileExtension: 'jpg', cropVariant: 'default')}" media="(min-width: 1600px)" type="image/jpeg">
                 <source srcset="{f:uri.image(image:file, maxWidth: 1601, fileExtension: 'webp', cropVariant: 'default')}" media="(min-width: 1201px)" type="image/webp">
                 <source srcset="{f:uri.image(image:file, maxWidth: 1600, fileExtension: 'jpg', cropVariant: 'default')}" media="(min-width: 1201px)" type="image/jpeg">
-                <source srcset="{f:uri.image(image:file, maxWidth: 1201, fileExtension: 'webp', cropVariant: 'default')}" media="(min-width: 769px)" type="image/webp">
-                <source srcset="{f:uri.image(image:file, maxWidth: 1200, fileExtension: 'jpg', cropVariant: 'default')}" media="(min-width: 769px)" type="image/jpeg">
-                <source srcset="{f:uri.image(image:file, maxWidth: 769, fileExtension: 'webp', cropVariant: 'small')}" media="(min-width: 481px)" type="image/webp">
-                <source srcset="{f:uri.image(image:file, maxWidth: 768, fileExtension: 'jpg', cropVariant: 'small')}" media="(min-width: 481px)" type="image/jpeg">
+                <source srcset="{f:uri.image(image:file, maxWidth: 1201, fileExtension: 'webp', cropVariant: 'medium')}" media="(min-width: 769px)" type="image/webp">
+                <source srcset="{f:uri.image(image:file, maxWidth: 1200, fileExtension: 'jpg', cropVariant: 'medium')}" media="(min-width: 769px)" type="image/jpeg">
+                <source srcset="{f:uri.image(image:file, maxWidth: 769, fileExtension: 'webp', cropVariant: 'medium')}" media="(min-width: 481px)" type="image/webp">
+                <source srcset="{f:uri.image(image:file, maxWidth: 768, fileExtension: 'jpg', cropVariant: 'medium')}" media="(min-width: 481px)" type="image/jpeg">
                 <source srcset="{f:uri.image(image:file, maxWidth: 481, fileExtension: 'webp',  cropVariant: 'small')}" type="image/webp">
                 <source srcset="{f:uri.image(image:file, maxWidth: 480, fileExtension: 'jpg', cropVariant: 'small')}" type="image/jpeg">
 
                 <f:if condition="{file.extension} == 'pdf'">
                     <f:then>
-                        <f:media class="image-embed-item" file="{file}" width="{dimensions.width}px" height="{dimensions.height}px" alt="{file.alternative}" title="{file.title}" />
+                        <f:media class="image-embed-item" file="{file}" width="{dimensions.width}px" height="{dimensions.height}px" additionalAttributes="alt: {file.alternative}"
+                                 title="{file.title}" />
                     </f:then>
                     <f:else>
                         <img class="cp-responsive-image"

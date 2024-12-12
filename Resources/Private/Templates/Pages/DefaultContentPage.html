@@ -2,28 +2,21 @@
 
 <f:layout name="Layout-{page.pagerecord.layout}" />
 
-<f:section name="Header">
-    <f:render partial="Header" arguments="{_all}" />
-</f:section>
-
 <f:section name="Main">
-    <main>
-        <h1>Hello World from DefaultContentPage</h1>
-        <p>page.title: {page.pagerecord.title} </p>
-        <hr>
-        <f:for each="{pagecontent.content.records}" as="contentelement">
-            <f:cObject
-                typoscriptObjectPath="tt_content.{contentelement.CType}"
-                data="{contentelement.rawRecord}"
-                table="tt_content"
-            />
-        </f:for>
-    </main>
+    <f:render section="Herosmall" arguments="{hero: pagecontent.hero, pageTitle: page.pagerecord.subtitle}" />
+    <f:for each="{pagecontent.content.records}" as="contentelement">
+        <f:cObject
+            typoscriptObjectPath="tt_content.{contentelement.CType}"
+            data="{contentelement.rawRecord}"
+            table="tt_content"
+        />
+    </f:for>
 </f:section>
 
-<f:section name="Footer">
-
+<f:section name="Herosmall">
+    <f:render partial="Herosmall" arguments="{hero: hero, pageTitle: pageTitle}"/>
 </f:section>
+
 
 </html>
 

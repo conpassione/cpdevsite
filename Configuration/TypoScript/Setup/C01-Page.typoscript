@@ -14,10 +14,10 @@ config {
   index_externals = 1
 
   noPageTitle = 0
-  pageTitle.field = subtitle // title
+  pageTitle.field = nav_title // title
   pageTitle.postCObject = TEXT
   pageTitle.postCObject {
-    field = seo_title // subtitle // title
+    field = seo_title // nav_title // title
     noTrimWrap = | : ||
     postCObject = TEXT
     postCObject {
@@ -38,13 +38,13 @@ config {
   cache_clearAtMidnight = 1
 
 
-  additionalHeaders {
-    10.header = Strict-Transport-Security: max-age=31536000; inludeSubDomains
-    20.header = X-Content-Type-Options: nosniff
-    30.header = X-Powered-By: Unicorns
-    40.header = Referrer-Policy: same-origin
-    60.header = Content-Security-Policy: frame-ancestors 'self'
-  }
+#  additionalHeaders {
+#    10.header = Strict-Transport-Security: max-age=31536000; inludeSubDomains
+#    20.header = X-Content-Type-Options: nosniff
+#    30.header = X-Powered-By: Unicorns
+#    40.header = Referrer-Policy: same-origin
+#    60.header = Content-Security-Policy: frame-ancestors 'self'
+#  }
 }
 
 page = PAGE
@@ -58,5 +58,7 @@ page {
   includeJSFooterlibs {
     mail = EXT:cpdevsite/Resources/Public/JavaScript/mail.min.js
     mail.async = 1
+
   }
+  jsFooterInline >
 }

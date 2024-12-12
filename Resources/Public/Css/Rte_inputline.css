@@ -18,10 +18,10 @@
     --clr-success: oklch(0.5 0.12 150);
     --clr-info: oklch(0.5 0.12 220);
     --clr-error: oklch(0.5 0.12 0);
-    --clr-brand--primary: oklch(0.491 0.061 62);
-    --clr-brand--secondary: oklch(0.5 0.13 318);
+    --clr-brand--primary: oklch(0.6 0.061 62);
+    --clr-brand--secondary: oklch(0.5 0.03 149);
     --clr-brand--tertiary: oklch(0.5 0.07 231);
-    --clr-brand--quaternary: oklch(0.5 0.03 149);
+    --clr-brand--quaternary: oklch(0.5 0.13 318);
     --clr-branddimmed--primary: oklch(from var(--clr-brand--primary) calc(l * .8) calc(c * .8) 220);
     --clr-branddimmed--secondary: oklch(from var(--clr-brand--secondary) calc(l * .8) calc(c * .8) 220);
     --clr-branddimmed--tertiary: oklch(from var(--clr-brand--tertiary) calc(l * .8) calc(c * .8) 220);
@@ -30,9 +30,11 @@
     /* Color Theme light            */
     /* ============================ */
     /* application colors */
-    --clr-text: var(--clr-bw-020);
-    --clr-bg: var(--clr-bw-090);
-    --clr-h: var(--clr-bw-060);
+    --clr-text: var(--clr-bw-030);
+    --clr-background: var(--clr-bw-090);
+    --clr-background-accent: var(--clr-bw-070);
+    --clr-background-brandcolor: oklch(from var(--clr-brand--primary) calc(l * .5) calc(c * 0.5) h);
+    --clr-h: var(--clr-bw-050);
     --clr-h--border: var(--clr-brand--primary);
     --clr-accent: var(--clr-brand--secondary);
     /* element colors */
@@ -45,10 +47,12 @@
     --clr-primarybtnbg--active: var(--clr-brand--primary);
     --clr-primarybtnbg--hover: var(--clr-bw-050);
     --clr-primarybtnbg--disabled: oklch(from var(--clr-primarybtn--active) calc(l * .75) c h);
+    --clr-primarybtn--border: transparent;
     --clr-secondarybtn--active: var(--clr-bw-090);
     --clr-secondarybtnbg--active: var(--clr-brand--secondary);
     --clr-secondarybtnbg--hover: var(--clr-bw-050);
-    --clr-secondarxbtnbg--disabled: oklch(from var(--clr-secondarybtnbg--active) calc(l * .75) c h);
+    --clr-secondarybtnbg--disabled: oklch(from var(--clr-secondarybtnbg--active) calc(l * .75) c h);
+    --clr-secondarybtn--border: transparent;
     /* section colors */
     --clr-headerbg: var(--clr-bw-060);
     --clr-footerbg: var(--clr-brand--primary);
@@ -61,16 +65,23 @@
     --clr-mnubg: var(--clr-headerbg);
     --clr-mnubg--active: var(--clr-bw-040);
     --clr-mnubg--hover: var(--clr-brand--primary);
+    /* logo */
+    --clr-logo: var(--clr-bw-000);
+    /* cards */
+    --clr-card--accent: var(--clr-brand--primary);
   }
   @media (prefers-color-scheme: dark) {
     :root {
       /* buttons */
       --clr-primarybtn--active: var(--clr-bw-075);
       --clr-primarybtnbg--active: var(--clr-brand--primary);
-      --clr-primarybtn--disabled: oklch(from var(--clr-primarybtn--active) calc(l + .5) c h);
+      --clr-primarybtn--disabled: oklch(from var(--clr-primarybtn--active) calc(l + .5) calc(c * 0.5) h);
       /* typographic colors */
-      --clr-background: var(--clr-bw-030);
       --clr-text: var(--clr-bw-090);
+      --clr-h: var(--clr-bw-080);
+      --clr-background: var(--clr-bw-030);
+      --clr-background-accent: var(--clr-bw-040);
+      --clr-background-brandcolor: oklch(from var(--clr-brand--primary) calc(l * .5) calc(c * 0.5) h);
     }
   }
 }
@@ -81,6 +92,9 @@
     --container-gutter: 2rem;
     --flow-spacer: 1em;
     --border-radius: 1em;
+    --border-width: 1px;
+    --border-style: solid;
+    --card-border-radius: 0.5rem;
     --mediasize--small: 480px;
     --mediasize--medium: 960px;
     --mediasize--large: 1600px;
@@ -308,6 +322,7 @@
   .vimeo-link--icon:before, .youtube-link--icon:before, .github-link--icon:before, .pinterest-link--icon:before, .linkedin-link--icon:before, .insta-link--icon:before, .fb-link--icon:before, .mail-link--icon:before, .phone-link--icon:before, .url-link--icon:before, .folder-link--icon:before, .file-link--icon:before, .page-link--icon:before {
     font-family: var(--ff-symbol), sans-serif;
     content: "";
+    padding-inline-start: 0.2em;
     padding-inline-end: 0.1em;
   }
   a:focus-visible {
@@ -448,6 +463,34 @@
     width: 100%;
     display: block;
   }
+  figure {
+    position: relative;
+  }
+  figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.5em;
+    font-size: var(--fs-small);
+    backdrop-filter: blur(1em);
+  }
+  .gallery {
+    display: grid;
+    gap: var(--gutter);
+  }
+  .gallery.columns1 {
+    grid-template-columns: repeat(1, minmax(200px, 100%));
+  }
+  .gallery.columns2 {
+    grid-template-columns: repeat(2, minmax(200px, 50%));
+  }
+  .gallery.columns3 {
+    grid-template-columns: repeat(3, minmax(200px, 50%));
+  }
+  .gallery.columns4 {
+    grid-template-columns: repeat(4, minmax(200px, 50%));
+  }
 }
 /* import utilities */
 /* headings */
@@ -457,25 +500,28 @@
     font-size: var(--fs-regular);
     line-height: var(--lh-h);
     font-family: var(--ff-h), sans-serif;
+    font-weight: normal;
+    margin: 0;
   }
   .h1, .h2, .h3, .h4, .h5, .h6 {
     text-wrap: balance;
+    color: var(--clr-h);
   }
   .h1-font,
   .h1 {
     font-size: clamp(2.5rem, 4vw, 4rem);
   }
   .h1 {
-    margin-block-start: 1.5em;
-    margin-block-end: 1em;
-    color: var(--clr-h);
+    padding-block: 0.25em;
+    margin-block-end: 0.25em;
+    color: var(--clr-bw-090);
   }
   .h2-font,
   .h2 {
     font-size: clamp(2rem, 3vw, 3rem);
   }
   .h2 {
-    margin-block-start: 1.5em;
+    margin-block-start: 1.2em;
     margin-block-end: 1em;
     color: var(--clr-h);
     border-bottom: 0.1em solid var(--clr-h--border);
@@ -507,8 +553,10 @@
     --_clr-btnbg--hover: var(--clr-btnbg--hover, var(--clr-primarybtnbg--hover));
     color: var(--_clr-btn);
     background-color: var(--_clr-btnbg);
-    border: 0;
-    border-radius: 0;
+    border-color: var(--btn-border-color), transparent;
+    border-style: var(--btn-border-style), none;
+    border-width: var(--bs-btn-border-width), 0px;
+    border-radius: var(--btn-border-radius), 0;
     display: inline-block;
     margin-inline: 0.25rem;
     padding: 0.5em 1em;
@@ -570,14 +618,20 @@
 /* import utilities */
 /* ck-editor */
 body {
-  font-size: 16px;
-  line-height: 20px;
-  padding: 5px;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 5px 10px;
+  color: var(--clr-text);
+  background-color: var(--clr-background);
 }
 
 body > *:nth-last-child(-n+1) {
   border-block-end: 0;
   padding-block-end: 0.25em;
+}
+
+.ck-content {
+  display: block !important;
 }
 
 /*# sourceMappingURL=Rte_inputline.css.map */

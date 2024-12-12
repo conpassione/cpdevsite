@@ -4,7 +4,7 @@
 <f:layout name="Layout-{page.pagerecord.layout}" />
 
 <f:section name="Main">
-    <f:render section="Hero" arguments="{hero: pagecontent.hero}" />
+    <f:render section="Hero" arguments="{hero: pagecontent.hero, pageTitle: page.pagerecord.subtitle}" />
     <f:render section="Submenu" arguments="{submenu: submenu}" />
     <f:for each="{pagecontent.content.records}" as="record">
         <f:cObject
@@ -16,7 +16,7 @@
 </f:section>
 
 <f:section name="Hero">
-    <f:render partial="Hero" arguments="{hero: hero}"/>
+    <f:render partial="Hero" arguments="{hero: hero, pageTitle: pageTitle}"/>
 </f:section>
 
 <f:section name="Submenu">

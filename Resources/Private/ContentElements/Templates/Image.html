@@ -1,15 +1,13 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:layout />
-
-<f:section name="Main">
-    <div class="cp-image">
-        <f:if condition="{data.header}">
-            <f:render partial="HeaderTag" arguments="{
-                header_layout: data.header_layout,
-                header: data.header,
-                link: data.header_link}" />
-        </f:if>
+<div class="cp-image">
+    <f:if condition="{data.header}">
+        <f:render partial="HeaderTag" arguments="{
+            header_layout: data.header_layout,
+            header: data.header,
+            link: data.header_link}" />
+    </f:if>
+    <div class="gallery columns{data.imagecols} orientation{data.imageorient}">
         <f:if condition="{files}">
             <f:for as="image" each="{files}">
                 <figure class="files">
@@ -31,5 +29,6 @@
             </f:for>
         </f:if>
     </div>
-</f:section>
+</div>
+
 </html>

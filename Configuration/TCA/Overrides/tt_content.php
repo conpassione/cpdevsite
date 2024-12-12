@@ -140,25 +140,48 @@ call_user_func(static function(): void {
     );
 
     $additionalColumns = [
-        'displaywidth' => [
+        'sectionlayout' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.column.displaywidth',
+            'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.column.sectionlayout',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
-                'default' => 0,
+                'default' => '',
                 'items' => [
                     [
-                        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.column.displaywidth.item0',
-                        'value' => '0',
+                        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.column.sectionlayout.item0',
+                        'value' => '',
                     ],
                     [
-                        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.column.displaywidth.item1',
-                        'value' => '1',
+                        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.column.sectionlayout.item1',
+                        'value' => 'breakout',
                     ],
                     [
-                        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.column.displaywidth.item2',
-                        'value' => '2',
+                        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.column.sectionlayout.item2',
+                        'value' => 'full-width',
+                    ],
+                ]
+            ]
+        ],
+        'contentlayout' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.column.contentlayout',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'default' => '',
+                'items' => [
+                    [
+                        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.column.contentlayout.item0',
+                        'value' => '',
+                    ],
+                    [
+                        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.column.contentlayout.item1',
+                        'value' => 'breakout',
+                    ],
+                    [
+                        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tt_content.column.contentlayout.item2',
+                        'value' => 'full-width',
                     ],
                 ]
             ]
@@ -167,9 +190,15 @@ call_user_func(static function(): void {
     ExtensionManagementUtility::addTCAcolumns('tt_content', $additionalColumns);
 
     $sections = 'cp-1col,cp-2cols5050,cp-2cols3366,cp-2cols6633,cp-3cols';
+    ExtensionManagementUtility::addFieldsToPalette(
+        'tt_content',
+        'cplayout',
+        'sectionlayout,contentlayout,'
+    );
+
     ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
-        'displaywidth',
+        '--palette--;Layout;cplayout',
         $sections,
         'after:sectionIndex');
 });

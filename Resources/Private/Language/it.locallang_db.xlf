@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="it" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-12-10T18:02:50+01:00">
+    <file source-language="en" target-language="it" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-12-12T21:14:22+01:00">
         <header></header>
         <body>
             <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
@@ -122,6 +122,14 @@
             <trans-unit id="crop.default.title" resname="crop.default.title">
                 <source>Desktop</source>
                 <target>Desktop</target>
+            </trans-unit>
+            <trans-unit id="crop.medium.free.title" resname="crop.medium.free.title">
+                <source>free</source>
+                <target>libero</target>
+            </trans-unit>
+            <trans-unit id="crop.medium.title" resname="crop.medium.title">
+                <source>Tablet</source>
+                <target>Tablet</target>
             </trans-unit>
             <trans-unit id="crop.small.free.title" resname="crop.small.free.title">
                 <source>free</source>
@@ -319,29 +327,73 @@
                 <source>Images</source>
                 <target>Imagine</target>
             </trans-unit>
+            <trans-unit id="tceform.page.nav_title.label" resname="tceform.page.nav_title.label">
+                <source>Navigation Title</source>
+                <target>Tittolo di navigazione</target>
+            </trans-unit>
             <trans-unit id="tceform.page.subtitle.label" resname="tceform.page.subtitle.label">
-                <source>Pageheader</source>
-                <target>Tittolo della pagina</target>
+                <source>Pageheader descirptiv</source>
+                <target>Tittolo lungo della pagina</target>
             </trans-unit>
             <trans-unit id="tceform.page.title.label" resname="tceform.page.title.label">
                 <source>Pagetree title</source>
                 <target>Identificazione nel menu</target>
             </trans-unit>
-            <trans-unit id="tt_content.column.displaywidth" resname="tt_content.column.displaywidth">
-                <source>Display width</source>
-                <target>Larghezza di sezione</target>
+            <trans-unit id="tt_content.column.contentlayout" resname="tt_content.column.contentlayout">
+                <source>Content width</source>
+                <target>Larghezza del contenuto</target>
             </trans-unit>
-            <trans-unit id="tt_content.column.displaywidth.item0" resname="tt_content.column.displaywidth.item0">
+            <trans-unit id="tt_content.column.contentlayout.item0" resname="tt_content.column.contentlayout.item0">
                 <source>normal</source>
                 <target>normale</target>
             </trans-unit>
-            <trans-unit id="tt_content.column.displaywidth.item1" resname="tt_content.column.displaywidth.item1">
+            <trans-unit id="tt_content.column.contentlayout.item1" resname="tt_content.column.contentlayout.item1">
                 <source>breakout</source>
                 <target>evasione</target>
             </trans-unit>
-            <trans-unit id="tt_content.column.displaywidth.item2" resname="tt_content.column.displaywidth.item2">
+            <trans-unit id="tt_content.column.contentlayout.item2" resname="tt_content.column.contentlayout.item2">
                 <source>full-width</source>
                 <target>massima</target>
+            </trans-unit>
+            <trans-unit id="tt_content.column.sectionlayout" resname="tt_content.column.sectionlayout">
+                <source>Display width</source>
+                <target>Larghezza di sezione</target>
+            </trans-unit>
+            <trans-unit id="tt_content.column.sectionlayout.item0" resname="tt_content.column.sectionlayout.item0">
+                <source>normal</source>
+                <target>normale</target>
+            </trans-unit>
+            <trans-unit id="tt_content.column.sectionlayout.item1" resname="tt_content.column.sectionlayout.item1">
+                <source>breakout</source>
+                <target>evasione</target>
+            </trans-unit>
+            <trans-unit id="tt_content.column.sectionlayout.item2" resname="tt_content.column.sectionlayout.item2">
+                <source>full-width</source>
+                <target>Larghezza totale</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.accent" resname="tt_content.sectionlayout.accent">
+                <source>greyed</source>
+                <target>grigia</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.breakout-accent" resname="tt_content.sectionlayout.breakout-accent">
+                <source>breakout greyed</source>
+                <target>evasione grigia</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.full-width-accent" resname="tt_content.sectionlayout.full-width-accent">
+                <source>full-width grayed</source>
+                <target>Larghezza totale grigia</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.brandcolor" resname="tt_content.sectionlayout.brandcolor">
+                <source>colored</source>
+                <target>colorata</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.breakout-brandcolor" resname="tt_content.sectionlayout.breakout-brandcolor">
+                <source>breakout colored</source>
+                <target>evasione colorata</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.full-width-brandcolor" resname="tt_content.sectionlayout.full-width-brandcolor">
+                <source>full-width colored</source>
+                <target>Larghezza totale colorata</target>
             </trans-unit>
         </body>
     </file>

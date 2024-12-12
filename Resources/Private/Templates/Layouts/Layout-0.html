@@ -2,19 +2,27 @@
 
 <f:asset.css identifier="globalcss" href="EXT:cpdevsite/Resources/Public/Css/Layout.css" />
 
-<header class="content-grid">
-    <f:render partial="Header" arguments="{_all}"/>
-</header>
+<f:spaceless>
+    <header class="content-grid">
+        <f:render partial="Header" arguments="{_all}"/>
+    </header>
 
-<main class="content-grid">
-    <!--TYPO3SEARCH_begin-->
-    <f:render section="Main" />
-    <!--TYPO3SEARCH_end-->
-</main>
+    <main class="content-grid">
+        <!--TYPO3SEARCH_begin-->
+        <f:render section="Main" />
+        <!--TYPO3SEARCH_end-->
+    </main>
 
-<footer class="content-grid">
-    <f:render partial="Footer" arguments="{_all}"/>
-</footer>
+    <footer class="content-grid">
+        <f:render partial="Footer" arguments="{pagecontent.footer}"/>
+        <script nonce="{f:security.nonce()}">
+            /*<![CDATA[*/
+            /*TS_inlineFooter */
+            var skjsonlylightbox = GLightbox({selector: '.skjsonlylightbox',touchNavigation: true,loop: true});
 
+            /*]]>*/
+        </script>
+    </footer>
+</f:spaceless>
 </html>
 
