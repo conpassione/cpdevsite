@@ -6,45 +6,56 @@
   .navsubmenu {
 
     /* local settings */
-    --_gutter--list:          calc(var(--gutter) / 2);
-    --_navsubmenu-card--size: calc(var(--mediasize--small) / 3);
+    --_card--gutter:   var(--gutter);
+    --_card--min-size: calc(var(--mediasize--small) / 3);
 
     display:                 grid;
-    gap:                     var(--gutter);
-    grid-template-columns:  repeat(auto-fit, minmax(var(--_navsubmenu-card--size), 1fr));
+    gap:                     var(--_card--gutter);
+    grid-template-columns:   repeat(auto-fit, minmax(var(--_card--min-size), 1fr));
     justify-content:         center;
     padding-inline-start:    0;
   }
 
   .navsubmenu--card {
     /* use default colors */
-    --clr-btn:  var(--clr-primarybtn--active);
-    --clr-btnbg:  var(--clr-primarybtnbg--active);
-    --clr-btn--hover: var(--clr-primarybtn--hover);
-    --clr-btnbg--hover: var(--clr-primarybtnbg--hover);
+    --_card--gutter:   var(--gutter);
+    --_card--color:    var(--clr-text);
+    --_card--border-radius:  var(--border-radius);
+    --_card--btn-color: var(--clr-primarybtn--active);
+    --_card--btnbg-color: var(--clr-primarybtnbg--active);
+    --_card--btn-color--hover: var(--clr-primarybtn--hover);
+    --_card--btnbg-color--hover: var(--clr-primarybtnbg--hover);
 
     list-style-type:    none;
-    border:             1px solid var(--clr-primarybtnbg--active);
+    border:             1px solid var(--_card--btnbg-color);
     border-radius:      var(--card-border-radius);
     overflow:           hidden;
 
     display:            grid;
     grid-template-rows: auto auto 1fr auto;
-    gap:                calc(var(--_gutter--list) / 2);
-  }
+    gap:                calc(var(--_card--gutter) / 2);
 
-  .navsubmenu--heading {
-    padding-block-start: var(--_gutter--list);
-    padding-inline:      var(--_gutter--list);
-  }
+    .navsubmenu--heading {
+      padding-block-start: var(--_card--gutter);
+      padding-inline:      var(--_card--gutter);
+      color: var(--_card--color);
+    }
 
-  .navsubmenu--description {
-    padding-inline: var(--_gutter--list);
-  }
+    .navsubmenu--description {
+      color: var(--_card--color);
+      padding-inline: var(--_card--gutter);
+    }
 
-  .navsubmenu--link {
-    margin:             var(--gutter--list);
-    align-self:         end;
+    a.navsubmenu--link {
+      margin:             0;
+      padding-inline: var(--_card--gutter);
+      align-self:         end;
+      color: var(--_card--btn-color);
+      background-color: var(--_card--btnbg-color);
+      &:hover {
+        color: var(--_card--btn-color--hover);
+        background-color: var(--_card--btnbg-color--hover);
+      }
+    }
   }
-
 }

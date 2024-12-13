@@ -6,7 +6,9 @@
   /* main navigation */
   .nav-main {
     display: none;
-    margin-inline: auto;
+    margin-inline-start: auto;
+    margin-inline-end: 0;
+    font-size: var(--fs-regular--big);
   }
 
   .menu-items {
@@ -67,12 +69,11 @@
 
   /* mobile navigation */
   .mobilemenu {
-    --_bor-width: var(--hamburger--bar-width, 60px);
+    --_bar-width: var(--hamburger--bar-width, 60px);
     --_bar-height: var(--hamburger--bar-height, 8px);
-    --_bar-gap: var(--hamburger--bar-gap, 6px);
 
     display: block;
-    margin-inline: auto var(--gutter);
+    margin-inline: var(--gutter);
   }
 
   .hamburger-menu {
@@ -80,7 +81,7 @@
   }
 
   .hamburger-menu svg {
-    width: 60px;
+    width: var(--_bar-width);
     aspect-ratio: 1;
     --button-color: var(--clr-mnu);
     background-color: var(--clr-mnubg);
@@ -89,33 +90,33 @@
       --button-color: var(--clr-mnu--hover);
       background-color: var(--clr-mnubg--hover);
     }
-  }
-
-  .hamburger-menu .line {
-    transition:
-      transform 300ms ease-in 300ms,
-      rotate 300ms ease-in,
-      opacity 0ms 300ms;
-    transform-origin: center;
+    .line {
+      height: var(--_bar-height);
+      transition:
+        y 300ms ease-in 300ms,
+        rotate 300ms ease-in,
+        opacity 0ms 300ms;
+      transform-origin: center;
+    }
   }
 
   .hamburger:checked ~ .hamburger-menu .line {
     transition:
-      transform 300ms ease-in,
+      y 300ms ease-in,
       rotate 300ms ease-in 300ms,
       opacity 0ms 300ms;
   }
 
   .hamburger:checked ~ .hamburger-menu {
     .top {
-      transform: translateY(20px);
+      y: 45px;
       rotate: 45deg;
     }
     .middle {
       opacity: 0;
     }
     .bottom {
-      transform: translateY(-20px);
+      y: 45px;
       rotate: -45deg;
     }
   }
@@ -268,17 +269,25 @@
   }
 
   .language-menu {
-    display: inline-block;
+    display: flex;
+    flex-wrap: nowrap;
     list-style: none;
     padding: 0;
   }
 
   .lmenu {
-    display: inline-block;
-    padding-inline: var(--gutter);
-    border-inline-end: 1px solid var(--clr-mnu);
+    display: block;
+    border-inline-start: 1px solid var(--clr-mnu);
     color: var(--clr-mnu);
     background-color: var(--clr-mnubg);
+    a {
+      display: block;
+      padding: 0.5em;
+    }
+    &:last-child {
+      border-inline-end: 1px solid var(--clr-mnu);
+    }
+
     .active {
       color: var(--clr-mnubg--active);
       background-color: var(--clr-mnubg--active);
@@ -292,14 +301,6 @@
       color: var(--clr-mnu--hover);
       background-color: var(--clr-mnubg--hover);
     }
-  }
-  .lmenu:first-child {
-    //padding-inline-start: 0;
-  }
-
-  .lmenu:last-child {
-    padding-inline-end: 0;
-    border-inline-end: 0;
   }
 
 }

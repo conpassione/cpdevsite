@@ -1,64 +1,77 @@
 /* Created by Content Blocks */
 
-:root {
-  --clr-staffcard--title: var(--clr-bw-090);
-  --clr-staffcard--bg: transparent;
-  --clr-staffcard--titlebg: var(--clr-brand--primary);
-}
-
 /* Stafflist Content Block */
+
+
 .staffcards {
+  --_card--gutter: var(--gutter);
+
   display: grid;
-  gap: var(--gutter);
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--_card--gutter);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   container: staffcards / inline-size;
 }
 
 .staffcard {
-  border: 1px solid var(--clr-staffcard--titlebg);
-  border-radius: var(--card-border-radius);
+  --_clr-staffcard: var(--clr-text);
+  --_clr-staffcard--bg: transparent;
+  --_clr-staffcard--title: var(--clr-bw-090);
+  --_clr-staffcard--titlebg: var(--clr-brand--primary);
+  --_card-border-radius: var(--card-border-radius);
+
+  border: 1px solid var(--_clr-staffcard--titlebg);
+  border-radius: var(--_card-border-radius);
   overflow: hidden;
 
   container: staffcard / inline-size;
-}
 
-.staffcard--content {
-  display: grid;
-  gap: 0;
+  .staffcard--content {
+    display: grid;
+    gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'card-title'
+      'card-image'
+      'card-address'
+      'card-responsibility';
 
-  @container staffcard (inline-size > 480px) {
-    grid-template-columns: auto 55%;
-    > h3 {
-      grid-column: 1 / -1
+    @container staffcard (width > 480px) {
+      grid-template-columns: minmax(100px,250px) 1fr;
+      grid-template-areas:
+      'card-title card-title'
+      'card-image card-address'
+      'card-responsibility card-responsibility';
+    }
+
+    .staffcard--title {
+      color: var(--_clr-staffcard--title);
+      background-color: var(--_clr-staffcard--titlebg);
+      margin-block: 0;
+      padding: 0.5rem;
+      grid-column: card-title;
+    }
+
+    .staffcard--image {
+      figcaption {
+        display: none;
+      }
+      grid-column: card-image;
+    }
+
+    .staffcard--address {
+      padding: 0.5rem;
+      grid-column: card-address;
+    }
+
+    .staffcard--responsibility {
+      padding: 0.5rem;
+      grid-column: card-responsibility;
     }
   }
 }
 
-.staffcard--title {
-  color: var(--clr-staffcard--title);
-  background-color: var(--clr-staffcard--titlebg);
-  margin-block: 0;
-  padding: 0.5em;
-}
 
-.staffcard--header {
-  figcaption {
-    display: none;
-  }
-}
 
-.staffcard--main {
-  padding-block-end: 1em;
-  p {
-    padding-inline: 1em;
-    padding-block-end: 0.5em;
-  };
-  p:first-child {
-    padding-block-start: 1em;
-  }
-  ul {
-    padding-inline-start: 2rem;
-    padding-inline-end: 1rem;
-  }
-}
+
+
 

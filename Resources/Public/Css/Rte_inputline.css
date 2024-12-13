@@ -94,7 +94,7 @@
     --border-radius: 1em;
     --border-width: 1px;
     --border-style: solid;
-    --card-border-radius: 0.5rem;
+    --card-border-radius: 0;
     --mediasize--small: 480px;
     --mediasize--medium: 960px;
     --mediasize--large: 1600px;
@@ -544,26 +544,22 @@
 /* import utilities */
 /* button */
 @layer basestyles {
-  button,
   .button {
     /* default colors for primary button */
     --_clr-btn: var(--clr-btn, var(--clr-primarybtn--active));
     --_clr-btnbg: var(--clr-btnbg, var(--clr-primarybtnbg--active));
     --_clr-btn--hover: var(--clr-btn--hover, var(--clr-primarybtn--hover));
     --_clr-btnbg--hover: var(--clr-btnbg--hover, var(--clr-primarybtnbg--hover));
+    --_btn-font-size: var(--fs-regular);
     color: var(--_clr-btn);
     background-color: var(--_clr-btnbg);
-    border-color: var(--btn-border-color), transparent;
-    border-style: var(--btn-border-style), none;
-    border-width: var(--bs-btn-border-width), 0px;
     border-radius: var(--btn-border-radius), 0;
+    font-size: var(--_btn-font-size);
     display: inline-block;
     margin-inline: 0.25rem;
     padding: 0.5em 1em;
   }
-  button:hover, button:focus,
-  .button:hover,
-  .button:focus {
+  .button:hover, .button:focus {
     color: var(--_clr-btn--hover);
     background-color: var(--_clr-btnbg--hover);
   }
@@ -572,7 +568,13 @@
     outline: 2px solid var(--clr-bw-070);
   }
   .button--small {
-    font-size: var(--fs-small);
+    --_font-size: var(--fs-small);
+  }
+  .button-secondary {
+    --_clr-btn: var(---clr-secondarybtn--active);
+    --_clr-btnbg: var(--clr-secondarybtnbg--active);
+    --_clr-btn--hover: var(--clr-secondarybtn--hover);
+    --_clr-btnbg--hover: var(--clr-secondarybtnbg--hover);
   }
 }
 /* import utilities */
