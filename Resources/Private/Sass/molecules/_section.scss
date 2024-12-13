@@ -10,33 +10,30 @@
   .section-hero-small{
     padding: 0;
     position: relative;
+
     img {
       object-fit: cover;
       object-position: center;
       min-height: 350px;
     }
 
+    .hero,
+    .hero-small {
+      grid-row: 1 / -1;
+    }
+
     .hero-overlay,
     .hero-small-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      grid-column: content;
+      grid-row: 1 / -1;
       display: grid;
-      grid-template-rows:
-          [empty-start]
-          1fr
-          [h1-start]
-          auto
-          [h1-end];
-    }
-    .h1--pagetitle {
-      grid-row: h1;
-      background-color: oklch(from var(--clr-brand--primary) l c h / .5);
-      backdrop-filter: blur(0.5rem);
-      padding-inline: 0.5rem;
-      margin-right: auto;
+      align-content: end;
+      .h1--pagetitle {
+        background-color: oklch(from var(--clr-brand--primary) l c h / .5);
+        backdrop-filter: blur(0.5rem);
+        padding-inline: 0.5rem;
+        margin-right: auto;
+      }
     }
   }
   .section-hero {
@@ -49,7 +46,6 @@
       height: 30vh;
     }
   }
-
 
   .cp-1col {
     display: block;

@@ -912,21 +912,25 @@
     object-position: center;
     min-height: 350px;
   }
+  .section-hero .hero,
+  .section-hero .hero-small,
+  .section-hero-small .hero,
+  .section-hero-small .hero-small {
+    grid-row: 1/-1;
+  }
   .section-hero .hero-overlay,
   .section-hero .hero-small-overlay,
   .section-hero-small .hero-overlay,
   .section-hero-small .hero-small-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    grid-column: content;
+    grid-row: 1/-1;
     display: grid;
-    grid-template-rows: [empty-start] 1fr [h1-start] auto [h1-end];
+    align-content: end;
   }
-  .section-hero .h1--pagetitle,
-  .section-hero-small .h1--pagetitle {
-    grid-row: h1;
+  .section-hero .hero-overlay .h1--pagetitle,
+  .section-hero .hero-small-overlay .h1--pagetitle,
+  .section-hero-small .hero-overlay .h1--pagetitle,
+  .section-hero-small .hero-small-overlay .h1--pagetitle {
     background-color: oklch(from var(--clr-brand--primary) l c h/0.5);
     backdrop-filter: blur(0.5rem);
     padding-inline: 0.5rem;
