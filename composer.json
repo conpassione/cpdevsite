@@ -18,7 +18,6 @@
 	"license": "GPL-2.0-or-later",
 	"minimum-stability": "dev",
 	"prefer-stable" : true,
-	"version": "1.0.0",
 	"require": {
 		"b13/container": "^3.1",
 		"b13/doktypemapper": "^2.0",
@@ -55,7 +54,7 @@
 		"typo3/cms-seo": "^13",
 		"typo3/cms-setup": "^13",
 		"typo3/cms-sys-note": "^13",
-		"typo3/cms-t3editor": "^13",
+		"typo3/cms-t3editor": "*",
 		"typo3/cms-tstemplate": "^13",
 		"typo3/cms-viewpage": "^13",
 		"typo3/cms-webhooks": "^13.3",
