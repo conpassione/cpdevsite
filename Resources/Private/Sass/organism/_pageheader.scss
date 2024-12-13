@@ -4,13 +4,13 @@
 @layer basestyles {
 
   .headercontent {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
     align-items: center;
     container-type: inline-size;
     container-name: headercontent;
     position: relative;
-
   }
 
   .logo{

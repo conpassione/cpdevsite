@@ -94,6 +94,8 @@ page.10 {
     homePageTitle.stdWrap.override.cObject.data = levelfield : 0, nav_title
     #homePageTitle.stdWrap.override.cObject.stdWrap.override.cObject = TEXT
     #homePageTitle.stdWrap.override.cObject.stdWrap.override.cObject.data = levelfield : 0, seo_title
+    homePageUid = TEXT
+    homePageUid.data = levelfield : 0, uid
     homePageSlug = TEXT
     homePageSlug.data = levelfield : 0, slug
 

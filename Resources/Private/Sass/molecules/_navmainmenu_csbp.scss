@@ -6,8 +6,7 @@
   /* main navigation */
   .nav-main {
     display: none;
-    margin-inline-start: auto;
-    margin-inline-end: 0;
+    margin-inline-end: var(--gutter);
     font-size: var(--fs-regular--big);
   }
 
