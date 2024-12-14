@@ -31,7 +31,7 @@ config {
   pageTitleSeparator.noTrimWrap = | | |
 
   removeDefaultCss = 1
-  removeDefaultJS = 1
+  removeDefaultJS = external
 
   sendCacheHeaders = 1
   cache_period = 86400
@@ -50,14 +50,16 @@ config {
 page = PAGE
 page {
   typeNum = 0
-  # bodyTagAdd = class="content-grid"
   meta {
     viewport = width=device-width, initial-scale=1.0
     vieport.replace = 1
   }
+  includeCSS {
+    globalcss = EXT:cpdevsite/Resources/Public/Css/Layout.css
+  }
   includeJSFooterlibs {
-    mail = EXT:cpdevsite/Resources/Public/JavaScript/mail.min.js
-    mail.async = 1
+    #mail = EXT:cpdevsite/Resources/Public/JavaScript/mail.min.js
+    #mail.async = 1
 
   }
   jsFooterInline >

@@ -10,7 +10,7 @@
     --_clr-btnbg:        var(--clr-btnbg, var(--clr-primarybtnbg--active));
     --_clr-btn--hover:   var(--clr-btn--hover, var(--clr-primarybtn--hover));
     --_clr-btnbg--hover: var(--clr-btnbg--hover, var(--clr-primarybtnbg--hover));
-    --_btn-font-size:        var(--fs-regular);
+    --_btn-font-size:    inherit;
 
     color:               var(--_clr-btn);
     background-color:    var(--_clr-btnbg);

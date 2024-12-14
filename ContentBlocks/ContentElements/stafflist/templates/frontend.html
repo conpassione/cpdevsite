@@ -38,7 +38,7 @@
                             <f:link.external uri="tel:{member.feusers.0.data.mobile}" class="phone-link--icon">{member.feusers.0.data.mobile}</f:link.external>
                         </p>
                         <p>
-                            <f:link.external uri="mailto:{member.feusers.0.data.email}" class="mail-link--icon">{member.feusers.0.data.email}</f:link.external>
+                            <f:link.email email="{member.feusers.0.data.email}" class="mail-link--icon">{member.feusers.0.data.email}</f:link.email>
                         </p>
                     </div>
                     <div class="staffcard--responsibility">
