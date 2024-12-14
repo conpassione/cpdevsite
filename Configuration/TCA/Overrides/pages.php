@@ -7,7 +7,7 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 call_user_func(static function(): void {
     // clear the default items for "layout" field to allow for consistent adding of additional items with addItems in
-    // PageTSConfig (instead of a combination of altLabels and addItems
+    // PageTSConfig (instead of a combination of altLabels and addItems)
     $GLOBALS['TCA']['pages']['columns']['layout']['config']['items'] = [];
     unset($GLOBALS['TCA']['pages']['columns']['layout']['config']['default']);
 
@@ -26,36 +26,18 @@ call_user_func(static function(): void {
     ];
     $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-memberfunction'] = 'tx-conpassione-memberfunction';
 
-    // Add group 'landingpage' to Page Types Selection
+    // Add group 'conpassione' to Page Types Selection
     ExtensionManagementUtility::addTcaSelectItemGroup(
         'pages',
         'doktype',
-        'landingpage',
-        'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:pagewizard.landingpage.groupLabel',
-        'after:default'
-    );
-
-    // Add group 'gallery' to Page Types Selection
-    ExtensionManagementUtility::addTcaSelectItemGroup(
-        'pages',
-        'doktype',
-        'gallery',
-        'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:pagewizard.gallery.groupLabel',
-        'after:default'
-    );
-
-    // Add group 'agenda' to Page Types Selection
-    ExtensionManagementUtility::addTcaSelectItemGroup(
-        'pages',
-        'doktype',
-        'agenda',
-        'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:pagewizard.agenda.groupLabel',
+        'conpassione',
+        'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:pagewizard.conpassione.groupLabel',
         'after:default'
     );
 
     // Bugfix for content-blocks
     // List all pages ot add the standard fields
-    $doktypes = '36650001,36650011,36650012,36650021,36650022';
+    $doktypes = '36650001,36650011,36650012';
 
     // update TCA (add abstract) to unify BE for Standard and Custom Pages
     ExtensionManagementUtility::addToAllTCAtypes(

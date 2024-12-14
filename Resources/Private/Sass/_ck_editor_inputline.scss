@@ -6,16 +6,33 @@
 body {
   font-size:   18px;
   line-height: 24px;
-  padding: 5px 10px;
+  padding-inline: 10px;
   color: var(--clr-text);
   background-color: var(--clr-background);
-}
+  display: block;
 
-body >*:nth-last-child(-n + 1) {
-  border-block-end: 0;
-  padding-block-end: 0.25em;
-}
+  p {
+    font-family: var(--ff);
+  };
 
-.ck-content {
-  display: block !important;
+  h3, .h3 {
+    font-size: 24px;
+    font-family: var(--ff-h);
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  .cp-accent {
+    color: var(--clr-accent);
+  }
+
+  .fs-small {
+    font-size: 16px;
+  }
+
+  .fs-big{
+    font-size: 22px;
+  }
 }

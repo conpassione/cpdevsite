@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2024-12-12T21:14:22+01:00">
+    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2024-12-15T00:51:46+01:00">
         <header></header>
         <body>
-            <trans-unit id="backendlayout.agenda.title" resname="backendlayout.agenda.title">
-                <source>Agenda</source>
-            </trans-unit>
             <trans-unit id="backendlayout.col0" resname="backendlayout.col0">
                 <source>Content</source>
             </trans-unit>
@@ -18,20 +15,17 @@
             <trans-unit id="backendlayout.defaultcontentpage.title" resname="backendlayout.defaultcontentpage.title">
                 <source>Standard content page</source>
             </trans-unit>
-            <trans-unit id="backendlayout.event.title" resname="backendlayout.event.title">
-                <source>Event</source>
-            </trans-unit>
-            <trans-unit id="backendlayout.gallery.title" resname="backendlayout.gallery.title">
-                <source>Gallery</source>
-            </trans-unit>
-            <trans-unit id="backendlayout.gallerymenu.title" resname="backendlayout.gallerymenu.title">
-                <source>Gallery menu</source>
+            <trans-unit id="backendlayout.detailpage.title" resname="backendlayout.detailpage.title">
+                <source>SubPage</source>
             </trans-unit>
             <trans-unit id="backendlayout.homepage.title" resname="backendlayout.homepage.title">
                 <source>Homepage</source>
             </trans-unit>
             <trans-unit id="backendlayout.submenu" resname="backendlayout.submenu">
                 <source>Menu of subpages</source>
+            </trans-unit>
+            <trans-unit id="backendlayout.submenupage.title" resname="backendlayout.submenupage.title">
+                <source>Menupage</source>
             </trans-unit>
             <trans-unit id="container.1col" resname="container.1col">
                 <source>1-Column</source>
@@ -198,6 +192,12 @@
             <trans-unit id="rte.style.labelaccent" resname="rte.style.labelaccent">
                 <source>Accent</source>
             </trans-unit>
+            <trans-unit id="rte.style.labelbig" resname="rte.style.labelbig">
+                <source>Big font</source>
+            </trans-unit>
+            <trans-unit id="rte.style.labelsmall" resname="rte.style.labelsmall">
+                <source>Small font</source>
+            </trans-unit>
             <trans-unit id="rte.style.paragraph" resname="rte.style.paragraph">
                 <source>Paragraph</source>
             </trans-unit>
@@ -282,17 +282,17 @@
             <trans-unit id="tt_content.sectionlayout.accent" resname="tt_content.sectionlayout.accent">
                 <source>greyed</source>
             </trans-unit>
-            <trans-unit id="tt_content.sectionlayout.breakout-accent" resname="tt_content.sectionlayout.breakout-accent">
-                <source>breakout greyed</source>
-            </trans-unit>
-            <trans-unit id="tt_content.sectionlayout.full-width-accent" resname="tt_content.sectionlayout.full-width-accent">
-                <source>full-width grayed</source>
-            </trans-unit>
             <trans-unit id="tt_content.sectionlayout.brandcolor" resname="tt_content.sectionlayout.brandcolor">
                 <source>colored</source>
             </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.breakout-accent" resname="tt_content.sectionlayout.breakout-accent">
+                <source>breakout greyed</source>
+            </trans-unit>
             <trans-unit id="tt_content.sectionlayout.breakout-brandcolor" resname="tt_content.sectionlayout.breakout-brandcolor">
                 <source>breakout colored</source>
+            </trans-unit>
+            <trans-unit id="tt_content.sectionlayout.full-width-accent" resname="tt_content.sectionlayout.full-width-accent">
+                <source>full-width grayed</source>
             </trans-unit>
             <trans-unit id="tt_content.sectionlayout.full-width-brandcolor" resname="tt_content.sectionlayout.full-width-brandcolor">
                 <source>full-width colored</source>

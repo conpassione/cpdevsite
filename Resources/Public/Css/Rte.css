@@ -32,11 +32,9 @@
     /* application colors */
     --clr-text: var(--clr-bw-030);
     --clr-background: var(--clr-bw-090);
-    --clr-background-accent: var(--clr-bw-070);
-    --clr-background-brandcolor: oklch(from var(--clr-brand--primary) calc(l * .5) calc(c * 0.5) h);
     --clr-h: var(--clr-bw-050);
     --clr-h--border: var(--clr-brand--primary);
-    --clr-accent: var(--clr-brand--secondary);
+    --clr-accent: var(--clr-brand--primary);
     /* element colors */
     --clr-list--marker: var(--clr-brand--primary);
     --clr-code--bg: var(--clr-bw-060);
@@ -55,9 +53,10 @@
     --clr-secondarybtn--border: transparent;
     /* section colors */
     --clr-headerbg: var(--clr-bw-060);
-    --clr-footerbg: var(--clr-brand--primary);
-    --clr-sectionbg--important: var(--clr-brand--primary);
-    --clr-sectionbg--gray: var(--clr-bw-075);
+    --clr-background-accent: var(--clr-bw-080);
+    --clr-background-brandcolor: oklch(from var(--clr-brand--primary) calc(l * 1.4) calc(c * 0.5) h);
+    --clr-footerbg: var(--clr-bw-080);
+    --clr-footer--border: var(--clr-brand--primary);
     /* menu colors */
     --clr-mnu: var(--clr-bw-100);
     --clr-mnu--active: var(--clr-bw-100);
@@ -81,7 +80,8 @@
       --clr-h: var(--clr-bw-080);
       --clr-background: var(--clr-bw-030);
       --clr-background-accent: var(--clr-bw-040);
-      --clr-background-brandcolor: oklch(from var(--clr-brand--primary) calc(l * .5) calc(c * 0.5) h);
+      --clr-background-brandcolor: oklch(from var(--clr-brand--primary) calc(l * .8) calc(c * 0.5) h);
+      --clr-footerbg: var(--clr-bw-040);
     }
   }
 }
@@ -180,7 +180,7 @@
     --fw-mono: 400;
     --fw-bold: 700;
     /* font size */
-    --fs-small: 16px;
+    --fs-minor: 16px;
     --fs-regular: 18px;
     --fs-regular--big: 24px;
     /* line height */
@@ -188,11 +188,18 @@
     --lh-small: 1.2;
     --lh-h: var(--lh-small);
     /* regular font */
-    font-size: clamp(var(--fs-regular), (100vw - 960px) / 100 + var(--fs-regular), var(--fs-regular--big));
+    --fs-standard: clamp(var(--fs-regular), (100vw - 960px) / 100 + var(--fs-regular), var(--fs-regular--big));
+    --fs-big: calc(var(--fs-standard) * 1.125);
+    --fs-small: calc(var(--fs-standard) * 0.875);
+    font-size: var(--fs-standard);
     line-height: var(--lh-regular);
   }
+  .fs-big {
+    font-size: var(--fs-big);
+    line-height: 1.8;
+  }
   .fs-small {
-    font-size: clamp(var(--fs-snall), 1.5vw, var(--fs-small) + 6px);
+    font-size: var(--fs-small);
   }
 }
 /* reset by conPassione gmbh */
@@ -241,10 +248,6 @@
     color: inherit;
     height: 0;
     overflow: visible;
-  }
-  b,
-  strong {
-    font-weight: 700;
   }
   /* @docs
   label: Responsive Embeds
@@ -639,9 +642,15 @@
     background: inherit;
     color: inherit;
   }
+  b,
+  strong {
+    font-weight: 700;
+  }
+  i {
+    font-style: italic;
+  }
   .cp-accent {
-    color: var(--clr-highlight);
-    font-weight: var(--fw-regular);
+    color: var(--clr-accent);
   }
   i.icon {
     font-family: var(--ff-symbol), sans-serif;
@@ -653,18 +662,42 @@
 /* import utilities */
 /* ck-editor */
 body {
-  font-family: var(--ff) sans-serif;
   font-size: 18px;
   line-height: 24px;
-  padding: 5px 10px;
+  padding-inline: 10px;
   color: var(--clr-text);
   background-color: var(--clr-background);
   display: block;
 }
+body p {
+  font-family: var(--ff);
+}
+body h3, body .h3 {
+  font-size: 24px;
+  font-family: var(--ff-h);
+}
+body strong {
+  font-weight: bold;
+}
+body .cp-accent {
+  color: var(--clr-accent);
+}
+body .fs-small {
+  font-size: 16px;
+}
+body .fs-big {
+  font-size: 22px;
+}
+
+/* import utilities */
+/* ck-editor */
+body {
+  padding-block: 5px;
+}
 
 body > :last-child {
   margin-bottom: 0;
-  padding-block-end: 0.25em;
+  padding-block-end: 0.5em;
   border-block-end: 1px solid var(--clr-bw-050);
 }
 

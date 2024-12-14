@@ -1,7 +1,7 @@
 name: conpassione/homepage
 typeName: 36650001
 title: HomePage
-group: landingpage
+group: conpassione
 description: This is the rootpage
 prefixFields: false
 fields:

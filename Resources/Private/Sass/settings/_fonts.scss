@@ -89,7 +89,7 @@
     --fw-bold:         700;
 
     /* font size */
-    --fs-small:        16px;
+    --fs-minor:        16px;
     --fs-regular:      18px;
     --fs-regular--big: 24px;
 
@@ -100,12 +100,21 @@
     --lh-h:            var(--lh-small);
 
     /* regular font */
-    font-size:         clamp(var(--fs-regular), (100vw - 960px) / 100 + var(--fs-regular), var(--fs-regular--big));
+    --fs-standard:     clamp(var(--fs-regular), (100vw - 960px) / 100 + var(--fs-regular), var(--fs-regular--big));
+    --fs-big:          calc(var(--fs-standard) * 1.125);
+    --fs-small:        calc(var(--fs-standard) * 0.875);
+
+    font-size:         var(--fs-standard);
     line-height:       var(--lh-regular);
+
   }
 
+  .fs-big {
+    font-size: var(--fs-big);
+    line-height: 1.8;
+  }
   .fs-small {
-    font-size: clamp(var(--fs-snall), 1.5vw, var(--fs-small) + 6px);
+    font-size: var(--fs-small);
   }
 
 }

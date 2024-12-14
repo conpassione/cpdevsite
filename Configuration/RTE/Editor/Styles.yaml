@@ -6,12 +6,15 @@ editor:
     contentsCss:
       - "EXT:cpdevsite/Resources/Public/Css/Rte.css"
 
-    #format_tags: "p;h2;h3;h4;blockquote"
+    htmlSupport:
+      allow:
+        - { name: 'p', attributes: true, classes: true, styles: true }
 
     style:
       definitions:
         # block level styles
-        #- { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.style.labelquote', element: 'blockquote', classes: ['cp-blockquote']  }
+        - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.style.labelbig', element: 'p', classes: ['fs-big']  }
+        - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.style.labelsmall', element: 'p', classes: ['fs-small'] }
         # Inline styles
         - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.style.labelaccent', element: 'span', classes: [ 'cp-accent' ] }
 

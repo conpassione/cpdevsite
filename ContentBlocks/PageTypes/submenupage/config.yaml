@@ -1,8 +1,9 @@
-name: conpassione/gallerymenu
+name: conpassione/submenupage
 typeName: 36650011
-title: Gallerymenu
-group: gallery
+title: Untermenuseite
+group: conpassione
 description: Das ist die Uebersichtsseite für Galerien
+prefixFields: false
 fields:
   - identifier: subtitle
     useExistingField: true

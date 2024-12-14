@@ -33,9 +33,17 @@
     color:       inherit;
   }
 
+  b,
+  strong {
+    font-weight: 700;
+  }
+
+  i {
+    font-style: italic;
+  }
+
   .cp-accent {
-    color:       var(--clr-highlight);
-    font-weight: var(--fw-regular);
+    color:       var(--clr-accent);
   }
 
   i.icon {

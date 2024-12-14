@@ -35,11 +35,9 @@
     /* application colors */
     --clr-text:                     var(--clr-bw-030);
     --clr-background:               var(--clr-bw-090);
-    --clr-background-accent:        var(--clr-bw-070);
-    --clr-background-brandcolor:    oklch(from var(--clr-brand--primary) calc(l * .5) calc(c * 0.5) h);
     --clr-h:                        var(--clr-bw-050);
     --clr-h--border:                var(--clr-brand--primary);
-    --clr-accent:                   var(--clr-brand--secondary);
+    --clr-accent:                   var(--clr-brand--primary);
 
     /* element colors */
     --clr-list--marker:             var(--clr-brand--primary);
@@ -62,9 +60,10 @@
 
     /* section colors */
     --clr-headerbg:                 var(--clr-bw-060);
-    --clr-footerbg:                 var(--clr-brand--primary);
-    --clr-sectionbg--important:     var(--clr-brand--primary);
-    --clr-sectionbg--gray:          var(--clr-bw-075);
+    --clr-background-accent:        var(--clr-bw-080);
+    --clr-background-brandcolor:    oklch(from var(--clr-brand--primary) calc(l * 1.4) calc(c * 0.5) h);
+    --clr-footerbg:                 var(--clr-bw-080);
+    --clr-footer--border:           var(--clr-brand--primary);
 
     /* menu colors */
     --clr-mnu:                      var(--clr-bw-100);
@@ -94,7 +93,10 @@
       --clr-h:                    var(--clr-bw-080);
       --clr-background:           var(--clr-bw-030);
       --clr-background-accent:        var(--clr-bw-040);
-      --clr-background-brandcolor:    oklch(from var(--clr-brand--primary) calc(l * .5) calc(c * 0.5) h);
+      --clr-background-brandcolor:    oklch(from var(--clr-brand--primary) calc(l * .8) calc(c * 0.5) h);
+
+      --clr-footerbg:                 var(--clr-bw-040);
+
     }
   }
 }

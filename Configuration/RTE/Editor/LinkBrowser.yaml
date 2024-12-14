@@ -27,8 +27,8 @@ allowedTypes: 'page,file,folder,url,telephone,email'
 # - "type":   LinkType as listed above
 # - "target": Default link target to apply to this LinkType
 classesAnchor:
-  - { class: 'page-link', type: 'page', target: '_top' }
-  - { class: 'page-link--icon', type: 'page', target: '_top' }
+  - { class: 'page-link', type: 'page', target: '_top', name: 'Seitenlink' }
+  - { class: 'page-link--icon', type: 'page', target: '_top', name: 'Seitenlink mit Icon' }
   - { class: 'file-link', type: 'file', target: '_blank' }
   - { class: 'file-link--icon', type: 'file', target: '_blank' }
   - { class: 'folder-link', type: 'folder', target: '_blank' }

@@ -17,7 +17,7 @@ editor:
   config:
     forcePasteAsPlainText: true
     # the CSS file to be used inside the editor
-    contentsCss: 'EXT:cpdevsite/Resources/Public/Css/Rte.css'
+    #contentsCss: 'EXT:cpdevsite/Resources/Public/Css/Rte.css'
     toolbar:
       items:
         - style

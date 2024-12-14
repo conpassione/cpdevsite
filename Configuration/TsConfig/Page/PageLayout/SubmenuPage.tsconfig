@@ -1,12 +1,12 @@
 mod {
   web_layout {
 		BackendLayouts {
-			DefaultContentPage {
-				title =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.defaultcontentpage.title
-        icon = tx-conpassione-backendlayout
+			SubmenuPage {
+				title =  LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:backendlayout.submenupage.title
+        icon = tx-conpassione-backendlayout-simplepage
         config {
           backend_layout {
-            doktype = 1
+            doktype = 36650011
             colCount = 1
             rowCount = 3
             rows {

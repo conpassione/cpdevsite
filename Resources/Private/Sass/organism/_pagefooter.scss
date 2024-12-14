@@ -5,6 +5,12 @@
 @layer basastyle {
   footer {
     background-color: var(--clr-footerbg);
+    //border-block-start: 5px solid var(--clr-footer--border);
   }
+
+  .footer--content {
+    padding-block: var(--gutter);
+  }
+
 }
 
