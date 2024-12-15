@@ -1,5 +1,5 @@
 /* import utilities */
 
-@use 'settings' as *;
-@use 'atoms' as *;
+@use 'settings/color' as *;
+@use 'settings/fonts' as *;
 @use 'ck_editor_inputline' as *;

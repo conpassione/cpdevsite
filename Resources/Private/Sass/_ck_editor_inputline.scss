@@ -1,38 +1,35 @@
 /* ck-editor */
 
-@use 'settings' as *;
-@use 'atoms' as *;
+@use 'settings/color' as *;
+@use 'settings/fonts' as *;
 
-body {
-  font-size:   18px;
-  line-height: 24px;
-  padding-inline: 10px;
-  color: var(--clr-text);
+body:not(.ck-style-panel) {
+  font-family: var(--ff);
+  font-size:        18px;
+  color:            var(--clr-text);
   background-color: var(--clr-background);
-  display: block;
+}
 
-  p {
-    font-family: var(--ff);
-  };
+h3, .h3 {
+  font-size: 26px;
+  font-family: var(--ff-h);
+}
+h4, .h4 {
+  font-size: 22px;
+  font-family: var(--ff-h);
+}
+strong {
+  font-weight: bold;
+}
 
-  h3, .h3 {
-    font-size: 24px;
-    font-family: var(--ff-h);
-  }
+.cp-accent {
+  color: var(--clr-accent);
+}
 
-  strong {
-    font-weight: bold;
-  }
+.fs-small {
+  font-size: 16px;
+}
 
-  .cp-accent {
-    color: var(--clr-accent);
-  }
-
-  .fs-small {
-    font-size: 16px;
-  }
-
-  .fs-big{
-    font-size: 22px;
-  }
+.fs-big {
+  font-size: 22px;
 }

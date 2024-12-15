@@ -14,7 +14,7 @@ editor:
     forcePasteAsPlainText: true
     clipboard_defaultContentType: 'text'
     # the CSS file to be used inside the editor
-    #contentsCss: 'EXT:cpdevsite/Resources/Public/Css/Rte_inputline.css'
+    contentsCss: 'EXT:cpdevsite/Resources/Public/Css/Rte_inputline.css'
     toolbar:
       items:
         - bold

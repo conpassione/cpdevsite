@@ -6,9 +6,9 @@ editor:
     contentsCss:
       - "EXT:cpdevsite/Resources/Public/Css/Rte.css"
 
-    htmlSupport:
-      allow:
-        - { name: 'p', attributes: true, classes: true, styles: true }
+    #htmlSupport:
+    #  allow:
+    #    - { name: 'p', attributes: true, classes: true, styles: true }
 
     style:
       definitions:
@@ -17,6 +17,7 @@ editor:
         - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.style.labelsmall', element: 'p', classes: ['fs-small'] }
         # Inline styles
         - { name: 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:rte.style.labelaccent', element: 'span', classes: [ 'cp-accent' ] }
+        #- { name: 'accent', element: 'span', classes: [ 'cp-accent' ] }
 
 
     heading:

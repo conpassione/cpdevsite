@@ -1,15 +1,10 @@
 /* ck-editor */
 
-@use 'settings' as *;
-@use 'atoms' as *;
+@use 'settings/color' as *;
+@use 'settings/fonts' as *;
 @use 'ck_editor_inputline' as *;
 
-body {
-  padding-block: 5px;
-}
-
-body > :last-child {
-  margin-bottom: 0;
+body > :last-child:not(span) {
   padding-block-end: 0.5em;
   border-block-end: 1px solid var(--clr-bw-050);
 }
