@@ -31,7 +31,7 @@
                     </div>
                     <div class="staffcard--address">
                         <p><strong><f:format.html>{member.feusers.0.data.name}</f:format.html></strong><br>
-                            <f:format.html>{member.feusers.0.data.address}</f:format.html><br>
+                            <f:format.html>{member.feusers.0.data.address -> f:format.nl2br()}</f:format.html><br>
                             <f:format.html>{member.feusers.0.data.zip} - {member.feusers.0.data.city}</f:format.html>
                         </p>
                         <p>

@@ -16,7 +16,7 @@
 		}
 	],
 	"license": "GPL-2.0-or-later",
-	"minimum-stability": "dev",
+	"minimum-stability": "stable",
 	"prefer-stable" : true,
 	"require": {
 		"b13/container": "^3.1",
