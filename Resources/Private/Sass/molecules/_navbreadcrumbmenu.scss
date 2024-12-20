@@ -1,0 +1,16 @@
+/* page */
+@use '../settings' as *;
+
+@layer basestyles {
+
+  .breadcrumbmenu {
+    /* local settings */
+
+    >span {
+      // color: oklch(from var(--clr-text) calc(l * .5) c h);
+    }
+    > a:hover {
+      background-color: var(--clr-accent);
+    }
+  }
+}

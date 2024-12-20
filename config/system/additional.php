@@ -38,7 +38,8 @@ $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive(
                 'availableLanguages' => [
                     'de',
                     'fr',
-                    'it'
+                    'it',
+                    'en'
                 ]
             ]
         ],

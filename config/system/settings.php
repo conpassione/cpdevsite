@@ -129,6 +129,6 @@ return [
         'systemMaintainers' => [
             1,
         ],
-        'trustedHostsPattern' => 'cpdevsite.ddev.site',
+        'trustedHostsPattern' => '.*.*',
     ],
 ];

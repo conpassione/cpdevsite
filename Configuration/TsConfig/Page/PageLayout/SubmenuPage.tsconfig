@@ -8,7 +8,7 @@ mod {
           backend_layout {
             doktype = 36650011
             colCount = 1
-            rowCount = 3
+            rowCount = 4
             rows {
               1 {
                 columns {
@@ -26,6 +26,13 @@ mod {
               2 {
                 columns {
                   1 {
+                    name = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.submenu
+                  }
+                }
+              }
+              3 {
+                columns {
+                  1 {
                     name =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.col0
                     identifier = content
                     colPos = 0
@@ -35,7 +42,7 @@ mod {
                   }
                 }
               }
-              3 {
+              4 {
                 columns {
                   1 {
                     name =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.col1

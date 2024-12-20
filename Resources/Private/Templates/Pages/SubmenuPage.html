@@ -4,6 +4,7 @@
 
 <f:section name="Main">
     <f:render section="Herosmall" arguments="{hero: pagecontent.hero, pageTitle: page.pagerecord.subtitle}" />
+    <f:render partial="Menu/BreadcrumbMenu" arguments="{_all}"/>
     <f:render section="Submenu" arguments="{submenu: submenu}" />
     <f:for each="{pagecontent.content.records}" as="contentelement">
         <f:cObject

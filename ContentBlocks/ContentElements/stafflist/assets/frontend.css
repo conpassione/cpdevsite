@@ -13,14 +13,14 @@
 }
 
 .staffcard {
-  --_clr-staffcard: var(--clr-text);
-  --_clr-staffcard--bg: transparent;
-  --_clr-staffcard--title: var(--clr-bw-090);
-  --_clr-staffcard--titlebg: var(--clr-brand--primary);
-  --_card-border-radius: var(--card-border-radius);
+  --_staffcard--color: var(--clr-text);
+  --_staffcard--bg: transparent;
+  --_staffcard--title: var(--clr-bw-090);
+  --_staffcard--titlebg: var(--clr-brand--primary);
+  --_staffcard--border-radius: var(--border-radius);
 
-  border: 1px solid var(--_clr-staffcard--titlebg);
-  border-radius: var(--_card-border-radius);
+  border: 1px solid var(--_staffcard--titlebg);
+  border-radius: var(--_staffcard--border-radius);
   overflow: hidden;
 
   container: staffcard / inline-size;
@@ -44,8 +44,8 @@
     }
 
     .staffcard--title {
-      color: var(--_clr-staffcard--title);
-      background-color: var(--_clr-staffcard--titlebg);
+      color: var(--_staffcard--title);
+      background-color: var(--_staffcard--titlebg);
       margin-block: 0;
       padding: 0.5rem;
       grid-column: card-title;

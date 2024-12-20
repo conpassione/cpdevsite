@@ -4,6 +4,9 @@
 
 <f:section name="Main">
     <f:render section="Herosmall" arguments="{hero: pagecontent.hero, pageTitle: page.pagerecord.subtitle}" />
+
+    <f:render partial="Menu/BreadcrumbMenu" arguments="{_all}"/>
+
     <f:for each="{pagecontent.content.records}" as="contentelement">
         <f:cObject
             typoscriptObjectPath="tt_content.{contentelement.CType}"
