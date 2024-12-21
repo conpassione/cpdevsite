@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="it" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-12-15T00:51:46+01:00">
-        <header></header>
+    <file source-language="en" target-language="it" original="" datatype="plaintext" date="2024-12-21T09:39:59+01:00">
         <body>
             <trans-unit id="backendlayout.col0" resname="backendlayout.col0">
                 <source>Content</source>
@@ -143,13 +142,9 @@
                 <source>Mobile</source>
                 <target>Natel</target>
             </trans-unit>
-            <trans-unit id="pagetype.memberfunction.label" resname="pagetype.memberfunction.label">
+            <trans-unit id="pagetype.stafflist.label" resname="pagetype.stafflist.label">
                 <source>Staff</source>
                 <target>Funzionari</target>
-            </trans-unit>
-            <trans-unit id="pagetype.memberlist.label" resname="pagetype.memberlist.label">
-                <source>Members</source>
-                <target>Membri</target>
             </trans-unit>
             <trans-unit id="pagewizard.agenda.groupLabel" resname="pagewizard.agenda.groupLabel">
                 <source>Agenda</source>

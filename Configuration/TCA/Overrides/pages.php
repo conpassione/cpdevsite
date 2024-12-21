@@ -13,18 +13,12 @@ call_user_func(static function(): void {
 
     // zusätzliche Icons für Folder-Seiten ... enthält Plugin Feld
     $GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] = [
-        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:pagetype.memberlist.label',
-        'icon' => 'tx-conpassione-memberlist',
-        'value'=>   'memberlist'
+        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:pagetype.stafflist.label',
+        'icon' => 'tx-conpassione-stafflist',
+        'value'=>   'stafflist'
     ];
-    $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-memberlist'] = 'tx-conpassione-memberlist';
+    $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-stafflist'] = 'tx-conpassione-stafflist';
 
-    $GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] = [
-        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:pagetype.memberfunction.label',
-        'icon' => 'tx-conpassione-memberfunction',
-        'value'=>   'memberfunction'
-    ];
-    $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-memberfunction'] = 'tx-conpassione-memberfunction';
 
     // Add group 'conpassione' to Page Types Selection
     ExtensionManagementUtility::addTcaSelectItemGroup(

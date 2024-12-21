@@ -10,7 +10,7 @@ enforce:
     - mode: "extend"
       directive: "script-src"
       sources:
-        - "'nonce-*'"
+        - "'unsafe-eval'"
 report:
   #includeResolutions: false
   inheritDefault: true

@@ -3,7 +3,7 @@ declare(strict_types=1);
 defined('TYPO3') or die();
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-use \TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 call_user_func(static function(): void {
     // Defaulteinstellungen für Feld layout löschen
@@ -45,20 +45,20 @@ call_user_func(static function(): void {
     /* containers */
     GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer (
         (
-        new \B13\Container\Tca\ContainerConfiguration(
-            'cp-1col', // CType
-            'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col', // label
-            'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col.description', // description
-            [
+            new \B13\Container\Tca\ContainerConfiguration(
+                'cp-1col', // CType
+                'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col', // label
+                'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col.description', // description
                 [
-                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col.col201', 'colPos' => 201],
-                ],
-            ] // grid configuration
+                    [
+                        ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col.col201', 'colPos' => 201],
+                    ],
+                ] // grid configuration
+            )
         )
-        )
-            // set an optional icon configuration
-            ->setIcon('EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg')
-            ->setGroup('z-cplayout')
+        // set an optional icon configuration
+        ->setIcon('tx-conpassione-cp-1col')
+        ->setGroup('z-cplayout')
     );
 
     /* containers */
@@ -77,7 +77,7 @@ call_user_func(static function(): void {
         )
         )
             // set an optional icon configuration
-            ->setIcon('EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg')
+            ->setIcon('tx-conpassione-cp-2cols5050')
             ->setGroup('z-cplayout')
     );
 
@@ -96,7 +96,7 @@ call_user_func(static function(): void {
         )
         )
             // set an optional icon configuration
-            ->setIcon('EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg')
+            ->setIcon('tx-conpassione-cp-2cols3366')
             ->setGroup('z-cplayout')
     );
 
@@ -115,7 +115,7 @@ call_user_func(static function(): void {
         )
         )
             // set an optional icon configuration
-            ->setIcon('EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg')
+            ->setIcon('tx-conpassione-cp-2cols6633')
             ->setGroup('z-cplayout')
     );
 
@@ -135,7 +135,7 @@ call_user_func(static function(): void {
         )
         )
             // set an optional icon configuration
-            ->setIcon('EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg')
+            ->setIcon('EXT:cpdevsite/Resources/Public/Icons/Section3.svg')
             ->setGroup('z-cplayout')
     );
 

@@ -30,6 +30,10 @@ lib.parseFunc {
             }
         }
     }
+    # This is the default; HTML tags are cleaned by the HTML Sanitizer (see #104220)
+    # "*" is set here so it can be extended via `allowTags := addToList(XXX)` in custom code.
+    # Without this, addToList would result in only "XXX" and not "*,XXX" thus breaking functionality.
+    allowTags = *
     nonTypoTagStdWrap {
         HTMLparser = 1
         HTMLparser {
@@ -109,7 +113,7 @@ lib.parseFunc_RTE {
         }
         encapsLines {
             encapsTagList = p,pre,h1,h2,h3,h4,h5,h6,hr,dt
-            remapTag >
+            remapTag.DIV = p
             nonWrappedTag >
             innerStdWrap_all.ifBlank = &nbsp;
         }

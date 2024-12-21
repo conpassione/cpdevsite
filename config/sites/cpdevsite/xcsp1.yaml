@@ -1,0 +1,5 @@
+mutations:
+  - mode: "set"
+    directive: "default-src"
+    sources:
+      - "'self'"

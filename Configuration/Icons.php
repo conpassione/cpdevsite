@@ -5,22 +5,42 @@ use TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider;
 use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
 
 return [
-    'tx-conpassione-memberlist' => [
+    'tx-conpassione-stafflist' => [
         'provider' => SvgIconProvider::class,
-        'source' => 'EXT:cpdevsite/Resources/Public/Icons/cpmemberlist.svg',
+        'source' => 'EXT:cpdevsite/Resources/Public/Icons/cpstafflist.svg',
     ],
 
-    'tx-conpassione-member' => [
+    'tx-conpassione-staff' => [
         'provider' => SvgIconProvider::class,
-        'source' => 'EXT:cpdevsite/Resources/Public/Icons/cpmember.svg',
+        'source' => 'EXT:cpdevsite/Resources/Public/Icons/cpstaff.svg',
     ],
 
-    'tx-conpassione-memberfunction' => [
+    'tx-conpassione-cp-1col' => [
         'provider' => SvgIconProvider::class,
-        'source' => 'EXT:cpdevsite/Resources/Public/Icons/cpmemberfunction.svg',
+        'source' => 'EXT:cpdevsite/Resources/Public/Icons/cp-1col.svg',
     ],
 
-     //  Im BackendLayout wird das Icon direkt vom File geladen, damit das Icon grösser dargestellt werden kann
+    'tx-conpassione-cp-2cols5050' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:cpdevsite/Resources/Public/Icons/cp-2cols5050.svg',
+    ],
+
+    'tx-conpassione-cp-2cols3366' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:cpdevsite/Resources/Public/Icons/cp-2cols3366.svg',
+    ],
+
+    'tx-conpassione-cp-2cols6633' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:cpdevsite/Resources/Public/Icons/cp-2cols6633.svg',
+    ],
+
+    'tx-conpassione-cp-3cols' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:cpdevsite/Resources/Public/Icons/cp-3cols.svg',
+    ],
+
+    //  Im BackendLayout wird das Icon direkt vom File geladen, damit das Icon grösser dargestellt werden kann
     'tx-conpassione-backendlayout' => [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:cpdevsite/Resources/Public/Icons/backendlayout.svg',
@@ -51,10 +71,11 @@ return [
         'source' => 'EXT:cpdevsite/Resources/Public/Icons/content-beside-text-img-right-bottom.svg',
     ],
 
-/*    'tx-myext-bitmapicon' => [
-        'provider' => BitmapIconProvider::class,
-        'source' => 'EXT:my_extension/Resources/Public/Icons/mybitmap.png',
-        // All icon providers provide the possibility to register an icon that spins
-        'spinning' => true,
-    ],*/
+    /*    'tx-myext-bitmapicon' => [
+            'provider' => BitmapIconProvider::class,
+            'source' => 'EXT:my_extension/Resources/Public/Icons/mybitmap.png',
+            // All icon providers provide the possibility to register an icon that spins
+            'spinning' => true,
+        ],*/
+
 ];

@@ -1,8 +1,0 @@
-enforce:
-  includeResolutions: false
-  inheritDefault: false
-  default-src: "'none'"
-report:
-  includeResolutions: false
-  inheritDefault: false
-  default-src: "'none'"

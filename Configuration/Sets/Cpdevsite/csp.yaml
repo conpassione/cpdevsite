@@ -1,0 +1,18 @@
+inheritDefault: true
+mutations:
+  - mode: extend
+    directive: 'default-src'
+    source:
+      - "'self'"
+  - mode: extend
+    directive: 'script-src'
+    source:
+      - "'unsafe-eval'"
+  - mode: extend
+    directive: 'style-src'
+    source:
+      - "'unsafe-inline'"
+  - mode: extend
+    directive: 'img-src'
+    source:
+      - 'data:'
