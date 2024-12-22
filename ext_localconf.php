@@ -2,6 +2,8 @@
 declare(strict_types=1);
 defined('TYPO3') or die();
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 // CK-Editor Konfiguration laden
 if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['CpDefault'])) {
     $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['CpDefault'] = 'EXT:cpdevsite/Configuration/RTE/CpDefault.yaml';
@@ -32,3 +34,15 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['it']['EXT:frontend/R
 // Define TypoScript as content rendering template.
 // This is normally set in Fluid Styled Content.
 $GLOBALS['TYPO3_CONF_VARS']['FE']['contentRenderingTemplates'][] = 'cpdevsite/Configuration/TypoScript/Rendering/';
+
+
+// Add module configuration
+ExtensionManagementUtility::addTypoScriptSetup('
+module.tx_form {
+    settings {
+        yamlConfigurations {
+            3665 = EXT:cpdevsite/Configuration/Yaml/CpFormSetup.yaml
+        }
+    }
+}
+');

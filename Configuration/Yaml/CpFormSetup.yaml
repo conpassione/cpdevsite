@@ -1,0 +1,25 @@
+persistenceManager:
+  allowedExtensionPaths:
+    100: 'EXT:cpdevsite/Resources/Private/Forms/'
+  allowSaveToExtensionPaths: false
+  allowDeleteFromExtensionPaths: false
+
+prototypes:
+  standard:
+    formEditor:
+      translationFiles:
+        20: 'EXT:cpdevsite/Resources/Private/Language/form.xlf'
+    formEngine:
+      translationFiles:
+        20: 'EXT:cpdevsite/Resources/Private/Language/form.xlf'
+
+formManager:
+  translationFiles:
+    20: 'EXT:cpdevsite/Resources/Private/Language/form.xlf'
+  selectablePrototypesConfiguration:
+    100:
+      newFormTemplates:
+        300:
+          templatePath: 'EXT:cpdevsite/Resources/Private/Forms/MembershipApplicationForm.yaml'
+          label: newFormTemplates.MembershipApplicationForm.label
+

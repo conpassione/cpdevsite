@@ -20,3 +20,11 @@ plugin.tx_seo {
     }
   }
 }
+
+plugin.tx_form {
+  settings {
+    yamlConfigurations {
+      3665 = EXT:cpdevsite/Configuration/Yaml/CpFormSetup.yaml
+    }
+  }
+}

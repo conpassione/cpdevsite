@@ -47,3 +47,12 @@ mod.wizards.newContentElement.wizardItems {
 #  }
 #  show:=addToList(cpdevsite_testce)
 #}
+
+
+module.tx_form {
+  settings {
+    yamlConfigurations {
+      3665 = EXT:cpdevsite/Configuration/Yaml/CpFormSetup.yaml
+    }
+  }
+}
