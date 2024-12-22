@@ -8,6 +8,7 @@
 
   display: grid;
   gap: var(--_card--gutter);
+  min-height: 0.0000000001vw; /* safari bug */
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   container: staffcards / inline-size;
 }

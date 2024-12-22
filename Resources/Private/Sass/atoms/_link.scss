@@ -22,6 +22,13 @@
 
     &:before {
       font-family:        var(--ff-symbol), sans-serif;
+      -webkit-text-rendering: optimizeLegibility;
+      -moz-text-rendering: optimizeLegibility;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+      font-feature-settings: "liga" 1, "dlig" 1;
       content:            '';
       padding-inline-start: 0.2em;
       padding-inline-end: 0.1em;
@@ -33,6 +40,13 @@
 
     &:after {
       font-family:          var(--ff-symbol), sans-serif;
+      -webkit-text-rendering: optimizeLegibility;
+      -moz-text-rendering: optimizeLegibility;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+      font-feature-settings: "liga" 1, "dlig" 1;
       content:              '';
       padding-inline-start: 0.1em;
       padding-inline-end: 0.2em;

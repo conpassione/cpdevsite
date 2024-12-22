@@ -3,7 +3,6 @@
 <f:layout />
 
 <f:section name="Main">
-    <f:debug>{_all}</f:debug>
     <f:if condition="{data.CType} === list">
         <f:then>
             <f:cObject typoscriptObjectPath="tt_content.list.20.{data.list_type}" table="tt_content" data="{data}"/>

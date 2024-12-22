@@ -321,6 +321,13 @@
   }
   .vimeo-link--icon:before, .youtube-link--icon:before, .github-link--icon:before, .pinterest-link--icon:before, .linkedin-link--icon:before, .insta-link--icon:before, .fb-link--icon:before, .mail-link--icon:before, .phone-link--icon:before, .url-link--icon:before, .folder-link--icon:before, .file-link--icon:before, .page-link--icon:before {
     font-family: var(--ff-symbol), sans-serif;
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    font-feature-settings: "liga" 1, "dlig" 1;
     content: "";
     padding-inline-start: 0.2em;
     padding-inline-end: 0.1em;
