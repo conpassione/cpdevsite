@@ -1006,7 +1006,7 @@
   .navsubmenu {
     /* local settings */
     --_card--gutter: var(--gutter);
-    --_card--min-size: calc(var(--mediasize--small) / 3);
+    --_card--min-size: calc(var(--mediasize--medium) / 3);
     display: grid;
     gap: var(--_card--gutter);
     grid-template-columns: repeat(auto-fit, minmax(var(--_card--min-size), 1fr));
