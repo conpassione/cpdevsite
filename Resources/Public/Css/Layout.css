@@ -694,6 +694,7 @@
   .section-hero .hero-small-overlay .h1--pagetitle,
   .section-hero-small .hero-overlay .h1--pagetitle,
   .section-hero-small .hero-small-overlay .h1--pagetitle {
+    z-index: 2;
     background-color: oklch(from var(--clr-brand--primary) l c h/0.5);
     backdrop-filter: blur(0.5rem);
     padding-inline: 0.5rem;
@@ -1073,14 +1074,14 @@
     background: linear-gradient(to bottom in oklab, oklch(60% 0 0deg) 50% 0%, oklch(60% 0 0deg / 0.25) 100%);
     backdrop-filter: blur(0.25rem);
   }
+  .logo a {
+    z-index: 2;
+  }
   .logo svg {
     fill: var(--clr-logo);
   }
   .logo a:focus-visible {
     outline: 2px solid var(--clr-bw-070);
-  }
-  .logo--img {
-    width: 100%;
   }
 }
 /* page */
