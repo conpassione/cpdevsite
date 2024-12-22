@@ -51,10 +51,10 @@
     --clr-secondarybtnbg--disabled: oklch(from var(--clr-secondarybtnbg--active) calc(l * .75) c h);
     --clr-secondarybtn--border: transparent;
     /* section colors */
-    --clr-headerbg: var(--clr-bw-060);
+    --clr-headerbg: var(--clr-bw-070);
     --clr-background-accent: var(--clr-bw-080);
     --clr-background-brandcolor: oklch(from var(--clr-brand--primary) calc(l * 1.4) calc(c * 0.5) h);
-    --clr-footerbg: var(--clr-bw-080);
+    --clr-footerbg: var(--clr-bw-070);
     --clr-footer--border: var(--clr-brand--primary);
     /* menu colors */
     --clr-mnu: var(--clr-bw-100);
@@ -65,6 +65,7 @@
     --clr-mnubg--hover: var(--clr-brand--primary);
     /* logo */
     --clr-logo: var(--clr-bw-000);
+    --clr-logobg: var(--clr-bw-080);
     /* cards */
     --clr-card--accent: var(--clr-brand--primary);
   }
@@ -239,6 +240,9 @@
     display: grid;
     grid-template-rows: 1fr auto;
     z-index: 0;
+  }
+  header, footer, nav, main, aside, title, div, figure, p, table, textarea {
+    display: block;
   }
   hr {
     border-style: solid;
@@ -1077,8 +1081,7 @@
     width: min(200px, 40vw);
     padding-block: var(--gutter);
     padding-inline: calc(var(--gutter) / 2);
-    background: linear-gradient(to bottom in oklab, oklch(60% 0 0deg) 50% 0%, oklch(60% 0 0deg / 0.25) 100%);
-    backdrop-filter: blur(0.25rem);
+    background-color: var(--clr-logobg);
   }
   .logo a {
     z-index: 2;

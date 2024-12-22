@@ -8,8 +8,8 @@
 
   display: grid;
   gap: var(--_card--gutter);
-  grid-template-columns: repeat(auto-fill, minmax(320px, 480px));
-  container: staffcards / inline-size;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
 }
 
 .staffcard {

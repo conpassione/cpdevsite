@@ -50,6 +50,9 @@
     z-index: 0;
   }
 
+  header, footer, nav, main, aside, title, div, figure, p, table, textarea {
+    display: block;
+  }
 
   hr {
     border-style: solid;

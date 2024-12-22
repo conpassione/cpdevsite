@@ -59,10 +59,10 @@
     --clr-secondarybtn--border:     transparent;
 
     /* section colors */
-    --clr-headerbg:                 var(--clr-bw-060);
+    --clr-headerbg:                 var(--clr-bw-070);
     --clr-background-accent:        var(--clr-bw-080);
     --clr-background-brandcolor:    oklch(from var(--clr-brand--primary) calc(l * 1.4) calc(c * 0.5) h);
-    --clr-footerbg:                 var(--clr-bw-080);
+    --clr-footerbg:                 var(--clr-bw-070);
     --clr-footer--border:           var(--clr-brand--primary);
 
     /* menu colors */
@@ -75,6 +75,7 @@
 
     /* logo */
     --clr-logo:                     var(--clr-bw-000);
+    --clr-logobg:                   var(--clr-bw-080);
 
     /* cards */
     --clr-card--accent:  var(--clr-brand--primary);
