@@ -8,8 +8,7 @@
 
   display: grid;
   gap: var(--_card--gutter);
-  min-height: 0.0000000001vw; /* safari bug */
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 480px));
   container: staffcards / inline-size;
 }
 
@@ -37,7 +36,7 @@
       'card-responsibility';
 
     @container staffcard (width > 480px) {
-      grid-template-columns: minmax(100px,250px) 1fr;
+      grid-template-columns: minmax(100px,240px) 1fr;
       grid-template-areas:
       'card-title card-title'
       'card-image card-address'
