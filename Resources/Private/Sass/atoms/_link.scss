@@ -80,6 +80,7 @@
 
   .file-link--icon {
     @extend %link-iconbefore;
+    line-break: anywhere;
 
     &:before {
       content: 'download';
@@ -104,6 +105,7 @@
 
   .url-link--icon {
     @extend %link-iconbefore;
+    line-break: anywhere;
 
     &:before {
       content: 'external';

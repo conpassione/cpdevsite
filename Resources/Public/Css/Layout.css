@@ -344,6 +344,9 @@
   .page-link--icon:focus-visible {
     outline: 2px solid var(--clr-bw-070);
   }
+  .file-link--icon {
+    line-break: anywhere;
+  }
   .file-link--icon:before {
     content: "download";
   }
@@ -355,6 +358,9 @@
   }
   .folder-link--icon:focus-visible {
     outline: 2px solid var(--clr-bw-070);
+  }
+  .url-link--icon {
+    line-break: anywhere;
   }
   .url-link--icon:before {
     content: "external";
