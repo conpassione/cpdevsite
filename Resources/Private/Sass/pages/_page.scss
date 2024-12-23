@@ -13,6 +13,7 @@
 
   header {
     position: fixed;
+    -webkit-transform: translateZ(0);
     width: 100svw;
     background-color: var(--clr-headerbg);
     z-index: 10;
