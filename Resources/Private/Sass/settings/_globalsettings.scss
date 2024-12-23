@@ -41,8 +41,7 @@
 
   body {
     overflow-y:     scroll;
-    text-rendering: optimizeSpeed;
-    min-height:         100svh;
+    min-height:         100%;
     container-type: inline-size;
     position: relative;
     display: grid;
