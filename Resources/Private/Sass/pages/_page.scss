@@ -4,12 +4,12 @@
 @layer basestyles {
 
 
-  @media (prefers-reduced-motion: no-preference) {
+/*   @media (prefers-reduced-motion: no-preference) {
     :has(:target) {
       scroll-behavior: smooth;
       scroll-padding-top: 3rem;
     }
-  }
+  } */
 
   header {
     position: fixed;
@@ -20,7 +20,7 @@
   }
 
   main {
-    margin-block-start: calc(32px + 1rem);
+    margin-block-start: 60px;
     container: main / inline-size;
     align-content: start;
   }

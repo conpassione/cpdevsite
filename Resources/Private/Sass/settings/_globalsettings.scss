@@ -30,24 +30,24 @@
     font-family:              var(--ff), sans-serif;
     font-weight:              var(--fw-regular);
     display:                  block;
-    min-height:               100%;
-    container-type:           inline-size;
+    min-height:               100svh;
   }
 
 
-  html:focus-within {
+/*   html:focus-within {
     scroll-behavior: smooth;
-  }
+  } */
 
   body {
-    overflow-y:     scroll;
-    min-height:         100%;
+    /* overflow-y:     scroll; */
+    min-height:         100svh;
     container-type: inline-size;
     position: relative;
     display: grid;
     grid-template-rows: 1fr auto;
     z-index: 0;
   }
+
 
   header, footer, nav, main, aside, title, div, figure, p, table, textarea {
     display: block;
