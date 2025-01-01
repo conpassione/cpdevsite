@@ -1,0 +1,49 @@
+@use '../settings' as *;
+
+@layer basestyles {
+
+  .form-label {
+   // color: rebeccapurple;
+  }
+
+  .form-text {
+    font-size: calc(var(--fs-small) * 0.8);
+  }
+
+  .form-control {
+    padding: 0.25em;
+
+  }
+
+  input, textarea, select {
+    width: 100%;
+    border: none;
+    background-color: var(--clr-input--bg);
+    &:focus-visible{
+      outline: 1px solid palegoldenrod;
+    }
+  }
+
+  .form-check,
+  .form-check-label {
+    input {
+      margin-inline-end: 0.25em;
+      height: 0.9em;
+      width: 1em;
+    }
+  }
+
+  .form-check-input {
+    width: auto;
+    padding-inline-end: 0.25em;
+  }
+
+  input:not(:placeholder-shown):valid {
+    outline-color: var(--clr-success);
+  }
+
+  input:not(:placeholder-shown):invalid {
+    outline-color: var(--clr-error);
+  }
+
+}

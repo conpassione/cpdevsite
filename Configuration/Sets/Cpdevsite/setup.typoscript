@@ -1,11 +1,4 @@
 # Setup Frontend Output
 
-@import 'EXT:skjsonlylightbox/Configuration/TypoScript/setup.typoscript'
-lib.contentElement.settings.media.popup {
-  crop >
-  width >
-  height >
-}
-
 @import 'EXT:cpdevsite/Configuration/TypoScript/Rendering/*.typoscript'
 @import 'EXT:cpdevsite/Configuration/TypoScript/Setup/*.typoscript'

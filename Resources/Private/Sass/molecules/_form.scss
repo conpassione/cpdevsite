@@ -1,0 +1,42 @@
+@use '../settings' as *;
+
+@layer basestyles {
+
+  .row {
+    display:               grid;
+    gap:                   var(--gutter);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+  }
+
+  .form-group {
+    padding-block-end: var(--gutter);
+
+    .form-group {
+      padding: 0;
+    }
+  }
+
+  form {
+    border:        1px solid var(--clr-accent);
+    border-radius: var(--border-radius);
+    padding:       var(--gutter);
+  }
+
+  fieldset {
+    border: 0;
+  }
+
+  .table {
+    border-collapse: collapse;
+    tr:nth-child(even) {
+      background-color: oklch(from var(--clr-background) calc(l * .9 ) c h );
+    }
+    td {
+      padding: 3px;
+    }
+  }
+
+  .summary-table-first-col {
+    width: 50%;
+  }
+}

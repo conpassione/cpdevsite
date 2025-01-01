@@ -38,6 +38,7 @@
     --clr-list--marker: var(--clr-brand--primary);
     --clr-code--bg: var(--clr-bw-060);
     --clr-code--bc: var(--clr-bw-030);
+    --clr-input--bg: var(--clr-bw-100);
     /* buttons */
     --clr-primarybtn--active: var(--clr-bw-090);
     --clr-primarybtn--hover: var(--clr-bw-090);
@@ -75,6 +76,7 @@
       --clr-primarybtn--active: var(--clr-bw-075);
       --clr-primarybtnbg--active: var(--clr-brand--primary);
       --clr-primarybtn--disabled: oklch(from var(--clr-primarybtn--active) calc(l + .5) calc(c * 0.5) h);
+      --clr-input--bg: var(--clr-bw-070);
       /* typographic colors */
       --clr-text: var(--clr-bw-090);
       --clr-h: var(--clr-bw-080);
@@ -208,8 +210,6 @@
   *::before,
   *::after {
     box-sizing: border-box;
-  }
-  * {
     margin: 0;
     padding: 0;
   }
@@ -241,6 +241,9 @@
   }
   header, footer, nav, main, aside, title, div, figure, p, table, textarea {
     display: block;
+  }
+  input, textarea, button, select {
+    font: inherit;
   }
   hr {
     border-style: solid;
@@ -588,6 +591,7 @@
 }
 /* button */
 @layer basestyles {
+  button[type=submit],
   .button {
     /* default colors for primary button */
     --_clr-btn: var(--clr-btn, var(--clr-primarybtn--active));
@@ -600,10 +604,12 @@
     border-radius: var(--btn-border-radius), 0;
     font-size: var(--_btn-font-size);
     display: inline-block;
-    margin-inline: 0.25rem;
+    margin-inline-end: 0.25rem;
     padding: 0.5em 1em;
   }
-  .button:hover, .button:focus {
+  button[type=submit]:hover, button[type=submit]:focus,
+  .button:hover,
+  .button:focus {
     color: var(--_clr-btn--hover);
     background-color: var(--_clr-btnbg--hover);
   }
@@ -664,6 +670,38 @@
     font-size: inherit;
     font-style: normal;
     color: inherit;
+  }
+}
+@layer basestyles {
+  .form-text {
+    font-size: calc(var(--fs-small) * 0.8);
+  }
+  .form-control {
+    padding: 0.25em;
+  }
+  input, textarea, select {
+    width: 100%;
+    border: none;
+    background-color: var(--clr-input--bg);
+  }
+  input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: 1px solid palegoldenrod;
+  }
+  .form-check input,
+  .form-check-label input {
+    margin-inline-end: 0.25em;
+    height: 0.9em;
+    width: 1em;
+  }
+  .form-check-input {
+    width: auto;
+    padding-inline-end: 0.25em;
+  }
+  input:not(:placeholder-shown):valid {
+    outline-color: var(--clr-success);
+  }
+  input:not(:placeholder-shown):invalid {
+    outline-color: var(--clr-error);
   }
 }
 /* sections (typo3-containers) */
@@ -1062,6 +1100,39 @@
     background-color: var(--clr-accent);
   }
 }
+@layer basestyles {
+  .row {
+    display: grid;
+    gap: var(--gutter);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .form-group {
+    padding-block-end: var(--gutter);
+  }
+  .form-group .form-group {
+    padding: 0;
+  }
+  form {
+    border: 1px solid var(--clr-accent);
+    border-radius: var(--border-radius);
+    padding: var(--gutter);
+  }
+  fieldset {
+    border: 0;
+  }
+  .table {
+    border-collapse: collapse;
+  }
+  .table tr:nth-child(even) {
+    background-color: oklch(from var(--clr-background) calc(l * 0.9) c h);
+  }
+  .table td {
+    padding: 3px;
+  }
+  .summary-table-first-col {
+    width: 50%;
+  }
+}
 /* page */
 @layer basestyles {
   .headercontent {
@@ -1111,7 +1182,7 @@
   header {
     position: fixed;
     -webkit-transform: translateZ(0);
-    width: 100svw;
+    width: 100vw;
     background-color: var(--clr-headerbg);
     z-index: 10;
   }

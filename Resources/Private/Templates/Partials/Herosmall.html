@@ -5,7 +5,7 @@
         <f:if condition = "{hero.records.0}">
             <f:cObject
                 typoscriptObjectPath="tt_content.{hero.records.0.CType}"
-                data="{files: hero.records.0.image, showcaption: '0'}"
+                data="{files: hero.records.0.image, showcaption: hero.records.0.image_zoom}"
                 table="tt_content"
             />
         </f:if>

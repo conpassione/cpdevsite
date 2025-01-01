@@ -6,6 +6,17 @@ persistenceManager:
 
 prototypes:
   standard:
+    formElementsDefinition:
+      Form:
+        renderingOptions:
+          templateRootPaths:
+            3665: 'EXT:cpdevsite/Resources/Private/Frontend/Templates/'
+          partialRootPaths:
+            3665: 'EXT:cpdevsite/Resources/Private/Frontend/Partials/'
+          layoutRootPaths:
+            3665: 'EXT:cpdevsite/Resources/Private/Frontend/Layouts/'
+          translation:
+            20: 'EXT:cpdevsite/Resources/Private/Language/form.xlf'
     formEditor:
       translationFiles:
         20: 'EXT:cpdevsite/Resources/Private/Language/form.xlf'

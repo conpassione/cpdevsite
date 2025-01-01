@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="fr" original="" datatype="plaintext" date="2024-12-22T13:45:11+01:00">
+    <file source-language="en" target-language="fr" original="" datatype="plaintext" date="2024-12-29T18:50:34+01:00">
         <body>
-            <trans-unit id="newFormTemplates.MembershipApplicationForm.label" resname="newFormTemplates.MembershipApplicationForm.label">
+            <trans-unit id="newFormTemplates.MembershipApplicationForm.label" resname="newFormTemplates.MembershipApplicationForm.label" approved="yes">
                 <source>Membership Application Form</source>
-                <target>Formulaire</target>
+                <target>Formulaire d&#39;admission</target>
+            </trans-unit>
+            <trans-unit id="element.firstname.properties.label" resname="element.firstname.properties.label" approved="yes">
+                <source>Firstname</source>
+                <target>Prénom</target>
+            </trans-unit>
+            <trans-unit id="element.lastname.properties.label" resname="element.lastname.properties.label" approved="yes">
+                <source>Lastname</source>
+                <target>Nom</target>
             </trans-unit>
         </body>
     </file>

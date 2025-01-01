@@ -1,4 +1,4 @@
-<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:cpce="http://typo3.org/ns/Conpassione/Cpdevsite/Viewhelpers">
 
 <div class="cp-image">
     <f:if condition="{data.header}">
@@ -11,9 +11,33 @@
         <f:if condition="{files}">
             <f:for as="image" each="{files}">
                 <figure class="files">
-                    <f:render partial="ImageTag" arguments="{file: image, settings: settings}" />
-                    <f:if condition="{image.description} && !({data.showcaption} == '0')">
-                        <figcaption>{image.description}</figcaption>
+                    <f:if condition="{image.link}">
+                        <f:then>
+                            <f:link.typolink parameter="{image.link}" title="{image.title}">
+                                <f:render partial="ImageTag" arguments="{file: image, settings: settings}" />
+                                <f:if condition="{image.description} && !({data.showcaption} == '0')">
+                                    <figcaption>{image.description}</figcaption>
+                                </f:if>
+                            </f:link.typolink>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{data.image_zoom}">
+                                <f:then>
+                                    <a class="lightbox" href="{f:uri.image(image:image, maxWidth: 1600, fileExtension: 'webp', cropVariant: 'default')}" title="{image.description}">
+                                        <f:render partial="ImageTag" arguments="{file: image, settings: settings}" />
+                                        <f:if condition="{image.description} && !({data.showcaption} == '0')">
+                                            <figcaption>{image.description}</figcaption>
+                                        </f:if>
+                                    </a>
+                                </f:then>
+                                <f:else>
+                                    <f:render partial="ImageTag" arguments="{file: image, settings: settings}" />
+                                    <f:if condition="{image.description} && !({data.showcaption} == '0')">
+                                        <figcaption>{image.description}</figcaption>
+                                    </f:if>
+                                </f:else>
+                            </f:if>
+                        </f:else>
                     </f:if>
                 </figure>
             </f:for>
@@ -21,9 +45,33 @@
         <f:if condition="{data.files}">
             <f:for as="image" each="{data.files}">
                 <figure class="data.files">
-                    <f:render partial="ImageTag" arguments="{file: image, settings: settings}" />
-                    <f:if condition="{image.description} && !({data.showcaption} == '0')">
-                        <figcaption>{image.description}</figcaption>
+                    <f:if condition="{image.link}">
+                        <f:then>
+                            <f:link.typolink parameter="{image.link}" title="{image.title}">
+                                <f:render partial="ImageTag" arguments="{file: image, settings: settings}" />
+                                <f:if condition="{image.description} && !({data.showcaption} == '0')">
+                                    <figcaption>{image.description}</figcaption>
+                                </f:if>
+                            </f:link.typolink>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{data.image_zoom}">
+                                <f:then>
+                                    <a class="lightbox" href="{f:uri.image(image:image, maxWidth: 1600, fileExtension: 'webp', cropVariant: 'default')}" title="{image.description}">
+                                        <f:render partial="ImageTag" arguments="{file: image, settings: settings}" />
+                                        <f:if condition="{image.description} && !({data.showcaption} == '0')">
+                                            <figcaption>{image.description}</figcaption>
+                                        </f:if>
+                                    </a>
+                                </f:then>
+                                <f:else>
+                                    <f:render partial="ImageTag" arguments="{file: image, settings: settings}" />
+                                    <f:if condition="{image.description} && !({data.showcaption} == '0')">
+                                        <figcaption>{image.description}</figcaption>
+                                    </f:if>
+                                </f:else>
+                            </f:if>
+                        </f:else>
                     </f:if>
                 </figure>
             </f:for>

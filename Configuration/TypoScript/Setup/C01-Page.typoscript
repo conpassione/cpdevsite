@@ -55,12 +55,14 @@ page {
     vieport.replace = 1
   }
   includeCSS {
+    jQueryMagnificPopup = EXT:cpdevsite/Resources/Public/Css/vendor/magnific-popup.css
     globalcss = EXT:cpdevsite/Resources/Public/Css/Layout.css
   }
   includeJSFooterlibs {
-    #mail = EXT:cpdevsite/Resources/Public/JavaScript/mail.min.js
-    #mail.async = 1
-
+    jQuery37 = EXT:cpdevsite/Resources/Public/JavaScript/jquery-3.7.1.slim.min.js
+    jQueryMagnificPopup = EXT:cpdevsite/Resources/Public/JavaScript/jquery.magnific-popup.min.js
+    jQueryMPexec = EXT:cpdevsite/Resources/Public/JavaScript/magnific-popup-exec.js
   }
   jsFooterInline >
 }
+

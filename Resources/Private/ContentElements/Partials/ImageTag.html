@@ -7,6 +7,7 @@
             height="{f:if(condition: '{data.imageheight}', then: '{data.imageheight}px', else: '{dimensions.height}px')}"
 			title="{f:if(condition: '{file.title}', then: '{file.title}')}"
             alt="{f:if(condition: '{file.alternative}', then: '{file.alternative}', else: '')}"
+            class="gifimage"
             />
         </f:then>
         <f:else>
@@ -24,7 +25,8 @@
 
                 <f:if condition="{file.extension} == 'pdf'">
                     <f:then>
-                        <f:media class="image-embed-item" file="{file}" width="{dimensions.width}px" height="{dimensions.height}px" additionalAttributes="alt: {file.alternative}"
+                        <f:media class="image-embed-item" file="{file}" width="{dimensions.width}px" height="{dimensions.height}px"
+                                 additionalAttributes="alt: {file.alternative}"
                                  title="{file.title}" />
                     </f:then>
                     <f:else>

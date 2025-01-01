@@ -1,10 +1,10 @@
 base: 'https://cpdevsite.ddev.site'
 dependencies:
-  - conpassione/cpdevsite
+  - typo3/seo-sitemap
+  - typo3/redirects
   - typo3/felogin
   - typo3/form
-  - typo3/redirects
-  - typo3/seo-sitemap
+  - conpassione/cpdevsite
 errorHandling:
   -
     errorCode: 404
@@ -53,7 +53,7 @@ languages:
     flag: it
     fallbackType: fallback
     fallbacks: '1,0'
-    enabled: false
+    enabled: true
     websiteTitle: 'conPassione gmbh'
   -
     languageId: 3
@@ -67,7 +67,7 @@ languages:
     flag: gb
     fallbackType: fallback
     fallbacks: '0'
-    enabled: false
+    enabled: true
     websiteTitle: 'conPassione gmbh'
 rootPageId: 1
 routeEnhancers:
@@ -85,3 +85,4 @@ routes:
     type: asset
     asset: 'EXT:cpdevsite/Resources/Public/Icons/Favicon/favicon.ico'
 websiteTitle: 'DDEV cpdevsite'
+

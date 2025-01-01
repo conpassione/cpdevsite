@@ -10,9 +10,6 @@
   *::before,
   *::after {
     box-sizing:  border-box;
-  }
-
-  * {
     margin:  0;
     padding: 0;
   }
@@ -51,6 +48,10 @@
 
   header, footer, nav, main, aside, title, div, figure, p, table, textarea {
     display: block;
+  }
+
+  input, textarea, button, select {
+    font: inherit;
   }
 
   hr {

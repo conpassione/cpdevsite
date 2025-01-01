@@ -52,7 +52,7 @@ mod.wizards.newContentElement.wizardItems {
 module.tx_form {
   settings {
     yamlConfigurations {
-      3665 = EXT:cpdevsite/Configuration/Yaml/CpFormSetup.yaml
+      36650 = EXT:cpdevsite/Configuration/Yaml/CpFormSetup.yaml
     }
   }
 }
