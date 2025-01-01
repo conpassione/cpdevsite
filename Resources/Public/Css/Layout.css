@@ -1101,6 +1101,15 @@
   }
 }
 @layer basestyles {
+  form {
+    --_clr-border: oklch(from var(--clr-background) calc(l * .9 ) c h );
+    border: 1px solid var(--clr-accent);
+    border-radius: var(--border-radius);
+    padding: var(--gutter);
+  }
+  fieldset {
+    border: 0;
+  }
   .row {
     display: grid;
     gap: var(--gutter);
@@ -1112,19 +1121,12 @@
   .form-group .form-group {
     padding: 0;
   }
-  form {
-    border: 1px solid var(--clr-accent);
-    border-radius: var(--border-radius);
-    padding: var(--gutter);
-  }
-  fieldset {
-    border: 0;
-  }
   .table {
     border-collapse: collapse;
+    border-block: calc(var(--gutter) / 2) solid var(--_clr-border);
   }
   .table tr:nth-child(even) {
-    background-color: oklch(from var(--clr-background) calc(l * 0.9) c h);
+    background-color: var(--_clr-border);
   }
   .table td {
     padding: 3px;

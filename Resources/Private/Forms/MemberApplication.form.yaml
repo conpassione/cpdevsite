@@ -288,6 +288,7 @@ renderables:
               options:
                 'Schweizer HUND': 'Schweizer HUND'
                 'Cynologie Romand': 'Cynologie Romand'
+                'Abo über anderen Verein': 'Abo über andern Verein'
               elementDescription: 'Wählen Sie die offizielle Zeitschrift aus'
               fluidAdditionalAttributes:
                 required: required
