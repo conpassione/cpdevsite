@@ -5,6 +5,7 @@
   /* as css constants (light theme) */
   :root {
     --clr-bw-000: oklch(0 0 0);
+    --clr-bw-010: oklch(0.1 0 0);
     --clr-bw-020: oklch(0.2 0 0);
     --clr-bw-030: oklch(0.3 0 0);
     --clr-bw-040: oklch(0.4 0 0);
@@ -541,6 +542,35 @@
     }
   }
 }
+.mfp-zoom-in {
+  /* start state */
+  /* animate in */
+  /* animate out */
+}
+.mfp-zoom-in .mfp-with-anim {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.8);
+}
+.mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.mfp-zoom-in.mfp-ready .mfp-with-anim {
+  opacity: 1;
+  transform: scale(1);
+}
+.mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+  transform: scale(0.8);
+  opacity: 0;
+}
+.mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
 /* headings */
 @layer basestyles {
   /* reset */

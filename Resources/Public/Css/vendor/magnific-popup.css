@@ -7,7 +7,7 @@
   z-index: 1042;
   overflow: hidden;
   position: fixed;
-  background: #0b0b0b;
+  background: var(--clr-bw-010);
   opacity: 0.8;
 }
 
@@ -64,15 +64,11 @@
 }
 
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
-  cursor: -moz-zoom-out;
-  cursor: -webkit-zoom-out;
   cursor: zoom-out;
 }
 
 .mfp-zoom {
   cursor: pointer;
-  cursor: -webkit-zoom-in;
-  cursor: -moz-zoom-in;
   cursor: zoom-in;
 }
 
@@ -98,7 +94,7 @@
 }
 
 .mfp-preloader {
-  color: #CCC;
+  color: #CCCCCC;
   position: absolute;
   top: 50%;
   width: auto;
@@ -109,10 +105,10 @@
   z-index: 1044;
 }
 .mfp-preloader a {
-  color: #CCC;
+  color: #CCCCCC;
 }
 .mfp-preloader a:hover {
-  color: #FFF;
+  color: #FFFFFF;
 }
 
 .mfp-s-ready .mfp-preloader {
@@ -152,7 +148,7 @@ button::-moz-focus-inner {
   text-align: center;
   opacity: 0.65;
   padding: 0 0 18px 10px;
-  color: #FFF;
+  color: #FFFFFF;
   font-style: normal;
   font-size: 28px;
   font-family: Arial, Baskerville, monospace;
@@ -165,12 +161,12 @@ button::-moz-focus-inner {
 }
 
 .mfp-close-btn-in .mfp-close {
-  color: #333;
+  color: #333333;
 }
 
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close {
-  color: #FFF;
+  color: #FFFFFF;
   right: -6px;
   text-align: right;
   padding-right: 6px;
@@ -181,7 +177,7 @@ button::-moz-focus-inner {
   position: absolute;
   top: 0;
   right: 0;
-  color: #CCC;
+  color: #CCCCCC;
   font-size: 12px;
   line-height: 18px;
   white-space: nowrap;
@@ -231,7 +227,7 @@ button::-moz-focus-inner {
   left: 0;
 }
 .mfp-arrow-left:after {
-  border-right: 17px solid #FFF;
+  border-right: 17px solid #FFFFFF;
   margin-left: 31px;
 }
 .mfp-arrow-left:before {
@@ -243,7 +239,7 @@ button::-moz-focus-inner {
   right: 0;
 }
 .mfp-arrow-right:after {
-  border-left: 17px solid #FFF;
+  border-left: 17px solid #FFFFFF;
   margin-left: 39px;
 }
 .mfp-arrow-right:before {
@@ -277,7 +273,7 @@ button::-moz-focus-inner {
   width: 100%;
   height: 100%;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-  background: #000;
+  background: #000000;
 }
 
 /* Main image in popup */
@@ -308,7 +304,7 @@ img.mfp-img {
   height: auto;
   z-index: -1;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-  background: #444;
+  background: #444444;
 }
 .mfp-figure small {
   color: #BDBDBD;
@@ -413,5 +409,3 @@ img.mfp-img {
     padding-right: 6px;
   }
 }
-
-/*# sourceMappingURL=magnific-popup.css.map */

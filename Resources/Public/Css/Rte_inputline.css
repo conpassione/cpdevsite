@@ -5,6 +5,7 @@
   /* as css constants (light theme) */
   :root {
     --clr-bw-000: oklch(0 0 0);
+    --clr-bw-010: oklch(0.1 0 0);
     --clr-bw-020: oklch(0.2 0 0);
     --clr-bw-030: oklch(0.3 0 0);
     --clr-bw-040: oklch(0.4 0 0);
