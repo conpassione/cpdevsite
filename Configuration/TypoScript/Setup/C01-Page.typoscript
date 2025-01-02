@@ -60,8 +60,13 @@ page {
   }
   includeJSFooterlibs {
     jQuery37 = EXT:cpdevsite/Resources/Public/JavaScript/jquery-3.7.1.slim.min.js
+    jQuery37.forceOnTop = 1
     jQueryMagnificPopup = EXT:cpdevsite/Resources/Public/JavaScript/jquery.magnific-popup.min.js
+    jQueryMagnificPopup.defer = 1
+  }
+  includeJSFooter {
     jQueryMPexec = EXT:cpdevsite/Resources/Public/JavaScript/magnific-popup-exec.js
+    jQueryMPexec.async = 1
   }
   jsFooterInline >
 }
