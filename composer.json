@@ -6,7 +6,7 @@
 		"TYPO3",
 		"TYPO3 Extension",
 		"typo3-cms-extension",
-		"sitecpdevsite"
+		"cpdevsite"
 	],
 	"homepage": "https://www.conpassione.ch/",
 	"authors": [
@@ -54,7 +54,7 @@
 		"typo3/cms-seo": "^13",
 		"typo3/cms-setup": "^13",
 		"typo3/cms-sys-note": "^13",
-		"typo3/cms-t3editor": "*",
+		"typo3/cms-t3editor": "^13",
 		"typo3/cms-tstemplate": "^13",
 		"typo3/cms-viewpage": "^13",
 		"typo3/cms-webhooks": "^13.3",
@@ -94,6 +94,9 @@
 		}
 	],
 	"extra": {
+		"branch-alias": {
+			"dev-main": "1.0.x"
+		},
 		"typo3/cms": {
 			"extension-key": "cpdevsite",
 			"web-dir": ".build/public"
