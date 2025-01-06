@@ -895,6 +895,9 @@
     display: block;
     margin-inline: var(--gutter);
   }
+  .no-inline-end-margin {
+    margin-inline-end: 0;
+  }
   .hamburger-menu {
     cursor: pointer;
   }
