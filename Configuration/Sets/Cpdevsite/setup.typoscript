@@ -1,5 +1,4 @@
 # Setup Frontend Output
 
-@import 'EXT:gridgallery/Configuration/TypoScript/*.typoscript'
 @import 'EXT:cpdevsite/Configuration/TypoScript/Rendering/*.typoscript'
 @import 'EXT:cpdevsite/Configuration/TypoScript/Setup/*.typoscript'
