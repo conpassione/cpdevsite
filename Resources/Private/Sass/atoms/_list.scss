@@ -15,10 +15,12 @@
     list-style-type:      disc;
     padding-inline-start: 1em;
     //font-size: inherit;
+    // size of marker in cap (Höhe von Grossbuchstaben) or ex (Höhe von Kleinbuchstaben)
+    // perfekte Ausrichtung mit vertical-align: middle; margin-top: calc(1ex - 1cap);
   }
 
   ul > ::marker {
-    color: var(--clr-list--marker);
+    color: var(--clr-list--marker, currentColor);
   }
 
 }

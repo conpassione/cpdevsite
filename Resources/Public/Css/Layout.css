@@ -443,7 +443,7 @@
     padding-inline-start: 1em;
   }
   ul > ::marker {
-    color: var(--clr-list--marker);
+    color: var(--clr-list--marker, currentColor);
   }
 }
 /* images */

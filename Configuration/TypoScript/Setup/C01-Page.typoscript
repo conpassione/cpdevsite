@@ -54,6 +54,10 @@ page {
     viewport = width=device-width, initial-scale=1.0
     vieport.replace = 1
   }
+  headerData.10 = TEXT
+#  headerData.10.value (
+#    <link rel="preload" href="vendor/conpassione/cpdevsite/Resources/Public/Fonts/Ubuntu/ubuntu-l-webfont.woff2" as="font" crossorigin>
+#  )
   includeCSS {
     jQueryMagnificPopup = EXT:cpdevsite/Resources/Public/Css/vendor/magnific-popup.css
     globalcss = EXT:cpdevsite/Resources/Public/Css/Layout.css
