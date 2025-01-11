@@ -63,6 +63,7 @@
     --clr-mnu--active: var(--clr-bw-100);
     --clr-mnu--hover: var(--clr-bw-100);
     --clr-mnubg: var(--clr-headerbg);
+    --clr-mnumobilebg: var(--clr-headerbg);
     --clr-mnubg--active: var(--clr-bw-040);
     --clr-mnubg--hover: var(--clr-brand--primary);
     /* logo */
