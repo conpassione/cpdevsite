@@ -4,6 +4,7 @@
 
 @layer basastyle {
   footer {
+    color: var(--clr-footer-text);
     background-color: var(--clr-footerbg);
     //border-block-start: 5px solid var(--clr-footer--border);
   }
