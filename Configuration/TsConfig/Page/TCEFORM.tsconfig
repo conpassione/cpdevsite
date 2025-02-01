@@ -81,7 +81,7 @@ TCEFORM.pages {
 
 TCEFORM.tt_content {
 # Allgemein
-  CType.removeItems := addToList(header,textpic,textmedia,bullets,table,uploads,html,div)
+  CType.removeItems := addToList(header,textmedia,bullets,table,uploads,html,div)
 
   colPos.disabled = 1
   header_layout {
@@ -167,7 +167,7 @@ TCEFORM.tt_content {
 # 33 unten-rechts    -> intext right below noWrap
 # 34 unten-links     -> intext left below noWrap
 TCEFORM.tt_content.imageorient {
-  removeItems = 17,18
+  # removeItems = 17,18
   addItems {
     # Neben dem Text mitterechts
     31 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.rightmiddle
@@ -182,8 +182,10 @@ TCEFORM.tt_content.imageorient {
     34 = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:tceform.imageorient.leftbottom
     34.icon = tx-conpassione-content-beside-text-img-left-bottom
   }
-  types.image.removeItems = 1,2,8,9,10,17,18,25,26,31,32,33,34
+  types.image.removeItems = 8,9,10,17,18,25,26,31,32,33,34
 }
+
+# Anzahl Spalten begrenzen
 TCEFORM.tt_content.imagecols {
   removeItems = 5,6,7,8
 }

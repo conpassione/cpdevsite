@@ -16,7 +16,7 @@
                 <img class="cp-responsive-image"
                      title="{file.title}"
                      alt="{file.alternative -> f:format.nl2br()}"
-                     style="mask-size: cover; mask-image: url('{f:uri.image(image: file)}'); background-color: var(--_svg-color, black);"
+                     style="mask-size: cover; mask-image: url('{f:uri.image(image: file)}'); background-color: var(--_svg-color, black); width: {data.imagewidth}px;"
                      loading="lazy"
                 />
             </f:then>

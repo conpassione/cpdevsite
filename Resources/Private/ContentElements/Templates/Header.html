@@ -1,13 +1,10 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:layout />
+<f:if condition="{data}">
+    <f:render partial="HeaderTag" arguments="{
+        header_layout: data.header_layout,
+        header: data.header,
+        link: data.header_link}" />
+</f:if>
 
-<f:section name="Main">
-    <f:if condition="{data}">
-        <f:render partial="HeaderTag" arguments="{
-            header_layout: data.header_layout,
-            header: data.header,
-            link: data.header_link}" />
-    </f:if>
-</f:section>
 </html>

@@ -33,9 +33,9 @@
   category: embedded elements
   */
   img, svg, video, canvas, figure {
-    height:    auto;
-    width: 100%;
-    display:   block;
+    //height:    auto;
+    //width: 100%;
+    //display:   block;
   }
 
   figure {
@@ -92,6 +92,52 @@
       @container (width > 960px) {
         grid-template-columns: repeat(4, 1fr);
       }
+    }
+
+    &.columnssized1 {
+      grid-template-columns: repeat(1, minmax(min-content, var(--gallery-imagewidth)));
+    }
+
+    &.columnssized2 {
+      grid-template-columns: repeat(1, minmax(min-content, var(--gallery-imagewidth)));
+      @container (width > 480px) {
+        grid-template-columns: repeat(2, minmax(min-content, var(--gallery-imagewidth)));
+      }
+    }
+
+    &.columnssized3 {
+      grid-template-columns: repeat(1, minmax(min-content, var(--gallery-imagewidth)));
+      @container (width > 480px) {
+        grid-template-columns: repeat(2, minmax(min-content, var(--gallery-imagewidth)));
+      }
+      @container (width > 740px) {
+        grid-template-columns: repeat(3, minmax(min-content, var(--gallery-imagewidth)));
+      }
+    }
+
+    &.columnssized4 {
+      grid-template-columns: repeat(1, minmax(min-content, var(--gallery-imagewidth)));
+      @container (width > 480px) {
+        grid-template-columns: repeat(2, minmax(min-content, var(--gallery-imagewidth)));
+      }
+      @container (width > 740px) {
+        grid-template-columns: repeat(3, minmax(min-content, var(--gallery-imagewidth)));
+      }
+      @container (width > 960px) {
+        grid-template-columns: repeat(4, minmax(min-content, var(--gallery-imagewidth)));
+      }
+    }
+
+    &.orientation0 {
+      justify-content: center;
+    }
+
+    &.orientation1 {
+      justify-content: end;
+    }
+
+    &.orientation2 {
+      justify-content: start;
     }
   }
 }

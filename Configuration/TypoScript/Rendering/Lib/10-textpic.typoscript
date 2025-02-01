@@ -1,8 +1,8 @@
 # CType: image
 
-tt_content.image < lib.contentElement
-tt_content.image {
-  templateName = Image
+tt_content.textpic < lib.contentElement
+tt_content.textpic {
+  templateName = Textpic
   dataProcessing {
     10 = files
     10.references.fieldName = image

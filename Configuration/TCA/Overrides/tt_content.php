@@ -135,7 +135,7 @@ call_user_func(static function(): void {
         )
         )
             // set an optional icon configuration
-            ->setIcon('EXT:cpdevsite/Resources/Public/Icons/Section3.svg')
+            ->setIcon('tx-conpassione-cp-3cols')
             ->setGroup('z-cplayout')
     );
 

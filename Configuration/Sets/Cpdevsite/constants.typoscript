@@ -40,3 +40,10 @@ plugin.tx_gridgallery {
   enableJquery = 0
 }
 
+styles.content.textmedia {
+  maxW = 1600
+  maxWInText = 622
+  columnSpacing = 0
+  borderWidth = 0
+  borderPadding = 0
+}

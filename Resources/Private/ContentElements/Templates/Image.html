@@ -7,14 +7,14 @@
             header: data.header,
             link: data.header_link}" />
     </f:if>
-    <div class="gallery columns{data.imagecols} orientation{data.imageorient}">
+    <div class="gallery columns{f:if(condition: '{data.imagewidth} == 0', then: '', else: 'sized')}{data.imagecols} orientation{data.imageorient}" {f:if(condition: '{data.imagewidth} == 0', then: '', else: 'style="--gallery-imagewidth: {data.imagewidth}px;"')}>
         <f:if condition="{files}">
             <f:for as="image" each="{files}">
-                <figure class="files">
+                <figure class="images files">
                     <f:if condition="{image.link}">
                         <f:then>
                             <f:link.typolink parameter="{image.link}" title="{image.title}">
-                                <f:render partial="ImageTag" arguments="{file: image, settings: settings}" />
+                                <f:render partial="ImageTag" arguments="{file: image, data:data}" />
                                 <f:if condition="{image.description} && !({data.showcaption} == '0')">
                                     <figcaption>{image.description}</figcaption>
                                 </f:if>
@@ -24,14 +24,14 @@
                             <f:if condition="{data.image_zoom}">
                                 <f:then>
                                     <a class="lightbox" href="{f:uri.image(image:image, maxWidth: 1600, fileExtension: 'webp', cropVariant: 'default')}" title="{image.description}">
-                                        <f:render partial="ImageTag" arguments="{file: image, settings: settings}" />
+                                        <f:render partial="ImageTag" arguments="{file: image, data:data}" />
                                         <f:if condition="{image.description} && !({data.showcaption} == '0')">
                                             <figcaption>{image.description}</figcaption>
                                         </f:if>
                                     </a>
                                 </f:then>
                                 <f:else>
-                                    <f:render partial="ImageTag" arguments="{file: image, settings: settings}" />
+                                    <f:render partial="ImageTag" arguments="{file: image, data:data}" />
                                     <f:if condition="{image.description} && !({data.showcaption} == '0')">
                                         <figcaption>{image.description}</figcaption>
                                     </f:if>
@@ -48,7 +48,7 @@
                     <f:if condition="{image.link}">
                         <f:then>
                             <f:link.typolink parameter="{image.link}" title="{image.title}">
-                                <f:render partial="ImageTag" arguments="{file: image, settings: settings}" />
+                                <f:render partial="ImageTag" arguments="{file: image, data:data}" />
                                 <f:if condition="{image.description} && !({data.showcaption} == '0')">
                                     <figcaption>{image.description}</figcaption>
                                 </f:if>
@@ -58,14 +58,14 @@
                             <f:if condition="{data.image_zoom}">
                                 <f:then>
                                     <a class="lightbox" href="{f:uri.image(image:image, maxWidth: 1600, fileExtension: 'webp', cropVariant: 'default')}" title="{image.description}">
-                                        <f:render partial="ImageTag" arguments="{file: image, settings: settings}" />
+                                        <f:render partial="ImageTag" arguments="{file: image, data:data}" />
                                         <f:if condition="{image.description} && !({data.showcaption} == '0')">
                                             <figcaption>{image.description}</figcaption>
                                         </f:if>
                                     </a>
                                 </f:then>
                                 <f:else>
-                                    <f:render partial="ImageTag" arguments="{file: image, settings: settings}" />
+                                    <f:render partial="ImageTag" arguments="{file: image, data:data}" />
                                     <f:if condition="{image.description} && !({data.showcaption} == '0')">
                                         <figcaption>{image.description}</figcaption>
                                     </f:if>
