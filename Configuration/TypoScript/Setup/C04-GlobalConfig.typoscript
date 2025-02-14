@@ -1,9 +1,3 @@
-lib.contentElement {
-  templateRootPaths.0 = EXT:cpdevsite/Resources/Private/ContentElements/Templates/
-  partialRootPaths.0 = EXT:cpdevsite/Resources/Private/ContentElements/Partials/
-  layoutRootPaths.0 = EXT:cpdevsite/Resources/Private/ContentElements/Layouts/
-}
-
 plugin.tx_seo {
   config {
     xmlSitemap {

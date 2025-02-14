@@ -37,7 +37,9 @@
       [breakout-start]
       minmax(0, var(--breakout-size))
       [content-start]
-      min(var(--content-max-width), 100% - 2 * var(--padding-inline))
+      min(var(--content-max-width) / 2, 50% - var(--padding-inline))
+      [centerline]
+      min(var(--content-max-width) / 2, 50% - var(--padding-inline))
       [content-end]
       minmax(0, var(--breakout-size))
       [breakout-end]

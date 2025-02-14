@@ -2,6 +2,7 @@
 .ddev/
 .DS_Store
 .idea/
+.env
 .stylelintrc.json
 composer.lock
 package.json
