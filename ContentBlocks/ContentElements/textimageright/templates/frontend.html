@@ -1,0 +1,21 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/Friendsoftypo3/ContentBlocks/ViewHelpers">
+
+<f:asset.css identifier="textimage-css" href="{cb:assetPath()}/frontend.css" />
+
+<div id="{data.uid}"  class="textimageright">
+    <div class="textimageright-text">
+        <f:cObject
+            typoscriptObjectPath="tt_content.header"
+            data="{data}"
+            table="tt_content"
+        />
+        <f:format.html>{data.bodytext}</f:format.html>
+    </div>
+    <f:cObject
+        typoscriptObjectPath="tt_content.image"
+        data="{header: '', showcaption:'0', files: data.image}"
+        table="tt_content"
+    />
+</div>
