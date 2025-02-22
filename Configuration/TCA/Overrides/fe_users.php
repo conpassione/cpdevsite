@@ -12,9 +12,9 @@ call_user_func(static function (): void {
             $GLOBALS['TCA']['fe_users'],
             [
                 'ctrl' => [
-                    'default_sortby' => 'active desc,name',
-                    'label' => 'name',
-                    'label_alt' => 'city,mobile,email,active',
+                    'default_sortby' => 'status desc,last_name,first_name',
+                    'label' => 'last_name',
+                    'label_alt' => 'first_name,city,mobile,email,status',
                     'label_alt_force' => true
                 ]
             ]
@@ -30,16 +30,22 @@ call_user_func(static function (): void {
                 'eval' => 'trim'
             ]
         ],
-        'active' => [
+        'status' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:fe_users.column.active',
+            'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:fe_users.column.status',
             'config' => [
-                'type' => 'check',
-                'renderType' => 'checkboxToggle',
-                'default' => 1,
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'default' => '1',
+                'maxItems' => '1',
                 'items' => [
                     [
-                        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:fe_users.column.active.label'
+                        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:fe_users.column.status.0.label',
+                        'value' => 0,
+                    ],
+                    [
+                        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:fe_users.column.status.1.label',
+                        'value' => 1,
                     ]
                 ]
             ]
@@ -47,6 +53,13 @@ call_user_func(static function (): void {
     ];
     ExtensionManagementUtility::addTCAcolumns('fe_users', $additionalColumns);
     ExtensionManagementUtility::addToAllTCAtypes('fe_users', 'mobile','','after:telephone');
-    ExtensionManagementUtility::addToAllTCAtypes('fe_users', 'active','','after:password');
+    ExtensionManagementUtility::addToAllTCAtypes('fe_users', 'status','','after:password');
 
+    /* Add additional Items to status field */
+/*    $myitem = [
+        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:fe_users.column.status.2.label',
+        'value' => 2,
+    ];
+    $GLOBALS['TCA']['fe_users']['columns']['status']['config']['items'][] = $myitem;
+    $GLOBALS['TCA']['fe_users']['columns']['status']['config']['items'][0]['label'] = 'overwritetest';*/
 });

@@ -1,21 +1,9 @@
 # yamllint disable rule:line-length
 
 TCEpage:
-  author: 'CSBP'
+  author: 'CSBPx'
   author_email: info@csbp.ch
   author_phone: '+41793301011'
   org_name: 'Club Suisse du Berger des Pyrénées'
   org_logo: 'EXT:cpdevsite/Resources/Public/Images/logo-berger.png'
 
-#styles:
-#  templates:
-#    layoutRootPath: EXT:cpdevsite/Resources/Private/Templates/ContentElements/Layouts
-#    partialRootPath: EXT:cpdevsite/Resources/Private/Templates/ContentElements/Partials
-#    templateRootPath: EXT:cpdevsite/Resources/Private/Templates/ContentElements/Templates
-#  content:
-#    textmedia:
-#      maxW: 1200
-#      maxWInText: 623
-#      linkWrap:
-#        lightboxEnabled: true
-#        lightboxCssClass: lightbox

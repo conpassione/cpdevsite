@@ -18,7 +18,7 @@ fields:
   type: Select
   renderType: selectSingle
   foreign_table: fe_users
-  foreign_table_where: 'AND {#fe_users}.{#active}=1'
+  foreign_table_where: 'AND {#fe_users}.{#status}>0'
   label: 'FE-User'
   labelField: name
 - identifier: responsibility
