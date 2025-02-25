@@ -3,8 +3,14 @@
   display: grid;
   grid-template-columns: subgrid;
   grid-column: full-width;
-  background-color: var(--clr-background-accent);
+  
+  .accent {
+    background-color: var(--clr-background-accent);
+  }
 
+  .brandcolor {
+    background-color: var(--clr-background-brandcolor);
+  }
   .cp-image {
     grid-column: full-width;
   }

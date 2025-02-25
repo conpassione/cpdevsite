@@ -4,7 +4,7 @@
 
 <f:asset.css identifier="textimage-css" href="{cb:assetPath()}/frontend.css" />
 
-<div id="{data.uid}"  class="textimageleft">
+<div id="{data.uid}"  class="textimageleft {data.sectionlayout}" >
     <f:cObject
         typoscriptObjectPath="tt_content.image"
         data="{header: '', showcaption:'0', files: data.image}"

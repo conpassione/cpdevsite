@@ -43,12 +43,12 @@
   }
 
   figcaption {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0.5em;
-    font-size: var(--fs-small);
+    position:        absolute;
+    left:            0;
+    right:           0;
+    bottom:          0;
+    padding:         0.5em;
+    font-size:       var(--fs-small);
     backdrop-filter: blur(1em);
   }
 
@@ -56,9 +56,14 @@
     container-type: inline-size;
   }
 
+  .cp-image:not(:last-child) {
+    margin-block-end: var(--gutter);
+  }
+
   .gallery {
-    display: grid;
-    gap:     var(--gutter);
+    --grid-min-col-size: 250px;
+    display:             grid;
+    gap:                 var(--gutter);
 
     &.columns1 {
       grid-template-columns: repeat(1, 1fr);
@@ -146,22 +151,23 @@
 
   /* start state */
   .mfp-with-anim {
-    opacity: 0;
+    opacity:    0;
+    transform:  scale(0.8);
     transition: all 0.2s ease-in-out;
-    transform: scale(0.8);
   }
 
   &.mfp-bg {
-    opacity: 0;
+    opacity:    0;
     transition: all 0.3s ease-out;
   }
 
   /* animate in */
   &.mfp-ready {
     .mfp-with-anim {
-      opacity: 1;
+      opacity:   1;
       transform: scale(1);
     }
+
     &.mfp-bg {
       opacity: 0.8;
     }
@@ -171,9 +177,10 @@
   &.mfp-removing {
 
     .mfp-with-anim {
+      opacity:   0;
       transform: scale(0.8);
-      opacity: 0;
     }
+
     &.mfp-bg {
       opacity: 0;
     }

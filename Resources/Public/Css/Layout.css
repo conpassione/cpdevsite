@@ -494,7 +494,11 @@
   .cp-image {
     container-type: inline-size;
   }
+  .cp-image:not(:last-child) {
+    margin-block-end: var(--gutter);
+  }
   .gallery {
+    --grid-min-col-size: 250px;
     display: grid;
     gap: var(--gutter);
   }
@@ -599,8 +603,8 @@
 }
 .mfp-zoom-in .mfp-with-anim {
   opacity: 0;
-  transition: all 0.2s ease-in-out;
   transform: scale(0.8);
+  transition: all 0.2s ease-in-out;
 }
 .mfp-zoom-in.mfp-bg {
   opacity: 0;
@@ -614,8 +618,8 @@
   opacity: 0.8;
 }
 .mfp-zoom-in.mfp-removing .mfp-with-anim {
-  transform: scale(0.8);
   opacity: 0;
+  transform: scale(0.8);
 }
 .mfp-zoom-in.mfp-removing.mfp-bg {
   opacity: 0;
