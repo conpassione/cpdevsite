@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2025-02-21T14:32:16+01:00">
+    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" date="2025-02-27T17:59:11+01:00">
         <header></header>
         <body>
             <trans-unit id="backendlayout.col0">
@@ -99,6 +99,9 @@
             <trans-unit id="crop.small.title">
                 <source>Mobile</source>
             </trans-unit>
+            <trans-unit id="fe_users.column.mobile">
+                <source>Mobile</source>
+            </trans-unit>
             <trans-unit id="fe_users.column.status">
                 <source>Status</source>
             </trans-unit>
@@ -108,10 +111,7 @@
             <trans-unit id="fe_users.column.status.1.label">
                 <source>active</source>
             </trans-unit>
-            <trans-unit id="fe_users.column.mobile">
-                <source>Mobile</source>
-            </trans-unit>
-            <trans-unit id="pagetype.stafflist.label">
+            <trans-unit id="pagetype.staff.label">
                 <source>Staff</source>
             </trans-unit>
             <trans-unit id="pagewizard.agenda.groupLabel">
