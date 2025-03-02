@@ -935,7 +935,7 @@
   .cta-menu button:last-child {
     margin-inline-end: 0;
   }
-  @container headercontent (width > 960px) {
+  @media (width > 960px) {
     .nav-main {
       display: block;
     }
