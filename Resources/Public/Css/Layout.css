@@ -72,6 +72,10 @@
     --clr-logobg: var(--clr-bw-080);
     /* cards */
     --clr-card--accent: var(--clr-brand--primary);
+    /* rte */
+    --clr-ckeditor--text: var(--clr-bw-020);
+    --clr-ckeditor--bg: var(--clr-bw-100);
+    --clr-ckeditor--endline: var(--clr-info);
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -88,6 +92,9 @@
       --clr-background-brandcolor: oklch(from var(--clr-brand--primary) calc(l * .8) calc(c * 0.5) h);
       --clr-footer-text: var(--clr-bw-090);
       --clr-footerbg: var(--clr-bw-040);
+      /* rte */
+      --clr-ckeditor--text: var(--clr-bw-080);
+      --clr-ckeditor--bg: var(--clr-bw-020);
     }
   }
 }

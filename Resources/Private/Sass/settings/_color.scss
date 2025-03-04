@@ -83,6 +83,11 @@
 
     /* cards */
     --clr-card--accent:  var(--clr-brand--primary);
+
+    /* rte */
+    --clr-ckeditor--text: var(--clr-bw-020);
+    --clr-ckeditor--bg: var(--clr-bw-100);
+    --clr-ckeditor--endline: var(--clr-info);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -105,6 +110,9 @@
       --clr-footer-text:              var(--clr-bw-090);
       --clr-footerbg:                 var(--clr-bw-040);
 
+      /* rte */
+      --clr-ckeditor--text: var(--clr-bw-080);
+      --clr-ckeditor--bg: var(--clr-bw-020);
     }
   }
 }

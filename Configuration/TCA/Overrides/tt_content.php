@@ -1,11 +1,14 @@
 <?php
+
 declare(strict_types=1);
 defined('TYPO3') or die();
 
+use B13\Container\Tca\ContainerConfiguration;
+use B13\Container\Tca\Registry;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-call_user_func(static function(): void {
+call_user_func(static function (): void {
     // Defaulteinstellungen für Feld layout löschen
     $GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'] = [];
     unset($GLOBALS['TCA']['tt_content']['columns']['layout']['config']['default']);
@@ -34,7 +37,7 @@ call_user_func(static function(): void {
     // TCA für header-Field überschreiben, damit der RTE zum Editieren verwendet werden kann
     // siehe: https://daniel-siepmann.de/typo3-rte-for-input-fields.html
     $GLOBALS['TCA']['tt_content']['columns']['header']['config'] = [
-        'type' =>'text',
+        'type' => 'text',
         'max' => 35,
         'rows' => 1,
         'cols' => 30,
@@ -43,28 +46,28 @@ call_user_func(static function(): void {
     ];
 
     /* containers */
-    GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer (
+    GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
-            new \B13\Container\Tca\ContainerConfiguration(
-                'cp-1col', // CType
-                'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col', // label
-                'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col.description', // description
+        new ContainerConfiguration(
+            'cp-1col', // CType
+            'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col', // label
+            'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col.description', // description
+            [
                 [
-                    [
-                        ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col.col201', 'colPos' => 201],
-                    ],
-                ] // grid configuration
-            )
+                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col.col201', 'colPos' => 201],
+                ],
+            ] // grid configuration
         )
-        // set an optional icon configuration
-        ->setIcon('tx-conpassione-cp-1col')
-        ->setGroup('z-cplayout')
+        )
+            // set an optional icon configuration
+            ->setIcon('tx-conpassione-cp-1col')
+            ->setGroup('z-cplayout')
     );
 
     /* containers */
-    GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer (
+    GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
-        new \B13\Container\Tca\ContainerConfiguration(
+        new ContainerConfiguration(
             'cp-2cols5050', // CType
             'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols5050', // label
             'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols5050.description', // description
@@ -81,9 +84,9 @@ call_user_func(static function(): void {
             ->setGroup('z-cplayout')
     );
 
-    GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer (
+    GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
-        new \B13\Container\Tca\ContainerConfiguration(
+        new ContainerConfiguration(
             'cp-2cols3366', // CType
             'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols3366', // label
             'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols3366.description', // description
@@ -100,15 +103,15 @@ call_user_func(static function(): void {
             ->setGroup('z-cplayout')
     );
 
-    GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer (
+    GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
-        new \B13\Container\Tca\ContainerConfiguration(
+        new ContainerConfiguration(
             'cp-2cols6633', // CType
             'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols6633', // label
             'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols6633.description', // description
             [
                 [
-                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols.col201', 'colPos' => 201, 'colspan' => 2,],
+                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols.col201', 'colPos' => 201, 'colspan' => 2],
                     ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols.col202', 'colPos' => 202],
                 ],
             ] // grid configuration
@@ -119,9 +122,9 @@ call_user_func(static function(): void {
             ->setGroup('z-cplayout')
     );
 
-    GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer (
+    GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
-        new \B13\Container\Tca\ContainerConfiguration(
+        new ContainerConfiguration(
             'cp-3cols', // CType
             'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.3cols', // label
             'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.3cols.description', // description
@@ -200,5 +203,6 @@ call_user_func(static function(): void {
         'tt_content',
         '--palette--;Layout;cplayout',
         $sections,
-        'after:sectionIndex');
+        'after:sectionIndex'
+    );
 });
