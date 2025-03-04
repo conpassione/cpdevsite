@@ -38,10 +38,7 @@
   body {
     /* overflow-y:     scroll; */
     min-height:         100svh;
-    container-type: inline-size;
     position: relative;
-    display: grid;
-    grid-template-rows: 1fr auto;
     z-index: 0;
   }
 

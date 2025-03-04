@@ -95,6 +95,7 @@
       /* rte */
       --clr-ckeditor--text: var(--clr-bw-080);
       --clr-ckeditor--bg: var(--clr-bw-020);
+      --clr-ckeditor--endline: var(--clr-info);
     }
   }
 }
@@ -288,10 +289,7 @@ strong {
   body {
     /* overflow-y:     scroll; */
     min-height: 100svh;
-    container-type: inline-size;
     position: relative;
-    display: grid;
-    grid-template-rows: 1fr auto;
     z-index: 0;
   }
   header, footer, nav, main, aside, title, div, figure, p, table, textarea {

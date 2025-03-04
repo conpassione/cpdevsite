@@ -3,6 +3,13 @@
 
 @layer basestyles {
 
+  body {
+    /* overflow-y:     scroll; */
+    container-type: inline-size;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+
 
 /*   @media (prefers-reduced-motion: no-preference) {
     :has(:target) {
