@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 defined('TYPO3') or die();
 
@@ -27,10 +28,22 @@ if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['CpMinimal'])) {
 
 // Add custom translations overriding cpdefault labels
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:frontend/Resources/Private/Language/locallang_tca.xlf'][] = 'EXT:cpdevsite/Resources/Private/Language/customtca.xlf';
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['de']['EXT:frontend/Resources/Private/Language/locallang_tca.xlf'][] ='EXT:cpdevsite/Resources/Private/Language/de.customtca.xlf';
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['fr']['EXT:frontend/Resources/Private/Language/locallang_tca.xlf'][] ='EXT:cpdevsite/Resources/Private/Language/fr.customtca.xlf';
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['it']['EXT:frontend/Resources/Private/Language/locallang_tca.xlf'][] ='EXT:cpdevsite/Resources/Private/Language/it.customtca.xlf';
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['de']['EXT:frontend/Resources/Private/Language/locallang_tca.xlf'][] = 'EXT:cpdevsite/Resources/Private/Language/de.customtca.xlf';
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['fr']['EXT:frontend/Resources/Private/Language/locallang_tca.xlf'][] = 'EXT:cpdevsite/Resources/Private/Language/fr.customtca.xlf';
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['it']['EXT:frontend/Resources/Private/Language/locallang_tca.xlf'][] = 'EXT:cpdevsite/Resources/Private/Language/it.customtca.xlf';
 
 // Define TypoScript as content rendering template.
 // This is normally set in Fluid Styled Content.
 $GLOBALS['TYPO3_CONF_VARS']['FE']['contentRenderingTemplates'][] = 'cpdevsite/Configuration/TypoScript/Rendering/';
+
+ExtensionManagementUtility::addTypoScriptSetup(
+    '
+   module.tx_form {
+       settings {
+           yamlConfigurations {
+               36650 = EXT:cpdevsite/Configuration/Form/CpFormSetup.yaml
+           }
+       }
+   }
+'
+);
