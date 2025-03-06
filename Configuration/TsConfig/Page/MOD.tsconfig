@@ -16,15 +16,18 @@ mod.wizards.newContentElement.wizardItems {
     # header,text,textpic,image,textmedia
     removeItems := addToList(header,textpic,textmedia)
   }
+
   lists {
     # bullets,table,uploads
     removeItems := addToList(bullets,table,uploads)
   }
+
   special {
     # shortcut
     removeItems := addToList(html,div)
   }
 }
+
 [! backend.user.isAdmin]
   mod.wizards.newContentElement.wizardItems {
     forms {
@@ -52,7 +55,7 @@ mod.wizards.newContentElement.wizardItems {
 module.tx_form {
   settings {
     yamlConfigurations {
-      36650 = EXT:cpdevsite/Configuration/Yaml/CpFormSetup.yaml
+      36650 = EXT:cpdevsite/Configuration/Form/CpFormSetup.yaml
     }
   }
 }
