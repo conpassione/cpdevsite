@@ -10,27 +10,28 @@ prototypes:
       Form:
         renderingOptions:
           templateRootPaths:
-            3665: 'EXT:cpdevsite/Resources/Private/Frontend/Templates/'
+            36650: 'EXT:cpdevsite/Resources/Private/Frontend/Templates/'
           partialRootPaths:
-            3665: 'EXT:cpdevsite/Resources/Private/Frontend/Partials/'
+            36650: 'EXT:cpdevsite/Resources/Private/Frontend/Partials/'
           layoutRootPaths:
-            3665: 'EXT:cpdevsite/Resources/Private/Frontend/Layouts/'
+            36650: 'EXT:cpdevsite/Resources/Private/Frontend/Layouts/'
           translation:
-            20: 'EXT:cpdevsite/Resources/Private/Language/form.xlf'
+            translationFiles:
+              36650: 'EXT:cpdevsite/Resources/Private/Language/formelements.xlf'
     formEditor:
       translationFiles:
-        20: 'EXT:cpdevsite/Resources/Private/Language/form.xlf'
+        36650: 'EXT:cpdevsite/Resources/Private/Language/form.xlf'
     formEngine:
       translationFiles:
-        20: 'EXT:cpdevsite/Resources/Private/Language/form.xlf'
+        36650: 'EXT:cpdevsite/Resources/Private/Language/form.xlf'
 
 formManager:
   translationFiles:
-    20: 'EXT:cpdevsite/Resources/Private/Language/form.xlf'
-  selectablePrototypesConfiguration:
-    100:
-      newFormTemplates:
-        300:
-          templatePath: 'EXT:cpdevsite/Resources/Private/Forms/MembershipApplicationForm.yaml'
-          label: newFormTemplates.MembershipApplicationForm.label
+    36650: 'EXT:cpdevsite/Resources/Private/Language/form.xlf'
+#  selectablePrototypesConfiguration:
+#    100:
+#      newFormTemplates:
+#        366501:
+#          templatePath: 'EXT:cpdevsite/Resources/Private/Forms/SimpleMessageForm.yaml'
+#          label: 'newFormTemplates.SimpleMessageForm.label'
 

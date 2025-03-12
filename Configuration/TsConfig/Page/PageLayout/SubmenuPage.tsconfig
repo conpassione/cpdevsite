@@ -1,8 +1,8 @@
 mod {
   web_layout {
-		BackendLayouts {
-			SubmenuPage {
-				title =  LLL:EXT:{$TYPO3extkey}/Resources/Private/Language/locallang_db.xlf:backendlayout.submenupage.title
+    BackendLayouts {
+      SubmenuPage {
+        title = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.submenupage.title
         icon = tx-conpassione-backendlayout-simplepage
         config {
           backend_layout {
@@ -19,10 +19,12 @@ mod {
                     allowed {
                       CType = image
                     }
+
                     maxitems = 1
                   }
                 }
               }
+
               2 {
                 columns {
                   1 {
@@ -30,10 +32,11 @@ mod {
                   }
                 }
               }
+
               3 {
                 columns {
                   1 {
-                    name =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.col0
+                    name = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.col0
                     identifier = content
                     colPos = 0
                     allowed {
@@ -42,10 +45,11 @@ mod {
                   }
                 }
               }
+
               4 {
                 columns {
                   1 {
-                    name =  LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.col1
+                    name = LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:backendlayout.col1
                     identifier = footer
                     colPos = 1
                     slideMode = collect
@@ -55,7 +59,7 @@ mod {
             }
           }
         }
-			}
-	  }
+      }
+    }
   }
 }

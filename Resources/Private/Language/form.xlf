@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/locallang.xlf" datatype="plaintext" product-name="cpdevsite" date="2024-12-29T18:31:20+01:00">
+    <file source-language="en" original="EXT:cpdevsite/Resources/Private/Language/form.xlf" datatype="plaintext" product-name="cpdevsite" date="2025-03-12T12:22:37+01:00">
         <header></header>
         <body>
-            <trans-unit id="newFormTemplates.MembershipApplicationForm.label" resname="newFormTemplates.MembershipApplicationForm.label" approved="yes">
+            <trans-unit id="newFormTemplates.MembershipApplicationForm.label" approved="yes">
                 <source>Membership Application Form</source>
             </trans-unit>
-            <trans-unit id="element.firstname.properties.label" resname="element.firstname.properties.label" approved="yes">
-                <source>Firstname</source>
+            <trans-unit id="newFormTemplates.SimpleMessageForm.label" approved="yes">
+                <source>Simple Message Form</source>
             </trans-unit>
-            <trans-unit id="element.lastname.properties.label" resname="element.lastname.properties.label" approved="yes">
-                <source>Lastname</source>
+            <trans-unit id="simple-message.label" approved="yes">
+                <source>Simple Message Form</source>
             </trans-unit>
         </body>
     </file>

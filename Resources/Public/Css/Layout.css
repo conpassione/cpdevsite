@@ -768,6 +768,9 @@
   .form-control {
     padding: 0.25em;
   }
+  .error {
+    color: var(--clr-error);
+  }
   input, textarea, select {
     width: 100%;
     border: none;
@@ -1139,7 +1142,7 @@
   .navsubmenu {
     /* local settings */
     --_card--gutter: var(--gutter);
-    --_card--min-size: calc(var(--mediasize--medium) / 3);
+    --_card--min-size: calc(var(--mediasize--medium) / 4);
     display: grid;
     gap: var(--_card--gutter);
     grid-template-columns: repeat(auto-fit, minmax(var(--_card--min-size), 1fr));
@@ -1195,7 +1198,7 @@
 }
 @layer basestyles {
   form {
-    --_clr-border: oklch(from var(--clr-background) calc(l * .9 ) c h );
+    --_clr-border: oklch(from var(--clr-background) calc(l * .9) c h);
     border: 1px solid var(--clr-accent);
     border-radius: var(--border-radius);
     padding: var(--gutter);
@@ -1226,6 +1229,10 @@
   }
   .summary-table-first-col {
     width: 50%;
+  }
+  .form-h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    color: var(--clr-h);
   }
 }
 /* page */

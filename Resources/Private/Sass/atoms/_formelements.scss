@@ -3,7 +3,7 @@
 @layer basestyles {
 
   .form-label {
-   // color: rebeccapurple;
+    // color: rebeccapurple;
   }
 
   .form-text {
@@ -12,14 +12,18 @@
 
   .form-control {
     padding: 0.25em;
+  }
 
+  .error {
+    color: var(--clr-error);
   }
 
   input, textarea, select {
-    width: 100%;
-    border: none;
+    width:            100%;
+    border:           none;
     background-color: var(--clr-input--bg);
-    &:focus-visible{
+
+    &:focus-visible {
       outline: 1px solid palegoldenrod;
     }
   }
@@ -28,13 +32,13 @@
   .form-check-label {
     input {
       margin-inline-end: 0.25em;
-      height: 0.9em;
-      width: 1em;
+      height:            0.9em;
+      width:             1em;
     }
   }
 
   .form-check-input {
-    width: auto;
+    width:              auto;
     padding-inline-end: 0.25em;
   }
 
