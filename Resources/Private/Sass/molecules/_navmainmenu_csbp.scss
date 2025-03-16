@@ -158,6 +158,7 @@
     right: 5%;
     width: 90%;
     padding: var(--gutter);
+    color: var(--clr-mnumobile);
     background-color: oklch(from var(--clr-mnubg) l c h / 0.6);
     backdrop-filter: blur(1rem);
   }

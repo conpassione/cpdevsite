@@ -1,9 +1,9 @@
 /* ck-editor */
 
-@use 'settings/color' as *;
-@use 'settings/fonts' as *;
-@use 'atoms/link' as *;
-@use 'atoms/list' as *;
+@use '../settings/color' as *;
+@use '../settings/fonts' as *;
+@use '../atoms/link' as *;
+@use '../atoms/list' as *;
 @use 'ck_editor_inputline' as *;
 
 body > :last-child:not(span) {

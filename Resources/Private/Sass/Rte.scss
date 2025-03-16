@@ -4,5 +4,5 @@
 @use 'settings/fonts' as *;
 // @use 'atoms/link' as *;
 // @use 'atoms/list' as *;
-@use 'ck_editor_inputline' as *;
-@use 'ck_editor' as *;
+@use 'vendor/ck_editor_inputline' as *;
+@use 'vendor/ck_editor' as *;

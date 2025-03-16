@@ -1,7 +1,7 @@
 /* ck-editor */
 
-@use 'settings/color' as *;
-@use 'settings/fonts' as *;
+@use '../settings/color' as *;
+@use '../settings/fonts' as *;
 
 body:not(.ck-style-panel) {
   font-family:      var(--ff);
