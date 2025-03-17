@@ -24,10 +24,10 @@
     --clr-brand--secondary:         oklch(0.5 0.03 149);
     --clr-brand--tertiary:          oklch(0.5 0.07 231);
     --clr-brand--quaternary:        oklch(0.5 0.13 318);
-    --clr-branddimmed--primary:     oklch(from var(--clr-brand--primary) calc(l * .8) calc(c * .8) 220);
-    --clr-branddimmed--secondary:   oklch(from var(--clr-brand--secondary) calc(l * .8) calc(c * .8) 220);
-    --clr-branddimmed--tertiary:    oklch(from var(--clr-brand--tertiary) calc(l * .8) calc(c * .8) 220);
-    --clr-branddimmed--quaternary:  oklch(from var(--clr-brand--quaternary) calc(l * .8) calc(c * .8) 220);
+    --clr-branddimmed--primary:     oklch(from var(--clr-brand--primary) calc(l * .8) calc(c * .8) h);
+    --clr-branddimmed--secondary:   oklch(from var(--clr-brand--secondary) calc(l * .8) calc(c * .8) h);
+    --clr-branddimmed--tertiary:    oklch(from var(--clr-brand--tertiary) calc(l * .8) calc(c * .8) h);
+    --clr-branddimmed--quaternary:  oklch(from var(--clr-brand--quaternary) calc(l * .8) calc(c * .8) h);
 
     /* ============================ */
     /* Color Theme light            */

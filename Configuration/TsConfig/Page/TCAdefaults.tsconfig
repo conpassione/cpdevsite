@@ -13,6 +13,8 @@ TCAdefaults.pages {
   #TAB-Ressourcen
   #TAB-Sprache
   #TAB-Zugriff
+  perms_groupid = 1
+  perms_everybody = 1
   #TAB-Kategorien
   #TAB-Hinweise
 }
