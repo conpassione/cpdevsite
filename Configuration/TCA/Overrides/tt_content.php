@@ -38,9 +38,13 @@ call_user_func(static function (): void {
     // siehe: https://daniel-siepmann.de/typo3-rte-for-input-fields.html
     $GLOBALS['TCA']['tt_content']['columns']['header']['config'] = [
         'type' => 'text',
-        'max' => 35,
         'rows' => 1,
-        'cols' => 30,
+        'enableRichtext' => true,
+        'richtextConfiguration' => 'CpMinimal'
+    ];
+    $GLOBALS['TCA']['pages']['columns']['subtitle']['config'] = [
+        'type' => 'text',
+        'rows' => 1,
         'enableRichtext' => true,
         'richtextConfiguration' => 'CpMinimal'
     ];
