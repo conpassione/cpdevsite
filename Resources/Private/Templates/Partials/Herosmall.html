@@ -2,12 +2,14 @@
 
 <section class="section-hero-small content-grid full-width" id="s{data.uid}">
     <div class="hero-small full-width">
-        <f:if condition="{hero.records.0}">
-            <f:cObject
-                data="{files: hero.records.0.image, showcaption: hero.records.0.image_zoom}"
-                table="tt_content"
-                typoscriptObjectPath="tt_content.{hero.records.0.CType}"
-            />
+        <f:if condition="{hero.records}">
+            <f:for as="record" each="{hero.records}">
+                <f:cObject
+                    data="{files: hero.records.0.image, showcaption: hero.records.0.image_zoom}"
+                    table="tt_content"
+                    typoscriptObjectPath="tt_content.{hero.records.0.CType}"
+                />
+            </f:for>
         </f:if>
     </div>
     <div class="hero-small-overlay">

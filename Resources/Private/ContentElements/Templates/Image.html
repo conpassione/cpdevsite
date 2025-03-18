@@ -7,7 +7,8 @@
             header: data.header,
             link: data.header_link}" />
     </f:if>
-    <div class="gallery columns{f:if(condition: '{data.imagewidth} == 0', then: '', else: 'sized')}{data.imagecols} orientation{data.imageorient}" {f:if(condition: '{data.imagewidth} == 0', then: '', else: 'style="--gallery-imagewidth: {data.imagewidth}px;"')}>
+    <div class="gallery columns{f:if(condition: '{data.imagewidth} == 0', then: '', else: 'sized')}{data.imagecols} orientation{data.imageorient}"
+         style="{f:if(condition: '{data.imagewidth} == 0', then: '', else: '--gallery-imagewidth: {data.imagewidth}px;')}">
         <f:if condition="{files}">
             <f:for as="image" each="{files}">
                 <figure class="images files">

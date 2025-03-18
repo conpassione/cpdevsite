@@ -1,14 +1,15 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <section class="section-hero content-grid full-width" id="section-hero">
-
     <div class="hero full-width">
-        <f:if condition="{hero.records.0.image}">
-            <f:cObject
-                data="{files: hero.records.0.image, showcaption: 0, image_zoom: hero.records.0.image_zoom}"
-                table="tt_content"
-                typoscriptObjectPath="tt_content.{hero.records.0.CType}"
-            />
+        <f:if condition="{hero.records}">
+            <f:for as="record" each="{hero.records}">
+                <f:cObject
+                    data="{files: record.image, showcaption: 0, image_zoom: record.image_zoom}"
+                    table="tt_content"
+                    typoscriptObjectPath="tt_content.{record.CType}"
+                />
+            </f:for>
         </f:if>
     </div>
     <div class="hero-overlay">
