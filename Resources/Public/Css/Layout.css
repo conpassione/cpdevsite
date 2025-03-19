@@ -39,7 +39,8 @@
     --clr-list--marker: var(--clr-brand--primary);
     --clr-code--bg: var(--clr-bw-060);
     --clr-code--bc: var(--clr-bw-030);
-    --clr-input--bg: var(--clr-bw-100);
+    --clr-input: var(--clr-text);
+    --clr-input--bg: var(--clr-bw-090);
     /* buttons */
     --clr-primarybtn--active: var(--clr-bw-090);
     --clr-primarybtn--hover: var(--clr-bw-090);
@@ -84,6 +85,7 @@
       --clr-primarybtn--active: var(--clr-bw-075);
       --clr-primarybtnbg--active: var(--clr-brand--primary);
       --clr-primarybtn--disabled: oklch(from var(--clr-primarybtn--active) calc(l + .5) calc(c * 0.5) h);
+      --clr-input: var(--clr-bw-020);
       --clr-input--bg: var(--clr-bw-070);
       /* typographic colors */
       --clr-text: var(--clr-bw-090);
@@ -769,6 +771,8 @@
   }
   .form-control {
     padding: 0.25em;
+    color: var(--clr-input);
+    background-color: var(--clr-input--bg);
   }
   .error {
     color: var(--clr-error);
@@ -776,10 +780,9 @@
   input, textarea, select {
     width: 100%;
     border: none;
-    background-color: var(--clr-input--bg);
   }
   input:focus-visible, textarea:focus-visible, select:focus-visible {
-    outline: 1px solid palegoldenrod;
+    outline: 1px solid var(--clr-brand--primary);
   }
   .form-check input,
   .form-check-label input {

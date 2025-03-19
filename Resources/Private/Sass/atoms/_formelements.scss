@@ -12,6 +12,8 @@
 
   .form-control {
     padding: 0.25em;
+    color: var(--clr-input);
+    background-color: var(--clr-input--bg);
   }
 
   .error {
@@ -21,10 +23,9 @@
   input, textarea, select {
     width:            100%;
     border:           none;
-    background-color: var(--clr-input--bg);
 
     &:focus-visible {
-      outline: 1px solid palegoldenrod;
+      outline: 1px solid var(--clr-brand--primary);
     }
   }
 
