@@ -1,27 +1,27 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:cb="http://typo3.org/ns/Friendsoftypo3/ContentBlocks/ViewHelpers">
+>
 
-<f:asset.css identifier="stafflist-css" href="{cb:assetPath()}/frontend.css" />
+<f:asset.css href="{cb:assetPath()}/frontend.css" identifier="stafflist-css"/>
 
-<div id="{data.uid}"  class="stafflist">
+<div class="stafflist" id="{data.uid}">
     <f:cObject
-        typoscriptObjectPath="tt_content.header"
         data="{data}"
         table="tt_content"
+        typoscriptObjectPath="tt_content.header"
     />
     <div class="staffcards">
         <f:for as="member" each="{staffmembers}">
-            <div class="staffcard" aria-label="Member">
+            <div aria-label="Member" class="staffcard">
                 <div class="staffcard--content">
                     <h3 class="h4 staffcard--title">{member.data.function}</h3>
                     <div class="staffcard--image">
                         <f:if condition="{member.feusers.0.files}">
                             <f:then>
                                 <f:cObject
-                                    typoscriptObjectPath="tt_content.image"
                                     data="{header: '', showcaption:'0', files: member.feusers.0.files}"
                                     table="tt_content"
+                                    typoscriptObjectPath="tt_content.image"
                                 />
                             </f:then>
                             <f:else>
@@ -30,15 +30,24 @@
                         </f:if>
                     </div>
                     <div class="staffcard--address">
-                        <p><strong><f:format.html>{member.feusers.0.data.name}</f:format.html></strong><br>
-                            <f:format.html>{member.feusers.0.data.address -> f:format.nl2br()}</f:format.html><br>
-                            <f:format.html>{member.feusers.0.data.zip} - {member.feusers.0.data.city}</f:format.html>
+                        <p><strong>
+                            <f:format.html>{member.feusers.0.data.last_name} {member.feusers.0.data.first_name}</f:format.html>
+                        </strong><br>
+                            <f:if condition="{member.feusers.0.data.zip}">
+                                <f:format.html>{member.feusers.0.data.address -> f:format.nl2br()}</f:format.html>
+                                <br>
+                                <f:format.html>{member.feusers.0.data.zip} {member.feusers.0.data.city}</f:format.html>
+                            </f:if>
                         </p>
                         <p>
-                            <f:link.external uri="tel:{member.feusers.0.data.mobile}" class="phone-link--icon">{member.feusers.0.data.mobile}</f:link.external>
+                            <f:if condition="{member.feusers.0.data.mobile}">
+                                <f:link.external class="phone-link--icon" uri="tel:{member.feusers.0.data.mobile}">{member.feusers.0.data.mobile}</f:link.external>
+                            </f:if>
                         </p>
                         <p>
-                            <f:link.email email="{member.feusers.0.data.email}" class="mail-link--icon">{member.feusers.0.data.email}</f:link.email>
+                            <f:if condition="{member.feusers.0.data.email2}">
+                                <f:link.email class="mail-link--icon" email="{member.feusers.0.data.email2}">{member.feusers.0.data.email2}</f:link.email>
+                            </f:if>
                         </p>
                     </div>
                     <div class="staffcard--responsibility">

@@ -16,7 +16,7 @@
   .row {
     display:               grid;
     gap:                   var(--gutter);
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 
   .form-group {
