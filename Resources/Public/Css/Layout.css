@@ -65,10 +65,14 @@
     --clr-mnu--active: var(--clr-bw-100);
     --clr-mnu--hover: var(--clr-bw-100);
     --clr-mnubg: var(--clr-headerbg);
-    --clr-mnumobile: var(--clr-bw-000);
-    --clr-mnumobilebg: var(--clr-headerbg);
     --clr-mnubg--active: var(--clr-bw-040);
     --clr-mnubg--hover: var(--clr-brand--primary);
+    --clr-mnumobile: var(--clr-bw-000);
+    --clr-mnumobile--active: var(--clr-bw-100);
+    --clr-mnumobile--hover: var(--clr-bw-100);
+    --clr-mnumobilebg: var(--clr-headerbg);
+    --clr-mnumobilebg--active: var(--clr-bw-040);
+    --clr-mnumobilebg--hover: var(--clr-brand--primary);
     /* logo */
     --clr-logo: var(--clr-bw-000);
     --clr-logobg: var(--clr-bw-080);
@@ -640,7 +644,7 @@
     font-size: var(--fs-regular);
     line-height: var(--lh-h);
     font-family: var(--ff-h), sans-serif;
-    font-weight: normal;
+    font-weight: var(--fw-regular);
     margin: 0;
   }
   .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -1021,7 +1025,7 @@
     width: 90%;
     padding: var(--gutter);
     color: var(--clr-mnumobile);
-    background-color: oklch(from var(--clr-mnubg) l c h/0.6);
+    background-color: oklch(from var(--clr-mnumobilebg) l c h/0.6);
     backdrop-filter: blur(1rem);
   }
   .mlevel-1 {
@@ -1043,13 +1047,12 @@
     padding: 0;
   }
   .current:is(.mlevel-01, .mlevel-02, .mlevel-03) > a {
-    color: var(--clr-mnu--active);
-    background-color: var(--clr-mnubg--active);
+    color: var(--clr-mnumobile--active);
+    background-color: var(--clr-mnumobilebg--active);
   }
   .mlevel-01 {
     flex: 250px 1 1;
     display: inline-block;
-    border-block-start: 1px solid var(--clr-mnu);
     background-color: var(--clr-mnumobilebg);
   }
   .mlevel-02,
@@ -1070,13 +1073,13 @@
   }
   a.mmenu-item:hover,
   a.mmenu-item:focus {
-    color: var(--clr-menu--hover);
-    background-color: var(--clr-mnubg--hover);
+    color: var(--clr-mnumobile--hover);
+    background-color: var(--clr-mnumobilebg--hover);
   }
   a.mmenu-item:focus-visible {
     outline: 2px solid var(--clr-bw-070);
-    color: var(--clr-menu--hover);
-    background-color: var(--clr-mnubg--hover);
+    color: var(--clr-mnumobile--hover);
+    background-color: var(--clr-mnumobilebg--hover);
   }
   .hamburger:checked ~ .nav-mobile {
     transition: visibility 300ms ease-in, opacity 300ms ease-in, transform 250ms ease-in;

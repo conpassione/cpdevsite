@@ -65,10 +65,14 @@
     --clr-mnu--active: var(--clr-bw-100);
     --clr-mnu--hover: var(--clr-bw-100);
     --clr-mnubg: var(--clr-headerbg);
-    --clr-mnumobile: var(--clr-bw-000);
-    --clr-mnumobilebg: var(--clr-headerbg);
     --clr-mnubg--active: var(--clr-bw-040);
     --clr-mnubg--hover: var(--clr-brand--primary);
+    --clr-mnumobile: var(--clr-bw-000);
+    --clr-mnumobile--active: var(--clr-bw-100);
+    --clr-mnumobile--hover: var(--clr-bw-100);
+    --clr-mnumobilebg: var(--clr-headerbg);
+    --clr-mnumobilebg--active: var(--clr-bw-040);
+    --clr-mnumobilebg--hover: var(--clr-brand--primary);
     /* logo */
     --clr-logo: var(--clr-bw-000);
     --clr-logobg: var(--clr-bw-080);

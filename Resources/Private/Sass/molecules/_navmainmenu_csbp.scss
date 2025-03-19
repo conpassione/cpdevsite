@@ -159,7 +159,7 @@
     width: 90%;
     padding: var(--gutter);
     color: var(--clr-mnumobile);
-    background-color: oklch(from var(--clr-mnubg) l c h / 0.6);
+    background-color: oklch(from var(--clr-mnumobilebg) l c h / 0.6);
     backdrop-filter: blur(1rem);
   }
 
@@ -184,14 +184,13 @@
   }
 
   .current:is(.mlevel-01, .mlevel-02, .mlevel-03) > a {
-    color: var(--clr-mnu--active);
-    background-color: var(--clr-mnubg--active);
+    color: var(--clr-mnumobile--active);
+    background-color: var(--clr-mnumobilebg--active);
   }
 
   .mlevel-01 {
     flex: 250px 1 1;
     display: inline-block;
-    border-block-start: 1px solid var(--clr-mnu);
     background-color: var(--clr-mnumobilebg);
   }
 
@@ -216,14 +215,14 @@
 
   a.mmenu-item:hover,
   a.mmenu-item:focus {
-    color: var(--clr-menu--hover);
-    background-color: var(--clr-mnubg--hover);
+    color: var(--clr-mnumobile--hover);
+    background-color: var(--clr-mnumobilebg--hover);
   }
 
   a.mmenu-item:focus-visible {
     @include outline;
-    color: var(--clr-menu--hover);
-    background-color: var(--clr-mnubg--hover);
+    color: var(--clr-mnumobile--hover);
+    background-color: var(--clr-mnumobilebg--hover);
   }
 
   .hamburger:checked ~ .nav-mobile {
@@ -308,4 +307,3 @@
   }
 
 }
-
