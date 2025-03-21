@@ -57,7 +57,7 @@
   }
 
   .cp-image:not(:last-child) {
-    margin-block-end: var(--gutter);
+    margin-block-end: calc(var(--gutter) * 2);
   }
 
   .gallery {

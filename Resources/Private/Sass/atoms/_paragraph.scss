@@ -9,6 +9,20 @@
     /* hyphens: auto;*/
   }
 
+  .cp-text:not(:last-child) {
+    margin-block-end: calc(var(--gutter) * 2);
+  }
+
+  p + h1 {
+    margin-block-start: calc(var(--gutter) * 2);
+  }
+
+  p + h2,
+  p + h3,
+  p + h4 {
+    margin-block-start: calc(var(--gutter) * 1.5);
+  }
+
   pre {
     font-family: var(--ff-mono), monospace;
     font-size:   1rem;
@@ -44,7 +58,7 @@
   }
 
   .cp-accent {
-    color:       var(--clr-accent);
+    color: var(--clr-accent);
   }
 
   i.icon {

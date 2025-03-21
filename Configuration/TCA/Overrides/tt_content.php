@@ -87,6 +87,22 @@ call_user_func(static function (): void {
             ->setIcon('tx-conpassione-cp-2cols5050')
             ->setGroup('z-cplayout')
     );
+    /*    $GLOBALS['TCA']['tt_content']['types']['cp-2cols5050']['showitem'] = [
+            '
+        --palette--;;general,header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.div_formlabel,
+        --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+        --palette--;;frames,
+        --palette--;;appearanceLinks,
+        --palette--;Layout;cplayout,
+        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,
+        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+        --palette--;;language,
+        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+        --palette--;;hidden,
+        --palette--;;access,
+        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,
+        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended'
+        ];*/
 
     GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
@@ -200,8 +216,9 @@ call_user_func(static function (): void {
     ExtensionManagementUtility::addFieldsToPalette(
         'tt_content',
         'cplayout',
-        'sectionlayout,contentlayout,'
+        'sectionlayout,contentlayout'
     );
+    // Zeilenumbruch einfügen 'sectionlayout,contentlayout,--linebreak--,imagecols'
 
     ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
