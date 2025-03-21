@@ -13,6 +13,24 @@
     margin-block-end: calc(var(--gutter) * 2);
   }
 
+  .text-center {
+    text-align: center;
+  }
+
+  .text-end {
+    text-align: end;
+  }
+
+  .text-justify {
+    text-align: justify;
+  }
+
+  .cp-zitat {
+    font-size:     120%;
+    color:         var(--clr-accent);
+    padding-block: var(--gutter);
+  }
+
   p + h1 {
     margin-block-start: calc(var(--gutter) * 2);
   }

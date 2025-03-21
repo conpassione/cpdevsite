@@ -207,11 +207,16 @@
 }
 /* import utilities */
 /* ck-editor */
+html {
+  min-height: auto;
+}
+
 body:not(.ck-style-panel) {
   font-family: var(--ff);
   font-size: 18px;
   color: var(--clr-ckeditor--text);
   background-color: var(--clr-ckeditor--bg);
+  min-height: auto;
 }
 
 h3, .h3 {
@@ -230,6 +235,12 @@ strong {
 
 .cp-accent {
   color: var(--clr-accent);
+}
+
+.cp-zitat {
+  font-size: 120%;
+  color: var(--clr-accent);
+  padding-block: var(--gutter);
 }
 
 .fs-small {
