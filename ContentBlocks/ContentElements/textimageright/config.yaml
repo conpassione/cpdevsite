@@ -13,12 +13,15 @@ fields:
     extendedPalette: true
     allowed: common-image-types
     maxitems: 1
-  - identifier: sectionlayout
-    type: Select
-    useExistingField: true
-  - identifier: contentlayout
-    type: Select
-    useExistingField: true
+  - identifier: layoutpalette
+    type: Palette
+    fields:
+      - identifier: sectionlayout
+        type: Select
+        useExistingField: true
+      - identifier: contentlayout
+        type: Select
+        useExistingField: true
 basics:
   - TYPO3/Appearance
   - TYPO3/Links

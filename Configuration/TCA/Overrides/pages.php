@@ -11,7 +11,7 @@ call_user_func(static function (): void {
     $GLOBALS['TCA']['pages']['columns']['layout']['config']['items'] = [];
     unset($GLOBALS['TCA']['pages']['columns']['layout']['config']['default']);
 
-    // zusätzliche Icons für Folder-Seiten ... enthält Plugin Feld
+    // STAFF zusätzliche Icons für Folder-Seiten ... enthält Plugin Feld
     $GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] = [
         'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:pagetype.staff.label',
         'icon' => 'tx-conpassione-staff',
@@ -19,6 +19,13 @@ call_user_func(static function (): void {
     ];
     $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-staff'] = 'tx-conpassione-staff';
 
+    // EVENT zusätzliche Icons für Folder-Seiten ... enthält Plugin Feld
+    $GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] = [
+        'label' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:pagetype.event.label',
+        'icon' => 'tx-conpassione-event',
+        'value' => 'event'
+    ];
+    $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-event'] = 'tx-conpassione-event';
 
     // Add group 'conpassione' to Page Types Selection
     ExtensionManagementUtility::addTcaSelectItemGroup(
@@ -31,7 +38,7 @@ call_user_func(static function (): void {
 
     // Bugfix for content-blocks
     // List all pages ot add the standard fields
-    $doktypes = '36650001,36650011,36650012';
+    $doktypes = '36650001,36650011,36650012,36650021';
 
     // update TCA (add abstract) to unify BE for Standard and Custom Pages
     ExtensionManagementUtility::addToAllTCAtypes(

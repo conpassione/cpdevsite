@@ -58,7 +58,11 @@ call_user_func(static function (): void {
             'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col.description', // description
             [
                 [
-                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col.col201', 'colPos' => 201],
+                    [
+                        'name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.1col.col201',
+                        'colPos' => 201,
+                        'disallowed' => ['CType' => 'cp-1col,cp-2cols5050,cp-2cols3366,cp-2cols6633,cp-3cols']
+                    ],
                 ],
             ] // grid configuration
         )
@@ -77,8 +81,16 @@ call_user_func(static function (): void {
             'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols5050.description', // description
             [
                 [
-                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols.col201', 'colPos' => 201],
-                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols.col202', 'colPos' => 202]
+                    [
+                        'name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols.col201',
+                        'colPos' => 201,
+                        'disallowed' => ['CType' => 'cp-1col,cp-2cols5050,cp-2cols3366,cp-2cols6633,cp-3cols']
+                    ],
+                    [
+                        'name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols.col202',
+                        'colPos' => 202,
+                        'disallowed' => ['CType' => 'cp-1col,cp-2cols5050,cp-2cols3366,cp-2cols6633,cp-3cols']
+                    ]
                 ],
             ] // grid configuration
         )
@@ -112,8 +124,17 @@ call_user_func(static function (): void {
             'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols3366.description', // description
             [
                 [
-                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols.col201', 'colPos' => 201],
-                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols.col202', 'colPos' => 202, 'colspan' => 2]
+                    [
+                        'name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols.col201',
+                        'colPos' => 201,
+                        'disallowed' => ['CType' => 'cp-1col,cp-2cols5050,cp-2cols3366,cp-2cols6633,cp-3cols']
+                    ],
+                    [
+                        'name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols.col202',
+                        'colPos' => 202,
+                        'colspan' => 2,
+                        'disallowed' => ['CType' => 'cp-1col,cp-2cols5050,cp-2cols3366,cp-2cols6633,cp-3cols']
+                    ]
                 ],
             ] // grid configuration
         )
@@ -131,8 +152,17 @@ call_user_func(static function (): void {
             'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols6633.description', // description
             [
                 [
-                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols.col201', 'colPos' => 201, 'colspan' => 2],
-                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols.col202', 'colPos' => 202],
+                    [
+                        'name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols.col201',
+                        'colPos' => 201,
+                        'colspan' => 2,
+                        'disallowed' => ['CType' => 'cp-1col,cp-2cols5050,cp-2cols3366,cp-2cols6633,cp-3cols']
+                    ],
+                    [
+                        'name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.2cols.col202',
+                        'colPos' => 202,
+                        'disallowed' => ['CType' => 'cp-1col,cp-2cols5050,cp-2cols3366,cp-2cols6633,cp-3cols']
+                    ],
                 ],
             ] // grid configuration
         )
@@ -150,9 +180,21 @@ call_user_func(static function (): void {
             'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.3cols.description', // description
             [
                 [
-                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.3cols.col201', 'colPos' => 201],
-                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.3cols.col202', 'colPos' => 202],
-                    ['name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.3cols.col203', 'colPos' => 203]
+                    [
+                        'name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.3cols.col201',
+                        'colPos' => 201,
+                        'disallowed' => ['CType' => 'cp-1col,cp-2cols5050,cp-2cols3366,cp-2cols6633,cp-3cols']
+                    ],
+                    [
+                        'name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.3cols.col202',
+                        'colPos' => 202,
+                        'disallowed' => ['CType' => 'cp-1col,cp-2cols5050,cp-2cols3366,cp-2cols6633,cp-3cols']
+                    ],
+                    [
+                        'name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.3cols.col203',
+                        'colPos' => 203,
+                        'disallowed' => ['CType' => 'cp-1col,cp-2cols5050,cp-2cols3366,cp-2cols6633,cp-3cols']
+                    ]
                 ],
             ] // grid configuration
         )

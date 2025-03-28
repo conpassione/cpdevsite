@@ -1,0 +1,24 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+
+<f:asset.css href="{cb:assetPath()}/frontend.css" identifier="eventlist-css"/>
+
+<div class="eventlist" id="{data.uid}">
+    <f:debug>{_all}</f:debug>
+    <f:cObject
+        data="{data}"
+        table="tt_content"
+        typoscriptObjectPath="tt_content.header"
+    />
+    <div class="eventcards">
+        <f:for as="event" each="{eventlist}">
+            <p>{event.data.header} - {event.data.subtitle} |
+                <f:format.date locale="de_CH" pattern="SHORT">{event.data.cp_edate}</f:format.date>
+            </p>
+            <p>Gehe zu:
+                <f:link.page additionalParams="{cp-page: '{data.pid}'}" pageUid="{event.data.uid}">Link zum Event</f:link.page>
+            </p>
+        </f:for>
+    </div>
+</div>

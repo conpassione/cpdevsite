@@ -1,0 +1,8 @@
+mod.web_list.downloadPresets {
+  pages {
+    10 {
+      label = Test Preset for pages
+      columns = title, slug, author
+    }
+  }
+}

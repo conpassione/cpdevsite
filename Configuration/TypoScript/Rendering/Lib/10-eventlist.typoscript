@@ -1,0 +1,20 @@
+# CType: eventlist
+
+tt_content.eventlist {
+  dataProcessing {
+    200 = database-query
+    200 {
+      table = pages
+      where = ({#doktype} = 36650021) AND ({#cp_bdate} >= UNIX_TIMESTAMP(NOW()))
+      # max = {$events_max_items}
+      max.data = field : cp_max_items
+      orderBy = cp_bdate ASC
+      recursive = 5
+      pidInList.data = field : cp_pages
+      as = eventlist
+    }
+  }
+}
+
+lib.eventlist_referer = TEXT
+lib.eventlist_referer.data = GP : cp-page

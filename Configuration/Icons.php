@@ -1,7 +1,7 @@
 <?php
+
 declare(strict_types=1);
 
-use TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider;
 use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
 
 return [
@@ -13,6 +13,11 @@ return [
     'tx-conpassione-staff' => [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:cpdevsite/Resources/Public/Icons/cpstaff.svg',
+    ],
+
+    'tx-conpassione-cp-event' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:cpdevsite/Resources/Public/Icons/cp-event.svg',
     ],
 
     'tx-conpassione-cp-1col' => [

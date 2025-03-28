@@ -84,6 +84,27 @@ page.10.dataProcessing {
     languages = auto
     as = languagemenu
   }
+
+  110 = menu
+  110 {
+    special = browse
+    as = prevNavigation
+    special {
+      items = prev
+      items.prevnetToSEction = 0
+    }
+  }
+
+  120 = menu
+  120 {
+    special = browse
+    as = nextNavigation
+    special {
+      items = next
+      items.prevnextToSection = 0
+    }
+  }
+
 }
 
 page.10 {

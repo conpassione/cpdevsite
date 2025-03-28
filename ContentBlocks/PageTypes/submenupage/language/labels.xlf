@@ -1,13 +1,13 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-09-28T21:37:39+00:00" product-name="conpassione/submenupage">
-		<header/>
+	<file source-language="en" original="Labels.xlf" datatype="plaintext" product-name="conpassione/submenupage" date="2025-03-26T10:44:46+01:00">
+		<header></header>
 		<body>
-			<trans-unit id="title" resname="title">
-				<source>Galery Menupage</source>
-			</trans-unit>
-			<trans-unit id="description" resname="description">
+			<trans-unit id="description">
 				<source>Page with Menucards of subpages</source>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Galery Menupage</source>
 			</trans-unit>
 		</body>
 	</file>

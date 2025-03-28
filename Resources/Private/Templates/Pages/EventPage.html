@@ -4,10 +4,14 @@
 
 <f:section name="Main">
     <f:debug>{_all}</f:debug>
-    <f:render arguments="{hero: pagecontent.hero, pageTitle: page.pagerecord.subtitle}" section="Herosmall"/>
+    <f:render arguments="{hero: pagecontent.hero, pageTitle: page.pagerecord.subtitle}" partial="Herosmall"/>
 
     <f:render arguments="{_all}" partial="Menu/BreadcrumbMenu"/>
-
+    <f:format.date locale="de_CH" pattern="FULL">{page.pagerecord.cp_bdate}</f:format.date>
+    cObject:
+    <f:cObject typoscriptObjectPath="lib.eventlist_referer"> test</f:cObject>
+    <f:link.page pageUid="{f:cObject(typoscriptObjectPath: 'lib.eventlist_referer')}">Zurück</f:link.page>
+    <f:format.raw>{page.pagerecord.cp_teaser}</f:format.raw>
     <f:for as="contentelement" each="{pagecontent.content.records}">
         <f:cObject
             data="{contentelement.rawRecord}"
@@ -15,10 +19,6 @@
             typoscriptObjectPath="tt_content.{contentelement.CType}"
         />
     </f:for>
-</f:section>
-
-<f:section name="Herosmall">
-    <f:render arguments="{hero: hero, pageTitle: pageTitle}" partial="Herosmall"/>
 </f:section>
 
 </html>

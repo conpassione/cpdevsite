@@ -18,3 +18,9 @@ tt_content.image {
     }
   }
 }
+
+lib.SVGinline = SVG
+lib.SVGinline {
+  renderMode = inline
+  src.field = src
+}
