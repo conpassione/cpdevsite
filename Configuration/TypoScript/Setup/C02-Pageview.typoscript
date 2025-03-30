@@ -91,7 +91,15 @@ page.10.dataProcessing {
     as = prevNavigation
     special {
       items = prev
-      items.prevnetToSEction = 0
+    }
+  }
+
+  115 = menu
+  115 {
+    special = browse
+    as = upNavigation
+    special {
+      items = up
     }
   }
 
@@ -101,7 +109,6 @@ page.10.dataProcessing {
     as = nextNavigation
     special {
       items = next
-      items.prevnextToSection = 0
     }
   }
 
@@ -120,6 +127,10 @@ page.10 {
     homePageSlug = TEXT
     homePageSlug.data = levelfield : 0, slug
 
+    referer = TEXT
+    referer {
+      data = getIndpEnv : HTTP_REFERER
+    }
 
     layoutName = TEXT
     layoutName {
@@ -132,21 +143,21 @@ page.10 {
       }
     }
 
-    displaywidth = TEXT
-    displaywidth {
-      cObject = CASE
-      cObject {
-        key.field = displaywidth
-
-        0 = TEXT
-        0.value >
-
-        1 = TEXT
-        1.value = breakout
-
-        2 = TEXT
-        2.value = full-width
-      }
-    }
+    #    displaywidth = TEXT
+    #    displaywidth {
+    #      cObject = CASE
+    #      cObject {
+    #        key.field = displaywidth
+    #
+    #        0 = TEXT
+    #        0.value >
+    #
+    #        1 = TEXT
+    #        1.value = breakout
+    #
+    #        2 = TEXT
+    #        2.value = full-width
+    #      }
+    #    }
   }
 }

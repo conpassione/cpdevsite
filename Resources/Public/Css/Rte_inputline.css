@@ -1,1 +1,261 @@
-@layer basestyles{:root{--clr-bw-000: oklch(0 0 0);--clr-bw-010: oklch(0.1 0 0);--clr-bw-020: oklch(0.2 0 0);--clr-bw-030: oklch(0.3 0 0);--clr-bw-040: oklch(0.4 0 0);--clr-bw-050: oklch(0.5 0 0);--clr-bw-060: oklch(0.6 0 0);--clr-bw-070: oklch(0.7 0 0);--clr-bw-080: oklch(0.8 0 0);--clr-bw-090: oklch(0.9 0 0);--clr-bw-100: oklch(1 0 0);--clr-success: oklch(0.5 0.12 150);--clr-info: oklch(0.5 0.12 220);--clr-error: oklch(0.5 0.12 0);--clr-brand--primary: oklch(0.6 0.061 62);--clr-brand--secondary: oklch(0.5 0.03 149);--clr-brand--tertiary: oklch(0.5 0.07 231);--clr-brand--quaternary: oklch(0.5 0.13 318);--clr-branddimmed--primary: oklch(from var(--clr-brand--primary) calc(l * .8) calc(c * .8) h);--clr-branddimmed--secondary: oklch(from var(--clr-brand--secondary) calc(l * .8) calc(c * .8) h);--clr-branddimmed--tertiary: oklch(from var(--clr-brand--tertiary) calc(l * .8) calc(c * .8) h);--clr-branddimmed--quaternary: oklch(from var(--clr-brand--quaternary) calc(l * .8) calc(c * .8) h);--clr-text: var(--clr-bw-030);--clr-background: var(--clr-bw-100);--clr-h: var(--clr-bw-050);--clr-h--border: var(--clr-brand--primary);--clr-accent: var(--clr-brand--primary);--clr-list--marker: var(--clr-brand--primary);--clr-code--bg: var(--clr-bw-060);--clr-code--bc: var(--clr-bw-030);--clr-input: var(--clr-text);--clr-input--bg: var(--clr-bw-090);--clr-primarybtn--active: var(--clr-bw-090);--clr-primarybtn--hover: var(--clr-bw-090);--clr-primarybtnbg--active: var(--clr-brand--primary);--clr-primarybtnbg--hover: var(--clr-bw-050);--clr-primarybtnbg--disabled: oklch(from var(--clr-primarybtn--active) calc(l * .75) c h);--clr-primarybtn--border: transparent;--clr-secondarybtn--active: var(--clr-bw-090);--clr-secondarybtnbg--active: var(--clr-brand--secondary);--clr-secondarybtnbg--hover: var(--clr-bw-050);--clr-secondarybtnbg--disabled: oklch(from var(--clr-secondarybtnbg--active) calc(l * .75) c h);--clr-secondarybtn--border: transparent;--clr-headerbg: var(--clr-bw-070);--clr-background-accent: var(--clr-bw-090);--clr-background-brandcolor: oklch(from var(--clr-brand--primary) calc(l * 1.4) calc(c * 0.5) h);--clr-footer-text: var(--clr-bw-030);--clr-footerbg: var(--clr-bw-070);--clr-footer--border: var(--clr-brand--primary);--clr-mnu: var(--clr-bw-100);--clr-mnu--active: var(--clr-bw-100);--clr-mnu--hover: var(--clr-bw-100);--clr-mnubg: var(--clr-headerbg);--clr-mnubg--active: var(--clr-bw-040);--clr-mnubg--hover: var(--clr-brand--primary);--clr-mnumobile: var(--clr-bw-000);--clr-mnumobile--active: var(--clr-bw-100);--clr-mnumobile--hover: var(--clr-bw-100);--clr-mnumobilebg: var(--clr-headerbg);--clr-mnumobilebg--active: var(--clr-bw-040);--clr-mnumobilebg--hover: var(--clr-brand--primary);--clr-logo: var(--clr-bw-000);--clr-logobg: var(--clr-bw-080);--clr-card--accent: var(--clr-brand--primary);--clr-ckeditor--text: var(--clr-bw-020);--clr-ckeditor--bg: var(--clr-bw-100);--clr-ckeditor--endline: var(--clr-info)}@media(prefers-color-scheme: dark){:root{--clr-primarybtn--active: var(--clr-bw-075);--clr-primarybtnbg--active: var(--clr-brand--primary);--clr-primarybtn--disabled: oklch(from var(--clr-primarybtn--active) calc(l + .5) calc(c * 0.5) h);--clr-input: var(--clr-bw-020);--clr-input--bg: var(--clr-bw-070);--clr-text: var(--clr-bw-090);--clr-h: var(--clr-bw-080);--clr-background: var(--clr-bw-030);--clr-background-accent: var(--clr-bw-040);--clr-background-brandcolor: oklch(from var(--clr-brand--primary) calc(l * .8) calc(c * 0.5) h);--clr-footer-text: var(--clr-bw-090);--clr-footerbg: var(--clr-bw-040);--clr-ckeditor--text: var(--clr-bw-080);--clr-ckeditor--bg: var(--clr-bw-020);--clr-ckeditor--endline: var(--clr-info)}}}@layer basestyles{@font-face{font-family:"Ubuntu";font-weight:300;src:url("../Fonts/Ubuntu/ubuntu-l-webfont.woff2") format("woff2")}@font-face{font-family:"Ubuntu";font-weight:300;font-style:italic;src:url("../Fonts/Ubuntu/ubuntu-li-webfont.woff2") format("woff2")}@font-face{font-family:"Ubuntu";font-weight:400;src:url("../Fonts/Ubuntu/ubuntu-r-webfont.woff2") format("woff2")}@font-face{font-family:"Ubuntu";font-weight:400;font-style:italic;src:url("../Fonts/Ubuntu/ubuntu-ri-webfont.woff2") format("woff2")}@font-face{font-family:"Ubuntu";font-weight:500;src:url("../Fonts/Ubuntu/ubuntu-m-webfont.woff2") format("woff2")}@font-face{font-family:"Ubuntu";font-weight:500;font-style:italic;src:url("../Fonts/Ubuntu/ubuntu-mi-webfont.woff2") format("woff2")}@font-face{font-family:"Ubuntu";font-weight:700;src:url("../Fonts/Ubuntu/ubuntu-b-webfont.woff2") format("woff2")}@font-face{font-family:"Ubuntu";font-weight:700;font-style:italic;src:url("../Fonts/Ubuntu/ubuntu-bi-webfont.woff2") format("woff2")}@font-face{font-family:"UbuntuCondensed";font-weight:400;src:url("../Fonts/Ubuntu/ubuntu-c-webfont.woff2") format("woff2")}@font-face{font-family:"UbuntuMono";font-weight:400;src:url("../Fonts/Ubuntu/ubuntumono-r-webfont.woff2") format("woff2")}@font-face{font-family:"Symbols";src:url("../Fonts/LigatureSymbols/LigatureSymbols-2.11.woff") format("woff");font-weight:normal;font-style:normal}:root{--ff: "Ubuntu";--ff-condensed: "UbuntuCondensed";--ff-serif: "Ubuntu";--ff-h: "UbuntuCondensed";--ff-nav: "UbuntuCondensed";--ff-mono: "UbuntuMono";--ff-symbol: "Symbols";--fw-regular: 300;--fw-mono: 400;--fw-bold: 700;--fs-minor: 16px;--fs-regular: 18px;--fs-regular--big: 24px;--lh-regular: 1.5;--lh-small: 1.2;--lh-h: var(--lh-small);--fs-standard: clamp(var(--fs-regular), (100vw - 960px) / 100 + var(--fs-regular), var(--fs-regular--big));--fs-big: calc(var(--fs-standard) * 1.125);--fs-small: calc(var(--fs-standard) * 0.875);font-size:var(--fs-standard);line-height:var(--lh-regular)}.fs-big{font-size:var(--fs-big);line-height:1.8}.fs-small{font-size:var(--fs-small)}}html{min-height:auto}body:not(.ck-style-panel){font-family:var(--ff);font-size:18px;color:var(--clr-ckeditor--text);background-color:var(--clr-ckeditor--bg);min-height:auto}h3,.h3{font-size:26px;font-family:var(--ff-h)}h4,.h4{font-size:22px;font-family:var(--ff-h)}strong{font-weight:bold}.cp-accent{color:var(--clr-accent)}.cp-zitat{font-size:120%;color:var(--clr-accent);padding-block:var(--gutter)}.fs-small{font-size:16px}.fs-big{font-size:22px}/*# sourceMappingURL=Rte_inputline.css.map */
+/* import utilities */
+/* cp_base:constants */
+@layer basestyles {
+  /* Baseline Colors */
+  /* as css constants (light theme) */
+  :root {
+    --clr-bw-000: oklch(0 0 0);
+    --clr-bw-010: oklch(0.1 0 0);
+    --clr-bw-020: oklch(0.2 0 0);
+    --clr-bw-030: oklch(0.3 0 0);
+    --clr-bw-040: oklch(0.4 0 0);
+    --clr-bw-050: oklch(0.5 0 0);
+    --clr-bw-060: oklch(0.6 0 0);
+    --clr-bw-070: oklch(0.7 0 0);
+    --clr-bw-080: oklch(0.8 0 0);
+    --clr-bw-090: oklch(0.9 0 0);
+    --clr-bw-100: oklch(1 0 0);
+    --clr-success: oklch(0.5 0.12 150);
+    --clr-info: oklch(0.5 0.12 220);
+    --clr-error: oklch(0.5 0.12 0);
+    --clr-brand--primary: oklch(0.6 0.061 62);
+    --clr-brand--secondary: oklch(0.5 0.03 149);
+    --clr-brand--tertiary: oklch(0.5 0.07 231);
+    --clr-brand--quaternary: oklch(0.5 0.13 318);
+    --clr-branddimmed--primary: oklch(from var(--clr-brand--primary) calc(l * .8) calc(c * .8) h);
+    --clr-branddimmed--secondary: oklch(from var(--clr-brand--secondary) calc(l * .8) calc(c * .8) h);
+    --clr-branddimmed--tertiary: oklch(from var(--clr-brand--tertiary) calc(l * .8) calc(c * .8) h);
+    --clr-branddimmed--quaternary: oklch(from var(--clr-brand--quaternary) calc(l * .8) calc(c * .8) h);
+    /* ============================ */
+    /* Color Theme light            */
+    /* ============================ */
+    /* application colors */
+    --clr-text: var(--clr-bw-030);
+    --clr-background: var(--clr-bw-100);
+    --clr-h: var(--clr-bw-050);
+    --clr-h--border: var(--clr-brand--primary);
+    --clr-accent: var(--clr-brand--primary);
+    /* element colors */
+    --clr-list--marker: var(--clr-brand--primary);
+    --clr-code--bg: var(--clr-bw-060);
+    --clr-code--bc: var(--clr-bw-030);
+    --clr-input: var(--clr-text);
+    --clr-input--bg: var(--clr-bw-090);
+    /* buttons */
+    --clr-primarybtn--active: var(--clr-bw-090);
+    --clr-primarybtn--hover: var(--clr-bw-090);
+    --clr-primarybtnbg--active: var(--clr-brand--primary);
+    --clr-primarybtnbg--hover: var(--clr-bw-050);
+    --clr-primarybtnbg--disabled: oklch(from var(--clr-primarybtn--active) calc(l * .75) c h);
+    --clr-primarybtn--border: transparent;
+    --clr-secondarybtn--active: var(--clr-bw-090);
+    --clr-secondarybtnbg--active: var(--clr-brand--secondary);
+    --clr-secondarybtnbg--hover: var(--clr-bw-050);
+    --clr-secondarybtnbg--disabled: oklch(from var(--clr-secondarybtnbg--active) calc(l * .75) c h);
+    --clr-secondarybtn--border: transparent;
+    /* section colors */
+    --clr-headerbg: var(--clr-bw-070);
+    --clr-background-accent: var(--clr-bw-090);
+    --clr-background-brandcolor: oklch(from var(--clr-brand--primary) calc(l * 1.4) calc(c * 0.5) h);
+    --clr-footer-text: var(--clr-bw-030);
+    --clr-footerbg: var(--clr-bw-070);
+    --clr-footer--border: var(--clr-brand--primary);
+    /* menu colors */
+    --clr-mnu: var(--clr-bw-100);
+    --clr-mnu--active: var(--clr-bw-100);
+    --clr-mnu--hover: var(--clr-bw-100);
+    --clr-mnubg: var(--clr-headerbg);
+    --clr-mnubg--active: var(--clr-bw-040);
+    --clr-mnubg--hover: var(--clr-brand--primary);
+    --clr-mnumobile: var(--clr-bw-000);
+    --clr-mnumobile--active: var(--clr-bw-100);
+    --clr-mnumobile--hover: var(--clr-bw-100);
+    --clr-mnumobilebg: var(--clr-headerbg);
+    --clr-mnumobilebg--active: var(--clr-bw-040);
+    --clr-mnumobilebg--hover: var(--clr-brand--primary);
+    /* logo */
+    --clr-logo: var(--clr-bw-000);
+    --clr-logobg: var(--clr-bw-080);
+    /* cards */
+    --clr-card--accent: var(--clr-brand--primary);
+    /* rte */
+    --clr-ckeditor--text: var(--clr-bw-020);
+    --clr-ckeditor--bg: var(--clr-bw-100);
+    --clr-ckeditor--endline: var(--clr-info);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* buttons */
+      --clr-primarybtn--active: var(--clr-bw-075);
+      --clr-primarybtnbg--active: var(--clr-brand--primary);
+      --clr-primarybtn--disabled: oklch(from var(--clr-primarybtn--active) calc(l + .5) calc(c * 0.5) h);
+      --clr-input: var(--clr-bw-020);
+      --clr-input--bg: var(--clr-bw-070);
+      /* typographic colors */
+      --clr-text: var(--clr-bw-090);
+      --clr-h: var(--clr-bw-080);
+      --clr-background: var(--clr-bw-030);
+      --clr-background-accent: var(--clr-bw-040);
+      --clr-background-brandcolor: oklch(from var(--clr-brand--primary) calc(l * .8) calc(c * 0.5) h);
+      --clr-footer-text: var(--clr-bw-090);
+      --clr-footerbg: var(--clr-bw-040);
+      /* rte */
+      --clr-ckeditor--text: var(--clr-bw-080);
+      --clr-ckeditor--bg: var(--clr-bw-020);
+      --clr-ckeditor--endline: var(--clr-info);
+    }
+  }
+}
+/* fonts */
+@layer basestyles {
+  @font-face {
+    font-family: "Ubuntu";
+    font-weight: 300;
+    src: url("../Fonts/Ubuntu/ubuntu-l-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Ubuntu";
+    font-weight: 300;
+    font-style: italic;
+    src: url("../Fonts/Ubuntu/ubuntu-li-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Ubuntu";
+    font-weight: 400;
+    src: url("../Fonts/Ubuntu/ubuntu-r-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Ubuntu";
+    font-weight: 400;
+    font-style: italic;
+    src: url("../Fonts/Ubuntu/ubuntu-ri-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Ubuntu";
+    font-weight: 500;
+    src: url("../Fonts/Ubuntu/ubuntu-m-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Ubuntu";
+    font-weight: 500;
+    font-style: italic;
+    src: url("../Fonts/Ubuntu/ubuntu-mi-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Ubuntu";
+    font-weight: 700;
+    src: url("../Fonts/Ubuntu/ubuntu-b-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Ubuntu";
+    font-weight: 700;
+    font-style: italic;
+    src: url("../Fonts/Ubuntu/ubuntu-bi-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "UbuntuCondensed";
+    font-weight: 400;
+    src: url("../Fonts/Ubuntu/ubuntu-c-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "UbuntuMono";
+    font-weight: 400;
+    src: url("../Fonts/Ubuntu/ubuntumono-r-webfont.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Symbols";
+    src: url("../Fonts/LigatureSymbols/LigatureSymbols-2.11.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  /* =============================== */
+  :root {
+    /* fontfaces */
+    --ff: "Ubuntu";
+    --ff-condensed: "UbuntuCondensed";
+    --ff-serif: "Ubuntu";
+    --ff-h: "UbuntuCondensed";
+    --ff-nav: "UbuntuCondensed";
+    --ff-mono: "UbuntuMono";
+    --ff-symbol: "Symbols";
+    /* font weight */
+    --fw-regular: 300;
+    --fw-mono: 400;
+    --fw-bold: 700;
+    /* font size */
+    --fs-fix--small: 16px;
+    --fs-fix--normal: 18px;
+    --fs-fix--big: 24px;
+    /* line height */
+    --lh-regular: 1.5;
+    --lh-small: 1.2;
+    --lh-h: var(--lh-small);
+    /* regular font */
+    --fs-regular: clamp(var(--fs-fix--normal), (100vw - 960px) / 100 + var(--fs-fix--normal), var(--fs-fix--big));
+    --fs-big: calc(var(--fs-regular) * 1.125);
+    --fs-small: calc(var(--fs-regular) * 0.875);
+    font-size: var(--fs-regular);
+    line-height: var(--lh-regular);
+  }
+  .fs-big {
+    font-size: var(--fs-big);
+    line-height: 1.8;
+  }
+  .fs-small {
+    font-size: var(--fs-small);
+  }
+  .iconfont {
+    font-family: var(--ff-symbol), sans-serif;
+    font-feature-settings: "liga" 1, "dlig" 1;
+    content: "";
+    padding-inline-start: 0.1em;
+    padding-inline-end: 0.2em;
+  }
+}
+/* import utilities */
+/* ck-editor */
+html {
+  min-height: auto;
+}
+
+body:not(.ck-style-panel) {
+  font-family: var(--ff);
+  font-size: 18px;
+  color: var(--clr-ckeditor--text);
+  background-color: var(--clr-ckeditor--bg);
+  min-height: auto;
+}
+
+h3, .h3 {
+  font-size: 26px;
+  font-family: var(--ff-h);
+}
+
+h4, .h4 {
+  font-size: 22px;
+  font-family: var(--ff-h);
+}
+
+strong {
+  font-weight: bold;
+}
+
+.cp-accent {
+  color: var(--clr-accent);
+}
+
+.cp-zitat {
+  font-size: 120%;
+  color: var(--clr-accent);
+  padding-block: var(--gutter);
+}
+
+.fs-small {
+  font-size: 16px;
+}
+
+.fs-big {
+  font-size: 22px;
+}
+
+/*# sourceMappingURL=Rte_inputline.css.map */

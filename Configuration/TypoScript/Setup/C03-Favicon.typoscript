@@ -3,8 +3,7 @@ page {
   shortcutIcon = EXT:cpdevsite/Resources/Public/Icons/Favicon/favicon.ico
   headerData.100 = TEXT
   headerData.100.value (
-
-    <link rel="icon" type="image/png" href="{path : EXT:cpdevsite/Resources/Public/Icons/Favicon/favicon-48x48.png}" sizes="48x48" />
+    <link rel="icon" type="image/png" href="{path : EXT:cpdevsite/Resources/Public/Icons/Favicon/favicon-96x96.png}" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="{path : EXT:cpdevsite/Resources/Public/Icons/Favicon/favicon.svg}" />
     <link rel="shortcut icon" href="{path : EXT:cpdevsite/Resources/Public/Icons/Favicon/favicon.ico}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{path : EXT:cpdevsite/Resources/Public/Icons/Favicon/apple-touch-icon.png}" />

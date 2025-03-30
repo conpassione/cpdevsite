@@ -89,9 +89,9 @@
     --fw-bold:         700;
 
     /* font size */
-    --fs-minor:        16px;
-    --fs-regular:      18px;
-    --fs-regular--big: 24px;
+    --fs-fix--small:        16px;
+    --fs-fix--normal:      18px;
+    --fs-fix--big: 24px;
 
     /* line height */
     --lh-regular:      1.5;
@@ -100,11 +100,11 @@
     --lh-h:            var(--lh-small);
 
     /* regular font */
-    --fs-standard:     clamp(var(--fs-regular), (100vw - 960px) / 100 + var(--fs-regular), var(--fs-regular--big));
-    --fs-big:          calc(var(--fs-standard) * 1.125);
-    --fs-small:        calc(var(--fs-standard) * 0.875);
+    --fs-regular:      clamp(var(--fs-fix--normal), (100vw - 960px) / 100 + var(--fs-fix--normal), var(--fs-fix--big));
+    --fs-big:          calc(var(--fs-regular) * 1.125);
+    --fs-small:        calc(var(--fs-regular) * 0.875);
 
-    font-size:         var(--fs-standard);
+    font-size:         var(--fs-regular);
     line-height:       var(--lh-regular);
 
   }
@@ -117,4 +117,11 @@
     font-size: var(--fs-small);
   }
 
+  .iconfont {
+    font-family:           var(--ff-symbol), sans-serif;
+    font-feature-settings: "liga" 1, "dlig" 1;
+    content:               '';
+    padding-inline-start:  0.1em;
+    padding-inline-end:    0.2em;
+  }
 }

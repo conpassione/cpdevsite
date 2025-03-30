@@ -116,6 +116,7 @@
     --border-width: 1px;
     --border-style: solid;
     --mediasize--small: 480px;
+    --mediasize--halfmedium: 720px;
     --mediasize--medium: 960px;
     --mediasize--large: 1200px;
     --blocksize--small: 200px;
@@ -200,18 +201,18 @@
     --fw-mono: 400;
     --fw-bold: 700;
     /* font size */
-    --fs-minor: 16px;
-    --fs-regular: 18px;
-    --fs-regular--big: 24px;
+    --fs-fix--small: 16px;
+    --fs-fix--normal: 18px;
+    --fs-fix--big: 24px;
     /* line height */
     --lh-regular: 1.5;
     --lh-small: 1.2;
     --lh-h: var(--lh-small);
     /* regular font */
-    --fs-standard: clamp(var(--fs-regular), (100vw - 960px) / 100 + var(--fs-regular), var(--fs-regular--big));
-    --fs-big: calc(var(--fs-standard) * 1.125);
-    --fs-small: calc(var(--fs-standard) * 0.875);
-    font-size: var(--fs-standard);
+    --fs-regular: clamp(var(--fs-fix--normal), (100vw - 960px) / 100 + var(--fs-fix--normal), var(--fs-fix--big));
+    --fs-big: calc(var(--fs-regular) * 1.125);
+    --fs-small: calc(var(--fs-regular) * 0.875);
+    font-size: var(--fs-regular);
     line-height: var(--lh-regular);
   }
   .fs-big {
@@ -220,6 +221,13 @@
   }
   .fs-small {
     font-size: var(--fs-small);
+  }
+  .iconfont {
+    font-family: var(--ff-symbol), sans-serif;
+    font-feature-settings: "liga" 1, "dlig" 1;
+    content: "";
+    padding-inline-start: 0.1em;
+    padding-inline-end: 0.2em;
   }
 }
 /* reset by conPassione gmbh */
@@ -343,15 +351,9 @@
   }
   .vimeo-link--icon:before, .youtube-link--icon:before, .github-link--icon:before, .pinterest-link--icon:before, .linkedin-link--icon:before, .insta-link--icon:before, .fb-link--icon:before, .mail-link--icon:before, .phone-link--icon:before, .url-link--icon:before, .folder-link--icon:before, .file-link--icon:before, .page-link--icon:before {
     font-family: var(--ff-symbol), sans-serif;
-    /*       -webkit-text-rendering: optimizeLegibility;
-          -moz-text-rendering: optimizeLegibility;
-          text-rendering: optimizeLegibility;
-          -webkit-font-smoothing: antialiased;
-          -moz-font-smoothing: antialiased;
-          font-smoothing: antialiased; */
     font-feature-settings: "liga" 1, "dlig" 1;
     content: "";
-    padding-inline-start: 0;
+    padding-inline-start: 0.1em;
     padding-inline-end: 0.25em;
   }
   a:focus-visible {
@@ -885,7 +887,7 @@
     grid-template-columns: 1fr 1fr;
     gap: var(--container-gutter);
   }
-  @container (width < 60ch) {
+  @container (width < 720px) {
     .cp-2cols5050--content {
       grid-template-columns: 1fr;
     }
@@ -895,7 +897,7 @@
     grid-template-columns: 1fr 2fr;
     gap: var(--container-gutter);
   }
-  @container (width < 75ch) {
+  @container (width < 960px) {
     .cp-2cols3366--content {
       grid-template-columns: 1fr;
     }
@@ -905,7 +907,7 @@
     grid-template-columns: 2fr 1fr;
     gap: var(--container-gutter);
   }
-  @container (width < 75ch) {
+  @container (width < 960px) {
     .cp-2cols6633--content {
       grid-template-columns: 1fr;
     }
@@ -915,7 +917,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: var(--container-gutter);
   }
-  @container (width < 75ch) {
+  @container (width < 960px) {
     .cp-3cols--content {
       grid-template-columns: 1fr;
     }
@@ -1267,6 +1269,56 @@
   .form-h2 {
     font-size: clamp(2rem, 3vw, 3rem);
     color: var(--clr-h);
+  }
+}
+/* page */
+@layer basestyles {
+  .eventlist {
+    min-width: 320px;
+  }
+  .eventcards {
+    margin-block-end: var(--gutter);
+  }
+  .event {
+    margin-block: var(--gutter);
+  }
+  .eventinfo {
+    margin-left: 110px;
+    padding-inline: var(--gutter);
+    min-height: 110px;
+  }
+  .eventcard {
+    border: 1px solid var(--clr-brand--primary);
+    margin-bottom: var(--gutter);
+  }
+  .eventcard .eventinfo {
+    padding-block: calc(var(--gutter) / 2);
+  }
+  .eventdate {
+    float: left;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding: calc(var(--gutter) / 2);
+    color: var(--clr-bw-090);
+    background-color: var(--clr-brand--primary);
+    text-align: center;
+    width: 110px;
+    height: 110px;
+  }
+  .eventdate .eventdate--day {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-big);
+  }
+  .eventdate .eventdate--month,
+  .eventdate .eventdate--year {
+    font-size: calc(var(--fs-small) * 0.75);
+  }
+  .eventtitle {
+    font-weight: var(--fw-bold);
+  }
+  .eventschedule {
+    padding-block: var(--gutter);
   }
 }
 /* page */
