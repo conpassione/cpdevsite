@@ -2,7 +2,9 @@
 
 <f:layout name="Eventlayout-{page.pagerecord.layout}"/>
 
+
 <f:section name="Main">
+    <f:asset.script identifier="event" src="EXT:cpdevsite/Resources/Public/JavaScript/Events.js"/>
     <f:debug>{_all}</f:debug>
     <f:render arguments="{hero: pagecontent.hero, pageTitle: page.pagerecord.subtitle}" partial="Herosmall"/>
 

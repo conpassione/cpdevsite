@@ -1,0 +1,41 @@
+name: conpassione/messageform
+typeName: messageform
+title: 'Messageform Item'
+table: tx_conpassione_messageform
+prefixFields: false
+labelField:
+  - event
+  - lastname
+  - firstname
+  - mobile
+  - email
+security:
+  ignorePageTypeRestriction: true
+
+fields:
+  - identifier: lastname
+    type: Text
+    label: 'Name'
+    required: true
+  - identifier: firstname
+    type: Text
+    label: 'Vorname'
+  - identifier: mobile
+    type: Text
+    label: 'Mobile'
+  - identifier: email
+    type: Text
+    label: 'E-Mail'
+    required: true
+  - identifier: event
+    type: Text
+    label: 'Event'
+    required: true
+  - identifier: sm-message
+    type: Textarea
+    label: 'Responsibility'
+    rows: 6
+    enableRichtext: true
+pgbJZ@mamsee!25:
+
+

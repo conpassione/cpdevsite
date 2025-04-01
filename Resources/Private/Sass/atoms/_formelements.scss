@@ -11,8 +11,8 @@
   }
 
   .form-control {
-    padding: 0.25em;
-    color: var(--clr-input);
+    padding:          0.25em;
+    color:            var(--clr-input);
     background-color: var(--clr-input--bg);
   }
 
@@ -21,8 +21,8 @@
   }
 
   input, textarea, select {
-    width:            100%;
-    border:           none;
+    width:  100%;
+    border: none;
 
     &:focus-visible {
       outline: 1px solid var(--clr-brand--primary);
@@ -50,5 +50,15 @@
   input:not(:placeholder-shown):invalid {
     outline-color: var(--clr-error);
   }
+
+  .form-group:has(input[readonly=readonly]) {
+    .form-control {
+      padding-inline: 0;
+      background-color: transparent;
+      color: var(--clr-brand--primary);
+      font-weight: var(--fw-bold);
+    }
+  }
+
 
 }

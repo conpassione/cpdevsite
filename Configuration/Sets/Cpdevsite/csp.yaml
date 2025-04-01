@@ -1,18 +1,28 @@
 inheritDefault: true
 mutations:
-  - mode: extend
+  - mode: set
     directive: 'default-src'
     source:
       - "'self'"
+
   - mode: extend
     directive: 'script-src'
     source:
-      - "'unsafe-eval'"
+      - "'self"
+      - "'unsafe-inline'"
+
   - mode: extend
     directive: 'style-src'
     source:
       - "'unsafe-inline'"
+      - "'self"
+  - mode: extend
+    directive: 'style-src-elem'
+    source:
+      - "'unsafe-inline'"
+      - "'self'"
+
   - mode: extend
     directive: 'img-src'
     source:
-      - 'data:'
+      - "https:"

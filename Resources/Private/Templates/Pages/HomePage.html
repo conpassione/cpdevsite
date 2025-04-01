@@ -1,26 +1,27 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 
-<f:layout name="Layout-{page.pagerecord.layout}" />
+<f:layout name="Layout-{page.pagerecord.layout}"/>
 
 <f:section name="Main">
-    <f:render section="Hero" arguments="{hero: pagecontent.hero, pageTitle: page.pagerecord.subtitle}" />
-    <f:render section="Submenu" arguments="{submenu: submenu}" />
-    <f:for each="{pagecontent.content.records}" as="record">
+    <f:debug>{_all}</f:debug>
+    <f:render arguments="{hero: pagecontent.hero, pageTitle: page.pagerecord.subtitle}" section="Hero"/>
+    <f:render arguments="{submenu: submenu}" section="Submenu"/>
+    <f:for as="record" each="{pagecontent.content.records}">
         <f:cObject
-            typoscriptObjectPath="tt_content.{record.CType}"
             data="{record.rawRecord}"
             table="tt_content"
+            typoscriptObjectPath="tt_content.{record.CType}"
         />
     </f:for>
 </f:section>
 
 <f:section name="Hero">
-    <f:render partial="Hero" arguments="{hero: hero, pageTitle: pageTitle}"/>
+    <f:render arguments="{hero: hero, pageTitle: pageTitle}" partial="Hero"/>
 </f:section>
 
 <f:section name="Submenu">
-   <f:render partial="Menu/SubMenu" arguments="{submenu: submenu}"/>
+    <f:render arguments="{submenu: submenu}" partial="Menu/SubMenu"/>
 </f:section>
 
 </html>
