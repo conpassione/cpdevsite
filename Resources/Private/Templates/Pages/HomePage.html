@@ -4,7 +4,6 @@
 <f:layout name="Layout-{page.pagerecord.layout}"/>
 
 <f:section name="Main">
-    <f:debug>{_all}</f:debug>
     <f:render arguments="{hero: pagecontent.hero, pageTitle: page.pagerecord.subtitle}" section="Hero"/>
     <f:render arguments="{submenu: submenu}" section="Submenu"/>
     <f:for as="record" each="{pagecontent.content.records}">
