@@ -33,7 +33,7 @@ finishers:
         tstamp:
           value: '{__currentTimestamp}'
         pid:
-          value: '{__currentPage}'
+          value: '{eventpid}'
       elements:
         lastname:
           mapOnDatabaseColumn: 'lastname'
@@ -47,8 +47,6 @@ finishers:
           mapOnDatabaseColumn: 'sm-message'
         event:
           mapOnDatabaseColumn: 'event'
-        pid:
-          mapOnDatabaseColumn: 'pid'
   - identifier: Confirmation
     options:
       message: 'Besten Dank für Deine Anfrage. Du bekommst innerhalb einer Woche Antwort von uns.'
@@ -65,10 +63,10 @@ renderables:
           containerClassAttribute: 'form-event-title'
           fluidAdditionalAttributes:
             readonly: readonly
-      - identifier: pid
-        type: Text
+      - identifier: eventpid
+        type: Hidden
         properties:
-          containerClassAttribute: 'form-event-pid'
+          elementClassAttribute: 'form-event-pid'
           fluidAdditionalAttributes:
             readonly: readonly
             hidden: hidden

@@ -3,5 +3,5 @@ $(document).ready(function () {
   $('.form-event-title > input').attr('value', $.trim(eventTitle));
 
   eventPid = $('.event').data("id");
-  $('.form-event-pid > input').attr('value', eventPid);
+  $('.form-event-pid').attr('value', eventPid);
 });

@@ -18,6 +18,7 @@ prototypes:
           translation:
             translationFiles:
               36650: 'EXT:cpdevsite/Resources/Private/Language/formelements.xlf'
+
     formEditor:
       translationFiles:
         36650: 'EXT:cpdevsite/Resources/Private/Language/form.xlf'
