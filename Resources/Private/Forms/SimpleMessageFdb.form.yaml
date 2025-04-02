@@ -27,7 +27,7 @@ finishers:
       title: 'Demande via site internet de {firstname} {lastname}'
   - identifier: SaveToDatabase
     options:
-      table: 'tx_conpassione_messageform'
+      table: 'tx_conpassione_registrationform'
       mode: insert
       databaseColumnMappings:
         tstamp:
@@ -64,9 +64,9 @@ renderables:
           fluidAdditionalAttributes:
             readonly: readonly
       - identifier: eventpid
-        type: Text
+        type: Hidden
         properties:
-          containerClassAttribute: 'form-event-pid'
+          elementClassAttribute: 'form-event-pid'
           fluidAdditionalAttributes:
             readonly: readonly
             hidden: hidden
