@@ -60,5 +60,13 @@
     }
   }
 
+  .form-group:has(input[hidden=hidden]) {
+    padding: 0;
+    display:none;
+    .form-control {
+      height: 0;
+    }
+  }
+
 
 }

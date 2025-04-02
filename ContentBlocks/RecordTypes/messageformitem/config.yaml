@@ -1,8 +1,9 @@
-name: conpassione/messageform
-typeName: messageform
-title: 'Messageform Item'
-table: tx_conpassione_messageform
+name: conpassione/registrationform
+typeName: registrationform
+title: 'Registration Item'
+table: tx_conpassione_registrationform
 prefixFields: false
+languageAware: false
 labelField:
   - event
   - lastname
@@ -33,7 +34,7 @@ fields:
     required: true
   - identifier: sm-message
     type: Textarea
-    label: 'Responsibility'
+    label: 'Message'
     rows: 6
     enableRichtext: true
 

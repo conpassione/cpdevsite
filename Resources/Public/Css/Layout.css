@@ -835,6 +835,13 @@
     color: var(--clr-brand--primary);
     font-weight: var(--fw-bold);
   }
+  .form-group:has(input[hidden=hidden]) {
+    padding: 0;
+    display: none;
+  }
+  .form-group:has(input[hidden=hidden]) .form-control {
+    height: 0;
+  }
 }
 /* sections (typo3-containers) */
 @layer basestyles {

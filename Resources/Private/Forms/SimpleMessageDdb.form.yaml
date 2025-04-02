@@ -27,13 +27,13 @@ finishers:
       title: 'Anfrage via Website von {firstname} {lastname}'
   - identifier: SaveToDatabase
     options:
-      table: 'tx_conpassione_messageform'
+      table: 'tx_conpassione_registrationform'
       mode: insert
       databaseColumnMappings:
         tstamp:
           value: '{__currentTimestamp}'
         pid:
-          value: 77
+          value: '{__currentPage}'
       elements:
         lastname:
           mapOnDatabaseColumn: 'lastname'
@@ -47,6 +47,8 @@ finishers:
           mapOnDatabaseColumn: 'sm-message'
         event:
           mapOnDatabaseColumn: 'event'
+        pid:
+          mapOnDatabaseColumn: 'pid'
   - identifier: Confirmation
     options:
       message: 'Besten Dank für Deine Anfrage. Du bekommst innerhalb einer Woche Antwort von uns.'
@@ -63,6 +65,13 @@ renderables:
           containerClassAttribute: 'form-event-title'
           fluidAdditionalAttributes:
             readonly: readonly
+      - identifier: pid
+        type: Text
+        properties:
+          containerClassAttribute: 'form-event-pid'
+          fluidAdditionalAttributes:
+            readonly: readonly
+            hidden: hidden
       - type: GridRow
         identifier: gridrow-2
         label: 'Person'
