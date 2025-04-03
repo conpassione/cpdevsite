@@ -37,5 +37,3 @@ fields:
     label: 'Message'
     rows: 6
     enableRichtext: true
-
-
