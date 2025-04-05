@@ -1,4 +1,5 @@
 name: conpassione/registrationform
+typeField: type
 typeName: registrationform
 title: 'Registration Item'
 table: tx_conpassione_registrationform
