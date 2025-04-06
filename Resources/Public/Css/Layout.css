@@ -127,60 +127,6 @@
 /* fonts */
 @layer basestyles {
   @font-face {
-    font-family: "Ubuntu";
-    font-weight: 300;
-    src: url("../Fonts/Ubuntu/ubuntu-l-webfont.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: "Ubuntu";
-    font-weight: 300;
-    font-style: italic;
-    src: url("../Fonts/Ubuntu/ubuntu-li-webfont.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: "Ubuntu";
-    font-weight: 400;
-    src: url("../Fonts/Ubuntu/ubuntu-r-webfont.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: "Ubuntu";
-    font-weight: 400;
-    font-style: italic;
-    src: url("../Fonts/Ubuntu/ubuntu-ri-webfont.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: "Ubuntu";
-    font-weight: 500;
-    src: url("../Fonts/Ubuntu/ubuntu-m-webfont.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: "Ubuntu";
-    font-weight: 500;
-    font-style: italic;
-    src: url("../Fonts/Ubuntu/ubuntu-mi-webfont.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: "Ubuntu";
-    font-weight: 700;
-    src: url("../Fonts/Ubuntu/ubuntu-b-webfont.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: "Ubuntu";
-    font-weight: 700;
-    font-style: italic;
-    src: url("../Fonts/Ubuntu/ubuntu-bi-webfont.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: "UbuntuCondensed";
-    font-weight: 400;
-    src: url("../Fonts/Ubuntu/ubuntu-c-webfont.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: "UbuntuMono";
-    font-weight: 400;
-    src: url("../Fonts/Ubuntu/ubuntumono-r-webfont.woff2") format("woff2");
-  }
-  @font-face {
     font-family: "Symbols";
     src: url("../Fonts/LigatureSymbols/LigatureSymbols-2.11.woff") format("woff");
     font-weight: normal;
@@ -189,12 +135,12 @@
   /* =============================== */
   :root {
     /* fontfaces */
-    --ff: "Ubuntu";
-    --ff-condensed: "UbuntuCondensed";
-    --ff-serif: "Ubuntu";
-    --ff-h: "UbuntuCondensed";
-    --ff-nav: "UbuntuCondensed";
-    --ff-mono: "UbuntuMono";
+    --ff: "system-ui, sans-serif";
+    --ff-condensed: "system-ui, sans-serif";
+    --ff-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+    --ff-h: "system-ui, sans-serif";
+    --ff-nav: "system-ui, sans-serif";
+    --ff-mono: "Nimbus Mono PS", "Courier New", monospace;
     --ff-symbol: "Symbols";
     /* font weight */
     --fw-regular: 300;
