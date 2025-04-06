@@ -1,9 +1,9 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:layout name="Layout-{page.pagerecord.layout}" />
+<f:layout name="Layout-{page.pagerecord.layout}"/>
 
 <f:section name="Header">
-    <f:render partial="Header" arguments="{_all}" />
+    <f:render arguments="{_all}" partial="Header"/>
 </f:section>
 
 <f:section name="Main">
@@ -11,7 +11,7 @@
         <h1>Hello World from Defaultpage</h1>
         <p>From settings.yaml: {settings.TYPO3copyright}</p>
         <hr>
-        <p>This page is not intendet to be used in production environnement. And in General its an Configuration-Error, if this page pops up.</p>
+        <p>This page is not intended to be used in production environment. And in General it's a Configuration-Error, if this page pops up.</p>
     </main>
 </f:section>
 

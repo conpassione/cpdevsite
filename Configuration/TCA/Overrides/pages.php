@@ -30,7 +30,7 @@ call_user_func(static function (): void {
     );
 
     // Bugfix for content-blocks
-    // List all pages ot add the standard fields
+    // List all pages to add the standard fields
     $doktypes = '36650001,36650011,36650012';
 
     // update TCA (add abstract) to unify BE for Standard and Custom Pages
