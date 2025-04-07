@@ -9,12 +9,13 @@
     line-height: var(--lh-h);
     font-family: var(--ff-h), sans-serif;
     font-weight: var(--fw-regular);
-    margin: 0;
+    margin:      0;
+    hyphens:     auto;
   }
 
   .h1, .h2, .h3, .h4, .h5, .h6 {
     text-wrap: balance;
-    color: var(--clr-h);
+    color:     var(--clr-h);
   }
 
   .h1-font,
@@ -23,9 +24,9 @@
   }
 
   .h1 {
-    padding-block: 0.25em;
+    padding-block:    0.25em;
     margin-block-end: 0.25em;
-    color:              var(--clr-bw-090);
+    color:            var(--clr-bw-090);
   }
 
   .h2-font,
@@ -34,8 +35,8 @@
   }
 
   .h2 {
-    margin-block-end:   1em;
-    color:              var(--clr-h);
+    margin-block-end: 1em;
+    color:            var(--clr-h);
   }
 
   .h3-font,
@@ -47,7 +48,7 @@
 
   .h3,
   .h4 {
-    margin-block-end:   0.5em;
+    margin-block-end: 0.5em;
   }
 
   .h3 {

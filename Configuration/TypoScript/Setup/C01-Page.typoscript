@@ -17,7 +17,7 @@ config {
   pageTitle.field = nav_title // title
   pageTitle.postCObject = TEXT
   pageTitle.postCObject {
-    field = seo_title // nav_title // title
+    field = sub_title // nav_title // title
     noTrimWrap = | : ||
     postCObject = TEXT
     postCObject {

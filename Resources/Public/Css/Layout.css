@@ -594,6 +594,7 @@
     font-family: var(--ff-h), sans-serif;
     font-weight: var(--fw-regular);
     margin: 0;
+    hyphens: auto;
   }
   .h1, .h2, .h3, .h4, .h5, .h6 {
     text-wrap: balance;
@@ -862,6 +863,9 @@
     .cp-2cols3366--content {
       grid-template-columns: 1fr;
     }
+    .cp-2cols3366--content .cp-col202 {
+      grid-column: 1/1;
+    }
   }
   .cp-2cols6633--content {
     display: grid;
@@ -874,6 +878,9 @@
   @container (width < 960px) {
     .cp-2cols6633--content {
       grid-template-columns: 1fr;
+    }
+    .cp-2cols6633--content .cp-col201 {
+      grid-column: 1/1;
     }
   }
   .cp-3cols--content {

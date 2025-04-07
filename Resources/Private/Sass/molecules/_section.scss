@@ -82,6 +82,9 @@
 
     @container (width < 960px) {
       grid-template-columns: 1fr;
+      .cp-col202 {
+        grid-column: 1 / 1;
+      }
     }
   }
 
@@ -89,11 +92,16 @@
     display:               grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap:                   var(--container-gutter);
+
     .cp-col201 {
       grid-column: 1 / span 2;
     }
+
     @container (width < 960px) {
       grid-template-columns: 1fr;
+      .cp-col201 {
+        grid-column: 1 / 1;
+      }
     }
   }
 
