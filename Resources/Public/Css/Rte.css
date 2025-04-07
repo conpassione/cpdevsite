@@ -362,6 +362,9 @@ strong {
   a:not([class]) {
     text-decoration-skip-ink: auto;
   }
+  .page-link--icon {
+    hyphens: auto;
+  }
   .page-link--icon:before {
     content: "arrowright";
   }
@@ -369,13 +372,16 @@ strong {
     outline: 2px solid var(--clr-bw-070);
   }
   .file-link--icon {
-    line-break: anywhere;
+    hyphens: auto;
   }
   .file-link--icon:before {
     content: "download";
   }
   .file-link--icon:focus-visible {
     outline: 2px solid var(--clr-bw-070);
+  }
+  .folder-link--icon {
+    hyphens: auto;
   }
   .folder-link--icon:before {
     content: "folder";
@@ -384,7 +390,7 @@ strong {
     outline: 2px solid var(--clr-bw-070);
   }
   .url-link--icon {
-    line-break: anywhere;
+    hyphens: auto;
   }
   .url-link--icon:before {
     content: "external";

@@ -56,6 +56,7 @@
 
   .page-link--icon {
     @extend %link-iconbefore;
+    hyphens: auto;
 
     &:before {
       content: 'arrowright';
@@ -68,7 +69,7 @@
 
   .file-link--icon {
     @extend %link-iconbefore;
-    line-break: anywhere;
+    hyphens: auto;
 
     &:before {
       content: 'download';
@@ -81,6 +82,7 @@
 
   .folder-link--icon {
     @extend %link-iconbefore;
+    hyphens: auto;
 
     &:before {
       content: 'folder';
@@ -93,7 +95,7 @@
 
   .url-link--icon {
     @extend %link-iconbefore;
-    line-break: anywhere;
+    hyphens: auto;
 
     &:before {
       content: 'external';
