@@ -5,9 +5,9 @@
         <f:if condition="{hero.records}">
             <f:for as="record" each="{hero.records}">
                 <f:cObject
-                    data="{files: hero.records.0.image, showcaption: hero.records.0.image_zoom}"
+                    data="{files: record.image, showcaption: 0, image_zoom: record.image_zoom}"
                     table="tt_content"
-                    typoscriptObjectPath="tt_content.{hero.records.0.CType}"
+                    typoscriptObjectPath="tt_content.{record.CType}"
                 />
             </f:for>
         </f:if>
