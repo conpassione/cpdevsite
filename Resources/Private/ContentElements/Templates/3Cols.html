@@ -1,19 +1,42 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<section id="s{data.uid}" class="cp-3cols{f:if(condition: '{data.sectionlayout}  && {data.sectionlayout} != \'accent\'  && {data.sectionlayout} != \'brandcolor\'', then:' content-grid {data.sectionlayout}', else:' {data.sectionlayout}')}">
+<section
+    class="cp-3cols{f:if(condition: '{data.sectionlayout}  && {data.sectionlayout} != \'accent\'  && {data.sectionlayout} != \'brandcolor\'', then:' content-grid {data.sectionlayout}', else:' {data.sectionlayout}')}"
+    id="s{data.uid}">
     <div class="cp-3cols--content{f:if(condition: data.contentlayout, then:' {data.contentlayout}')}">
-       <div class="cp-col201">
-           <f:for each="{children_201}" as="record">
-               <f:format.raw>{record.renderedContent}</f:format.raw>
-           </f:for>
-       </div>
+        <div class="cp-col201">
+            <f:for as="record" each="{children_201}">
+                <f:if condition="{record.CType} === 'form_formframework'">
+                    <f:cObject
+                        data="{record}"
+                        table="tt_content"
+                        typoscriptObjectPath="tt_content.header"
+                    />
+                </f:if>
+                <f:format.raw>{record.renderedContent}</f:format.raw>
+            </f:for>
+        </div>
         <div class="cp-col202">
-            <f:for each="{children_202}" as="record">
+            <f:if condition="{record.CType} === 'form_formframework'">
+                <f:cObject
+                    data="{record}"
+                    table="tt_content"
+                    typoscriptObjectPath="tt_content.header"
+                />
+            </f:if>
+            <f:for as="record" each="{children_202}">
                 <f:format.raw>{record.renderedContent}</f:format.raw>
             </f:for>
         </div>
         <div class="cp-col203">
-            <f:for each="{children_203}" as="record">
+            <f:if condition="{record.CType} === 'form_formframework'">
+                <f:cObject
+                    data="{record}"
+                    table="tt_content"
+                    typoscriptObjectPath="tt_content.header"
+                />
+            </f:if>
+            <f:for as="record" each="{children_203}">
                 <f:format.raw>{record.renderedContent}</f:format.raw>
             </f:for>
         </div>

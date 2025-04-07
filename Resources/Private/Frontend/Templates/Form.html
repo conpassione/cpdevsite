@@ -1,4 +1,5 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers">
+
 <formvh:renderRenderable renderable="{form}">
     <formvh:form
         action="{form.renderingOptions.controllerAction}"
@@ -13,7 +14,7 @@
         section="{form.identifier}"
     >
         <f:render arguments="{page: form.currentPage}" partial="{form.currentPage.templateName}"/>
-        <div class="test {form.renderingOptions.formNavigation.navigationWrapperClassAttribute}">
+        <div class="{form.renderingOptions.formNavigation.navigationWrapperClassAttribute}">
             <f:render arguments="{form: form}" partial="Form/Navigation"/>
         </div>
     </formvh:form>
