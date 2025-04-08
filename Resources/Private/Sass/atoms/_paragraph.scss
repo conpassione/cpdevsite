@@ -7,6 +7,10 @@
     text-wrap: pretty;
     orphans:   inherit;
     /* hyphens: auto;*/
+    padding-block-end: 1em;
+    &:last-child {
+      padding-block-end: 2em;
+    }
   }
 
   .cp-text:not(:last-child) {
