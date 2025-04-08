@@ -27,7 +27,6 @@
       content:               '';
       padding-inline-start:  0.1em;
       padding-inline-end:    0.25em;
-      text-decoration:       none;
     }
   }
 
@@ -40,7 +39,6 @@
       content:               '';
       padding-inline-start:  0.1em;
       padding-inline-end:    0.2em;
-      text-decoration:       none;
     }
   }
 
@@ -114,7 +112,6 @@
 
     &:before {
       content:         'phone';
-      text-decoration: none;
     }
 
     &:focus-visible {
