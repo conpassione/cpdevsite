@@ -38,13 +38,11 @@
                                 <br>
                                 <f:format.html>{member.feusers.0.data.zip} {member.feusers.0.data.city}</f:format.html>
                             </f:if>
-                        </p>
-                        <p>
+                            <br>
                             <f:if condition="{member.feusers.0.data.mobile}">
                                 <f:link.external class="phone-link--icon" uri="tel:{member.feusers.0.data.mobile}">{member.feusers.0.data.mobile}</f:link.external>
                             </f:if>
-                        </p>
-                        <p>
+                            <br>
                             <f:if condition="{member.feusers.0.data.email2}">
                                 <f:link.email class="mail-link--icon" email="{member.feusers.0.data.email2}">{member.feusers.0.data.email2}</f:link.email>
                             </f:if>

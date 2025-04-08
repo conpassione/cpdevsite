@@ -5,25 +5,29 @@
 
   /* main navigation */
   .nav-main {
-    display: none;
+    display:           none;
     margin-inline-end: var(--gutter);
-    font-size: var(--fs-regular--big);
+    font-size:         var(--fs-regular--big);
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .menu-items {
-    list-style:      none;
-    padding:         0;
-    margin:          0;
-    display:         flex;
-    flex-wrap:       nowrap;
-    justify-content: center;
-    color: var(--clr-mnu);
+    list-style:       none;
+    padding:          0;
+    margin:           0;
+    display:          flex;
+    flex-wrap:        nowrap;
+    justify-content:  center;
+    color:            var(--clr-mnu);
     background-color: var(--clr-mnubg);
   }
 
   .menu-items > li {
     &.active {
-      color: var(--clr-mnu--active);
+      color:            var(--clr-mnu--active);
       background-color: var(--clr-mnubg--active);
     }
 
@@ -34,7 +38,7 @@
 
     a.menu-item:hover,
     a.menu-item:focus {
-      color: var(--clr-mnu--hover);
+      color:            var(--clr-mnu--hover);
       background-color: var(--clr-mnubg--hover);
     }
 
@@ -46,6 +50,9 @@
 
   .cta-menu {
     display: none;
+    a {
+      text-decoration: none;
+    }
   }
 
   .cta-menu button:first-child {
@@ -68,11 +75,15 @@
 
   /* mobile navigation */
   .mobilemenu {
-    --_bar-width: var(--hamburger--bar-width, 60px);
+    --_bar-width:  var(--hamburger--bar-width, 60px);
     --_bar-height: var(--hamburger--bar-height, 8px);
 
-    display: block;
+    display:       block;
     margin-inline: var(--gutter);
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .no-inline-end-margin {
@@ -84,56 +95,57 @@
   }
 
   .hamburger-menu svg {
-    width: var(--_bar-width);
-    aspect-ratio: 1;
-    --button-color: var(--clr-mnu);
+    width:            var(--_bar-width);
+    aspect-ratio:     1;
+    --button-color:   var(--clr-mnu);
     background-color: var(--clr-mnubg);
 
     &:hover {
-      --button-color: var(--clr-mnu--hover);
+      --button-color:   var(--clr-mnu--hover);
       background-color: var(--clr-mnubg--hover);
     }
+
     .line {
-      height: var(--_bar-height);
-      transition:
-        y 300ms ease-in 300ms,
-        rotate 300ms ease-in,
-        opacity 0ms 300ms;
+      height:           var(--_bar-height);
+      transition:       y 300ms ease-in 300ms,
+                        rotate 300ms ease-in,
+                        opacity 0ms 300ms;
       transform-origin: center;
     }
   }
 
   .hamburger:checked ~ .hamburger-menu .line {
-    transition:
-      y 300ms ease-in,
-      rotate 300ms ease-in 300ms,
-      opacity 0ms 300ms;
+    transition: y 300ms ease-in,
+                rotate 300ms ease-in 300ms,
+                opacity 0ms 300ms;
   }
 
   .hamburger:checked ~ .hamburger-menu {
     .top {
-      y: 45px;
+      y:      45px;
       rotate: 45deg;
     }
+
     .middle {
       opacity: 0;
     }
+
     .bottom {
-      y: 45px;
+      y:      45px;
       rotate: -45deg;
     }
   }
 
   .hamburger-overlay {
-    position: absolute;
-    display: none;
-    top:2.5rem;
-    left:-50vw;
-    width: 200vw;
-    height: 100vh;
+    position:   absolute;
+    display:    none;
+    top:        2.5rem;
+    left:       -50vw;
+    width:      200vw;
+    height:     100vh;
     background: transparent;
-    z-index: 98;
-    cursor: pointer;
+    z-index:    98;
+    cursor:     pointer;
   }
 
   .hamburger {
@@ -142,67 +154,67 @@
 
   .nav-mobile {
     //display: none;
-    transition:
-      visibility 360ms ease-in 100ms,
-      opacity 300ms ease-in 100ms,
-      transform 360ms ease-in;
+    transition:       visibility 360ms ease-in 100ms,
+                      opacity 300ms ease-in 100ms,
+                      transform 360ms ease-in;
 
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-10%);
+    visibility:       hidden;
+    opacity:          0;
+    transform:        translateY(-10%);
 
-    position: absolute;
-    z-index: 100;
+    position:         absolute;
+    z-index:          100;
 
-    top: 2.5rem;
-    right: 5%;
-    width: 90%;
-    padding: var(--gutter);
-    color: var(--clr-mnumobile);
+    top:              2.5rem;
+    right:            5%;
+    width:            90%;
+    padding:          var(--gutter);
+    color:            var(--clr-mnumobile);
     background-color: oklch(from var(--clr-mnumobilebg) l c h / 0.6);
-    backdrop-filter: blur(1rem);
+    backdrop-filter:  blur(1rem);
   }
 
   .mlevel-1 {
-    list-style: none;
-    display: flex;
-    flex-flow: column;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: var(--gutter);
-    align-content: flex-start;
+    list-style:       none;
+    display:          flex;
+    flex-flow:        column;
+    flex-wrap:        wrap;
+    flex-direction:   row;
+    gap:              var(--gutter);
+    align-content:    flex-start;
     background-color: transparent;
-    padding: 0;
-    max-height: calc(100svh - 5rem);
-    overflow-y: scroll;
+    padding:          0;
+    max-height:       calc(100svh - 5rem);
+    overflow-y:       scroll;
   }
 
   .mlevel-2,
   .mlevel-3 {
     list-style: none;
-    padding: 0;
+    padding:    0;
   }
 
   .current:is(.mlevel-01, .mlevel-02, .mlevel-03) > a {
-    color: var(--clr-mnumobile--active);
+    color:            var(--clr-mnumobile--active);
     background-color: var(--clr-mnumobilebg--active);
   }
 
   .mlevel-01 {
-    flex: 250px 1 1;
-    display: inline-block;
+    flex:             250px 1 1;
+    display:          inline-block;
     background-color: var(--clr-mnumobilebg);
   }
 
   .mlevel-02,
   .mlevel-03 {
-    display: block;
+    display:   block;
     font-size: var(--fs-small);
   }
 
   .mlevel-02 {
     padding-inline-start: var(--gutter);
   }
+
   .mlevel-03 {
     padding-inline-start: calc(var(--gutter) * 2);
   }
@@ -210,45 +222,44 @@
   a.mmenu-item {
     display: block;
     padding: 0.5em;
-    width: 100%;
+    width:   100%;
   }
 
   a.mmenu-item:hover,
   a.mmenu-item:focus {
-    color: var(--clr-mnumobile--hover);
+    color:            var(--clr-mnumobile--hover);
     background-color: var(--clr-mnumobilebg--hover);
   }
 
   a.mmenu-item:focus-visible {
     @include outline;
-    color: var(--clr-mnumobile--hover);
+    color:            var(--clr-mnumobile--hover);
     background-color: var(--clr-mnumobilebg--hover);
   }
 
   .hamburger:checked ~ .nav-mobile {
-    transition:
-      visibility 300ms ease-in,
-      opacity 300ms ease-in,
-      transform 250ms ease-in;
+    transition: visibility 300ms ease-in,
+                opacity 300ms ease-in,
+                transform 250ms ease-in;
 
     visibility: visible;
-    opacity: 1;
-    transform: translateY(0%);
+    opacity:    1;
+    transform:  translateY(0%);
   }
 
   .hamburger:checked ~ .hamburger-menu svg {
-    --button-color: var(--clr-mnu--hover);
+    --button-color:   var(--clr-mnu--hover);
     background-color: var(--clr-mnubg--hover);
   }
 
   .hamburger:focus ~ .hamburger-menu svg {
-    --button-color: var(--clr-mnu--hover);
+    --button-color:   var(--clr-mnu--hover);
     background-color: var(--clr-mnubg--hover);
   }
 
-  .hamburger:focus-visible ~.hamburger-menu svg {
+  .hamburger:focus-visible ~ .hamburger-menu svg {
     @include outline;
-    --button-color: var(--clr-mnu--hover);
+    --button-color:   var(--clr-mnu--hover);
     background-color: var(--clr-mnubg--hover);
   }
 
@@ -258,9 +269,12 @@
 
 
   /* language menu */
-
   .lan-menu {
     display: block;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .lan-menu button:first-child {
@@ -272,36 +286,40 @@
   }
 
   .language-menu {
-    display: flex;
-    flex-wrap: nowrap;
+    display:    flex;
+    flex-wrap:  nowrap;
     list-style: none;
-    padding: 0;
+    padding:    0;
   }
 
   .lmenu {
-    display: block;
+    display:             block;
     border-inline-start: 1px solid var(--clr-mnu);
-    color: var(--clr-mnu);
-    background-color: var(--clr-mnubg);
+    color:               var(--clr-mnu);
+    background-color:    var(--clr-mnubg);
+
     a {
       display: block;
       padding: 0.5em;
     }
+
     &:last-child {
       border-inline-end: 1px solid var(--clr-mnu);
     }
 
     .active {
-      color: var(--clr-mnubg--active);
+      color:            var(--clr-mnubg--active);
       background-color: var(--clr-mnubg--active);
     }
+
     .text-muted,
     .text-muted:hover {
-      color: var(--clr-mnubg--active);
+      color:            var(--clr-mnubg--active);
       background-color: transparent;
     }
+
     &:hover {
-      color: var(--clr-mnu--hover);
+      color:            var(--clr-mnu--hover);
       background-color: var(--clr-mnubg--hover);
     }
   }

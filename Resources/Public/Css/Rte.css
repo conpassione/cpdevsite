@@ -343,10 +343,13 @@ strong {
   a:not([class]), a, .vimeo-link--icon, .youtube-link--icon, .github-link--icon, .pinterest-link--icon, .linkedin-link--icon, .insta-link--icon, .fb-link--icon, .mail-link--icon, .phone-link--icon, .url-link--icon, .folder-link--icon, .file-link--icon, .page-link--icon {
     color: currentColor;
     background-color: inherit;
-    text-decoration: none;
+    /*text-decoration:  none;*/
+    text-decoration-color: var(--clr-brand--primary);
+    text-decoration-skip-ink: auto;
+    text-decoration-style: dotted;
   }
-  a:active, .vimeo-link--icon:active, .youtube-link--icon:active, .github-link--icon:active, .pinterest-link--icon:active, .linkedin-link--icon:active, .insta-link--icon:active, .fb-link--icon:active, .mail-link--icon:active, .phone-link--icon:active, .url-link--icon:active, .folder-link--icon:active, .file-link--icon:active, .page-link--icon:active, a:hover, .vimeo-link--icon:hover, .youtube-link--icon:hover, .github-link--icon:hover, .pinterest-link--icon:hover, .linkedin-link--icon:hover, .insta-link--icon:hover, .fb-link--icon:hover, .mail-link--icon:hover, .phone-link--icon:hover, .url-link--icon:hover, .folder-link--icon:hover, .file-link--icon:hover, .page-link--icon:hover, a:focus-visible, .vimeo-link--icon:focus-visible, .youtube-link--icon:focus-visible, .github-link--icon:focus-visible, .pinterest-link--icon:focus-visible, .linkedin-link--icon:focus-visible, .insta-link--icon:focus-visible, .fb-link--icon:focus-visible, .mail-link--icon:focus-visible, .phone-link--icon:focus-visible, .url-link--icon:focus-visible, .folder-link--icon:focus-visible, .file-link--icon:focus-visible, .page-link--icon:focus-visible {
-    text-decoration: none;
+  a:focus-visible, .vimeo-link--icon:focus-visible, .youtube-link--icon:focus-visible, .github-link--icon:focus-visible, .pinterest-link--icon:focus-visible, .linkedin-link--icon:focus-visible, .insta-link--icon:focus-visible, .fb-link--icon:focus-visible, .mail-link--icon:focus-visible, .phone-link--icon:focus-visible, .url-link--icon:focus-visible, .folder-link--icon:focus-visible, .file-link--icon:focus-visible, .page-link--icon:focus-visible {
+    /*text-decoration: none;*/
     outline: 0;
   }
   .vimeo-link--icon:before, .youtube-link--icon:before, .github-link--icon:before, .pinterest-link--icon:before, .linkedin-link--icon:before, .insta-link--icon:before, .fb-link--icon:before, .mail-link--icon:before, .phone-link--icon:before, .url-link--icon:before, .folder-link--icon:before, .file-link--icon:before, .page-link--icon:before {
@@ -355,6 +358,7 @@ strong {
     content: "";
     padding-inline-start: 0.1em;
     padding-inline-end: 0.25em;
+    text-decoration: none;
   }
   a:focus-visible {
     outline: 2px solid var(--clr-bw-070);
@@ -400,6 +404,7 @@ strong {
   }
   .phone-link--icon:before {
     content: "phone";
+    text-decoration: none;
   }
   .phone-link--icon:focus-visible {
     outline: 2px solid var(--clr-bw-070);

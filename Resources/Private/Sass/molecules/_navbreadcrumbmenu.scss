@@ -6,6 +6,10 @@
   .breadcrumbmenu {
     /* local settings */
 
+    a {
+      text-decoration: none;
+    }
+
     >span {
       // color: oklch(from var(--clr-text) calc(l * .5) c h);
     }

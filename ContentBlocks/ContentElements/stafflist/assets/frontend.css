@@ -36,7 +36,7 @@
       'card-responsibility';
 
     @container staffcard (width > 480px) {
-      grid-template-columns: minmax(100px,240px) 1fr;
+      grid-template-columns: minmax(100px, 240px) 1fr;
       grid-template-areas:
       'card-title card-title'
       'card-image card-address'
@@ -55,12 +55,19 @@
       figcaption {
         display: none;
       }
+
       grid-column: card-image;
     }
 
     .staffcard--address {
       padding: 0.5rem;
       grid-column: card-address;
+
+      > p {
+        &:last-child {
+          padding-block-end: 0;
+        }
+      }
     }
 
     .staffcard--responsibility {
