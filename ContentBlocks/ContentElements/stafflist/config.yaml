@@ -11,6 +11,7 @@ fields:
     minitems: 0
     maxitems: 1
     foreign_table: pages
+    #foreign_table_where: 'AND pages.module="staff" AND ({#pages}.{#sys_language_uid} = ###REC_FIELD_sys_language_uid###) ORDER BY pages.title'
     foreign_table_where: 'AND pages.module="staff" AND ({#pages}.{#sys_language_uid} = 0) ORDER BY pages.title'
 basics:
   - TYPO3/Appearance
