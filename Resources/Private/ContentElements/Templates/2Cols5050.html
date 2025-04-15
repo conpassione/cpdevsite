@@ -4,6 +4,13 @@
     class="cp-2cols5050{f:if(condition: '{data.sectionlayout}  && {data.sectionlayout} != \'accent\'  && {data.sectionlayout} != \'brandcolor\'', then:' content-grid {data.sectionlayout}', else:' {data.sectionlayout}')}"
     id="s{data.uid}">
     <div class="cp-2cols5050--content{f:if(condition: data.contentlayout, then:' {data.contentlayout}')}">
+        <f:if condition="{data.header}">
+            <f:cObject
+                data="{data}"
+                table="tt_content"
+                typoscriptObjectPath="tt_content.header"
+            />
+        </f:if>
         <div class="cp-col201">
             <f:for as="record" each="{children_201}">
                 <f:if condition="{record.CType} === 'form_formframework'">

@@ -454,11 +454,11 @@
   figcaption {
     position: absolute;
     left: 0;
-    right: 0;
     bottom: 0;
-    padding: 0.5em;
+    padding: 0.25em;
     font-size: var(--fs-small);
-    backdrop-filter: blur(1em);
+    backdrop-filter: blur(0.5em);
+    background-color: rgba(var(--clr-bw-100)/0.4);
   }
   .cp-image {
     container-type: inline-size;

@@ -72,6 +72,15 @@ call_user_func(static function (): void {
             ->setGroup('z-cplayout')
     );
 
+    $GLOBALS['TCA']['tt_content']['types']['cp-1col']['showitem'] = '
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+        --palette--;;general,
+        --palette--;;headers,
+    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+        --palette--;;frames,
+        --palette--;;appearanceLinks,
+        ';
+
     /* containers */
     GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
@@ -99,22 +108,14 @@ call_user_func(static function (): void {
             ->setIcon('tx-conpassione-cp-2cols5050')
             ->setGroup('z-cplayout')
     );
-    /*    $GLOBALS['TCA']['tt_content']['types']['cp-2cols5050']['showitem'] = [
-            '
-        --palette--;;general,header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.div_formlabel,
-        --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+    $GLOBALS['TCA']['tt_content']['types']['cp-2cols5050']['showitem'] = '
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+        --palette--;;general,
+        --palette--;;headers,
+    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
         --palette--;;frames,
         --palette--;;appearanceLinks,
-        --palette--;Layout;cplayout,
-        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,
-        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
-        --palette--;;language,
-        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
-        --palette--;;hidden,
-        --palette--;;access,
-        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,
-        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended'
-        ];*/
+        ';
 
     GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
@@ -143,6 +144,14 @@ call_user_func(static function (): void {
             ->setIcon('tx-conpassione-cp-2cols3366')
             ->setGroup('z-cplayout')
     );
+    $GLOBALS['TCA']['tt_content']['types']['cp-2cols3366']['showitem'] = '
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+        --palette--;;general,
+        --palette--;;headers,
+    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+        --palette--;;frames,
+        --palette--;;appearanceLinks,
+        ';
 
     GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
@@ -171,6 +180,14 @@ call_user_func(static function (): void {
             ->setIcon('tx-conpassione-cp-2cols6633')
             ->setGroup('z-cplayout')
     );
+    $GLOBALS['TCA']['tt_content']['types']['cp-2cols6633']['showitem'] = '
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+        --palette--;;general,
+        --palette--;;headers,
+    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+        --palette--;;frames,
+        --palette--;;appearanceLinks,
+        ';
 
     GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
@@ -203,6 +220,14 @@ call_user_func(static function (): void {
             ->setIcon('tx-conpassione-cp-3cols')
             ->setGroup('z-cplayout')
     );
+    $GLOBALS['TCA']['tt_content']['types']['cp-3cols']['showitem'] = '
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+        --palette--;;general,
+        --palette--;;headers,
+    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+        --palette--;;frames,
+        --palette--;;appearanceLinks,
+        ';
 
     $additionalColumns = [
         'sectionlayout' => [
