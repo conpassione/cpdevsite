@@ -3,7 +3,7 @@
 imports:
   - { resource: 'EXT:rte-ckeditor/Configuration/RTE/Editor/Base.yaml' }
   - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml' }
-  - { resource: 'EXT:cpdevsite/Configuration/RTE/Processing.yaml' }
+  - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Processing.yaml' }
   - { resource: 'EXT:cpdevsite/Configuration/RTE/Editor/Base.yaml' }
 
 # Add configuration for the editor
