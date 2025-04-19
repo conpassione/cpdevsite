@@ -1153,7 +1153,7 @@
     border-inline-end: 1px solid var(--clr-mnu);
   }
   .lmenu.active {
-    color: var(--clr-mnubg--active);
+    color: var(--clr-mnu--active);
     background-color: var(--clr-mnubg--active);
   }
   .lmenu .text-muted,
