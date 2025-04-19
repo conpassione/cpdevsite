@@ -307,7 +307,7 @@
       border-inline-end: 1px solid var(--clr-mnu);
     }
 
-    .active {
+    &.active {
       color:            var(--clr-mnubg--active);
       background-color: var(--clr-mnubg--active);
     }
