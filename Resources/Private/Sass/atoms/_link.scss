@@ -5,12 +5,12 @@
 @layer basestyles {
 
   %link {
-    color:                 currentColor;
-    background-color:      inherit;
+    color:                    currentColor;
+    background-color:         inherit;
     /*text-decoration:  none;*/
-    text-decoration-color: var(--clr-brand--primary);
+    text-decoration-color:    var(--clr-brand--primary);
     text-decoration-skip-ink: auto;
-    text-decoration-style: dotted;
+    text-decoration-style:    dotted;
 
     &:focus-visible {
       /*text-decoration: none;*/
@@ -60,7 +60,7 @@
     hyphens: auto;
 
     &:before {
-      content: 'arrowright';
+      content: 'right';
     }
 
     &:focus-visible {
@@ -111,7 +111,7 @@
     @extend %link-iconbefore;
 
     &:before {
-      content:         'phone';
+      content: 'phone';
     }
 
     &:focus-visible {
