@@ -1,22 +1,16 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-<f:layout name="Layout-{page.pagerecord.layout}" />
+<f:layout name="Layout-{page.pagerecord.layout}"/>
 
 <f:section name="Main">
-    <f:render section="Herosmall" arguments="{hero: pagecontent.hero, pageTitle: page.pagerecord.subtitle}" />
-    <f:for each="{pagecontent.content.records}" as="contentelement">
+    <f:for as="contentelement" each="{pagecontent.content.records}">
         <f:cObject
-            typoscriptObjectPath="tt_content.{contentelement.CType}"
             data="{contentelement.rawRecord}"
             table="tt_content"
+            typoscriptObjectPath="tt_content.{contentelement.CType}"
         />
     </f:for>
 </f:section>
-
-<f:section name="Herosmall">
-    <f:render partial="Herosmall" arguments="{hero: hero, pageTitle: pageTitle}"/>
-</f:section>
-
 
 </html>
 

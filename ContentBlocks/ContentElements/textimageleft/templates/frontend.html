@@ -2,11 +2,11 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
 >
 
-<f:asset.css href="{cb:assetPath()}/frontend.css" identifier="textimage-css"/>
+<f:asset.css href="{cb:assetPath()}/frontend.css" identifier="textimagel-css"/>
 
 <div class="textimageleft {data.sectionlayout}" id="ce{data.uid}">
     <f:cObject
-        data="{header: '', showcaption:'0', files: data.image}"
+        data="{header: data.header, showcaption:'0', files: data.image}"
         table="tt_content"
         typoscriptObjectPath="tt_content.image"
     />

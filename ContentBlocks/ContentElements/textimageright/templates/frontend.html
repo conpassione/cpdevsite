@@ -2,7 +2,7 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
 >
 
-<f:asset.css href="{cb:assetPath()}/frontend.css" identifier="textimage-css"/>
+<f:asset.css href="{cb:assetPath()}/frontend.css" identifier="textimager-css"/>
 
 <div class="textimageright {data.sectionlayout}" id="ce{data.uid}">
     <div class="textimageright-text">
@@ -14,7 +14,7 @@
         <f:format.html>{data.bodytext}</f:format.html>
     </div>
     <f:cObject
-        data="{header: '', showcaption:'0', files: data.image}"
+        data="{header: data.header, showcaption:'0', files: data.image}"
         table="tt_content"
         typoscriptObjectPath="tt_content.image"
     />
