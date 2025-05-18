@@ -14,6 +14,7 @@
 
   .cp-image {
     grid-column: full-width;
+    margin-block-end: 0;
   }
 
   .textimageleft-text {
