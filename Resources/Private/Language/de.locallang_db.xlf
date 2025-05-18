@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="de" original="" datatype="plaintext" date="2025-03-19T21:30:13+01:00">
+    <file source-language="en" target-language="de" original="" datatype="plaintext" date="2025-05-18T15:10:46+02:00">
         <body>
             <trans-unit id="backendlayout.col0">
                 <source>Content</source>
@@ -360,7 +360,7 @@
             </trans-unit>
             <trans-unit id="tt_content.column.sectionlayout">
                 <source>Display width</source>
-                <target>Breit des Abschnitts</target>
+                <target>Breite des Abschnitts</target>
             </trans-unit>
             <trans-unit id="tt_content.column.sectionlayout.item0">
                 <source>normal</source>
