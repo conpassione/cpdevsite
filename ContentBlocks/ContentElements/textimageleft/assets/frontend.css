@@ -19,6 +19,7 @@
 
   .textimageleft-text {
     grid-column: content;
+    padding-block-end: var(--gutter);
   }
 }
 
