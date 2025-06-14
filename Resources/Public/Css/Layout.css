@@ -747,6 +747,9 @@
   .cp-accent {
     color: var(--clr-accent);
   }
+  .cp-bold {
+    font-weight: 700;
+  }
   i.icon {
     font-family: var(--ff-symbol), sans-serif;
     font-size: inherit;
