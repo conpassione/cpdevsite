@@ -5,7 +5,7 @@
 
 <f:section name="Main">
     <f:render arguments="{hero: pagecontent.hero, pageTitle: page.pagerecord.subtitle}" section="Hero"/>
-    <f:render arguments="{submenu: submenu}" section="Submenu"/>
+    <f:render arguments="{_all}" section="Submenu"/>
     <f:for as="record" each="{pagecontent.content.records}">
         <f:cObject
             data="{record.rawRecord}"
@@ -20,7 +20,7 @@
 </f:section>
 
 <f:section name="Submenu">
-    <f:render arguments="{submenu: submenu}" partial="Menu/SubMenu"/>
+    <f:render arguments="{submenu: submenu, cp_status: page.pagerecord.cp_status}" partial="Menu/SubMenu"/>
 </f:section>
 
 </html>

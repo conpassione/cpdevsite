@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en" target-language="de" original="Labels.xlf" datatype="plaintext" product-name="conpassione/submenupage" date="2025-06-17T16:26:33+02:00">
-		<header></header>
+	<file source-language="en" target-language="it" original="" datatype="plaintext" date="2025-06-17T16:29:46+02:00">
 		<body>
 			<trans-unit id="description">
-				<source>Page with Menucards of subpages</source>
-				<target>Verzeichnisseite mit Menu-Cards der Unterseiten</target>
+				<source>Used as Homepage</source>
+				<target>Homepage</target>
 			</trans-unit>
 			<trans-unit id="title">
-				<source>Menupage</source>
-				<target>Verzeichnisseite</target>
+				<source>Homepage</source>
+				<target>Homepage</target>
 			</trans-unit>
 			<trans-unit id="cp_status.label">
 				<source>Display</source>
-				<target>Anzeige</target>
+				<target>Display</target>
 			</trans-unit>
 			<trans-unit id="cp_status.items.0.label">
 				<source>Show SEO description</source>
-				<target>SEO Beschrieb anzeigen</target>
+				<target>mostra SEO</target>
 			</trans-unit>
 			<trans-unit id="cp_status.items.1.label">
 				<source>Hide SEO description</source>
-				<target>SEO Beschrieb verstecken</target>
+				<target>hide SEO</target>
 			</trans-unit>
 		</body>
 	</file>

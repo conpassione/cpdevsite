@@ -2,10 +2,17 @@ name: conpassione/submenupage
 typeName: 36650011
 title: Untermenuseite
 group: conpassione
-description: Das ist die Uebersichtsseite für Galerien
+description: Das ist die Uebersichtsseite für Unterseiten
 prefixFields: false
 fields:
   - identifier: subtitle
     useExistingField: true
-
-
+  - identifier: cp_status
+    type: Radio
+    label: "Display"
+    defaultValue: 0
+    items:
+      - label: 'show SEO'
+        value: 0
+      - label: 'hide SEO'
+        value: 1
