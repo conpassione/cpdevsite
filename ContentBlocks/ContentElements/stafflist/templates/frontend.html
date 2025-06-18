@@ -29,26 +29,23 @@
                             </f:else>
                         </f:if>
                     </div>
-                    <f:variable name="showadr" value="{data.cp_status} = 0 || {data.cp_status} = 2"></f:variable>
                     <div class="staffcard--address">
-                        <p><strong>[{data.cp_status}]:
+                        <p><strong>
                             <f:format.html>{member.feusers.0.data.last_name} {member.feusers.0.data.first_name}</f:format.html>
                         </strong>
-                            <f:if condition="{data.cp_status} < 7">
-                                <br>XX{showadr}XX
-                                <f:if condition="{member.feusers.0.data.zip} && ({data.cp_status} = 0 || {data.cp_status} = 2 || {data.cp_status} = 4 || {data.cp_status} = 6)">
-                                    <f:format.html>{member.feusers.0.data.address -> f:format.nl2br()}</f:format.html>
-                                    <br>
-                                    <f:format.html>{member.feusers.0.data.zip} {member.feusers.0.data.city}</f:format.html>
-                                </f:if>
+                            <br>
+                            <f:if condition="{member.feusers.0.data.zip} && ({data.cp_status} == 0)">
+                                <f:format.html>{member.feusers.0.data.address -> f:format.nl2br()}</f:format.html>
                                 <br>
-                                <f:if condition="{member.feusers.0.data.mobile} && ({data.cp_status} = 0 || {data.cp_status} = 1 || {data.cp_status} = 4 || {data.cp_status} = 5)">
-                                    <f:link.external class="phone-link--icon" uri="tel:{member.feusers.0.data.mobile}">{member.feusers.0.data.mobile}</f:link.external>
-                                </f:if>
+                                <f:format.html>{member.feusers.0.data.zip} {member.feusers.0.data.city}</f:format.html>
                                 <br>
-                                <f:if condition="{member.feusers.0.data.email2} && {data.cp_staus} < 4">
-                                    <f:link.email class="mail-link--icon" email="{member.feusers.0.data.email2}">{member.feusers.0.data.email2}</f:link.email>
-                                </f:if>
+                            </f:if>
+                            <f:if condition="{member.feusers.0.data.mobile} && ({data.cp_status1} == 0)">
+                                <f:link.external class="phone-link--icon" uri="tel:{member.feusers.0.data.mobile}">{member.feusers.0.data.mobile}</f:link.external>
+                                <br>
+                            </f:if>
+                            <f:if condition="{member.feusers.0.data.email2} && ({data.cp_status2} == 0)">
+                                <f:link.email class="mail-link--icon" email="{member.feusers.0.data.email2}">{member.feusers.0.data.email2}</f:link.email>
                             </f:if>
                         </p>
                     </div>

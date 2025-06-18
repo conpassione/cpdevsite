@@ -1,22 +1,31 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-05-01T12:29:50+00:00" product-name="conpassione/stafflist">
-		<header/>
+	<file source-language="en" original="Labels.xlf" datatype="plaintext" product-name="conpassione/stafflist" date="2025-06-18T17:19:55+02:00">
+		<header></header>
 		<body>
-			<trans-unit id="title" resname="title">
-				<source>Stafflist</source>
+			<trans-unit id="be.description">
+				<source>Displays Staffmembers of pages:</source>
 			</trans-unit>
-			<trans-unit id="description" resname="description">
+			<trans-unit id="cp_status.label">
+				<source>hide Address</source>
+			</trans-unit>
+			<trans-unit id="cp_status1.label">
+				<source>hide Fon</source>
+			</trans-unit>
+			<trans-unit id="cp_status2.label">
+				<source>hide email</source>
+			</trans-unit>
+			<trans-unit id="description">
 				<source>List of Board-members (Staff)</source>
 			</trans-unit>
-			<trans-unit id="header.label" resname="header.label">
+			<trans-unit id="header.label">
 				<source>Board</source>
 			</trans-unit>
-			<trans-unit id="members.label" resname="members.label">
+			<trans-unit id="members.label">
 				<source>Page with Staff members</source>
 			</trans-unit>
-			<trans-unit id="be.description" resname="be.description">
-				<source>Displays Staffmembers of pages:</source>
+			<trans-unit id="title">
+				<source>Stafflist</source>
 			</trans-unit>
 		</body>
 	</file>

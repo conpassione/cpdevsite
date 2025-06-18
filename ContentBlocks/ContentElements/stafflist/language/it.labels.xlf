@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="it" datatype="plaintext" original="Labels.xlf" date="2024-05-01T12:29:50+00:00" product-name="conpassione/stafflist">
-        <header/>
-        <body>
-			<trans-unit id="title" resname="title">
-				<source>Stafflist</source>
-				<target>Elenco dei funzionari</target>
-			</trans-unit>
-			<trans-unit id="description" resname="description">
-				<source>List of Board-members (Staff)</source>
-				<target>Elenco dei funzionari di una specifica unità</target>
-			</trans-unit>
-			<trans-unit id="header.label" resname="header.label">
-				<source>Board</source>
-				<target>Unità organizzativa</target>
-			</trans-unit>
-			<trans-unit id="members.label" resname="members.label">
-				<source>Page with Staff members</source>
-				<target>Pagina conpassione id funzionari</target>
-			</trans-unit>
-			<trans-unit id="be.description" resname="be.description">
+	<file source-language="en" target-language="it" original="Labels.xlf" datatype="plaintext" product-name="conpassione/stafflist" date="2025-06-18T17:19:55+02:00">
+		<header></header>
+		<body>
+			<trans-unit id="be.description">
 				<source>Displays Staffmembers of pages:</source>
 				<target>Display dei funzionari elencati nelle pagine seguenti:</target>
 			</trans-unit>
-        </body>
-    </file>
+			<trans-unit id="cp_status.label">
+				<source>hide Address</source>
+				<target>Nascondere Indirizzo</target>
+			</trans-unit>
+			<trans-unit id="cp_status1.label">
+				<source>hide Fon</source>
+				<target>Nascondere Telefono</target>
+			</trans-unit>
+			<trans-unit id="cp_status2.label">
+				<source>hide email</source>
+				<target>Nascondere email</target>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>List of Board-members (Staff)</source>
+				<target>Elenco dei funzionari di una specifica unità</target>
+			</trans-unit>
+			<trans-unit id="header.label">
+				<source>Board</source>
+				<target>Unità organizzativa</target>
+			</trans-unit>
+			<trans-unit id="members.label">
+				<source>Page with Staff members</source>
+				<target>Pagina conpassione id funzionari</target>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Stafflist</source>
+				<target>Elenco dei funzionari</target>
+			</trans-unit>
+		</body>
+	</file>
 </xliff>
