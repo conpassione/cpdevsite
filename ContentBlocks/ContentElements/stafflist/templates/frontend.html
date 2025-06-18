@@ -34,17 +34,17 @@
                             <f:format.html>{member.feusers.0.data.last_name} {member.feusers.0.data.first_name}</f:format.html>
                         </strong>
                             <br>
-                            <f:if condition="{member.feusers.0.data.zip} && ({data.cp_status} == 0)">
+                            <f:if condition="{member.feusers.0.data.zip} && ({data.cp_hideaddress} == 0)">
                                 <f:format.html>{member.feusers.0.data.address -> f:format.nl2br()}</f:format.html>
                                 <br>
                                 <f:format.html>{member.feusers.0.data.zip} {member.feusers.0.data.city}</f:format.html>
                                 <br>
                             </f:if>
-                            <f:if condition="{member.feusers.0.data.mobile} && ({data.cp_status1} == 0)">
+                            <f:if condition="{member.feusers.0.data.mobile} && ({data.cp_hidefon} == 0)">
                                 <f:link.external class="phone-link--icon" uri="tel:{member.feusers.0.data.mobile}">{member.feusers.0.data.mobile}</f:link.external>
                                 <br>
                             </f:if>
-                            <f:if condition="{member.feusers.0.data.email2} && ({data.cp_status2} == 0)">
+                            <f:if condition="{member.feusers.0.data.email2} && ({data.cp_hideemail} == 0)">
                                 <f:link.email class="mail-link--icon" email="{member.feusers.0.data.email2}">{member.feusers.0.data.email2}</f:link.email>
                             </f:if>
                         </p>

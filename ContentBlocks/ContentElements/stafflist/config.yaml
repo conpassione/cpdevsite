@@ -13,17 +13,17 @@ fields:
     foreign_table: pages
     #foreign_table_where: 'AND pages.module="staff" AND ({#pages}.{#sys_language_uid} = ###REC_FIELD_sys_language_uid###) ORDER BY pages.title'
     foreign_table_where: 'AND pages.module="staff" AND ({#pages}.{#sys_language_uid} = 0) ORDER BY pages.title'
-  - identifier: cp_status
+  - identifier: cp_hideaddress
     type: Checkbox
     renderType: checkboxToggle
     label: 'hide Address'
     default: 0
-  - identifier: cp_status1
+  - identifier: cp_hidefon
     type: Checkbox
     renderType: checkboxToggle
     label: 'hide Fon'
     default: 0
-  - identifier: cp_status2
+  - identifier: cp_hideemail
     type: Checkbox
     renderType: checkboxToggle
     label: 'hide eMail'

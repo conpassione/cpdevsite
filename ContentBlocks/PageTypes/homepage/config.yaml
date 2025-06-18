@@ -9,7 +9,7 @@ fields:
     useExistingField: true
   - identifier: cp_status
     type: Radio
-    label: "Display"
+    label: "Display SEO"
     defaultValue: 0
     items:
       - label: 'show SEO'
