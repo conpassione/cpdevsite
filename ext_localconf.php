@@ -3,7 +3,15 @@
 declare(strict_types=1);
 defined('TYPO3') or die();
 
+use Egulias\EmailValidator\Validation\DNSCheckValidation;
+use Egulias\EmailValidator\Validation\RFCValidation;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
+// Spam-Protection: E-Mail Validatiors
+$GLOBALS['TYPO3_CONF_VARS']['MAIL']['validators'] = [
+    RFCValidation::class,
+    DNSCheckValidation::class
+];
 
 // CK-Editor Konfiguration laden
 if (empty($GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['CpDefault'])) {
