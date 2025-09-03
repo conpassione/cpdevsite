@@ -4,6 +4,7 @@
 .idea/
 .env
 .stylelintrc.json
+.php-cs-fixer.cache
 composer.lock
 package.json
 package-lock.json
