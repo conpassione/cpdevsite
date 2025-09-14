@@ -44,9 +44,7 @@ class RemoveMissingfileRelationsCommand extends Command
                 AND (l_status = 2) AND (l_date < (unix_timestamp(current_timestamp) - 86400*90));
         */
 
-        $site = $this->siteFinder->getSiteByPageId(1);
         $connectionPool = GeneralUtility::makeInstance(ConnectionPool::class);
-        $queryBuilder = $connectionPool->getQueryBuilderForTable('sys_file');
         $connection = $connectionPool->getConnectionByName('Default');
         $sql = 'DELETE FROM sys_file WHERE sys_file.missing = 1 AND sys_file.uid NOT IN(SELECT sys_file_reference.uid_local FROM sys_file_reference WHERE sys_file_reference.uid = sys_file.uid)';
         $statement = $connection->executeStatement($sql);
