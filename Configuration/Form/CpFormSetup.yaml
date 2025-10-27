@@ -9,12 +9,12 @@ prototypes:
     formElementsDefinition:
       Form:
         renderingOptions:
-          #          templateRootPaths:
-          #            36650: 'EXT:cpdevsite/Resources/Private/Frontend/Templates/'
-          #          partialRootPaths:
-          #            36650: 'EXT:cpdevsite/Resources/Private/Frontend/Partials/'
-          #          layoutRootPaths:
-          #            36650: 'EXT:cpdevsite/Resources/Private/Frontend/Layouts/'
+#          templateRootPaths:
+#            36650: 'EXT:cpdevsite/Resources/Private/Frontend/Templates/'
+#          partialRootPaths:
+#            36650: 'EXT:cpdevsite/Resources/Private/Frontend/Partials/'
+#          layoutRootPaths:
+#            36650: 'EXT:cpdevsite/Resources/Private/Frontend/Layouts/'
           translation:
             translationFiles:
               36650: 'EXT:cpdevsite/Resources/Private/Language/formelements.xlf'
@@ -35,4 +35,3 @@ formManager:
 #        366501:
 #          templatePath: 'EXT:cpdevsite/Resources/Private/Forms/SimpleMessageForm.yaml'
 #          label: 'newFormTemplates.SimpleMessageForm.label'
-

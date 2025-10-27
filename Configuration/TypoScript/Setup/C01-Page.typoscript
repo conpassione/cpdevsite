@@ -52,6 +52,8 @@ page = PAGE
 page {
   typeNum = 0
   meta {
+    keywords.data = levelfield:-1, keywords, slide
+    description.data = levelfield:-1, abstract, slide
     viewport = width=device-width, initial-scale=1.0
     vieport.replace = 1
   }
