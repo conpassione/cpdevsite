@@ -6,6 +6,25 @@ persistenceManager:
 
 prototypes:
   standard:
+    finishersDefinition:
+      EmailToReceiver:
+        options:
+          templateName: 'ReceiverForm'
+          templateRootPaths:
+            36650: 'EXT:cpdevsite/Resources/Private/Emails/Templates/'
+          layoutRootPaths:
+            36650: 'EXT:cpdevsite/Resources/Private/Emails/Layouts/'
+          partialRootPaths:
+            36650: 'EXT:cpdevsite/Resources/Private/Emails/Partials/'
+      EmailToSender:
+        options:
+          templateName: 'SenderForm'
+          templateRootPaths:
+            36650: 'EXT:cpdevsite/Resources/Private/Emails/Templates/'
+          layoutRootPaths:
+            36650: 'EXT:cpdevsite/Resources/Private/Emails/Layouts/'
+          partialRootPaths:
+            36650: 'EXT:cpdevsite/Resources/Private/Emails/Partials/'
     formElementsDefinition:
       Form:
         renderingOptions:
@@ -29,9 +48,12 @@ prototypes:
 formManager:
   translationFiles:
     36650: 'EXT:cpdevsite/Resources/Private/Language/form.xlf'
-#  selectablePrototypesConfiguration:
-#    100:
-#      newFormTemplates:
-#        366501:
-#          templatePath: 'EXT:cpdevsite/Resources/Private/Forms/SimpleMessageForm.yaml'
-#          label: 'newFormTemplates.SimpleMessageForm.label'
+  selectablePrototypesConfiguration:
+    100:
+      newFormTemplates:
+        36650:
+          templatePath: 'EXT:cpdevsite/Resources/Private/Forms/SimpleMessageD.form.yaml'
+          label: 'Einfaches Anmeldeformular'
+        36651:
+          templatePath: 'EXT:cpdevsite/Resources/Private/Forms/SimpleMessageF.form.yaml'
+          label: 'Formulaire de demande simple'

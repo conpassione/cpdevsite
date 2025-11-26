@@ -1,0 +1,5 @@
+<f:layout name="cpSystemEmail" />
+<f:section name="Title">{headline}</f:section>
+<f:section name="Main">{introduction}
+
+{content}</f:section>
