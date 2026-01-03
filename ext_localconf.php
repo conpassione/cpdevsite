@@ -56,6 +56,6 @@ ExtensionManagementUtility::addTypoScriptSetup(
 '
 );
 
-$GLOBALS['TYPO3_CONF_VARS']['MAIL']['layoutRootPaths'][36650] = 'EXT:cpdevsite/Resources/Private/Email/Layouts/';
-$GLOBALS['TYPO3_CONF_VARS']['MAIL']['templateRootPaths'][36650] = 'EXT:cpdevsite/Resources/Private/Email/Templates/';
-$GLOBALS['TYPO3_CONF_VARS']['MAIL']['partialRootPaths'][36650] = 'EXT:cpdevsite/Resources/Private/Email/Partials/';
+//$GLOBALS['TYPO3_CONF_VARS']['MAIL']['layoutRootPaths'][36650] = 'EXT:cpdevsite/Resources/Private/Email/Layouts/';
+//$GLOBALS['TYPO3_CONF_VARS']['MAIL']['templateRootPaths'][36650] = 'EXT:cpdevsite/Resources/Private/Email/Templates/';
+//$GLOBALS['TYPO3_CONF_VARS']['MAIL']['partialRootPaths'][36650] = 'EXT:cpdevsite/Resources/Private/Email/Partials/';
