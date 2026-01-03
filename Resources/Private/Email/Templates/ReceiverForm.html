@@ -1,11 +1,7 @@
-<f:layout name="cpSystemEmail" />
+<f:layout name="CpSystemEmail" />
 <f:section name="Title">{title}</f:section>
 <f:section name="Main">
     <table>
-        <tr>
-            <td colspan="2"><p>Du hast uns diese Angaben gesendet. Wir melden uns innerhalb einer Woche bei Dir. Falls Du nichts hörst von uns, melde Dich bitte via E-Mail (<a href="mailto:info@kindundhund.ch">info@kindundhund.ch</a>) mit deinem Anliegen. Danke<br></p></td>
-        </tr>
-
         <formvh:renderAllFormValues renderable="{form.formDefinition}" as="formValue">
             <tr>
                 <f:if condition="{formValue.isSection}">

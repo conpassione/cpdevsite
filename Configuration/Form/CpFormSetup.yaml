@@ -11,20 +11,20 @@ prototypes:
         options:
           templateName: 'ReceiverForm'
           templateRootPaths:
-            36650: 'EXT:cpdevsite/Resources/Private/Emails/Templates/'
+            36650: 'EXT:cpdevsite/Resources/Private/Email/Templates/'
           layoutRootPaths:
-            36650: 'EXT:cpdevsite/Resources/Private/Emails/Layouts/'
+            36650: 'EXT:cpdevsite/Resources/Private/Email/Layouts/'
           partialRootPaths:
-            36650: 'EXT:cpdevsite/Resources/Private/Emails/Partials/'
+            36650: 'EXT:cpdevsite/Resources/Private/Email/Partials/'
       EmailToSender:
         options:
           templateName: 'SenderForm'
           templateRootPaths:
-            36650: 'EXT:cpdevsite/Resources/Private/Emails/Templates/'
+            36650: 'EXT:cpdevsite/Resources/Private/Email/Templates/'
           layoutRootPaths:
-            36650: 'EXT:cpdevsite/Resources/Private/Emails/Layouts/'
+            36650: 'EXT:cpdevsite/Resources/Private/Email/Layouts/'
           partialRootPaths:
-            36650: 'EXT:cpdevsite/Resources/Private/Emails/Partials/'
+            36650: 'EXT:cpdevsite/Resources/Private/Email/Partials/'
     formElementsDefinition:
       Form:
         renderingOptions:
