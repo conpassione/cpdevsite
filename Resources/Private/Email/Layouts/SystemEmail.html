@@ -269,6 +269,12 @@
             text-decoration:underline;
         }
 
+        .imgLogo {
+            max-height:200px;
+            width: auto;
+            max-width: 100%;
+        }
+
         @media only screen and (min-width:600px){
             .headerContainer {
                 border-top-left-radius: .25rem;
@@ -279,11 +285,21 @@
                 border-bottom-left-radius: .25rem;
                 border-bottom-right-radius: .25rem;
             }
+            .imgLogo {
+                max-height:150px;
+                width: auto;
+                max-width: 100%;
+            }
         }
 
         @media only screen and (min-width:768px){
             .templateContainer {
                 width:600px !important;
+            }
+            .imgLogo {
+                max-height:175px;
+                width: auto;
+                max-width: 100%;
             }
         }
 
@@ -324,6 +340,11 @@
             .bodyContainer .textContent p {
                 font-size:16px !important;
                 line-height:150% !important;
+            }
+            .imgLogo {
+                max-height:100px;
+                width: auto;
+                max-width: 100%;
             }
         }
 
@@ -430,13 +451,13 @@
                                 <td valign="top" class="image" align="center" style="padding: 0px 36px; padding-bottom: 20px; text-align: center;">
                                     <f:if condition="{typo3.systemConfiguration.backend.loginLogo}">
                                         <f:then>
-                                            <img src="{typo3.systemConfiguration.backend.loginLogo -> core:normalizedUrl()}" alt="{typo3.systemConfiguration.backend.loginLogoAlt}" width="90%"/>
+                                            <img class="imgLogo" src="{typo3.systemConfiguration.backend.loginLogo -> core:normalizedUrl()}" alt="{typo3.systemConfiguration.backend.loginLogoAlt}" width="90%"/>
                                         </f:then>
                                         <f:else if="{typo3.systemConfiguration.backend.loginHighlightColor}">
-                                            <img src="{normalizedParams.siteUrl}{f:uri.resource(path: 'EXT:core/Resources/Public/Images/typo3_black.svg')}" alt="TYPO3 Logo" height="41" width="150" />
+                                            <img class="imgLogo" src="{normalizedParams.siteUrl}{f:uri.resource(path: 'EXT:core/Resources/Public/Images/typo3_black.svg')}" alt="TYPO3 Logo" height="41" width="150" />
                                         </f:else>
                                         <f:else>
-                                            <img src="{normalizedParams.siteUrl}{f:uri.resource(path: 'EXT:core/Resources/Public/Images/typo3_orange.svg')}" alt="TYPO3 Logo" height="41" width="150" />
+                                            <img class="imgLogo" src="{normalizedParams.siteUrl}{f:uri.resource(path: 'EXT:core/Resources/Public/Images/typo3_orange.svg')}" alt="TYPO3 Logo" height="41" width="150" />
                                         </f:else>
                                     </f:if>
                                 </td>
