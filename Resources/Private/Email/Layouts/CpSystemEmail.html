@@ -458,13 +458,13 @@
                                 <td valign="top" class="image" align="center" style="padding: 0px 36px; padding-bottom: 20px; text-align: center;">
                                     <f:if condition="{typo3.systemConfiguration.backend.loginLogo}">
                                         <f:then>
-                                            <img src="{typo3.systemConfiguration.backend.loginLogo -> core:normalizedUrl()}" alt="{typo3.systemConfiguration.backend.loginLogoAlt}" width="90%"/>
+                                            <img class="imgLogo" src="{typo3.systemConfiguration.backend.loginLogo -> core:normalizedUrl()}" alt="{typo3.systemConfiguration.backend.loginLogoAlt}" width="90%"/>
                                         </f:then>
                                         <f:else if="{typo3.systemConfiguration.backend.loginHighlightColor}">
-                                            <img src="{normalizedParams.siteUrl}{f:uri.resource(path: 'EXT:core/Resources/Public/Images/typo3_black.svg')}" alt="TYPO3 Logo" height="41" width="150" />
+                                            <img class="imgLogo" src="{normalizedParams.siteUrl}{f:uri.resource(path: 'EXT:core/Resources/Public/Images/typo3_black.svg')}" alt="TYPO3 Logo" height="41" width="150" />
                                         </f:else>
                                         <f:else>
-                                            <img src="{normalizedParams.siteUrl}{f:uri.resource(path: 'EXT:core/Resources/Public/Images/typo3_orange.svg')}" alt="TYPO3 Logo" height="41" width="150" />
+                                            <img class="imgLogo" src="{normalizedParams.siteUrl}{f:uri.resource(path: 'EXT:core/Resources/Public/Images/typo3_orange.svg')}" alt="TYPO3 Logo" height="41" width="150" />
                                         </f:else>
                                     </f:if>
                                 </td>
