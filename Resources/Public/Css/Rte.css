@@ -120,11 +120,11 @@
     /* fontfaces */
     --ff: system-ui, sans-serif;
     --ff-condensed: system-ui, sans-serif;
-    --ff-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+    --ff-serif: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
     --ff-h: system-ui, sans-serif;
     --ff-nav: system-ui, sans-serif;
-    --ff-mono: "Nimbus Mono PS", "Courier New", monospace;
-    --ff-symbol: "Symbols";
+    --ff-mono: 'Nimbus Mono PS', 'Courier New', monospace;
+    --ff-symbol: 'Symbols';
     /* font weight */
     --fw-regular: 300;
     --fw-mono: 400;

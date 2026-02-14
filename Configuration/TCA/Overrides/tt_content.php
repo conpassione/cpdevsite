@@ -229,6 +229,40 @@ call_user_func(static function (): void {
         --palette--;;appearanceLinks,
         ';
 
+    /* containers */
+    GeneralUtility::makeInstance(Registry::class)->configureContainer(
+        (
+        new ContainerConfiguration(
+            'cp-carousel', // CType
+            'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.carousel', // label
+            'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.carousel.description', //
+            // description
+            [
+                [
+                    [
+                        'name' => 'LLL:EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf:container.carousel.col201',
+                        'colPos' => 201,
+                        'disallowed' => ['CType' => 'cp-1col,cp-2cols5050,cp-2cols3366,cp-2cols6633,cp-3cols,cp-carousel']
+                    ],
+                ],
+            ] // grid configuration
+        )
+        )
+            // set an optional icon configuration
+            ->setIcon('tx-conpassione-cp-carousel')
+            ->setGroup('z-cpextensions')
+    );
+
+    $GLOBALS['TCA']['tt_content']['types']['cp-carousel']['showitem'] = '
+    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+        --palette--;;general,
+        --palette--;;headers,
+    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+        --palette--;;frames,
+        --palette--;;appearanceLinks,
+        ';
+
+
     $additionalColumns = [
         'sectionlayout' => [
             'exclude' => true,
@@ -279,7 +313,7 @@ call_user_func(static function (): void {
     ];
     ExtensionManagementUtility::addTCAcolumns('tt_content', $additionalColumns);
 
-    $sections = 'cp-1col,cp-2cols5050,cp-2cols3366,cp-2cols6633,cp-3cols';
+    $sections = 'cp-1col,cp-2cols5050,cp-2cols3366,cp-2cols6633,cp-3cols,cp-carousel';
     ExtensionManagementUtility::addFieldsToPalette(
         'tt_content',
         'cplayout',

@@ -1,0 +1,19 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<section
+    class="cp-carousel{f:if(condition: '{data.sectionlayout}  && {data.sectionlayout} != \'accent\'  && {data.sectionlayout} != \'brandcolor\'', then:' content-grid {data.sectionlayout}', else:' {data.sectionlayout}')}"
+    id="s{data.uid}" style="
+        --cp-carousel--num: {children_201 -> f:count()};
+    ">
+    <div class="cp-carousel--content{f:if(condition: data.contentlayout, then:' {data.contentlayout}')}">
+        <div class="cp-col201">
+            <f:for as="record" each="{children_201}" iteration="cp-carousel--iterator">
+                <div class="cp-carousel--card" style="--cp-carousel--position: {cp-carousel--iterator.cycle}">
+                    <f:format.raw>{record.renderedContent}</f:format.raw>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</section>
+
+</html>

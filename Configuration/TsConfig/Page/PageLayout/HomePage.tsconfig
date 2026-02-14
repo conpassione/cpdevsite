@@ -37,7 +37,7 @@ mod {
                     identifier = content
                     colPos = 0
                     allowed {
-                      CType = cp-1col,cp-2cols3366,cp-2cols5050,cp-2cols6633,cp-3cols,cp-textimageleft,cp-textimageright
+                      CType = cp-1col,cp-2cols3366,cp-2cols5050,cp-2cols6633,cp-3cols,cp-textimageleft,cp-textimageright,cp-carousel
                     }
                   }
                 }

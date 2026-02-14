@@ -138,11 +138,11 @@
     /* fontfaces */
     --ff: system-ui, sans-serif;
     --ff-condensed: system-ui, sans-serif;
-    --ff-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+    --ff-serif: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
     --ff-h: system-ui, sans-serif;
     --ff-nav: system-ui, sans-serif;
-    --ff-mono: "Nimbus Mono PS", "Courier New", monospace;
-    --ff-symbol: "Symbols";
+    --ff-mono: 'Nimbus Mono PS', 'Courier New', monospace;
+    --ff-symbol: 'Symbols';
     /* font weight */
     --fw-regular: 300;
     --fw-mono: 400;
@@ -569,8 +569,6 @@
 }
 .mfp-zoom-in {
   /* start state */
-  /* animate in */
-  /* animate out */
 }
 .mfp-zoom-in .mfp-with-anim {
   opacity: 0;
@@ -581,12 +579,18 @@
   opacity: 0;
   transition: all 0.3s ease-out;
 }
+.mfp-zoom-in {
+  /* animate in */
+}
 .mfp-zoom-in.mfp-ready .mfp-with-anim {
   opacity: 1;
   transform: scale(1);
 }
 .mfp-zoom-in.mfp-ready.mfp-bg {
   opacity: 0.8;
+}
+.mfp-zoom-in {
+  /* animate out */
 }
 .mfp-zoom-in.mfp-removing .mfp-with-anim {
   opacity: 0;
@@ -909,6 +913,61 @@
   @container (width < 960px) {
     .cp-3cols--content {
       grid-template-columns: 1fr;
+    }
+  }
+  /* Karussell Layout */
+  .cp-carousel {
+    padding: 0;
+    --cp-carousel--height: min(250px, 20vh);
+    --cp-carousel--width: calc(var(--cp-carousel--height) * 16 / 9);
+    --cp-carousel--time: 40s;
+  }
+  .cp-carousel--content .cp-col201 {
+    height: var(--cp-carousel--height);
+    width: 100%;
+    min-width: calc(var(--cp-carousel--width) * (var(--cp-carousel--num) - 1));
+    position: relative;
+  }
+  .cp-carousel--content {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10% 90%, transparent);
+  }
+  .cp-carousel--content:hover .cp-carousel--card {
+    animation-play-state: paused;
+    filter: grayscale(1);
+  }
+  .cp-carousel--content .cp-carousel--card:hover {
+    filter: grayscale(0);
+  }
+  .cp-carousel--card {
+    height: var(--cp-carousel--height);
+    width: var(--cp-carousel--width);
+    position: absolute;
+    left: 100%;
+    overflow: hidden;
+    animation: scrollLeft var(--cp-carousel--time) linear infinite;
+    animation-delay: calc(var(--cp-carousel--time) / var(--cp-carousel--num) * (var(--cp-carousel--num) - var(--cp-carousel--position)) * -1);
+  }
+  .cp-carousel--card img {
+    object-fit: cover;
+  }
+  .cp-carousel--card > .cp-text {
+    padding: var(--gutter);
+  }
+  .cp-carousel--card > .cp-image h1, .cp-carousel--card > .cp-image h2, .cp-carousel--card > .cp-image h3, .cp-carousel--card > .cp-image h4 {
+    z-index: 2;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    text-align: center;
+  }
+  @keyframes scrollLeft {
+    from {
+      left: 100%;
+    }
+    to {
+      left: calc(var(--cp-carousel--width) * -1);
     }
   }
   .accent,
