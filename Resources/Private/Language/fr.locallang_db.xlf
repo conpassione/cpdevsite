@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="fr" original="" datatype="plaintext" date="2025-03-19T21:30:13+01:00">
+    <file source-language="en" target-language="fr" original="" datatype="plaintext" date="2026-02-14T19:25:19+01:00">
         <body>
             <trans-unit id="backendlayout.col0">
                 <source>Content</source>
@@ -97,6 +97,18 @@
             <trans-unit id="container.3cols.description">
                 <source>A three column section</source>
                 <target>Section avec trois colonnes</target>
+            </trans-unit>
+            <trans-unit id="container.carousel">
+                <source>Carousel</source>
+                <target>Carrousel</target>
+            </trans-unit>
+            <trans-unit id="container.carousel.col201">
+                <source>Content</source>
+                <target>Contenu</target>
+            </trans-unit>
+            <trans-unit id="container.carousel.description">
+                <source>Corousel for text and images</source>
+                <target>Carrousel pour textes et images</target>
             </trans-unit>
             <trans-unit id="contentwizard.z-cpextensions.groupLabel">
                 <source>Additional extensions</source>

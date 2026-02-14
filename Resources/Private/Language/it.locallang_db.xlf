@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="it" original="EXT:cpdevsite/Resources/Private/Language/locallang_db.xlf" datatype="plaintext" product-name="cpdevsite" date="2025-03-19T21:30:13+01:00">
-        <header></header>
+    <file source-language="en" target-language="it" original="" datatype="plaintext" date="2026-02-14T19:25:19+01:00">
         <body>
             <trans-unit id="backendlayout.col0">
                 <source>Content</source>
@@ -98,6 +97,18 @@
             <trans-unit id="container.3cols.description">
                 <source>A three column section</source>
                 <target>Sezione con tre colonne</target>
+            </trans-unit>
+            <trans-unit id="container.carousel">
+                <source>Carousel</source>
+                <target>Giostra</target>
+            </trans-unit>
+            <trans-unit id="container.carousel.col201">
+                <source>Content</source>
+                <target>Contenuto</target>
+            </trans-unit>
+            <trans-unit id="container.carousel.description">
+                <source>Corousel for text and images</source>
+                <target>Giostra per Testi e Imagini</target>
             </trans-unit>
             <trans-unit id="contentwizard.z-cpextensions.groupLabel">
                 <source>Additional extensions</source>

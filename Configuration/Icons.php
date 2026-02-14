@@ -45,12 +45,16 @@ return [
         'source' => 'EXT:cpdevsite/Resources/Public/Icons/cp-3cols.svg',
     ],
 
+    'tx-conpassione-cp-carousel' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:cpdevsite/Resources/Public/Icons/cp-carousel.svg',
+    ],
+
     //  Im BackendLayout wird das Icon direkt vom File geladen, damit das Icon grösser dargestellt werden kann
     'tx-conpassione-backendlayout' => [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:cpdevsite/Resources/Public/Icons/backendlayout.svg',
     ],
-
     'tx-conpassione-content-beside-text-img-left' => [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:cpdevsite/Resources/Public/Icons/content-beside-text-img-left.svg',
